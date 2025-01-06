@@ -18,7 +18,7 @@ function Partners() {
       <div className="w-[1px] h-full flex-1 absolute bg-lightSecondary top-0 bg-opacity-15"></div>
       <div className="w-[1px] h-full flex-1 absolute bg-lightSecondary top-0 left-[50%] bg-opacity-15"></div>
       <div className="w-[1px] h-full flex-1 absolute bg-lightSecondary top-0 right-20 bg-opacity-15"></div>
-      <h2 className="w-[50%] text-lightPrimary font-bold text-[3vw] uppercase">
+      <h2 className="w-[50%] text-lightPrimary font-bold text-[3vw] uppercase font-inter">
         <span className="text-accentColor">Brands</span> we&apos;ve partnered
         with{" "}
       </h2>

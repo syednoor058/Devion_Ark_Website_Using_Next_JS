@@ -18,7 +18,7 @@ function WhoWeAre() {
             <div id="who-bar" className="w-[2px] h-full bg-accentColor"></div>
           </div>
           <div className="flex flex-col gap-2 uppercase font-titleFont text-lightTitleText">
-            <h2 className="text-[4vw] leading-none overflow-hidden font-medium">
+            <h2 className="text-[4vw] leading-none overflow-hidden font-medium font-inter">
               <span id="who-title-1" className="inline-block">
                 Empowering your Business to Reach{" "}
                 <span id="who-title-3" className="inline-block font-bold">

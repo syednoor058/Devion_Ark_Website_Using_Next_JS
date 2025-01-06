@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -20,6 +21,11 @@ export default {
         darkTitleText: "#121212",
         darkBodyText: "#212529",
       },
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        roboto: ["var(--font-roboto)"],
+        poppins: ["var(--font-poppins)"],
+      }
     },
   },
   plugins: [],

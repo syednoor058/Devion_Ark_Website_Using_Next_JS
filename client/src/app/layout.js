@@ -1,16 +1,12 @@
 import Navbar from "@/components/navbar/Navbar";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Inter, Poppins, Roboto } from 'next/font/google';
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'], variable: "--font-inter" });
+const roboto = Roboto({ subsets: ['latin'], weight: ["100","300","400","500","700","900"], variable: "--font-roboto" });
+const poppins = Poppins({ subsets: ['latin'], weight: ["100","300","400","500","700","900"], variable: "--font-poppins" });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${roboto.variable} ${poppins.variable} antialiased`}
       >
         <Navbar />
         {children}

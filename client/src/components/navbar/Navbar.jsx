@@ -1,5 +1,8 @@
+"use client";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import logo from "../../../public/dark_mode_logo.png";
 import CallToActionsButton from "../buttons/CallToActionsButton";
@@ -13,8 +16,49 @@ function Navbar() {
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
   ];
+  const [hidden, setHidden] = useState(false);
+  const [bgColor, setBgColor] = useState("bg-transparent");
+  const [topMargin, setTopMargin] = useState("top-0");
+  const [navShadow, setNavShadow] = useState("drop-shadow-none");
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latestY) => {
+    const prevY = scrollY.getPrevious();
+    if (latestY > prevY && latestY > 60) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+    if (latestY > 60) {
+      setBgColor("bg-black");
+    } else {
+      setBgColor("bg-transparent");
+    }
+    if (latestY > 60) {
+      setTopMargin("top-2");
+    } else {
+      setTopMargin("top-0");
+    }
+    if (latestY > 60) {
+      setNavShadow("drop-shadow-lg");
+    } else {
+      setNavShadow("drop-shadow-none");
+    }
+    console.log(latestY);
+  });
   return (
-    <div className="flex flex-row gap-5 justify-between items-center px-20 sticky top-0 z-[1000] py-2">
+    <motion.div
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-120%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{
+        duration: 1,
+        ease: "easeInOut",
+      }}
+      className={`flex flex-row gap-5 justify-between items-center mx-10 px-10 sticky ${topMargin} ${navShadow} z-[1000] py-[5px] ${bgColor} rounded-3xl`}
+    >
       <div className="">
         <Image
           src={logo}
@@ -23,7 +67,7 @@ function Navbar() {
         />
       </div>
       <div className="">
-        <div className="flex flex-row items-center justify-end gap-10">
+        <div className="flex flex-row items-center justify-end gap-7">
           {navLinks.map((navLink, index) => (
             <Link href={navLink.path} key={index}>
               {navLink.label}
@@ -38,7 +82,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
