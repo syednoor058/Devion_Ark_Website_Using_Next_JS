@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+*::selection {
+  color: #121212;
+  background: #c8f31d;
+}
+
 body {
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
   background-color: #121212;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;

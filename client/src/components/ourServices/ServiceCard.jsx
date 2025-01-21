@@ -1,57 +1,89 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { FaRegDotCircle } from "react-icons/fa";
+import gsap from "gsap";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
-function ServiceCard({ title, description, index }) {
-  const cardRef = useRef(null);
-  const [topOffset, setTopOffset] = useState(0);
-
+function ServiceCard({ serviceIndex, serviceTitle, image, forwardTo }) {
+  const serviceCard = useRef(null);
+  const serviceCardHover = useRef(null);
   useEffect(() => {
-    const onScroll = () => {
-      if (cardRef.current) {
-        const { top } = cardRef.current.getBoundingClientRect();
-        const offset = Math.max(0, Math.min(index * 120, top));
-        setTopOffset(offset);
-      }
+    const serviceContainer = serviceCard.current;
+    const serviceHoverComponent = serviceCardHover.current;
+
+    if (!serviceContainer) return;
+
+    const handleMouseEnter = () => {
+      gsap.to(serviceHoverComponent, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+      });
     };
 
-    console.log(index, index * 120);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [index]);
+    const handleMouseLeave = () => {
+      gsap.to(serviceHoverComponent, {
+        opacity: 0,
+        scale: 0,
+        duration: 0.5,
+      });
+    };
 
+    const handleMouseMove = (event) => {
+      const rect = serviceContainer.getBoundingClientRect();
+      const x = event.clientX - rect.left - 140; // Mouse X relative to the component
+      const y = event.clientY - rect.top; // Mouse Y relative to the component
+
+      gsap.to(serviceHoverComponent, {
+        left: x,
+        top: y,
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+      });
+    };
+
+    serviceContainer.addEventListener("mouseenter", handleMouseEnter);
+    serviceContainer.addEventListener("mouseleave", handleMouseLeave);
+    serviceContainer.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      serviceContainer.removeEventListener("mouseenter", handleMouseEnter);
+      serviceContainer.removeEventListener("mouseleave", handleMouseLeave);
+      serviceContainer.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
   return (
     <div
-      ref={cardRef}
-      className={`px-10 py-10 border-t border-lightSecondary border-opacity-15 bg-darkSecondary sticky leading-tight top-0`}
-      // style={{
-      //   top: `calc(${index * 120}px)`,
-      // }} // Dynamic top value using inline style
+      ref={serviceCard}
+      className="w-full h-full py-5 lg:py-10 border-b border-gray-700 text-lightPrimary relative px-4 lg:px-7"
     >
-      <div className="flex flex-row gap-10 ">
-        <div className="w-[5%] text-6xl font-extralight font-roboto text-accentColor">
-          0{index + 1}
+      <div className="w-full flex flex-row gap-10 justify-between items-center bg-darkPrimary">
+        <div className="w-full flex flex-row items-center gap-7">
+          <p className="w-[5%] lg:w-[8%] font-light text-[5vw] lg:text-[3.5vw] leading-none text-accentColor">
+            {serviceIndex}
+          </p>
+          <h2 className="text-[5vw] lg:text-[3.5vw] font-oswald font-bold uppercase leading-tight">
+            {serviceTitle}
+          </h2>
         </div>
-        <div className="w-[30%] text-lightPrimary font-inter font-bold text-3xl uppercase">
-          {title}
-        </div>
-        <ul className="w-[30%] flex flex-col gap-2">
-          {description.map((descItem, idx) => (
-            <li key={idx} className="font-light">
-              <div className="flex flex-row gap-2">
-                <span className="text-accentColor pt-[2px]">
-                  <FaRegDotCircle />
-                </span>
-                {descItem}
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div className="w-[30%] aspect-video bg-lightSecondary"></div>
-        <div className="w-[5%] text-6xl">
+        <Link href={forwardTo} className="text-[7vw] lg:text-[5vw]">
           <GoArrowUpRight />
+        </Link>
+      </div>
+      <div
+        ref={serviceCardHover}
+        className="w-[15%] h-full top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] absolute opacity-0 scale-0 z-[10]"
+      >
+        <div className="w-full aspect-[5/6] overflow-hidden relative rotate-12">
+          <Image
+            src={image}
+            alt={serviceTitle + " service image"}
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </div>

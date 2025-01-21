@@ -25,8 +25,14 @@ export default {
         inter: ["var(--font-inter)"],
         roboto: ["var(--font-roboto)"],
         poppins: ["var(--font-poppins)"],
+        oswald: ["var(--font-oswald)"],
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("group-1", "&:has(.group-1:hover)");
+      addVariant("group-2", "&:has(.group-2:hover)");
+    },
+  ],
 };
