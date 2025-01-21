@@ -98,7 +98,9 @@ function Navbar() {
             <div className="text-xl">
               <HiOutlineMenuAlt4 />
             </div>
-            <div className="font-oswald font-semibold  uppercase text-lg">Menu</div>
+            <div className="font-oswald font-semibold  uppercase text-lg">
+              Menu
+            </div>
           </div>
           <div className="ps-10 border-l border-lightSecondary text-xl">
             <BiSupport />
@@ -106,8 +108,8 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="w-full lg:hidden flex flex-row gap-5 justify-between items-center px-5 py-[3px]">
-        <div className="w-[15%] flex justify-start items-center border-r border-lightSecondary text-lg">
+      <div className="w-full h-14 lg:hidden flex flex-row gap-5 justify-between items-center py-[3px]">
+        <div className="w-[15%] flex justify-center items-center border-r border-lightSecondary text-2xl">
           <div
             className="text-lightPrimary cursor-pointer"
             onClick={() => setMenuExpand((prevMenuExpand) => !prevMenuExpand)}
@@ -115,16 +117,16 @@ function Navbar() {
             <MdOutlineMenu />
           </div>
         </div>
-        <div className="w-[70%] flex justify-center items-center">
-          <div className="relative">
+        <div className="w-[50%] flex justify-center items-center px-5">
+          <div className="w-full relative">
             <Image
               src={darkLogoMobile}
               alt="devion_ark_logo"
-              className="w-auto h-12 object-fill"
+              className="w-full h-auto object-cover"
             />
           </div>
         </div>
-        <div className="w-[15%]  flex justify-end items-center border-l border-lightSecondary text-lg text-lightPrimary">
+        <div className="w-[15%]  flex justify-center items-center border-l border-lightSecondary text-2xl text-lightPrimary">
           <div>
             <BiSupport />
           </div>
@@ -135,8 +137,8 @@ function Navbar() {
           } duration-1000`}
         >
           <div className="w-full h-full flex flex-col">
-            <div className="w-full lg:hidden flex flex-row justify-between items-center ps-5 pe-10 text-darkPrimary border-b border-lightPrimary">
-              <div className="w-[15%] h-full flex justify-start items-center border-r border-lightPrimary text-lg py-5">
+            <div className="w-full lg:hidden flex flex-row justify-between items-center pe-5 text-darkPrimary border-b border-lightPrimary">
+              <div className="w-[15%] h-full flex justify-center items-center border-r border-lightPrimary text-2xl py-5">
                 <div
                   className="cursor-pointer"
                   onClick={() =>
@@ -147,7 +149,7 @@ function Navbar() {
                 </div>
               </div>
               <div className="w-[70%] flex justify-center items-center py-[3px]"></div>
-              <div className="w-[15%] h-full flex justify-end items-center border-l border-lightPrimary text-lg py-5">
+              <div className="w-[15%] h-full flex justify-center items-center border-l border-lightPrimary text-2xl py-5">
                 <div>
                   <BiSupport />
                 </div>
@@ -170,7 +172,7 @@ function Navbar() {
                         index === navLinks.length - 1
                           ? "border-none"
                           : "border-b"
-                      } border-lightPrimary hover:bg-darkPrimary hover:text-lightPrimary duration-500 text-[9vw] font-bold uppercase text-center`}
+                      } border-lightPrimary hover:bg-darkPrimary hover:text-lightPrimary duration-500 text-[8vw] font-bold uppercase text-center`}
                     >
                       {navLink.label}
                     </div>

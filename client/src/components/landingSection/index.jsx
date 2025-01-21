@@ -31,8 +31,8 @@ function LandingSection() {
               </h3>
             </div>
 
-            <div className="w-full flex flex-row justify-end leading-none">
-              <div className="p-3 lg:p-5 border-r border-gray-700">
+            <div className="w-full flex flex-row justify-center lg:justify-end leading-none">
+              <div className="p-5 border-r border-gray-700">
                 <motion.div
                   className="text-accentColor text-[12vw] lg:text-[7vw]"
                   animate={{ rotate: -360 }}
@@ -46,7 +46,7 @@ function LandingSection() {
                   <FaStarOfLife />
                 </motion.div>
               </div>
-              <div>
+              <div className="">
                 <h1
                   className={`uppercase font-extrabold text-[18vw] lg:text-[15vw] text-lightPrimary leading-[.7] font-oswald pt-5 pb-6 lg:pt-7 lg:pb-12 ps-3 lg:ps-5 pe-5 lg:pe-10 overflow-hidden`}
                 >

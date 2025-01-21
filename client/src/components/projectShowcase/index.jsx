@@ -1,14 +1,81 @@
 "use client";
-import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 import { MdWork } from "react-icons/md";
 import ProjectColumn from "./ProjectColumn";
 import ProjectMobileColumn from "./ProjectMobileColumn";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ProjectShowcase = () => {
+  const projectCardDivRef = useRef(null);
+  const projectCardTwoRef = useRef(null);
+  const projectCardThreeRef = useRef(null);
+  const projectCardFourRef = useRef(null);
   const [activeCard, setActiveCard] = useState("1");
   useEffect(() => {
-    console.log(activeCard);
-  }, [activeCard]);
+    if (!projectCardDivRef.current) return;
+
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: projectCardDivRef.current,
+        start: "top top",
+        end: "400% bottom",
+        pin: true,
+        scrub: 1.5,
+        // markers: true,
+      },
+    });
+
+    tl.to(
+      projectCardTwoRef.current,
+      {
+        top: 0,
+        ease: "power2.inOut",
+      },
+      "a"
+    )
+      .to(
+        projectCardThreeRef.current,
+        {
+          top: "100%",
+        },
+        "a"
+      )
+      .to(
+        projectCardFourRef.current,
+        {
+          top: "200%",
+        },
+        "a"
+      )
+      .to(
+        projectCardThreeRef.current,
+        {
+          top: 0,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        projectCardFourRef.current,
+        {
+          top: "100%",
+        },
+        "b"
+      )
+      .to(
+        projectCardFourRef.current,
+        {
+          top: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      );
+
+    return () => tl.revert();
+  }, []);
   return (
     <div className="w-full bg-darkSecondary flex flex-col">
       <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden">
@@ -85,7 +152,10 @@ const ProjectShowcase = () => {
             setActiveCard={setActiveCard}
           />
         </div>
-        <div className="w-full h-full flex lg:hidden flex-col ">
+        <div
+          ref={projectCardDivRef}
+          className="w-full min-h-screen flex lg:hidden flex-col relative"
+        >
           <ProjectMobileColumn
             caption="Sportswear E-Commerce Web Application, was built using MERN (MongoDB, Express JS, React, Node JS) Stack."
             title="E-commerce Web Application"
@@ -93,27 +163,45 @@ const ProjectShowcase = () => {
             forward=""
             projectNum="1"
           />
-          <ProjectMobileColumn
-            caption="Sportswear E-Commerce Web Application"
-            title="Real Estate CRM System"
-            image="/projects/real_estate.jpg"
-            forward=""
-            projectNum="2"
-          />
-          <ProjectMobileColumn
-            caption="Sportswear E-Commerce Web Application"
-            title="Social Media Growth"
-            image="/projects/smm.jpg"
-            forward=""
-            projectNum="3"
-          />
-          <ProjectMobileColumn
-            caption="Sportswear E-Commerce Web Application"
-            title="Search Engine Optimization"
-            image="/projects/seo.jpg"
-            forward=""
-            projectNum="4"
-          />
+          <div
+            ref={projectCardTwoRef}
+            className="w-full h-screen absolute top-[100%] left-0 z-[10]"
+            style={{ top: "100%" }}
+          >
+            <ProjectMobileColumn
+              caption="Sportswear E-Commerce Web Application"
+              title="Real Estate CRM System"
+              image="/projects/real_estate.jpg"
+              forward=""
+              projectNum="2"
+            />
+          </div>
+          <div
+            ref={projectCardThreeRef}
+            className="w-full h-screen absolute top-[100%] left-0 z-[15]"
+            style={{ top: "200%" }}
+          >
+            <ProjectMobileColumn
+              caption="Sportswear E-Commerce Web Application"
+              title="Social Media Growth"
+              image="/projects/smm.jpg"
+              forward=""
+              projectNum="3"
+            />
+          </div>
+          <div
+            ref={projectCardFourRef}
+            className="w-full h-screen absolute top-[100%] left-0 z-[20]"
+            style={{ top: "300%" }}
+          >
+            <ProjectMobileColumn
+              caption="Sportswear E-Commerce Web Application"
+              title="Search Engine Optimization"
+              image="/projects/seo.jpg"
+              forward=""
+              projectNum="4"
+            />
+          </div>
         </div>
       </div>
     </div>

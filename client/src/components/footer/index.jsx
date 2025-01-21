@@ -165,7 +165,7 @@ function Footer() {
                 </div>
 
                 <Marquee autoFill={true}>
-                  <div className="w-screen aspect-[6/1] relative mx-4 lg:mx-8">
+                  <div className="w-screen aspect-[7.6/1] relative mx-4 lg:mx-8">
                     <Image
                       src="/footer_logo.png"
                       alt="footer-logo"

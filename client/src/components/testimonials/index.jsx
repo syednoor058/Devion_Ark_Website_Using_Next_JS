@@ -85,9 +85,9 @@ function Testimonials() {
   return (
     <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-black overflow-x-hidden">
       <div className="w-full h-full flex flex-col lg:gap-20 justify-between">
-        <div className="w-full h-full ps-5 lg:ps-20 flex flex-row  relative border-b border-darkSecondary">
+        <div className="w-full h-full ps-5 lg:ps-20 flex flex-row  relative border-b border-gray-700">
           {/* <div className="w-[1px] h-full bg-darkSecondary"></div> */}
-          <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor font-inter text-[14vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-darkSecondary pb-5 lg:pb-0">
+          <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor font-inter text-[14vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-gray-700 pb-5 lg:pb-0">
             Clients talk
           </h2>
           {/* <div className="w-[1px] h-full bg-darkSecondary"></div> */}
@@ -181,9 +181,9 @@ function Testimonials() {
           </div>
         </div>
         <div className="flex lg:hidden flex-col">
-          <div className="border-b border-darkSecondary flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row gap-2">
-              <p className="text-xs font-light leading-tight">
+              <p className=" font-light leading-tight">
                 With their SEO expertise and digital marketing campaigns, we saw
                 a 200% increase in website traffic within the first quarter.
                 They transformed our online presence and positioned us as an
@@ -205,9 +205,9 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="border-b border-darkSecondary flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row-reverse items-start gap-2">
-              <p className="text-xs font-light leading-tight text-end">
+              <p className="font-light leading-tight text-end">
                 Our business grew faster than we imagined after partnering with
                 this agency. They showed obedient behavior and a work friendly
                 attitude. They were always willing to offer their assistance. I
@@ -229,9 +229,9 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="border-b border-darkSecondary flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row gap-2">
-              <p className="text-xs font-light leading-tight">
+              <p className="font-light leading-tight">
                 They developed an E-commerce web application for my jersey
                 business! The most loveble thing is they actually can understand
                 what clients want and their requirments! Totally satisfied with
@@ -253,9 +253,9 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="border-b border-darkSecondary flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row-reverse items-start gap-2">
-              <p className="text-xs font-light leading-tight text-end">
+              <p className="font-light leading-tight text-end">
                 We relied on them for software development, and they exceeded
                 expectations with flawless, reliable solutions. Their rigorous
                 testing ensured a smooth launch with zero downtime—simply

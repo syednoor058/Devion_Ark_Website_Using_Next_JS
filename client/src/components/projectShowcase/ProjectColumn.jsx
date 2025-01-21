@@ -110,8 +110,11 @@ function ProjectColumn({
           activeCard === projectNum ? "flex" : "hidden"
         } justify-center items-center`}
       >
-        <Link href={forward} className="">
-          <div className="inline-flex overflow-hidden relative border-[2px] border-darkPrimary group">
+        <Link
+          href={forward}
+          className="relative  overflow-hidden  border-[2px] border-darkPrimary group"
+        >
+          <div className="inline-flex">
             <span className="px-8 py-3 text-darkPrimary group-hover:text-lightPrimary duration-500 z-[2] ">
               Learn More
             </span>

@@ -15,13 +15,16 @@ function ProjectMobileColumn({ caption, image, title, forward, projectNum }) {
         </div>
       </div>
       <div className="p-5 w-full h-full flex flex-col justify-between gap-5 ">
-        <div className="w-full h-[10%] z-[5] text-sm">{caption}</div>
+        <div className="w-full h-[10%] z-[5]">{caption}</div>
         <div className="w-full h-[40%] text-center flex justify-center items-center z-[5] text-5xl font-oswald leading-tight font-bold">
           {title}
         </div>
         <div className="w-full h-[10%] flex justify-center items-center z-[5]">
-          <Link href={forward} className="">
-            <div className="inline-flex overflow-hidden relative border-[2px] border-darkPrimary group">
+          <Link
+            href={forward}
+            className="relative overflow-hidden group border-[2px] border-darkPrimary"
+          >
+            <div className="inline-flex">
               <span className="px-8 py-3 text-darkPrimary group-hover:text-lightPrimary duration-500 z-[2] ">
                 Learn More
               </span>
