@@ -3,14 +3,27 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 import { BiSupport } from "react-icons/bi";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { IoMdClose } from "react-icons/io";
-import { MdOutlineMenu } from "react-icons/md";
-
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoMdMail, IoMdPin } from "react-icons/io";
+import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
-import logoMobile from "../../../public/expand_menu_logo.png";
+import MenuIcon from "../menuIcon/MenuIcon";
+
+function AddressInfo({ icon, title, value }) {
+  return (
+    <div className="w-full flex flex-row gap-5 font-light leading-none">
+      <div className="w-[25%] flex flex-row gap-2">
+        <span>{icon}</span>
+        {title}:
+      </div>
+      <div className="w-[75%] leading-tight">{value}</div>
+    </div>
+  );
+}
 
 function Navbar() {
   const navLinks = [
@@ -66,120 +79,206 @@ function Navbar() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className={` sticky ${topMargin} ${navShadow} z-[1000]  ${bgColor}`}
+      className={`sticky ${topMargin} ${navShadow} z-[1000]  ${bgColor}`}
     >
-      <div className="w-full hidden lg:flex flex-row gap-5 justify-between items-center px-20 py-[5px]">
-        <div className="relative">
-          <Image
-            src={logo}
-            alt="devion_ark_logo"
-            className="w-auto h-14 object-fill"
-          />
-        </div>
-        {/* <div className="">
-          <div className="flex flex-row items-center justify-end gap-7">
-            {navLinks.map((navLink, index) => (
-              <Link href={navLink.path} key={index}>
-                {navLink.label}
-              </Link>
-            ))}
-            <div className="ml-7">
-              <CallToActionsButton
-                forwardTo="/"
-                label="Get A Quote"
-                icon={<GoArrowUpRight />}
-                btnColor="bg-accentColor"
-              />
-            </div>
-          </div>
-        </div> */}
-        <div className="flex flex-row justify-end items-center text-lightSecondary">
-          <div className="flex flex-row gap-2 items-center px-10">
-            <div className="text-xl">
-              <HiOutlineMenuAlt4 />
-            </div>
-            <div className="font-oswald font-semibold  uppercase text-lg">
-              Menu
-            </div>
-          </div>
-          <div className="ps-10 border-l border-lightSecondary text-xl">
-            <BiSupport />
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full h-14 lg:hidden flex flex-row gap-5 justify-between items-center py-[3px]">
-        <div className="w-[15%] flex justify-center items-center border-r border-lightSecondary text-2xl">
-          <div
-            className="text-lightPrimary cursor-pointer"
-            onClick={() => setMenuExpand((prevMenuExpand) => !prevMenuExpand)}
-          >
-            <MdOutlineMenu />
-          </div>
-        </div>
-        <div className="w-[50%] flex justify-center items-center px-5">
-          <div className="w-full relative">
+      <div className="w-full hidden lg:flex relative">
+        <div
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center ${
+            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+          } px-20 z-[1002] py-[5px]`}
+        >
+          <div className={`relative z-[1003]`}>
             <Image
-              src={darkLogoMobile}
+              src={logo}
               alt="devion_ark_logo"
-              className="w-full h-auto object-cover"
+              className="w-auto h-14 object-fill"
             />
           </div>
-        </div>
-        <div className="w-[15%]  flex justify-center items-center border-l border-lightSecondary text-2xl text-lightPrimary">
-          <div>
-            <BiSupport />
+          <div
+            className={`flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
+          >
+            <div
+              className="flex flex-row gap-2 items-center px-10 cursor-pointer"
+              onClick={() => setMenuExpand((prevMenu) => !prevMenu)}
+            >
+              <div>
+                <MenuIcon expand={menuExpand} />
+              </div>
+              <div className="font-oswald font-semibold  uppercase text-lg">
+                Menu
+              </div>
+            </div>
+            <div className="ps-10 border-l border-lightSecondary text-xl">
+              <BiSupport />
+            </div>
           </div>
         </div>
+
         <div
-          className={`w-screen h-screen overflow-hidden bg-accentColor fixed top-0 left-0 transform ${
-            menuExpand ? "translate-x-0" : "-translate-x-full"
-          } duration-1000`}
+          className={`w-full h-screen overflow-hidden ${
+            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+          } fixed top-0 left-0 transform ${
+            menuExpand ? "translate-y-0" : "-translate-y-full"
+          } duration-1000 ease-in-out`}
         >
-          <div className="w-full h-full flex flex-col">
-            <div className="w-full lg:hidden flex flex-row justify-between items-center pe-5 text-darkPrimary border-b border-lightPrimary">
-              <div className="w-[15%] h-full flex justify-center items-center border-r border-lightPrimary text-2xl py-5">
-                <div
-                  className="cursor-pointer"
-                  onClick={() =>
-                    setMenuExpand((prevMenuExpand) => !prevMenuExpand)
-                  }
-                >
-                  <IoMdClose />
-                </div>
-              </div>
-              <div className="w-[70%] flex justify-center items-center py-[3px]"></div>
-              <div className="w-[15%] h-full flex justify-center items-center border-l border-lightPrimary text-2xl py-5">
-                <div>
-                  <BiSupport />
-                </div>
-              </div>
-            </div>
-            <div className="w-full ps-5 pe-10 py-3 relative border-b border-lightPrimary">
-              <Image
-                src={logoMobile}
-                alt="devion_ark_logo_mobile"
-                className="w-full h-auto object-fill"
-              />
-            </div>
-            <div className="w-full flex flex-row  justify-between ps-5 pe-10 text-darkPrimary border-b border-lightPrimary ">
-              <div className="w-[15%] border-r border-lightPrimary"></div>
-              <div className="w-[70%] flex flex-col font-oswald">
+          <div className="w-full h-full flex flex-col gap-10 pt-14">
+            <div className="w-full h-[80%] flex flex-row gap-20 mt-10">
+              <div className="w-[50%] h-full ps-20 flex flex-col gap-2">
                 {navLinks.map((navLink, index) => (
                   <Link href={navLink.path} key={index}>
                     <div
-                      className={`w-full px-3 py-3 ${
-                        index === navLinks.length - 1
-                          ? "border-none"
-                          : "border-b"
-                      } border-lightPrimary hover:bg-darkPrimary hover:text-lightPrimary duration-500 text-[8vw] font-bold uppercase text-center`}
+                      className={`w-full text-lightPrimary duration-500 text-[4.5vw] font-bold uppercase font-oswald leading-none`}
                     >
                       {navLink.label}
                     </div>
                   </Link>
                 ))}
               </div>
-              <div className="w-[15%] border-l border-lightPrimary"></div>
+              <div className="w-[50%] h-full pe-20 flex items-end text-sm">
+                <div className="w-full h-full flex flex-col justify-end gap-5">
+                  <div className="w-full h-full flex flex-row gap-20">
+                    <div className="flex flex-col gap-2 text-nowrap">
+                      <div className="font-bold uppercase text-lightPrimary">
+                        Resources
+                      </div>
+                      <div>Privacy Policy</div>
+                      <div>Terms Of Use</div>
+                      <div>Cookies Policy</div>
+                    </div>
+                    <div className="w-full flex flex-col gap-2">
+                      <AddressInfo
+                        icon={<IoMdMail />}
+                        title="Email"
+                        value="info@devionark.com"
+                      />
+                      <AddressInfo
+                        icon={<MdPhone />}
+                        title="Phone"
+                        value="+8801782734573"
+                      />
+                      <AddressInfo
+                        icon={<IoMdPin />}
+                        title="Address"
+                        value="Holding No. 08, Tootpare Central Rd, Khulna Sadar, Khulna-9100, Bangladesh"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full">
+                    <div className="relative w-full aspect-[4.3478/1]">
+                      <Image
+                        src="/nav_expand_logo.png"
+                        alt="devion-ark-logo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" w-full h-[20%] flex flex-col justify-end gap-2">
+              <div className="w-full h-[1px] bg-gray-700 "></div>
+              <div className="w-full flex flex-row gap-10 items-center py-5 px-20 justify-between">
+                <div className="font-semibold text-lightPrimary">Links:</div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaFacebookF />
+                  </span>
+                  Facebook
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <AiFillInstagram />
+                  </span>
+                  Instagram
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaLinkedinIn />
+                  </span>
+                  LinkedIn
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaYoutube />
+                  </span>
+                  YouTube
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaXTwitter />
+                  </span>
+                  Twitter (X)
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <AiOutlineTikTok />
+                  </span>
+                  Tiktok
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full lg:hidden relative">
+        <div
+          className={`w-full flex flex-row gap-5 justify-between items-center py-4  z-[1002]`}
+        >
+          <div className="w-[15%] flex justify-center items-center border-r border-lightSecondary text-2xl z-[1003]">
+            <div
+              className="text-lightPrimary cursor-pointer"
+              onClick={() => setMenuExpand((prevMenuExpand) => !prevMenuExpand)}
+            >
+              <MenuIcon expand={menuExpand} />
+            </div>
+          </div>
+          <div className="w-[50%] flex justify-center items-center px-5 z-[1003]">
+            <div className="w-full relative">
+              <Image
+                src={darkLogoMobile}
+                alt="devion_ark_logo"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div className="w-[15%]  flex justify-center items-center border-l border-lightSecondary text-2xl text-lightPrimary z-[1003]">
+            <div>
+              <BiSupport />
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`w-screen h-screen overflow-hidden ${
+            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+          } fixed top-0 left-0 transform ${
+            menuExpand ? "translate-y-0" : "-translate-y-full"
+          } duration-1000 ease-in-out z-[999]`}
+        >
+          <div className="w-full h-full pt-20 flex flex-col gap-10 justify-between z-[1001]">
+            <div className="w-full flex flex-col gap-2 px-5">
+              {navLinks.map((navLink, index) => (
+                <Link href={navLink.path} key={index}>
+                  <div
+                    className={`w-full text-lightPrimary duration-500 text-[14vw] font-bold uppercase font-oswald leading-none`}
+                  >
+                    {navLink.label}
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="w-full ps-5 pe-10">
+              <div className="w-full h-[1px] bg-lightSecondary"></div>
+              <div className=" w-full flex flex-row gap-2 justify-between py-5 text-lg">
+                <FaFacebookF />
+                <FaLinkedinIn />
+                <FaYoutube />
+                <FaXTwitter />
+                <AiFillInstagram />
+                <AiOutlineTikTok />
+              </div>
             </div>
           </div>
         </div>

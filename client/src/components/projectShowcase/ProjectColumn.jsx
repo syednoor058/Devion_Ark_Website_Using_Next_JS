@@ -2,7 +2,6 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-
 function ProjectColumn({
   caption,
   title,
@@ -53,12 +52,6 @@ function ProjectColumn({
     projectContainer.addEventListener("mouseenter", handleMouseEnter);
     projectContainer.addEventListener("mouseleave", handleMouseLeave);
     projectContainer.addEventListener("mousemove", handleMouseMove);
-
-    // if (activeCard === projectNum) {
-    //   handleMouseEnter();
-    // } else {
-    //   handleMouseLeave();
-    // }
 
     return () => {
       projectContainer.removeEventListener("mouseenter", handleMouseEnter);
@@ -129,7 +122,7 @@ function ProjectColumn({
 
       <div
         ref={projectCardHover}
-        className="w-[25%] aspect-square bg-accentColor bg-opacity-60 rounded-full absolute top-0 left-0 z-[1] opacity-0 scale-0"
+        className="w-[25%] aspect-square bg-accentColor bg-opacity-60 rounded-full absolute top-0 left-0 z-[1] opacity-0 scale-0 p-2"
       ></div>
     </div>
   );

@@ -3,6 +3,7 @@ import CircleType from "circletype";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect } from "react";
+import { BiSolidQuoteLeft } from "react-icons/bi";
 import { FaStarOfLife } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
 import { ImPause2 } from "react-icons/im";
@@ -26,15 +27,15 @@ function LandingSection() {
         <div className="w-full lg:w-[75%] border-r border-gray-700">
           <div className="w-full flex flex-col">
             <div className="flex flex-row gap-5 items-center py-3 ps-5 pe-5 lg:py-5 lg:ps-20 lg:pe-5 border-b border-gray-700 ">
-              <h3 className="text-[5vw] lg:text-[4vw] uppercase font-medium lg:text-nowrap overflow-hidden leading-none w-full text-center lg:text-start ">
+              <h3 className="text-[6vw] lg:text-[5vw] uppercase font-medium lg:text-nowrap overflow-hidden leading-none w-full text-center lg:text-start font-oswald">
                 Transforming your ideas into
               </h3>
             </div>
 
-            <div className="w-full flex flex-row justify-center lg:justify-end leading-none">
-              <div className="p-5 border-r border-gray-700">
+            <div className="w-full flex flex-row justify-start lg:justify-start leading-none">
+              <div className="p-5 lg:p-10 border-r border-gray-700 bg-accentColor">
                 <motion.div
-                  className="text-accentColor text-[12vw] lg:text-[7vw]"
+                  className="text-darkPrimary text-[12vw] lg:text-[10vw]"
                   animate={{ rotate: -360 }}
                   transition={{
                     duration: 5,
@@ -46,9 +47,9 @@ function LandingSection() {
                   <FaStarOfLife />
                 </motion.div>
               </div>
-              <div className="">
+              <div className="w-full">
                 <h1
-                  className={`uppercase font-extrabold text-[18vw] lg:text-[15vw] text-lightPrimary leading-[.7] font-oswald pt-5 pb-6 lg:pt-7 lg:pb-12 ps-3 lg:ps-5 pe-5 lg:pe-10 overflow-hidden`}
+                  className={`w-full text-center uppercase font-extrabold text-[18vw] lg:text-[15vw] text-lightPrimary leading-[.7] font-oswald pt-5 pb-6 lg:pt-7 lg:pb-12 ps-3 lg:ps-5 pe-5 lg:pe-10 overflow-hidden`}
                 >
                   <span className="inline-block">Digital</span>
                 </h1>
@@ -78,21 +79,18 @@ function LandingSection() {
         </div>
       </div>
       <div className="w-full h-full flex flex-col-reverse lg:flex-row ">
-        <div className="w-full lg:w-[40%] h-full ">
-          <div className="h-full aspect-video relative">
-            <Image
-              src={heroImg}
-              alt="hero-cover-image"
-              fill
-              placeholder="blur"
-              className="object-cover"
-            />
-            <div className="absolute right-0 bottom-0 w-10 lg:w-16 aspect-square bg-lightPrimary z-[5] flex justify-center items-center text-darkPrimary text-xl lg:text-3xl cursor-pointer">
-              <ImPause2 />
-            </div>
-          </div>
+        <div className="w-full lg:w-[40%] h-full font-light p-5 flex flex-row items-start gap-2 lg:gap-4">
+          <span className="text-lightPrimary text-[6vw] leading-none">
+            <BiSolidQuoteLeft />
+          </span>
+          <p className="text-sm lg:text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            nihil sapiente itaque repellendus harum ea voluptatum nobis
+            architecto vel atque cupiditate eveniet quasi repudiandae obcaecati
+            inventore, deleniti ullam blanditiis.
+          </p>
         </div>
-        <div className="w-full lg:w-[60%] flex flex-row items-center justify-between">
+        <div className="w-full lg:w-[60%] flex flex-row items-center justify-between border-b lg:border-b-0 lg:border-l border-gray-700">
           {" "}
           <h1 className="uppercase font-extrabold text-[18vw] lg:text-[16vw] text-accentColor leading-[.7] font-oswald pt-5 pb-6 lg:pb-10 ps-3 lg:ps-10 pe-5 overflow-hidden">
             <span className="inline-block">Reality</span>
@@ -116,6 +114,20 @@ function LandingSection() {
                 <GoDotFill />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full">
+        <div className="w-full aspect-video relative">
+          <Image
+            src={heroImg}
+            alt="hero-cover-image"
+            fill
+            placeholder="blur"
+            className="object-cover"
+          />
+          <div className="absolute right-0 bottom-0 w-10 lg:w-16 aspect-square bg-lightPrimary z-[5] flex justify-center items-center text-darkPrimary text-xl lg:text-3xl cursor-pointer">
+            <ImPause2 />
           </div>
         </div>
       </div>

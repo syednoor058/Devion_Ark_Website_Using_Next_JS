@@ -7,7 +7,7 @@ import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import React from "react";
-import { FaStarOfLife } from "react-icons/fa6";
+import { TiPointOfInterest } from "react-icons/ti";
 
 function FAQSection() {
   const [expanded1, setExpanded1] = React.useState(true);
@@ -45,7 +45,7 @@ function FAQSection() {
             <span>(FAQ)</span>
           </div>
           <div className="w-full h-full flex justify-end">
-            <div className="text-[14vw] flex justify-center items-center text-darkPrimary h-full aspect-square bg-lightPrimary p-5">
+            <div className="text-[15vw] flex justify-center items-center text-darkPrimary h-full aspect-square bg-lightPrimary p-5">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{
@@ -55,7 +55,7 @@ function FAQSection() {
                   ease: "linear",
                 }}
               >
-                <FaStarOfLife />
+                <TiPointOfInterest />
               </motion.div>
             </div>
           </div>
