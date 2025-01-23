@@ -1,25 +1,78 @@
 "use client";
 import CircleType from "circletype";
 import { motion } from "framer-motion";
+import gsap from "gsap";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { FaStarOfLife } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
-import { ImPause2 } from "react-icons/im";
+import { IoIosPause } from "react-icons/io";
 import { LuMouse } from "react-icons/lu";
 import heroImg from "../../../public/cover.jpg";
 
 function LandingSection() {
+  const videoRef = useRef(null);
+  const videoHoverRef = useRef(null);
   useEffect(() => {
     const circleType = new CircleType(
       document.getElementById("hero-rotated-text")
+    );
+    const videoHoverCircleType = new CircleType(
+      document.getElementById("video-hover")
     );
     const circleTypeMobile = new CircleType(
       document.getElementById("hero-rotated-text-mobile")
     );
     circleType.radius(80);
+    videoHoverCircleType.radius(60);
     circleTypeMobile.radius(20);
+  }, []);
+  useEffect(() => {
+    const videoContainer = videoRef.current;
+    const videoHoverContainer = videoHoverRef.current;
+
+    if (!videoContainer) return;
+
+    const handleMouseEnter = () => {
+      gsap.to(videoHoverContainer, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+      });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(videoHoverContainer, {
+        opacity: 0,
+        scale: 0,
+        duration: 0.5,
+      });
+    };
+
+    const handleMouseMove = (event) => {
+      const rect = videoContainer.getBoundingClientRect();
+      const x = event.clientX - rect.left - 70; // Mouse X relative to the component
+      const y = event.clientY - rect.top - 70; // Mouse Y relative to the component
+
+      gsap.to(videoHoverContainer, {
+        left: x,
+        top: y,
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+      });
+    };
+
+    videoContainer.addEventListener("mouseenter", handleMouseEnter);
+    videoContainer.addEventListener("mouseleave", handleMouseLeave);
+    videoContainer.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      videoContainer.removeEventListener("mouseenter", handleMouseEnter);
+      videoContainer.removeEventListener("mouseleave", handleMouseLeave);
+      videoContainer.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
   return (
     <div className=" w-full h-full lg:min-h-[90vh] flex flex-col">
@@ -84,10 +137,10 @@ function LandingSection() {
             <BiSolidQuoteLeft />
           </span>
           <p className="text-sm lg:text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            nihil sapiente itaque repellendus harum ea voluptatum nobis
-            architecto vel atque cupiditate eveniet quasi repudiandae obcaecati
-            inventore, deleniti ullam blanditiis.
+            Driven by innovation and client-focused solutions, we elevate brands
+            with seamless digital experiences. From tailored software design to
+            strategic digital marketing, our team brings expertise to every
+            phase of your project.
           </p>
         </div>
         <div className="w-full lg:w-[60%] flex flex-row items-center justify-between border-b lg:border-b-0 lg:border-l border-gray-700">
@@ -118,7 +171,10 @@ function LandingSection() {
         </div>
       </div>
       <div className="w-full">
-        <div className="w-full aspect-video relative">
+        <div
+          ref={videoRef}
+          className="w-full aspect-video relative overflow-hidden"
+        >
           <Image
             src={heroImg}
             alt="hero-cover-image"
@@ -126,8 +182,28 @@ function LandingSection() {
             placeholder="blur"
             className="object-cover"
           />
-          <div className="absolute right-0 bottom-0 w-10 lg:w-16 aspect-square bg-lightPrimary z-[5] flex justify-center items-center text-darkPrimary text-xl lg:text-3xl cursor-pointer">
-            <ImPause2 />
+          <div
+            ref={videoHoverRef}
+            className="absolute right-0 bottom-0 w-[10%] aspect-square z-[5] hidden xl:flex justify-center items-center text-darkPrimary text-xl lg:text-3xl cursor-pointer"
+          >
+            <div className="w-full h-full rounded-full bg-lightPrimary flex justify-center items-center relative ">
+              <motion.div
+                id="video-hover"
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear",
+                }}
+                className="text-base text-darkPrimary"
+              >
+                lick . Play . Pause . Click. Play . C
+              </motion.div>
+              <div className="text-darkPrimary absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]">
+                <IoIosPause />
+              </div>
+            </div>
           </div>
         </div>
       </div>

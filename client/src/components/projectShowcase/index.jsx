@@ -116,7 +116,7 @@ const ProjectShowcase = () => {
       <div className="w-full lg:h-screen overflow-hidden relative">
         <div className="w-full h-full hidden lg:flex">
           <ProjectColumn
-            caption="Sportswear E-Commerce Web Application, was built using MERN (MongoDB, Express JS, React, Node JS) Stack."
+            caption="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend."
             title="E-commerce Web Application"
             image="/projects/shop.jpg"
             forward=""
@@ -157,7 +157,7 @@ const ProjectShowcase = () => {
           className="w-full min-h-screen flex lg:hidden flex-col relative"
         >
           <ProjectMobileColumn
-            caption="Sportswear E-Commerce Web Application, was built using MERN (MongoDB, Express JS, React, Node JS) Stack."
+            caption="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend."
             title="E-commerce Web Application"
             image="/projects/shop.jpg"
             forward=""

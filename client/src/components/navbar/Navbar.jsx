@@ -222,9 +222,11 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="w-full lg:hidden relative">
+      <div className="w-full flex lg:hidden relative">
         <div
-          className={`w-full flex flex-row gap-5 justify-between items-center py-4  z-[1002]`}
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center py-4  z-[1002] ${
+            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+          }`}
         >
           <div className="w-[15%] flex justify-center items-center border-r border-lightSecondary text-2xl z-[1003]">
             <div
@@ -249,6 +251,37 @@ function Navbar() {
             </div>
           </div>
         </div>
+        {/* <div
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center ${
+            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+          } px-20 z-[1002] py-[5px]`}
+        >
+          <div className={`relative z-[1003]`}>
+            <Image
+              src={logo}
+              alt="devion_ark_logo"
+              className="w-auto h-14 object-fill"
+            />
+          </div>
+          <div
+            className={`flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
+          >
+            <div
+              className="flex flex-row gap-2 items-center px-10 cursor-pointer"
+              onClick={() => setMenuExpand((prevMenu) => !prevMenu)}
+            >
+              <div>
+                <MenuIcon expand={menuExpand} />
+              </div>
+              <div className="font-oswald font-semibold  uppercase text-lg">
+                Menu
+              </div>
+            </div>
+            <div className="ps-10 border-l border-lightSecondary text-xl">
+              <BiSupport />
+            </div>
+          </div>
+        </div> */}
 
         <div
           className={`w-screen h-screen overflow-hidden ${
@@ -282,6 +315,112 @@ function Navbar() {
             </div>
           </div>
         </div>
+        {/* <div
+          className={`w-full h-screen overflow-hidden ${
+            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+          } fixed top-0 left-0 transform ${
+            menuExpand ? "translate-y-0" : "-translate-y-full"
+          } duration-1000 ease-in-out`}
+        >
+          <div className="w-full h-full flex flex-col gap-10 pt-14">
+            <div className="w-full h-[80%] flex flex-row gap-20 mt-10">
+              <div className="w-[50%] h-full ps-20 flex flex-col gap-2">
+                {navLinks.map((navLink, index) => (
+                  <Link href={navLink.path} key={index}>
+                    <div
+                      className={`w-full text-lightPrimary duration-500 text-[4.5vw] font-bold uppercase font-oswald leading-none`}
+                    >
+                      {navLink.label}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="w-[50%] h-full pe-20 flex items-end text-sm">
+                <div className="w-full h-full flex flex-col justify-end gap-5">
+                  <div className="w-full h-full flex flex-row gap-20">
+                    <div className="flex flex-col gap-2 text-nowrap">
+                      <div className="font-bold uppercase text-lightPrimary">
+                        Resources
+                      </div>
+                      <div>Privacy Policy</div>
+                      <div>Terms Of Use</div>
+                      <div>Cookies Policy</div>
+                    </div>
+                    <div className="w-full flex flex-col gap-2">
+                      <AddressInfo
+                        icon={<IoMdMail />}
+                        title="Email"
+                        value="info@devionark.com"
+                      />
+                      <AddressInfo
+                        icon={<MdPhone />}
+                        title="Phone"
+                        value="+8801782734573"
+                      />
+                      <AddressInfo
+                        icon={<IoMdPin />}
+                        title="Address"
+                        value="Holding No. 08, Tootpare Central Rd, Khulna Sadar, Khulna-9100, Bangladesh"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full">
+                    <div className="relative w-full aspect-[4.3478/1]">
+                      <Image
+                        src="/nav_expand_logo.png"
+                        alt="devion-ark-logo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" w-full h-[20%] flex flex-col justify-end gap-2">
+              <div className="w-full h-[1px] bg-gray-700 "></div>
+              <div className="w-full flex flex-row gap-10 items-center py-5 px-20 justify-between">
+                <div className="font-semibold text-lightPrimary">Links:</div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaFacebookF />
+                  </span>
+                  Facebook
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <AiFillInstagram />
+                  </span>
+                  Instagram
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaLinkedinIn />
+                  </span>
+                  LinkedIn
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaYoutube />
+                  </span>
+                  YouTube
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <FaXTwitter />
+                  </span>
+                  Twitter (X)
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <span>
+                    <AiOutlineTikTok />
+                  </span>
+                  Tiktok
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </motion.div>
   );

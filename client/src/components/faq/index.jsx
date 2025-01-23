@@ -60,7 +60,7 @@ function FAQSection() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-[50%] border-l border-gray-700">
+        <div className="w-full lg:w-[50%] lg:border-l border-gray-700">
           <div className="border-b border-gray-700 py-5">
             <Accordion
               elevation={0}
