@@ -37,7 +37,7 @@ function FAQSection() {
   };
 
   return (
-    <div className=" font-bodyFont text-lightSecondary bg-darkSecondary relative overflow-hidden">
+    <div className="w-screen text-lightSecondary bg-darkSecondary relative overflow-hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-[50%] flex flex-col">
           <div className="w-full uppercase font-oswald text-lightPrimary text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 py-7 lg:py-20 border-b border-gray-700 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none">
@@ -61,7 +61,7 @@ function FAQSection() {
           </div>
         </div>
         <div className="w-full lg:w-[50%] lg:border-l border-gray-700">
-          <div className="border-b border-gray-700 py-5">
+          <div className="border-b border-gray-700 py-5 pe-5">
             <Accordion
               elevation={0}
               expanded={expanded1}
@@ -130,7 +130,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5">
+          <div className="border-b border-gray-700 py-5 pe-5">
             <Accordion
               elevation={0}
               expanded={expanded2}
@@ -198,7 +198,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5">
+          <div className="border-b border-gray-700 py-5 pe-5">
             <Accordion
               elevation={0}
               expanded={expanded3}
@@ -267,7 +267,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5">
+          <div className="border-b border-gray-700 py-5 pe-5">
             <Accordion
               elevation={0}
               expanded={expanded4}
@@ -336,7 +336,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5">
+          <div className="border-b border-gray-700 py-5 pe-5">
             <Accordion
               elevation={0}
               expanded={expanded5}
@@ -405,7 +405,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5">
+          <div className="border-b border-gray-700 py-5 pe-5">
             <Accordion
               elevation={0}
               expanded={expanded6}

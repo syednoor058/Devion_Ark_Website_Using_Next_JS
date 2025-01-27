@@ -116,8 +116,8 @@ const ProjectShowcase = () => {
       <div className="w-full lg:h-screen overflow-hidden relative">
         <div className="w-full h-full hidden lg:flex">
           <ProjectColumn
-            caption="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend."
-            title="E-commerce Web Application"
+            caption="An intuitive and scalable e-commerce website tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking."
+            title="Dynamic Sportswear E-Commerce Platform"
             image="/projects/shop.jpg"
             forward=""
             projectNum="1"
@@ -125,8 +125,8 @@ const ProjectShowcase = () => {
             setActiveCard={setActiveCard}
           />
           <ProjectColumn
-            caption="Sportswear E-Commerce Web Application"
-            title="Real Estate CRM System"
+            caption="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
+            title="Comprehensive Real Estate CRM Solution"
             image="/projects/real_estate.jpg"
             forward=""
             projectNum="2"
@@ -134,8 +134,8 @@ const ProjectShowcase = () => {
             setActiveCard={setActiveCard}
           />
           <ProjectColumn
-            caption="Sportswear E-Commerce Web Application"
-            title="Social Media Growth"
+            caption="A strategic social media project encompassing content creation, ad campaigns, audience engagement strategies, and performance monitoring to boost online presence."
+            title="Advanced Social Media Marketing Toolkit"
             image="/projects/smm.jpg"
             forward=""
             projectNum="3"
@@ -143,8 +143,8 @@ const ProjectShowcase = () => {
             setActiveCard={setActiveCard}
           />
           <ProjectColumn
-            caption="Sportswear E-Commerce Web Application"
-            title="Search Engine Optimization"
+            caption="A robust SEO implementation project focused on keyword research, technical SEO audits, on-page optimization, and content strategy to improve search rankings and organic traffic."
+            title="Strategic SEO Optimization Framework"
             image="/projects/seo.jpg"
             forward=""
             projectNum="4"
@@ -157,8 +157,8 @@ const ProjectShowcase = () => {
           className="w-full min-h-screen flex lg:hidden flex-col relative"
         >
           <ProjectMobileColumn
-            caption="Developed a house price prediction model using machine learning algorithms. Built a user-friendly website with React.js and FastAPI for the backend."
-            title="E-commerce Web Application"
+            caption="An intuitive and scalable e-commerce web application tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking."
+            title="Dynamic Sportswear E-Commerce Platform"
             image="/projects/shop.jpg"
             forward=""
             projectNum="1"
@@ -169,8 +169,8 @@ const ProjectShowcase = () => {
             style={{ top: "100%" }}
           >
             <ProjectMobileColumn
-              caption="Sportswear E-Commerce Web Application"
-              title="Real Estate CRM System"
+              caption="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
+              title="Comprehensive Real Estate CRM Solution"
               image="/projects/real_estate.jpg"
               forward=""
               projectNum="2"
@@ -182,8 +182,8 @@ const ProjectShowcase = () => {
             style={{ top: "200%" }}
           >
             <ProjectMobileColumn
-              caption="Sportswear E-Commerce Web Application"
-              title="Social Media Growth"
+              caption="A strategic social media project encompassing content creation, ad campaigns, audience engagement strategies, and performance monitoring to boost online presence."
+              title="Advanced Social Media Marketing Toolkit"
               image="/projects/smm.jpg"
               forward=""
               projectNum="3"
@@ -195,8 +195,8 @@ const ProjectShowcase = () => {
             style={{ top: "300%" }}
           >
             <ProjectMobileColumn
-              caption="Sportswear E-Commerce Web Application"
-              title="Search Engine Optimization"
+              caption="A robust SEO implementation project focused on keyword research, technical SEO audits, on-page optimization, and content strategy to improve search rankings and organic traffic."
+              title="Strategic SEO Optimization Framework"
               image="/projects/seo.jpg"
               forward=""
               projectNum="4"
