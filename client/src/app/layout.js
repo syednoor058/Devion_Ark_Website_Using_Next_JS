@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`w-screen ${inter.variable} ${roboto.variable} ${poppins.variable} ${oswald.variable} overflow-x-hidden antialiased`}
+        className={`w-screen ${inter.variable} ${roboto.variable} ${poppins.variable} ${oswald.variable} antialiased`}
       >
         <Navbar />
         <SmoothScroll>{children}</SmoothScroll>

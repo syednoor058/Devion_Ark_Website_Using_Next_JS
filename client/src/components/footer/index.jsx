@@ -10,7 +10,7 @@ import CallToActionsButton from "../buttons/CallToActionsButton";
 
 function AddressInfo({ icon, title, value }) {
   return (
-    <div className="w-full flex flex-row gap-5 font-light leading-none">
+    <div className="w-screen flex flex-row gap-5 font-light leading-none">
       <div className="w-[30%] flex flex-row gap-2">
         <span>{icon}</span>
         {title}:

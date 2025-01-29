@@ -81,7 +81,7 @@ function Navbar() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className={`sticky ${topMargin} ${navShadow} z-[1000]  ${bgColor}`}
+      className={`w-screen sticky ${topMargin} ${navShadow} z-[1000]  ${bgColor}`}
     >
       <div className="w-full hidden lg:flex relative">
         <div

@@ -19,7 +19,7 @@ function Partners() {
   const partnersLogoContainer = useRef(null);
   useEffect(() => {}, []);
   return (
-    <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-5 leading-none w-full h-full lg:px-20 relative">
+    <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-5 leading-none w-screen h-full lg:px-20 relative">
       <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 bg-opacity-15"></div>
       <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 left-[50%] bg-opacity-15"></div>
       <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 right-20 bg-opacity-15"></div>

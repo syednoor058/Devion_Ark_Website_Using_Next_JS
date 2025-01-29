@@ -75,9 +75,9 @@ function LandingSection() {
     };
   }, []);
   return (
-    <div className=" w-full h-full flex flex-col overflow-x-hidden">
+    <div className="w-screen h-full flex flex-col overflow-x-hidden">
       <div className="w-full h-full flex flex-col">
-        <div className="w-full h-full flex flex-row border-b border-gray-700">
+        <div className="w-full h-full flex flex-row">
           <div className="w-full lg:w-[75%] border-r border-gray-700">
             <div className="w-full flex flex-col">
               <div className="flex flex-row gap-5 items-center py-3 ps-5 pe-5 lg:py-5 lg:ps-20 lg:pe-5 border-b border-gray-700 ">
@@ -101,9 +101,9 @@ function LandingSection() {
                     <FaStarOfLife />
                   </motion.div>
                 </div>
-                <div className="w-full">
+                <div className="w-full flex justify-center items-center">
                   <h1
-                    className={`w-full text-center uppercase font-extrabold text-[18vw] lg:text-[15vw] text-lightPrimary leading-[.7] font-oswald pt-5 pb-6 lg:pt-7 lg:pb-12 ps-3 lg:ps-5 pe-5 lg:pe-10 overflow-hidden`}
+                    className={`w-full text-center uppercase font-extrabold text-[18vw] lg:text-[15vw] text-lightPrimary leading-[0.5] font-oswald pt-5 pb-6 lg:pt-7 lg:pb-12 ps-3 lg:ps-5 pe-5 lg:pe-10 overflow-hidden`}
                   >
                     <span className="inline-block">Digital</span>
                   </h1>
@@ -133,7 +133,7 @@ function LandingSection() {
           </div>
         </div>
         <div className="w-full h-full flex flex-col-reverse lg:flex-row">
-          <div className="w-full lg:w-[40%] h-full font-light p-5 flex flex-row items-start gap-2 lg:gap-4">
+          <div className="w-full lg:w-[40%] h-full font-light p-5 flex flex-row items-start gap-2 lg:gap-4 lg:border-t border-gray-700">
             <span className="text-lightPrimary text-[6vw] leading-none">
               <BiSolidQuoteLeft />
             </span>
@@ -144,9 +144,9 @@ function LandingSection() {
               to every phase of your project.
             </p>
           </div>
-          <div className="w-full lg:w-[60%] h-full flex flex-row items-center justify-between border-b lg:border-b-0 lg:border-l border-gray-700">
+          <div className="w-full lg:w-[60%] h-full flex flex-row items-center justify-between border-b lg:border-b-0 lg:border-l border-gray-700 ">
             {" "}
-            <h1 className="uppercase font-extrabold text-[18vw] lg:text-[16vw] text-accentColor leading-[.7] font-oswald pt-5 pb-6 lg:pb-10 ps-3 lg:ps-10 pe-5 overflow-hidden">
+            <h1 className="uppercase font-extrabold text-[18vw] lg:text-[16vw] text-accentColor leading-[0.7] font-oswald pt-5 pb-6 lg:pt-7 lg:pb-12 ps-3 lg:ps-5 pe-5 lg:pe-10 overflow-hidden  text-center">
               <span className="inline-block">Reality</span>
             </h1>
             <div className="w-[30%] aspect-square flex lg:hidden justify-center items-start p-3 bg-lightPrimary text-darkPrimary">

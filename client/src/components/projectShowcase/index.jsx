@@ -77,7 +77,7 @@ const ProjectShowcase = () => {
     return () => tl.revert();
   }, []);
   return (
-    <div className="w-full bg-darkSecondary flex flex-col">
+    <div className="w-screen bg-darkSecondary flex flex-col">
       <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden">
         <div className="w-full lg:w-[60%] flex flex-col gap-5 lg:gap-10 ps-5 lg:ps-20 pe-5 lg:pe-10 border-r border-gray-700 py-10 lg:py-20">
           <div className="flex flex-row gap-2 items-center">

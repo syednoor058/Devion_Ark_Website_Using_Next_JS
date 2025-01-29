@@ -2,7 +2,6 @@
 import CircleType from "circletype";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { FiArrowDownRight } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 
 function ServiceLandingSection() {
@@ -14,11 +13,11 @@ function ServiceLandingSection() {
     circleType.radius(70);
   }, []);
   return (
-    <div className="w-full h-[calc(100vh-56px)] relative">
+    <div className="w-screen h-full relative">
       <div className="w-full h-full flex flex-col justify-end border-b border-gray-700">
         <div className="w-full h-full flex flex-row">
-          <div className="w-[13%] h-full">
-            <div className="w-full h-full bg-lightPrimary">
+          <div className="w-[13%] bg-lightPrimary">
+            <div className="w-full h-full ">
               <div className="w-full h-full relative flex justify-center items-center text-darkPrimary font-light p-5">
                 <motion.div
                   id="service-hero-rotated-text"
@@ -39,18 +38,26 @@ function ServiceLandingSection() {
               </div>
             </div>
           </div>
-          <div className="w-[57%] border-x border-gray-700 p-2 flex justify-end items-end text-7xl">
-            <FiArrowDownRight />
+          <div className="w-[57%] border-x border-gray-700 p-5 flex justify-end items-end text-7xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 480 480"
+              width="64"
+              height="64"
+              fill="#999"
+            >
+              <path d="M240.2 240A240 240 0 0 0 480 0H240a240 240 0 1 0 0 480h240a240 240 0 0 0-239.8-240Z"></path>
+            </svg>
+            {/* <FiArrowDownRight /> */}
           </div>
           <div className="w-[30%] p-5 bg-accentColor text-darkPrimary">
             <p className="font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              possimus labore temporibus ratione itaque nisi non deleniti
-              tempore! Deleniti, deserunt. Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Pariatur, aspernatur. Lorem ipsum
-              dolor, sit amet consectetur adipisicing elit. Labore, inventore!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi qui
-              culpa nulla reprehenderit blanditiis magni nihil.
+              Transform Your Business with Data-Driven Digital Solutions – From
+              Skyrocketing Social Media Engagement to Dominating Search
+              Rankings. Partner with Devion Ark for Tailored Strategies in SEO,
+              Custom Software, and Growth-Focused Marketing That Delivers
+              Measurable Results. Ready to Outrank Competitors, Convert Leads,
+              and Scale Seamlessly? Let’s Build Your Online Empire.
             </p>
           </div>
         </div>

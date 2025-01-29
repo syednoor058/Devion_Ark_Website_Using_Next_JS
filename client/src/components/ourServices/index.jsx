@@ -30,7 +30,7 @@ function OurServices() {
   };
 
   return (
-    <div className="py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
+    <div className="w-screen py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
       <div className="w-full h-full flex flex-row justify-between absolute top-0 z-[1] overflow-hidden px-5 lg:px-20">
         <div className="w-[1px] h-full bg-darkSecondary"></div>
         <div className="w-[1px] h-full bg-darkSecondary"></div>
