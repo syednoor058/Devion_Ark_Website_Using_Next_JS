@@ -10,7 +10,7 @@ import CallToActionsButton from "../buttons/CallToActionsButton";
 
 function AddressInfo({ icon, title, value }) {
   return (
-    <div className="w-screen flex flex-row gap-5 font-light leading-none">
+    <div className="w-full flex flex-row gap-5 font-light leading-none">
       <div className="w-[30%] flex flex-row gap-2">
         <span>{icon}</span>
         {title}:
@@ -117,7 +117,7 @@ function Footer() {
               </div>
               <div className="w-full flex flex-row gap-5 lg:gap-20 px-5">
                 <div className="uppercase font-semibold text-lightPrimary">
-                  Connect:
+                  Connect
                 </div>
                 <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-5 gap-y-2 lg:gap-x-10 lg:gap-y-0 font-inter font-medium text-sm lg:text-base">
                   <div className="flex flex-row items-center gap-2">
@@ -158,14 +158,14 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-5 w-screen justify-end">
-                <div className="w-full flex flex-row gap-5 justify-between text-xs lg:text-base ps-5 pe-10">
+              <div className="flex flex-col gap-5 w-full justify-end">
+                <div className="w-full flex flex-row gap-5 justify-between text-xs lg:text-base px-5">
                   <div>&copy;2024 - 2025</div>
                   <div>All rights reserved by</div>
                 </div>
 
                 <Marquee autoFill={true}>
-                  <div className="w-screen aspect-[7.6/1] relative mx-4 lg:mx-8">
+                  <div className="w-[480px] lg:w-[1300px] aspect-[7.6/1] relative mx-4 lg:mx-8">
                     <Image
                       src="/footer_logo.png"
                       alt="footer-logo"

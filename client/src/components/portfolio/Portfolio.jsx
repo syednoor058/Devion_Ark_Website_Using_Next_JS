@@ -83,7 +83,7 @@ function PortfolioCard({ amount, text }) {
 
 function Portfolio() {
   return (
-    <div className="w-screen bg-accentColor text-darkSecondary py-5 lg:py-10 px-5 lg:px-20 flex justify-center">
+    <div className="w-full bg-accentColor text-darkSecondary py-5 lg:py-10 px-5 lg:px-20 flex justify-center">
       <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-16">
         <PortfolioCard amount="3+" text="Years of experienced team." />
         <PortfolioCard amount="20" text="Projects completed successfully." />

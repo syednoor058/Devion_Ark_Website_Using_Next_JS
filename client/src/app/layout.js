@@ -1,8 +1,8 @@
-import Navbar from "@/components/navbar/Navbar";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./globals.css";
 
+import Navbar from "@/components/navbar/Navbar";
 import SmoothScroll from "@/components/smoothScroll";
 import { Inter, Oswald, Poppins, Roboto } from 'next/font/google';
 
@@ -21,8 +21,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
-        className={`w-screen ${inter.variable} ${roboto.variable} ${poppins.variable} ${oswald.variable} antialiased`}
+        className={`w-full ${inter.variable} ${roboto.variable} ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden`}
       >
         <Navbar />
         <SmoothScroll>{children}</SmoothScroll>

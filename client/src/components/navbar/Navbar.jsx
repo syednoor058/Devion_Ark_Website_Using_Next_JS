@@ -39,16 +39,19 @@ function Navbar() {
   const [menuExpand, setMenuExpand] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [bgColor, setBgColor] = useState("bg-transparent");
-  const [topMargin, setTopMargin] = useState("top-0");
-  const [navShadow, setNavShadow] = useState("drop-shadow-none");
   const { scrollY } = useScroll();
 
   // useEffect(() => {
   //   console.log(menuExpand);
   // }, [menuExpand]);
 
+  // useEffect(() => {
+  //   console.log(hidden);
+  // }, [hidden]);
+
   useMotionValueEvent(scrollY, "change", (latestY) => {
     const prevY = scrollY.getPrevious();
+    // console.log(latestY, prevY);
     if (latestY > prevY && latestY > 25 && !menuExpand) {
       setHidden(true);
     } else {
@@ -58,16 +61,6 @@ function Navbar() {
       setBgColor("bg-black");
     } else {
       setBgColor("bg-transparent");
-    }
-    if (latestY > 25) {
-      setTopMargin("top-0");
-    } else {
-      setTopMargin("top-0");
-    }
-    if (latestY > 25) {
-      setNavShadow("drop-shadow-lg");
-    } else {
-      setNavShadow("drop-shadow-none");
     }
   });
   return (
@@ -81,7 +74,7 @@ function Navbar() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className={`w-screen sticky ${topMargin} ${navShadow} z-[1000]  ${bgColor}`}
+      className={`sticky top-0 z-[1000] ${bgColor}`}
     >
       <div className="w-full hidden lg:flex relative">
         <div

@@ -37,7 +37,7 @@ function FAQSection() {
   };
 
   return (
-    <div className="w-screen text-lightSecondary bg-darkSecondary relative overflow-hidden">
+    <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-[50%] flex flex-col">
           <div className="w-full uppercase font-oswald text-lightPrimary text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 py-7 lg:py-20 border-b border-gray-700 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none">

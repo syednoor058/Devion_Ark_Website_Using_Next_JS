@@ -83,7 +83,7 @@ function TestimonialCard2({ image, name, position, company, review }) {
 
 function Testimonials() {
   return (
-    <div className="w-screen min-h-[15vh] pb-0 lg:pb-10 bg-black overflow-x-hidden">
+    <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-black overflow-x-hidden">
       <div className="w-full h-full flex flex-col lg:gap-20 justify-between">
         <div className="w-full h-full ps-5 lg:ps-20 flex flex-row  relative border-b border-gray-700">
           {/* <div className="w-[1px] h-full bg-darkSecondary"></div> */}

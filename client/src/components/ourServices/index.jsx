@@ -30,7 +30,7 @@ function OurServices() {
   };
 
   return (
-    <div className="w-screen py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
+    <div className="w-full py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
       <div className="w-full h-full flex flex-row justify-between absolute top-0 z-[1] overflow-hidden px-5 lg:px-20">
         <div className="w-[1px] h-full bg-darkSecondary"></div>
         <div className="w-[1px] h-full bg-darkSecondary"></div>
@@ -38,10 +38,6 @@ function OurServices() {
         <div className="w-[1px] h-full bg-darkSecondary"></div>
         <div className="w-[1px] h-full bg-darkSecondary"></div>
         <div className="w-[1px] h-full bg-darkSecondary"></div>
-        {/* <div className="w-[1px] h-screen bg-lightSecondary bg-opacity-15"></div>
-        <div className="w-[1px] h-screen bg-lightSecondary bg-opacity-15"></div>
-        <div className="w-[1px] h-screen bg-lightSecondary bg-opacity-15"></div>
-        <div className="w-[1px] h-screen bg-lightSecondary bg-opacity-15"></div> */}
       </div>
       <div className="flex flex-col gap-5 lg:gap-10 z-[2]">
         <div className="flex flex-row gap-2 items-center px-5 lg:px-20">
@@ -52,7 +48,7 @@ function OurServices() {
           </div>
           <div id="who-bar" className="w-[2px] h-5 lg:h-7 bg-accentColor"></div>
         </div>
-        <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-none font-medium">
+        <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
           The Solutions that drive <br />
           <span className="text-accentColor font-bold">Your Success</span>
         </h2>

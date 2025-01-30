@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function CTASection() {
   return (
-    <div className="w-screen bg-accentColor text-darkSecondary">
+    <div className="w-full bg-accentColor text-darkSecondary">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-[50%] text-darkPrimary font-bold text-[7vw] lg:text-[5.5vw] pt-5 pb-5 lg:pt-32 lg:pb-16 uppercase px-5 lg:px-10 border-b lg:border-b-0 lg:border-r border-darkPrimary font-oswald leading-none">
           <h3>
