@@ -11,7 +11,7 @@ import WhoWeAre from "@/components/whoWeAre/WhoWeAre";
 
 export default function Home() {
   return (
-    <main className="font-poppins">
+    <main className="font-roboto">
       <LandingSection />
       <Partners />
       <WhoWeAre />

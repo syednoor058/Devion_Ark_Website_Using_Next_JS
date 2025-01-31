@@ -256,7 +256,7 @@ function Navbar() {
           </div>
         </div>
         <div
-          className={`w-screen h-screen overflow-hidden ${
+          className={`w-screen h-screen overflow-x-hidden overflow-y-auto ${
             bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
           } fixed top-0 left-0 transform ${
             menuExpand ? "translate-y-0" : "-translate-y-full"

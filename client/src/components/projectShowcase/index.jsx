@@ -83,7 +83,7 @@ const ProjectShowcase = () => {
           <div className="flex flex-row gap-2 items-center">
             <div className="uppercase font-semibold text-sm lg:text-lg overflow-hidden">
               <p id="who-we-are" className="inline-block">
-                Case Studies
+                Featured Case Studies
               </p>
             </div>
             <div

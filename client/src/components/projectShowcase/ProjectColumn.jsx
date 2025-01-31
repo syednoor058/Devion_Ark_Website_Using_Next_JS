@@ -120,7 +120,7 @@ function ProjectColumn({
         </Link>
       </div>
 
-      <div className="w-full h-[40%] text-darkPrimary text-[250px] font-light z-[2] leading-none text-center">
+      <div className="w-full h-[40%] text-darkPrimary text-[250px] font-light z-[2] leading-none text-center font-poppins">
         {projectNum}
       </div>
 

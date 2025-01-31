@@ -39,9 +39,7 @@ function PortfolioCard({ amount, text }) {
         <h3 className="text-[8vw] lg:text-[4vw] font-medium font-poppins leading-none">
           {amount}
         </h3>
-        <p className="text-center text-[3.5vw] lg:text-sm leading-tight">
-          {text}
-        </p>
+        <p className="text-center text-sm leading-none">{text}</p>
       </div>
       <div className="w-[15%] text-lightPrimary">
         <svg

@@ -34,7 +34,7 @@ function ProjectMobileColumn({ caption, image, title, forward, projectNum }) {
             </div>
           </Link>
         </div>
-        <div className="w-full h-[40%] text-center flex justify-center items-end z-[5] text-[50vw] leading-none">
+        <div className="w-full h-[40%] text-center flex justify-center items-end z-[5] text-[50vw] leading-none font-poppins">
           {projectNum}
         </div>
       </div>

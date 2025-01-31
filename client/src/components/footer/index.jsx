@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 import { BsHandIndexThumbFill } from "react-icons/bs";
-import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import CallToActionsButton from "../buttons/CallToActionsButton";
@@ -28,7 +25,7 @@ function Footer() {
     >
       <div className="relative w-full h-[200vh] -top-[100vh]">
         <div className="sticky w-full h-[100vh] top-0 left-0">
-          <div className="w-full h-[100vh] relative bg-black pt-7 text-sm flex items-end">
+          <div className="w-full h-[100vh] relative bg-black pt-7 flex items-end">
             <div className="w-full h-full flex flex-col justify-between">
               <div className="w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-10">
                 <div className="w-full lg:w-[40%] flex flex-col gap-3 px-5">
@@ -52,7 +49,7 @@ function Footer() {
                     />
                   </form>
 
-                  <p className="text-xs font-light">
+                  <p className="text-sm font-light">
                     By signing up, you understand and agree that your data will
                     be collected and used subject to our{" "}
                     <span className="underline underline-offset-2">
@@ -67,7 +64,7 @@ function Footer() {
                 </div>
                 <div className="w-full lg:w-[40%] flex flex-col gap-10 justify-between px-5">
                   <div className="flex flex-row gap-10 ">
-                    <div className="w-full lg:w-[60%] flex flex-col gap-3 lg:gap-7">
+                    <div className="w-full flex flex-col gap-3 lg:gap-7">
                       <div className="uppercase font-semibold text-lightPrimary">
                         Contact Us
                       </div>
@@ -89,74 +86,76 @@ function Footer() {
                         />
                       </div>
                     </div>
-                    <div className="w-[40%] hidden lg:flex flex-col gap-7">
-                      <div className="uppercase font-semibold text-lightPrimary">
-                        Resources
-                      </div>
-                      <div className="flex flex-col gap-3 font-light">
-                        <div>Privacy Poilicy</div>
-                        <div>Terms of Use</div>
-                        <div>Cookies Policy</div>
-                        <div>Contact</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full hidden lg:flex flex-row gap-10">
-                    <div className="uppercase font-semibold text-lightPrimary text-nowrap">
-                      Quick Links
-                    </div>
-                    <div className="w-full flex flex-row gap-5 font-light">
-                      <div>Home</div>
-                      <div>Case Studies</div>
-                      <div>Blog</div>
-                      <div>About</div>
-                    </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full flex flex-row gap-5 lg:gap-20 px-5">
-                <div className="uppercase font-semibold text-lightPrimary">
-                  Connect
-                </div>
-                <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-5 gap-y-2 lg:gap-x-10 lg:gap-y-0 font-inter font-medium text-sm lg:text-base">
-                  <div className="flex flex-row items-center gap-2">
-                    <span>
-                      <FaFacebookF />
-                    </span>
-                    Facebook
+              <div className="w-full flex flex-col gap-3">
+                <div className="w-full hidden lg:flex flex-row gap-10 px-5">
+                  <div className="uppercase font-semibold text-lightPrimary">
+                    Resources
                   </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <span>
-                      <AiFillInstagram />
-                    </span>
-                    Instagram
-                  </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <span>
-                      <FaLinkedinIn />
-                    </span>
-                    LinkedIn
-                  </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <span>
-                      <FaYoutube />
-                    </span>
-                    YouTube
-                  </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <span>
-                      <FaXTwitter />
-                    </span>
-                    Twitter (X)
-                  </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <span>
-                      <AiOutlineTikTok />
-                    </span>
-                    Tiktok
+                  <div className="flex flex-row gap-5 font-light">
+                    <div>Privacy Poilicy</div>
+                    <div>Terms of Use</div>
+                    <div>Cookies Policy</div>
+                    <div>Contact</div>
                   </div>
                 </div>
+
+                {/* <div className="w-full hidden lg:flex flex-row gap-10 px-5">
+                  <div className="uppercase font-semibold text-lightPrimary text-nowrap">
+                    Quick Links
+                  </div>
+                  <div className="w-full flex flex-row gap-5 font-light">
+                    <div>Home</div>
+                    <div>Case Studies</div>
+                    <div>Blog</div>
+                    <div>About</div>
+                  </div>
+                </div>
+                <div className="w-full hidden lg:flex flex-row gap-5 lg:gap-10 px-5">
+                  <div className="uppercase font-semibold text-lightPrimary">
+                    Connect
+                  </div>
+                  <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-5 gap-y-2 lg:gap-x-10 lg:gap-y-0 font-inter font-medium text-sm lg:text-base">
+                    <div className="flex flex-row items-center gap-2">
+                      <span>
+                        <FaFacebookF />
+                      </span>
+                      Facebook
+                    </div>
+                    <div className="flex flex-row items-center gap-2">
+                      <span>
+                        <AiFillInstagram />
+                      </span>
+                      Instagram
+                    </div>
+                    <div className="flex flex-row items-center gap-2">
+                      <span>
+                        <FaLinkedinIn />
+                      </span>
+                      LinkedIn
+                    </div>
+                    <div className="flex flex-row items-center gap-2">
+                      <span>
+                        <FaYoutube />
+                      </span>
+                      YouTube
+                    </div>
+                    <div className="flex flex-row items-center gap-2">
+                      <span>
+                        <FaXTwitter />
+                      </span>
+                      Twitter (X)
+                    </div>
+                    <div className="flex flex-row items-center gap-2">
+                      <span>
+                        <AiOutlineTikTok />
+                      </span>
+                      Tiktok
+                    </div>
+                  </div>
+                </div> */}
               </div>
               <div className="flex flex-col gap-5 w-full justify-end">
                 <div className="w-full flex flex-row gap-5 justify-between text-xs lg:text-base px-5">

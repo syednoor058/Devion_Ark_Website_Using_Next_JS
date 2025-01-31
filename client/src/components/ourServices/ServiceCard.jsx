@@ -62,7 +62,7 @@ function ServiceCard({ serviceIndex, serviceTitle, image, forwardTo }) {
           ref={serviceCard}
           className="w-full flex flex-row items-center gap-7 py-5 lg:py-10 relative"
         >
-          <p className="w-[5%] lg:w-[8%] font-light text-[5vw] lg:text-[3.5vw] leading-none text-accentColor">
+          <p className="w-[5%] lg:w-[8%] font-light text-[5vw] lg:text-[3.5vw] leading-none text-accentColor font-poppins">
             {serviceIndex}
           </p>
           <h2 className="text-[5vw] lg:text-[3.5vw] font-oswald font-bold uppercase leading-tight">

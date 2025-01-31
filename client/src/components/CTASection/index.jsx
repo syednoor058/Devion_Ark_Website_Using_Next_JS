@@ -1,33 +1,53 @@
-import { CgArrowTopRight } from "react-icons/cg";
-import { FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function CTASection() {
   return (
     <div className="w-full bg-accentColor text-darkSecondary">
-      <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-[50%] text-darkPrimary font-bold text-[7vw] lg:text-[5.5vw] pt-5 pb-5 lg:pt-32 lg:pb-16 uppercase px-5 lg:px-10 border-b lg:border-b-0 lg:border-r border-darkPrimary font-oswald leading-none">
-          <h3>
-            Do you have a <span className="text-lightPrimary">project</span> in
-            mind?
-          </h3>
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-5 py-10 lg:py-20 px-5 lg:px-20">
+        <div className="w-full lg:w-1/3 flex flex-row gap-3 justify-center items-center text-2xl">
+          <Link
+            href=""
+            className="p-3 rounded-full border border-darkSecondary hover:text-lightPrimary hover:bg-darkPrimary hover:-translate-y-2 duration-300"
+          >
+            <FaFacebookF />
+          </Link>
+          <Link
+            href=""
+            className="p-3 rounded-full border border-darkSecondary hover:text-lightPrimary hover:bg-darkPrimary hover:-translate-y-2 duration-300"
+          >
+            <FaLinkedinIn />
+          </Link>
+          <Link
+            href=""
+            className="p-3 rounded-full border border-darkSecondary hover:text-lightPrimary hover:bg-darkPrimary hover:-translate-y-2 duration-300"
+          >
+            <FaXTwitter />
+          </Link>
+          <Link
+            href=""
+            className="p-3 rounded-full border border-darkSecondary hover:text-lightPrimary hover:bg-darkPrimary hover:-translate-y-2 duration-300"
+          >
+            <AiFillInstagram />
+          </Link>
         </div>
-        <div className="w-full lg:w-[20%]  flex flex-row lg:flex-col">
-          <div className="w-[50%] py-5 lg:py-0 lg:w-full h-full lg:-[50%] flex justify-center items-center px-5 lg:px-10  text-center text-sm lg:text-xl border-r lg:border-r-0 lg:border-b border-darkPrimary hover:bg-darkPrimary hover:text-lightPrimary duration-500 transform transition ease-in-out uppercase cursor-pointer relative">
-            Get in Touch
-            <div className="w-[15%] lg:w-[20%] aspect-square absolute bottom-0 right-0 bg-lightPrimary text-darkPrimary flex justify-center items-center">
-              <CgArrowTopRight />
-            </div>
-          </div>
-          <div className="w-[50%] py-5 lg:py-0 lg:w-full h-full lg:-[50%] flex justify-center items-center px-5 lg:px-10  text-center text-sm lg:text-xl hover:bg-darkPrimary hover:text-lightPrimary duration-500 transform transition ease-in-out uppercase cursor-pointer relative">
-            LinkedIn
-            <div className="w-[15%] lg:w-[20%] aspect-square absolute bottom-0 right-0 bg-lightPrimary text-darkPrimary flex justify-center items-center">
-              <FaLinkedinIn />
-            </div>
-          </div>
+        <div className="w-full lg:w-1/3 flex justify-center items-center text-center font-oswald font-bold uppercase text-5xl lg:text-6xl border-x-[2px] border-lightPrimary">
+          <h2>Let&apos;s Talk!</h2>
         </div>
-        <div className="w-full lg:w-[30%] uppercase font-semibold text-[9vw] lg:text-[4vw] px-5 flex justify-center items-center text-center border-t lg:border-t-0 lg:border-l border-darkPrimary pt-5 pb-5 lg:pt-0 lg:pb-0 leading-none">
-          Let&apos;s &nbsp;
-          <span className="text-lightPrimary ps-5 lg:ps-3">talk</span>!
+        <div className="w-full lg:w-1/3 flex justify-center items-center">
+          <Link
+            href=""
+            className="relative  overflow-hidden  border-[2px] border-darkPrimary group"
+          >
+            <div className="inline-flex">
+              <span className="px-8 py-3 text-darkPrimary group-hover:text-lightPrimary duration-500 z-[2] text-lg">
+                Book A Call
+              </span>
+              <div className="w-full h-full bg-darkPrimary absolute top-0 left-0 -translate-x-full group-hover:translate-x-0 duration-500 z-[1] "></div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

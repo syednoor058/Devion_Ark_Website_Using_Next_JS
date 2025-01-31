@@ -69,7 +69,7 @@ function OurServices() {
         </div>
         <div className="w-full sm:w-[40%] lg:w-[60%] flex flex-row gap-5 items-center justify-end">
           <div className="text-7xl lg:text-9xl xl:text-[200px] leading-none font-thin text-accentColor overflow-hidden">
-            <span id="growth-rate" className="inline-block">
+            <span id="growth-rate" className="inline-block font-poppins">
               1.5
               <span className="text-5xl lg:text-7xl xl:text-9xl font-medium">
                 X

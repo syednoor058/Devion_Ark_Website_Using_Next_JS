@@ -1,29 +1,29 @@
 "use client";
 import Image from "next/image";
-import { CgQuote } from "react-icons/cg";
-import { IoPause } from "react-icons/io5";
 import { LuMouse } from "react-icons/lu";
-import { VscScreenFull } from "react-icons/vsc";
 
 function LandingSection() {
   return (
-    <div className="w-full">
-      <div className="w-full h-full flex flex-col-reverse lg:flex-col pb-10 lg:pb-0 pt-5 gap-5 lg:gap-0">
-        <div className="w-full px-5 lg:px-16">
-          <div className="w-full lg:w-[40%] flex flex-row items-start">
-            <span className="hidden lg:flex lg:text-6xl">
-              <CgQuote />
-            </span>
-            <p className="pt-0 lg:pt-4 font-light leading-tight text-sm">
-              Driven by innovation and client-focused solutions, we elevate
-              brands with seamless digital experiences. From tailored software
-              design to strategic digital marketing, our team brings expertise
-              to every phase of your project.
-            </p>
+    <div className="w-full h-full">
+      <div className="w-full h-full flex flex-col pb-10 pt-5 gap-5">
+        <div className="w-full flex flex-col px-5 lg:px-20">
+          <div className="uppercase font-oswald font-bold text-[6vw] lg:text-5xl leading-none">
+            <h1>Transforming your ideas into</h1>
+          </div>
+          <div className="uppercase font-oswald font-bold text-[25vw] lg:text-[12.5vw] text-lightPrimary leading-none">
+            <h1>
+              <span className="text-accentColor">Digital</span> Reality
+            </h1>
           </div>
         </div>
-        <div className="w-full flex justify-end px-0 lg:px-10">
-          <div className="w-full lg:w-[25%] flex flex-col px-3 pt-3 rounded-sm bg-darkSecondary">
+        <div className="w-full flex flex-col lg:flex-row gap-5 justify-between items-end px-0 lg:px-20">
+          <div className="w-full lg:w-[50%] h-full flex flex-row items-end px-5 lg:px-0">
+            <p className="pt-0 lg:pt-4 font-light leading-tight text-[5vw] lg:text-[2.5vw]">
+              We Deliver Data-Backed SEO, Social Media Campaigns, and Business
+              Software Designed to Scale Your Revenue.
+            </p>
+          </div>
+          <div className="w-full lg:w-[35%] flex flex-col gap-3 rounded-sm">
             <div className="w-full aspect-video overflow-hidden relative rounded-sm">
               <Image
                 src="/cover.jpg"
@@ -32,33 +32,18 @@ function LandingSection() {
                 className="object-cover"
               />
             </div>
-            <div className="w-full flex justify-between text-sm font-light">
-              <div className="w-[50%] flex flex-row gap-1 justify-center items-center py-3 border-r bg-transparent border-lightSecondary/40 cursor-pointer hover:bg-gradient-to-l hover:from-black hover:to-darkSecondary duration-1000 transform">
-                <span className="text-lg">
-                  <IoPause />
-                </span>
-                Pause
+            <div className="w-full flex flex-col items-end text-xs lg:text-sm font-light px-5 lg:px-0">
+              <div className="w-full text-start lg:text-end">
+                Devion Ark Digital Solutions
               </div>
-              <div className="w-[50%] flex flex-row justify-center gap-2 items-center py-3 bg-transparent hover:bg-gradient-to-r cursor-pointer hover:from-black hover:to-darkSecondary duration-1000">
-                <span className="text-lg">
-                  <VscScreenFull />
-                </span>
-                Full Screen
+              <div className="w-full text-start lg:text-end">
+                Showreel (2023-2025)
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col px-5 lg:px-20">
-          <div className="uppercase font-oswald font-bold text-3xl lg:text-5xl leading-none">
-            <h1>Transforming your ideas into</h1>
-          </div>
-          <div className="uppercase font-oswald font-bold text-8xl lg:text-[170px] text-lightPrimary leading-none">
-            <h1>
-              <span className="text-accentColor">Digital</span> Reality
-            </h1>
-          </div>
-        </div>
-        <div className="w-full px-20 hidden lg:flex flex-row justify-between gap-5 py-10 font-light text-sm">
+
+        <div className="w-full px-20 hidden lg:flex flex-row justify-between gap-5 font-light pt-10">
           <div className="w-1/3 flex justify-start items-center">
             &copy;2024-2025
           </div>
