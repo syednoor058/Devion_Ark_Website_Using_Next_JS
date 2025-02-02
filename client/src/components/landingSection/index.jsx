@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { LuMouse } from "react-icons/lu";
 
 function LandingSection() {
@@ -25,19 +24,16 @@ function LandingSection() {
           </div>
           <div className="w-full lg:w-[35%] flex flex-col gap-3 rounded-sm">
             <div className="w-full aspect-video overflow-hidden relative rounded-sm">
-              <Image
-                src="/cover.jpg"
-                alt="cover-image"
-                fill
-                className="object-cover"
-              />
+              <video className="w-full" loop muted autoPlay>
+                <source src="/videos/devion_ark_showreel_2024.mp4" />
+              </video>
             </div>
             <div className="w-full flex flex-col items-end text-xs lg:text-sm font-light px-5 lg:px-0">
               <div className="w-full text-start lg:text-end">
                 Devion Ark Digital Solutions
               </div>
               <div className="w-full text-start lg:text-end">
-                Showreel (2023-2025)
+                Showreel (2023-2024)
               </div>
             </div>
           </div>
