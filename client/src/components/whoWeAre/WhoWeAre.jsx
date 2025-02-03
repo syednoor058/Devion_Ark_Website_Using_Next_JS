@@ -1,22 +1,27 @@
 "use client";
 import { Avatar, AvatarGroup } from "@mui/material";
-import CircleType from "circletype";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { GoDotFill } from "react-icons/go";
+// import CircleType from "circletype";
+// import { motion } from "framer-motion";
+// import { useEffect } from "react";
+// import { GoDotFill } from "react-icons/go";
 
 function WhoWeAre() {
-  useEffect(() => {
-    const circleType = new CircleType(
-      document.getElementById("devion-ark-rotate-text")
-    );
-    circleType.radius(40);
-  }, []);
+  // useEffect(() => {
+  //   const circleType = new CircleType(
+  //     document.getElementById("devion-ark-rotate-text")
+  //   );
+  //   circleType.radius(40);
+  // }, []);
   return (
-    <div className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-darkPrimary relative overflow-hidden">
-      <div className="w-[95%] sm:w-[70%] lg:w-[50%] aspect-square bg-darkSecondary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 z-[2]">
+    <div
+      className={`w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-[url('/backgrounds/bg-zig-zag.svg')] bg-fit relative overflow-hidden`}
+    >
+      {/* <div className="w-[95%] sm:w-[70%] lg:w-[50%] aspect-square bg-black/30 rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-72 sm:-bottom-36 lg:-bottom-80 p-20 sm:p-28 lg:p-40 z-[2]">
         <div className="w-full aspect-square rounded-[100%] bg-darkPrimary"></div>
       </div>
+      <div className="w-[95%] sm:w-[70%] lg:w-[50%] aspect-square bg-black/30 rounded-[100%] absolute -left-32 -top-32 sm:-left-36 lg:-left-72 sm:-top-36 lg:-top-80 p-20 sm:p-28 lg:p-40 z-[2]">
+        <div className="w-full aspect-square rounded-[100%] bg-darkPrimary"></div>
+      </div> */}
       <div className="flex flex-col lg:flex-row gap-7 lg:gap-20 relative z-[5]">
         <div className="w-full lg:w-[65%] flex flex-col gap-5 lg:gap-10">
           <div className="flex flex-row gap-2 items-center overflow-hidden">
@@ -40,7 +45,7 @@ function WhoWeAre() {
               </span>
             </h2>
             <div className="w-full hidden lg:flex justify-start lg:justify-end">
-              <div className="w-[25%] aspect-square rounded-full bg-black flex justify-center items-center relative text-accentColor">
+              {/* <div className="w-[25%] aspect-square rounded-full bg-black flex justify-center items-center relative text-accentColor">
                 <motion.div
                   id="devion-ark-rotate-text"
                   animate={{ rotate: 360 }}
@@ -56,7 +61,7 @@ function WhoWeAre() {
                 <div className="text-2xl absolute w-full h-full top-0 left-0 flex justify-center items-center text-lightPrimary">
                   <GoDotFill />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -92,7 +97,7 @@ function WhoWeAre() {
                 8+
               </Avatar>
             </AvatarGroup>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden font-light">
               <span id="who-subdesc" className="inline-block">
                 We have{" "}
                 <span className="font-medium underline underline-offset-4 text-lightTitleText">
@@ -102,7 +107,7 @@ function WhoWeAre() {
               </span>
             </div>
           </div>
-          <div className="text-sm sm:text-base overflow-hidden font-light">
+          <div className="text-base lg:text-lg overflow-hidden font-light leading-tight">
             <span id="who-desc" className="inline-block">
               We are more than just a service provider — we are your strategic
               partner. Our mission is to empower your business with tailored

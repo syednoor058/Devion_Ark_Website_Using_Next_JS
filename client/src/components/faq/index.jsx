@@ -5,9 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
-import { motion } from "framer-motion";
 import React from "react";
-import { TiPointOfInterest } from "react-icons/ti";
 
 function FAQSection() {
   const [expanded1, setExpanded1] = React.useState(true);
@@ -37,14 +35,14 @@ function FAQSection() {
   };
 
   return (
-    <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden">
+    <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden pt-7 lg:pt-20">
       <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-[50%] flex flex-col">
-          <div className="w-full uppercase font-oswald text-lightPrimary text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 py-7 lg:py-20 border-b border-gray-700 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none">
+        <div className="w-full lg:w-[40%] flex flex-col">
+          <div className="w-full uppercase font-oswald text-lightPrimary text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none">
             Frequently Asked <span className="text-accentColor">Questions</span>
             <span>(FAQ)</span>
           </div>
-          <div className="w-full h-full flex justify-end">
+          {/* <div className="w-full h-full flex justify-end">
             <div className="text-[15vw] flex justify-center items-center text-darkPrimary h-full aspect-square bg-lightPrimary p-5">
               <motion.div
                 animate={{ rotate: 360 }}
@@ -58,10 +56,10 @@ function FAQSection() {
                 <TiPointOfInterest />
               </motion.div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="w-full lg:w-[50%] lg:border-l border-gray-700">
-          <div className="border-b border-gray-700 py-5 pe-5">
+        <div className="w-full lg:w-[60%] lg:pe-20">
+          <div className="border-gray-800 border-b py-3">
             <Accordion
               elevation={0}
               expanded={expanded1}
@@ -130,7 +128,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5 pe-5">
+          <div className=" border-gray-800 border-b py-3">
             <Accordion
               elevation={0}
               expanded={expanded2}
@@ -198,7 +196,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5 pe-5">
+          <div className=" border-gray-800 border-b py-3">
             <Accordion
               elevation={0}
               expanded={expanded3}
@@ -267,7 +265,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5 pe-5">
+          <div className=" border-gray-800 border-b py-3">
             <Accordion
               elevation={0}
               expanded={expanded4}
@@ -336,7 +334,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5 pe-5">
+          <div className=" border-gray-800 border-b py-3">
             <Accordion
               elevation={0}
               expanded={expanded5}
@@ -405,7 +403,7 @@ function FAQSection() {
               </AccordionDetails>
             </Accordion>
           </div>
-          <div className="border-b border-gray-700 py-5 pe-5">
+          <div className=" pt-3 py-6">
             <Accordion
               elevation={0}
               expanded={expanded6}

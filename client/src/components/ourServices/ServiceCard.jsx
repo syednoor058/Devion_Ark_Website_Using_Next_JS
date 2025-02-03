@@ -56,7 +56,7 @@ function ServiceCard({ serviceIndex, serviceTitle, image, forwardTo }) {
     };
   }, []);
   return (
-    <div className="w-full h-full border-b border-gray-700 text-lightPrimary  px-4 lg:px-7">
+    <div className="w-full h-full border-b border-gray-800 text-lightPrimary  px-4 lg:px-7">
       <div className="w-full flex flex-row gap-10 justify-between items-center bg-darkPrimary">
         <div
           ref={serviceCard}

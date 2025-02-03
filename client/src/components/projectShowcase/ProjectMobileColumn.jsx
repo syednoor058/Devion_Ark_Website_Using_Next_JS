@@ -15,7 +15,7 @@ function ProjectMobileColumn({ caption, image, title, forward, projectNum }) {
         </div>
       </div>
       <div className="p-5 w-full h-full flex flex-col justify-between gap-5 ">
-        <div className="w-full h-[10%] z-[5] text-sm lg:text-base">
+        <div className="w-full h-[10%] z-[5] text-base">
           {caption}
         </div>
         <div className="w-full h-[40%] text-center flex justify-center items-center z-[5] text-3xl lg:text-5xl font-oswald leading-tight font-bold">

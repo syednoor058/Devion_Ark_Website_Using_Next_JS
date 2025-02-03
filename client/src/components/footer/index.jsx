@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 import { BsHandIndexThumbFill } from "react-icons/bs";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import CallToActionsButton from "../buttons/CallToActionsButton";
@@ -90,11 +93,11 @@ function Footer() {
                 </div>
               </div>
               <div className="w-full flex flex-col gap-3">
-                <div className="w-full hidden lg:flex flex-row gap-10 px-5">
-                  <div className="uppercase font-semibold text-lightPrimary">
+                <div className="w-full hidden lg:flex flex-row gap-20 px-5">
+                  <div className="w-[10%] uppercase font-semibold text-lightPrimary">
                     Resources
                   </div>
-                  <div className="flex flex-row gap-5 font-light">
+                  <div className="w-[90%] flex flex-row gap-10 font-light">
                     <div>Privacy Poilicy</div>
                     <div>Terms of Use</div>
                     <div>Cookies Policy</div>
@@ -102,22 +105,11 @@ function Footer() {
                   </div>
                 </div>
 
-                {/* <div className="w-full hidden lg:flex flex-row gap-10 px-5">
-                  <div className="uppercase font-semibold text-lightPrimary text-nowrap">
-                    Quick Links
-                  </div>
-                  <div className="w-full flex flex-row gap-5 font-light">
-                    <div>Home</div>
-                    <div>Case Studies</div>
-                    <div>Blog</div>
-                    <div>About</div>
-                  </div>
-                </div>
-                <div className="w-full hidden lg:flex flex-row gap-5 lg:gap-10 px-5">
-                  <div className="uppercase font-semibold text-lightPrimary">
+                <div className="w-full hidden lg:flex flex-row gap-20 px-5">
+                  <div className="w-[10%] uppercase font-semibold text-lightPrimary">
                     Connect
                   </div>
-                  <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-5 gap-y-2 lg:gap-x-10 lg:gap-y-0 font-inter font-medium text-sm lg:text-base">
+                  <div className="w-[90%] flex flex-row gap-10 font-light">
                     <div className="flex flex-row items-center gap-2">
                       <span>
                         <FaFacebookF />
@@ -155,7 +147,7 @@ function Footer() {
                       Tiktok
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
               <div className="flex flex-col gap-5 w-full justify-end">
                 <div className="w-full flex flex-row gap-5 justify-between text-xs lg:text-base px-5">

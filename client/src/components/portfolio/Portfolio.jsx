@@ -1,6 +1,6 @@
 function PortfolioCard({ amount, text }) {
   return (
-    <div className="w-[60%] lg:w-[20%] flex flex-row leading-none">
+    <div className="w-[33%] lg:w-[20%] flex flex-row leading-none">
       <div className="w-[15%] text-lightPrimary">
         <svg
           width=" 100%"
@@ -35,11 +35,13 @@ function PortfolioCard({ amount, text }) {
           ></path>
         </svg>
       </div>
-      <div className="w-[70%] flex flex-col gap-3 py-5 justify-center items-center">
-        <h3 className="text-[8vw] lg:text-[4vw] font-medium font-poppins leading-none">
+      <div className="w-[70%] flex flex-col py-5 gap-1 justify-center items-center">
+        <h3 className="text-[6vw] lg:text-[4vw] font-medium font-poppins leading-none">
           {amount}
         </h3>
-        <p className="text-center text-sm leading-none">{text}</p>
+        <p className="text-center text-xs lg:text-base leading-none font-light lg:font-medium">
+          {text}
+        </p>
       </div>
       <div className="w-[15%] text-lightPrimary">
         <svg
@@ -81,14 +83,11 @@ function PortfolioCard({ amount, text }) {
 
 function Portfolio() {
   return (
-    <div className="w-full bg-accentColor text-darkSecondary py-5 lg:py-10 px-5 lg:px-20 flex justify-center">
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-16">
-        <PortfolioCard amount="3+" text="Years of experienced team." />
-        <PortfolioCard amount="20" text="Projects completed successfully." />
-        <PortfolioCard
-          amount="12"
-          text="Satisfied clients all over the world."
-        />
+    <div className="w-full bg-accentColor text-darkSecondary py-5 lg:py-10 px-[5px] lg:px-20 flex justify-center">
+      <div className="flex flex-row justify-center items-center gap-2 lg:gap-10">
+        <PortfolioCard amount="3+" text="Years of Expertise." />
+        <PortfolioCard amount="20" text="Projects Delivered." />
+        <PortfolioCard amount="12" text="Global Collaborations." />
       </div>
     </div>
   );

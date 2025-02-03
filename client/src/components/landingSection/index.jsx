@@ -28,7 +28,7 @@ function LandingSection() {
                 <source src="/videos/devion_ark_showreel_2024.mp4" />
               </video>
             </div>
-            <div className="w-full flex flex-col items-end text-xs lg:text-sm font-light px-5 lg:px-0">
+            <div className="w-full flex flex-col items-end text-sm font-light px-5 lg:px-0">
               <div className="w-full text-start lg:text-end">
                 Devion Ark Digital Solutions
               </div>

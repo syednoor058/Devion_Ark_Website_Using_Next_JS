@@ -32,12 +32,12 @@ function OurServices() {
   return (
     <div className="w-full py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
       <div className="w-full h-full flex flex-row justify-between absolute top-0 z-[1] overflow-hidden px-5 lg:px-20">
-        <div className="w-[1px] h-full bg-darkSecondary"></div>
-        <div className="w-[1px] h-full bg-darkSecondary"></div>
-        <div className="w-[1px] h-full bg-darkSecondary"></div>
-        <div className="w-[1px] h-full bg-darkSecondary"></div>
-        <div className="w-[1px] h-full bg-darkSecondary"></div>
-        <div className="w-[1px] h-full bg-darkSecondary"></div>
+        <div className="w-[1px] h-full bg-gray-800"></div>
+        <div className="w-[1px] h-full bg-gray-800"></div>
+        <div className="w-[1px] h-full bg-gray-800"></div>
+        <div className="w-[1px] h-full bg-gray-800"></div>
+        {/* <div className="w-[1px] h-full bg-gray-800"></div>
+        <div className="w-[1px] h-full bg-gray-800"></div> */}
       </div>
       <div className="flex flex-col gap-5 lg:gap-10 z-[2]">
         <div className="flex flex-row gap-2 items-center px-5 lg:px-20">
@@ -54,7 +54,7 @@ function OurServices() {
         </h2>
       </div>
       <div className="w-full flex flex-col sm:flex-row justify-start px-5 sm:px-7 lg:px-10 xl:px-20 gap-7 z-[2]">
-        <div className="w-full sm:w-[60%] xl:w-[40%] text-sm lg:text-base font-light overflow-hidden">
+        <div className="w-full sm:w-[60%] xl:w-[40%] text-base lg:text-lg font-light overflow-hidden leading-tight">
           <span
             id="what-we-do-desc"
             className="block overflow-hidden  backdrop-blur-[1px] py-3 bg-darkPrimary"
@@ -81,7 +81,7 @@ function OurServices() {
       </div>
 
       <div className="px-5 lg:px-20 z-[2]">
-        <div className="border-t border-gray-700 flex flex-col">
+        <div className="border-t border-gray-800 flex flex-col">
           <ServiceCard
             serviceIndex="01"
             serviceTitle="Software System Development"

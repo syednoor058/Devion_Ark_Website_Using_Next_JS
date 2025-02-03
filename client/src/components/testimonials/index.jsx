@@ -181,7 +181,7 @@ function Testimonials() {
           </div>
         </div>
         <div className="flex lg:hidden flex-col">
-          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row gap-2">
               <p className=" font-light leading-tight">
                 With their SEO expertise and digital marketing campaigns, we saw
@@ -205,7 +205,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row-reverse items-start gap-2">
               <p className="font-light leading-tight text-end">
                 Our business grew faster than we imagined after partnering with
@@ -229,7 +229,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row gap-2">
               <p className="font-light leading-tight">
                 They developed an E-commerce web application for my jersey
@@ -253,7 +253,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="border-b border-gray-700 flex flex-col gap-5 px-5 py-5">
+          <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
             <div className="flex flex-row-reverse items-start gap-2">
               <p className="font-light leading-tight text-end">
                 We relied on them for software development, and they exceeded
