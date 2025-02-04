@@ -85,38 +85,38 @@ function OurServices() {
           <ServiceCard
             serviceIndex="01"
             serviceTitle="Software System Development"
-            image="/services/software_development.jpg"
             forwardTo=""
+            background="/services/software_development_background.mp4"
           />
           <ServiceCard
             serviceIndex="02"
             serviceTitle="Modern Website Development"
-            image="/services/software_development.jpg"
             forwardTo=""
+            background="/services/web_development_background.mp4"
           />
           <ServiceCard
             serviceIndex="03"
             serviceTitle="Social Media Marketing (SMM)"
-            image="/services/software_development.jpg"
             forwardTo=""
+            background="/services/social_media_marketing_background.mp4"
           />
           <ServiceCard
             serviceIndex="04"
             serviceTitle="Search Engine Marketing (SEM)"
-            image="/services/software_development.jpg"
             forwardTo=""
+            background="/services/search_engine_marketing_background.mp4"
           />
           <ServiceCard
             serviceIndex="05"
             serviceTitle="Search Engine Optimization"
-            image="/services/software_development.jpg"
             forwardTo=""
+            background="/services/seo_background.mp4"
           />
           <ServiceCard
             serviceIndex="06"
             serviceTitle="Business Consultation"
-            image="/services/software_development.jpg"
             forwardTo=""
+            background="/services/business_consult_background.mp4"
           />
         </div>
       </div>

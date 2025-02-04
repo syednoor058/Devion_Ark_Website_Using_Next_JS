@@ -35,10 +35,10 @@ function FAQSection() {
   };
 
   return (
-    <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden pt-7 lg:pt-20">
+    <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-[40%] flex flex-col">
-          <div className="w-full uppercase font-oswald text-lightPrimary text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none">
+          <div className="w-full uppercase font-oswald text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none text-darkSecondary bg-lightPrimary py-20">
             Frequently Asked <span className="text-accentColor">Questions</span>
             <span>(FAQ)</span>
           </div>
@@ -57,8 +57,9 @@ function FAQSection() {
               </motion.div>
             </div>
           </div> */}
+          <div className="w-full aspect-video bg-black"></div>
         </div>
-        <div className="w-full lg:w-[60%] lg:pe-20">
+        <div className="w-full lg:w-[60%] lg:pe-20 pt-5 lg:ps-10">
           <div className="border-gray-800 border-b py-3">
             <Accordion
               elevation={0}
