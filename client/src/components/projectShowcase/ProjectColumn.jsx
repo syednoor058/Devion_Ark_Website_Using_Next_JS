@@ -1,21 +1,30 @@
 import gsap from "gsap";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 function ProjectColumn({
   caption,
   title,
   forward,
-  image,
+  video,
   projectNum,
   activeCard,
   setActiveCard,
 }) {
   const projectCard = useRef(null);
+  const videoRef = useRef(null);
+
   const projectCardHover = useRef(null);
   useEffect(() => {
     const projectContainer = projectCard.current;
     const projectHoverComponent = projectCardHover.current;
+    const videoComponent = videoRef.current;
+
+    if (activeCard === projectNum) {
+      videoComponent.play();
+    } else {
+      videoComponent.pause();
+      videoComponent.currentTime = 0;
+    }
 
     if (!projectContainer || activeCard !== projectNum) return;
 
@@ -81,22 +90,30 @@ function ProjectColumn({
         }}
       >
         <div className={`w-full h-full overflow-hidden relative`}>
-          <Image
-            src={image}
-            alt="ecommerce web application"
-            fill
-            className="object-cover"
-          />
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={video} />
+          </video>
         </div>
       </div>
 
-      <div className="w-full text-sm h-[15%] text-darkPrimary z-[2]">
+      <div
+        className={`w-full ${
+          activeCard === projectNum ? "text-base" : "text-sm"
+        } h-[15%] text-darkPrimary z-[2]`}
+      >
         {caption}
       </div>
       <div className="w-full h-[30%] z-[2] flex flex-col gap-7 justify-center items-center">
         <h2
           className={`font-oswald font-bold ${
-            activeCard === projectNum ? "text-3xl" : "text-2xl"
+            activeCard === projectNum ? "text-5xl" : "text-2xl"
           }  text-darkPrimary text-center duration-500`}
         >
           {title}

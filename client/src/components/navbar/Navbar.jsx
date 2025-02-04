@@ -2,6 +2,7 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 import { BiSupport } from "react-icons/bi";
@@ -36,18 +37,11 @@ function Navbar() {
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
   ];
+  const pathname = usePathname(); // Get the current path
   const [menuExpand, setMenuExpand] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [bgColor, setBgColor] = useState("bg-transparent");
   const { scrollY } = useScroll();
-
-  // useEffect(() => {
-  //   console.log(menuExpand);
-  // }, [menuExpand]);
-
-  // useEffect(() => {
-  //   console.log(hidden);
-  // }, [hidden]);
 
   useMotionValueEvent(scrollY, "change", (latestY) => {
     const prevY = scrollY.getPrevious();
@@ -131,7 +125,11 @@ function Navbar() {
                     onClick={() => setMenuExpand(false)}
                   >
                     <div
-                      className={`w-full text-lightPrimary duration-500 text-[4.5vw] font-bold uppercase font-oswald leading-none`}
+                      className={`w-full ${
+                        pathname === navLink.path
+                          ? "text-accentColor"
+                          : "text-lightSecondary hover:text-lightPrimary"
+                      } hover:tracking-widest text-[4.5vw] font-bold uppercase font-oswald leading-none duration-500`}
                     >
                       {navLink.label}
                     </div>
@@ -265,9 +263,17 @@ function Navbar() {
           <div className="w-full h-full pt-20 flex flex-col gap-10 justify-between z-[1001]">
             <div className="w-full flex flex-col gap-2 px-5">
               {navLinks.map((navLink, index) => (
-                <Link href={navLink.path} key={index}>
+                <Link
+                  href={navLink.path}
+                  key={index}
+                  onClick={() => setMenuExpand(false)}
+                >
                   <div
-                    className={`w-full text-lightPrimary duration-500 text-[14vw] font-bold uppercase font-oswald leading-none`}
+                    className={`w-full ${
+                      pathname === navLink.path
+                        ? "text-accentColor"
+                        : "text-lightSecondary hover:text-lightPrimary"
+                    }  duration-500 text-[14vw] font-bold uppercase font-oswald leading-none`}
                   >
                     {navLink.label}
                   </div>
@@ -275,7 +281,7 @@ function Navbar() {
               ))}
             </div>
             <div className="w-full ps-5 pe-10">
-              <div className="w-full h-[1px] bg-lightSecondary"></div>
+              <div className="w-full h-[1px] bg-gray-800"></div>
               <div className=" w-full flex flex-row gap-2 justify-between py-5 text-lg">
                 <FaFacebookF />
                 <FaLinkedinIn />

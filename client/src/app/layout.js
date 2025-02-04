@@ -14,7 +14,7 @@ const oswald = Oswald({ subsets: ['latin'], weight: ["200", "300", "400", "500",
 gsap.registerPlugin(ScrollTrigger);
 
 export const metadata = {
-  title: "Devion Ark - Innovative IT Solutions for Your Business Success",
+  title: "Devion Ark | Innovative IT Solutions for Your Business Success",
   description: "Explore cutting-edge IT solutions with Devion Ark for businesses of all sizes. From e-commerce development and custom management systems to SEO optimization and digital marketing strategies, we deliver tailored services to drive your growth.",
 };
 

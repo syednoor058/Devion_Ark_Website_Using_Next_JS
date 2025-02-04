@@ -1,23 +1,23 @@
-import Image from "next/image";
 import Link from "next/link";
 
-function ProjectMobileColumn({ caption, image, title, forward, projectNum }) {
+function ProjectMobileColumn({ caption, video, title, forward, projectNum }) {
   return (
     <div className="w-full h-screen relative text-darkPrimary border-b border-black">
       <div className="w-full h-full absolute top-0 left-0 z-[1]">
         <div className="w-full h-full overflow-hidden relative z-[1]">
-          <Image
-            src={image}
-            alt={title + "project image"}
-            fill
-            className="object-cover"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={video} />
+          </video>
         </div>
       </div>
       <div className="p-5 w-full h-full flex flex-col justify-between gap-5 ">
-        <div className="w-full h-[10%] z-[5] text-base">
-          {caption}
-        </div>
+        <div className="w-full h-[10%] z-[5] text-base">{caption}</div>
         <div className="w-full h-[40%] text-center flex justify-center items-center z-[5] text-3xl lg:text-5xl font-oswald leading-tight font-bold">
           {title}
         </div>

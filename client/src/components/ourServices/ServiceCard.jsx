@@ -58,7 +58,7 @@ function ServiceCard({ serviceIndex, serviceTitle, background, forwardTo }) {
       <div className="w-full h-full absolute top-0 left-0 overflow-hidden z-[2]">
         <div className="w-full h-full relative -translate-x-full group-hover:translate-x-0 duration-500">
           <video
-            className="object-cover object-center opacity-50"
+            className="w-full h-full object-cover object-center opacity-50"
             autoPlay
             loop
             muted

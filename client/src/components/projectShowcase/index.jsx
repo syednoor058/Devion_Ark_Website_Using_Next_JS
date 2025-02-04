@@ -142,7 +142,7 @@ const ProjectShowcase = () => {
           <ProjectColumn
             caption="An intuitive and scalable e-commerce website tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking."
             title="Dynamic Sportswear E-Commerce Platform"
-            image="/projects/shop.jpg"
+            video="/projects/e-commerce_background.mp4"
             forward=""
             projectNum="1"
             activeCard={activeCard}
@@ -151,7 +151,7 @@ const ProjectShowcase = () => {
           <ProjectColumn
             caption="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
             title="Comprehensive Real Estate CRM Solution"
-            image="/projects/real_estate.jpg"
+            video="/projects/real_estate_background.mp4"
             forward=""
             projectNum="2"
             activeCard={activeCard}
@@ -160,7 +160,7 @@ const ProjectShowcase = () => {
           <ProjectColumn
             caption="A strategic social media project encompassing content creation, ad campaigns, audience engagement strategies, and performance monitoring to boost online presence."
             title="Advanced Social Media Marketing Toolkit"
-            image="/projects/smm.jpg"
+            video="/projects/smm_background.mp4"
             forward=""
             projectNum="3"
             activeCard={activeCard}
@@ -169,7 +169,7 @@ const ProjectShowcase = () => {
           <ProjectColumn
             caption="A strategic social media project encompassing content creation, ad campaigns, audience engagement strategies, and performance monitoring to boost online presence."
             title="Technical Search Engine Optimization"
-            image="/projects/seo.jpg"
+            video="/projects/seo_background.mp4"
             forward=""
             projectNum="4"
             activeCard={activeCard}
@@ -183,7 +183,7 @@ const ProjectShowcase = () => {
           <ProjectMobileColumn
             caption="An intuitive and scalable e-commerce web application tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking."
             title="Dynamic Sportswear E-Commerce Platform"
-            image="/projects/shop.jpg"
+            video="/projects/e-commerce_background.mp4"
             forward=""
             projectNum="1"
           />
@@ -195,7 +195,7 @@ const ProjectShowcase = () => {
             <ProjectMobileColumn
               caption="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
               title="Comprehensive Real Estate CRM Solution"
-              image="/projects/real_estate.jpg"
+              video="/projects/real_estate_background.mp4"
               forward=""
               projectNum="2"
             />
@@ -208,7 +208,7 @@ const ProjectShowcase = () => {
             <ProjectMobileColumn
               caption="A strategic social media project encompassing content creation, ad campaigns, audience engagement strategies, and performance monitoring to boost online presence."
               title="Advanced Social Media Marketing Toolkit"
-              image="/projects/smm.jpg"
+              video="/projects/smm_background.mp4"
               forward=""
               projectNum="3"
             />
@@ -221,7 +221,7 @@ const ProjectShowcase = () => {
             <ProjectMobileColumn
               caption="A robust SEO implementation project focused on keyword research, technical SEO audits, on-page optimization, and content strategy to improve search rankings and organic traffic."
               title="Strategic SEO Optimization Framework"
-              image="/projects/seo.jpg"
+              video="/projects/seo_background.mp4"
               forward=""
               projectNum="4"
             />
