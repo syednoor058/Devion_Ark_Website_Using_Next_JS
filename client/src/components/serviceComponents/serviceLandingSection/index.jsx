@@ -1,72 +1,40 @@
-"use client";
-import CircleType from "circletype";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { GoDotFill } from "react-icons/go";
+import ActionButton from "@/components/buttons/ActionButton";
 
 function ServiceLandingSection() {
-  useEffect(() => {
-    const circleType = new CircleType(
-      document.getElementById("service-hero-rotated-text")
-    );
-
-    circleType.radius(70);
-  }, []);
   return (
     <div className="w-screen h-full relative">
-      <div className="w-full h-full flex flex-col justify-end border-b border-gray-700">
-        <div className="w-full h-full flex flex-row">
-          <div className="w-[13%] bg-lightPrimary">
-            <div className="w-full h-full ">
-              <div className="w-full h-full relative flex justify-center items-center text-darkPrimary font-light p-5">
-                <motion.div
-                  id="service-hero-rotated-text"
-                  className=""
-                  animate={{ rotate: 360 }}
-                  transition={{
-                    duration: 15,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "linear",
-                  }}
-                >
-                  ur Services . Our Services . Our Services . O
-                </motion.div>
-                <div className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-3xl">
-                  <GoDotFill />
-                </div>
-              </div>
-            </div>
+      <div className="w-full flex flex-col gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
+        <div className="w-full flex flex-col font-oswald font-bold uppercase text-center lg:text-end">
+          <div className=" text-lightSecondary leading-tight lg:leading-none text-[5.5vw] lg:text-[5vw]">
+            <h1>Empowering Your Business with</h1>
           </div>
-          <div className="w-[57%] border-x border-gray-700 p-5 flex justify-end items-end text-7xl">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 480 480"
-              width="64"
-              height="64"
-              fill="#999"
-            >
-              <path d="M240.2 240A240 240 0 0 0 480 0H240a240 240 0 1 0 0 480h240a240 240 0 0 0-239.8-240Z"></path>
-            </svg>
-            {/* <FiArrowDownRight /> */}
-          </div>
-          <div className="w-[30%] p-5 bg-accentColor text-darkPrimary">
-            <p className="font-light">
-              Transform Your Business with Data-Driven Digital Solutions – From
-              Skyrocketing Social Media Engagement to Dominating Search
-              Rankings. Partner with Devion Ark for Tailored Strategies in SEO,
-              Custom Software, and Growth-Focused Marketing That Delivers
-              Measurable Results. Ready to Outrank Competitors, Convert Leads,
-              and Scale Seamlessly? Let’s Build Your Online Empire.
-            </p>
+          <div className="leading-tight lg:leading-none text-lightPrimary text-[8vw]">
+            <h1>
+              Cutting-Edge <span className="text-accentColor">Solutions</span>
+            </h1>
           </div>
         </div>
-        <div className="w-full flex flex-row border-t border-gray-700">
-          <div className="w-[13%]"></div>
-          <div className="w-[57%] border-x border-gray-700 px-5 uppercase font-bold text-[13.5vw] font-oswald text-accentColor leading-tight">
-            <h1>Services</h1>
+        <div className="w-full">
+          <p className="w-full lg:w-[50%] text-[4vw] lg:text-[2vw] font-light text-lightSecondary leading-tight lg:pt-5">
+            We craft tailored digital experiences-driving measurable growth,
+            ensuring your business stands out in today&apos;s competitive online
+            landscape."
+          </p>
+        </div>
+        <div className="w-full flex justify-end">
+          <div className="w-full lg:w-[50%] flex justify-start lg:justify-end">
+            <ActionButton
+              forwardTo=""
+              label="Get Started"
+              labelColor="text-lightPrimary"
+              labelHoverColor="text-darkPrimary"
+              bgColor="bg-lightPrimary"
+              labelSize="text-2xl"
+              borderColor="border-lightPrimary"
+              iconColor="text-darkPrimary"
+              iconSize="text-4xl"
+            />
           </div>
-          <div className="w-[30%] p-5 flex items-end text-xl">6</div>
         </div>
       </div>
     </div>
