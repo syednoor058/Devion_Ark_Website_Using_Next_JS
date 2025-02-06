@@ -1,3 +1,5 @@
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/footer";
 import ServicesDetails from "@/components/serviceComponents/serviceDetails";
 import ServiceLandingSection from "@/components/serviceComponents/serviceLandingSection";
 
@@ -12,6 +14,8 @@ function Services() {
     <main className="font-poppins">
       <ServiceLandingSection />
       <ServicesDetails />
+      <CTASection />
+      <Footer />
     </main>
   );
 }

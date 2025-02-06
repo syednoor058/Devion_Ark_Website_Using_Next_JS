@@ -7,7 +7,6 @@ function ActionButton({
   label,
   labelSize,
   labelColor,
-  labelHoverColor,
   borderColor,
   bgColor,
   iconColor,
@@ -19,11 +18,11 @@ function ActionButton({
         <div className="inline-flex">
           {/* Text Container */}
           <div
-            className={`relative px-5 py-3 border-l-2 border-y-2 overflow-hidden ${borderColor}`}
+            className={`relative px-5 py-3 border-2 overflow-hidden ${borderColor}`}
           >
             {/* Label Text */}
             <h4
-              className={`relative z-10 block transition-colors duration-500 ${labelColor} group-hover:${labelHoverColor} ${labelSize} capitalize`}
+              className={`relative z-10 block transition-colors duration-500 ${labelColor} ${labelSize} capitalize`}
             >
               {label}
             </h4>
