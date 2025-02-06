@@ -1,7 +1,8 @@
 "use client";
-
 import ActionButton from "@/components/buttons/ActionButton";
 import dynamic from "next/dynamic";
+import { FaEarthAmericas } from "react-icons/fa6";
+import { LuArrowUpRight } from "react-icons/lu";
 import dollarAnimation from "../../../../public/animations/business.json";
 import SEMAnimation from "../../../../public/animations/sem.json";
 import SEOAnimation from "../../../../public/animations/seo.json";
@@ -14,7 +15,7 @@ function ServicesDetails() {
   return (
     <div className="w-full px-5 lg:px-20 bg-black py-10 lg:py-20">
       <div className="w-full flex flex-col gap-5 lg:gap-10">
-        <div className="w-full text-accentColor font-oswald font-bold uppercase text-center text-[7vw]">
+        <div className="w-full text-accentColor font-oswald font-bold uppercase text-center text-[8vw] lg:text-[7vw]">
           <h2>At your service</h2>
         </div>
         <div className="w-full h-full flex flex-col gap-5 lg:gap-10">
@@ -25,9 +26,10 @@ function ServicesDetails() {
                   <h3>Custom Software Development</h3>
                 </div>
                 <p className="font-light leading-tight text-base lg:text-lg text-darkSecondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                  a esse, nostrum sint eos beatae eum, nam odio eveniet
-                  expedita, sed deleniti nobis accusantium delectus ex.
+                  Every business has unique needs. Custom software solutions
+                  improve efficiency, automate workflows, and solve specific
+                  challenges with precision, ensuring seamless integration and
+                  long-term scalability.
                 </p>
                 <div className="w-full flex justify-end">
                   <div className="w-full flex justify-end">
@@ -40,6 +42,7 @@ function ServicesDetails() {
                       borderColor="border-darkPrimary"
                       iconColor="text-lightPrimary"
                       iconSize="text-lg lg:text-2xl"
+                      icon={<FaEarthAmericas />}
                     />
                   </div>
                 </div>
@@ -60,9 +63,10 @@ function ServicesDetails() {
                     <h3>Website Development</h3>
                   </div>
                   <p className="font-light leading-tight text-base lg:text-lg text-lightSecondary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nisi a esse, nostrum sint eos beatae eum, nam odio eveniet
-                    expedita, sed deleniti nobis accusantium delectus ex.
+                    A well-crafted website is the foundation of any successful
+                    online presence. Expect lightning-fast performance,
+                    responsive layouts, and seamless navigation—all designed to
+                    engage visitors and boost conversions.
                   </p>
                   <div className="w-full flex justify-end">
                     <div className="w-full flex justify-end">
@@ -75,6 +79,7 @@ function ServicesDetails() {
                         borderColor="border-accentColor"
                         iconColor="text-darkPrimary"
                         iconSize="text-lg lg:text-xl"
+                        icon={<FaEarthAmericas />}
                       />
                     </div>
                   </div>
@@ -97,9 +102,10 @@ function ServicesDetails() {
                   />
                 </div>
                 <p className="font-light leading-tight text-base lg:text-lg text-darkSecondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                  a esse, nostrum sint eos beatae eum, nam odio eveniet
-                  expedita, sed deleniti nobis accusantium delectus ex.
+                  Ranking higher on search engines means more customers and
+                  better conversions. From keyword research, website audit &
+                  backlinking to content strategy & technical SEO, every step is
+                  geared toward increasing reach and online presence.
                 </p>
               </div>
             </div>
@@ -112,10 +118,11 @@ function ServicesDetails() {
                         <h3>Social Media Marketing</h3>
                       </div>
                       <p className="font-light leading-tight text-base lg:text-lg text-darkSecondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi a esse, nostrum sint eos beatae eum, nam odio
-                        eveniet expedita, sed deleniti nobis accusantium
-                        delectus ex.
+                        A strong social presence builds brand trust and drives
+                        engagement. Targeted campaigns, creative content, and
+                        data-driven strategies ensure the right audience sees
+                        and interacts with your brand across platforms like
+                        Facebook, Instagram, LinkedIn, and more.
                       </p>
                       <div className="w-full flex">
                         <div className="w-full flex">
@@ -128,6 +135,7 @@ function ServicesDetails() {
                             borderColor="border-darkPrimary"
                             iconColor="text-lightPrimary"
                             iconSize="text-2xl"
+                            icon={<LuArrowUpRight />}
                           />
                         </div>
                       </div>
@@ -187,10 +195,11 @@ function ServicesDetails() {
                         </div>
                       </div>
                       <p className="font-light leading-tight text-base lg:text-lg text-darkSecondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi a esse, nostrum sint eos beatae eum, nam odio
-                        eveniet expedita, sed deleniti nobis accusantium
-                        delectus ex.
+                        Success starts with the right strategy. Data-backed
+                        decisions, market study, competitor analysis, & tailored
+                        solutions help businesses optimize operations, increase
+                        profitability, and stay ahead of competitors in an
+                        ever-evolving market.
                       </p>
                     </div>
                   </div>

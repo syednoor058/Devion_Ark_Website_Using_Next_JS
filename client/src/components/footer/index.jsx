@@ -6,7 +6,7 @@ import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
-import CallToActionsButton from "../buttons/CallToActionsButton";
+import ActionButton from "../buttons/ActionButton";
 
 function AddressInfo({ icon, title, value }) {
   return (
@@ -40,16 +40,24 @@ function Footer() {
                   </p>
                   <form className="w-full flex flex-col gap-2">
                     <input
-                      className="px-5 py-2 rounded-sm"
+                      className="px-5 py-3 rounded-sm"
                       placeholder="Enter your email address"
                     />
-
-                    <CallToActionsButton
-                      forwardTo=""
-                      label="Subscribe"
-                      icon={<BsHandIndexThumbFill />}
-                      btnColor="bg-lightPrimary"
-                    />
+                    <div className="w-full flex justify-start">
+                      <div className="w-full flex justify-start">
+                        <ActionButton
+                          forwardTo=""
+                          label="Subscribe"
+                          labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                          bgColor="bg-lightPrimary"
+                          labelSize="text-base"
+                          borderColor="border-lightPrimary"
+                          iconColor="text-darkPrimary"
+                          iconSize="text-xl"
+                          icon={<BsHandIndexThumbFill />}
+                        />
+                      </div>
+                    </div>
                   </form>
 
                   <p className="text-sm font-light">

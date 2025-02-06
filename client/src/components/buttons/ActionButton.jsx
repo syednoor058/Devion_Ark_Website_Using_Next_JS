@@ -1,6 +1,5 @@
 // import Link from "next/link";
 import Link from "next/link";
-import { LuArrowUpRight } from "react-icons/lu";
 
 function ActionButton({
   forwardTo,
@@ -11,6 +10,7 @@ function ActionButton({
   bgColor,
   iconColor,
   iconSize,
+  icon,
 }) {
   return (
     <div className="inline-flex group">
@@ -22,7 +22,7 @@ function ActionButton({
           >
             {/* Label Text */}
             <h4
-              className={`relative z-10 block transition-colors duration-500 ${labelColor} ${labelSize} capitalize`}
+              className={`relative z-10 block transition-colors duration-500 ${labelColor} ${labelSize} capitalize whitespace-nowrap`}
             >
               {label}
             </h4>
@@ -37,7 +37,7 @@ function ActionButton({
       <div
         className={`h-full aspect-square flex justify-center items-center ${iconSize} transition-colors duration-500 ${bgColor} ${iconColor}`}
       >
-        <LuArrowUpRight />
+        {icon}
       </div>
     </div>
   );

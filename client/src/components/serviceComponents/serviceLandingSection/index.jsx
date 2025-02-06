@@ -1,5 +1,5 @@
 import ActionButton from "@/components/buttons/ActionButton";
-
+import { LuArrowUpRight } from "react-icons/lu";
 function ServiceLandingSection() {
   return (
     <div className="w-full h-full relative">
@@ -35,6 +35,7 @@ function ServiceLandingSection() {
               borderColor="border-lightPrimary"
               iconColor="text-darkPrimary"
               iconSize="text-4xl"
+              icon={<LuArrowUpRight />}
             />
           </div>
         </div>

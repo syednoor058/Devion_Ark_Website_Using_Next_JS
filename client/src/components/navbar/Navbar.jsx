@@ -5,15 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
-import { BiSupport } from "react-icons/bi";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { HiMiniArrowUpRight } from "react-icons/hi2";
-import { IoMdMail, IoMdPin } from "react-icons/io";
+import { IoIosSend, IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
-import CallToActionsButton from "../buttons/CallToActionsButton";
+import ActionButton from "../buttons/ActionButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
 function AddressInfo({ icon, title, value }) {
@@ -76,18 +74,18 @@ function Navbar() {
             bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
           } px-20 z-[1002] py-[5px]`}
         >
-          <div className={`relative z-[1003]`}>
+          <Link href="/" className={`relative z-[1003]`}>
             <Image
               src={logo}
               alt="devion_ark_logo"
               className="w-auto h-14 object-fill"
             />
-          </div>
+          </Link>
           <div
-            className={`flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
+            className={`w-full flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
           >
             <div
-              className="flex flex-row gap-2 items-center px-10 cursor-pointer"
+              className=" flex flex-row gap-2 items-center px-10 cursor-pointer"
               onClick={() => setMenuExpand((prevMenu) => !prevMenu)}
             >
               <div>
@@ -97,13 +95,22 @@ function Navbar() {
                 Menu
               </div>
             </div>
-            <div className="ps-10 border-l border-lightSecondary">
-              <CallToActionsButton
-                forwardTo=""
-                label="Get A Quote"
-                icon={<HiMiniArrowUpRight />}
-                btnColor="bg-accentColor"
-              />
+            <div className="ps-10">
+              <div className="w-full flex justify-end">
+                <div className="w-full flex justify-end">
+                  <ActionButton
+                    forwardTo=""
+                    label="Get A Quote"
+                    labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                    bgColor="bg-lightPrimary"
+                    labelSize="text-sm"
+                    borderColor="border-lightPrimary"
+                    iconColor="text-darkPrimary"
+                    iconSize="text-lg"
+                    icon={<IoIosSend />}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -249,7 +256,7 @@ function Navbar() {
           </div>
           <div className="w-[15%]  flex justify-center items-center border-l border-lightSecondary text-2xl text-lightPrimary z-[1003]">
             <div>
-              <BiSupport />
+              <IoIosSend />
             </div>
           </div>
         </div>
