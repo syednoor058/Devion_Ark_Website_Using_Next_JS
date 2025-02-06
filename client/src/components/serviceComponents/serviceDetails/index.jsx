@@ -1,12 +1,14 @@
 "use client";
 
 import ActionButton from "@/components/buttons/ActionButton";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import dollarAnimation from "../../../../public/animations/business.json";
 import SEMAnimation from "../../../../public/animations/sem.json";
 import SEOAnimation from "../../../../public/animations/seo.json";
 import SMMAnimation from "../../../../public/animations/social_media_marketing.json";
 import webDevelopmentAnimation from "../../../../public/animations/website_development.json";
+// Dynamically import Lottie with SSR disabled
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 function ServicesDetails() {
   return (
