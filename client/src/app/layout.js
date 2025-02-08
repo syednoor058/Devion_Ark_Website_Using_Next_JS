@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./globals.css";
 
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/Navbar";
 import SmoothScroll from "@/components/smoothScroll";
 import { Inter, Oswald, Poppins, Roboto } from 'next/font/google';
@@ -28,7 +30,11 @@ export default function RootLayout({ children }) {
         className={`w-full ${inter.variable} ${roboto.variable} ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden`}
       >
         <Navbar />
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          {children}
+          <CTASection />
+          </SmoothScroll>
+        <Footer />
       </body>
     </html>
   );

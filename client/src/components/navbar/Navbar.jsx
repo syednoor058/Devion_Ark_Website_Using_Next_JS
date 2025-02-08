@@ -5,9 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
-import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaRegPaperPlane,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { IoIosSend, IoMdMail, IoMdPin } from "react-icons/io";
+import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
@@ -72,13 +77,13 @@ function Navbar() {
         <div
           className={`w-full h-full flex flex-row gap-5 justify-between items-center ${
             bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
-          } px-20 z-[1002] py-[5px]`}
+          } px-20 z-[1002] py-3`}
         >
-          <Link href="/" className={`relative z-[1003]`}>
+          <Link href="/" className={`w-full relative z-[1003]`}>
             <Image
               src={logo}
               alt="devion_ark_logo"
-              className="w-auto h-14 object-fill"
+              className="w-auto h-14 object-fit"
             />
           </Link>
           <div
@@ -107,7 +112,7 @@ function Navbar() {
                     borderColor="border-lightPrimary"
                     iconColor="text-darkPrimary"
                     iconSize="text-lg"
-                    icon={<IoIosSend />}
+                    icon={<FaRegPaperPlane />}
                   />
                 </div>
               </div>
@@ -256,7 +261,7 @@ function Navbar() {
           </div>
           <div className="w-[15%]  flex justify-center items-center border-l border-lightSecondary text-2xl text-lightPrimary z-[1003]">
             <div>
-              <IoIosSend />
+              <FaRegPaperPlane />
             </div>
           </div>
         </div>

@@ -28,11 +28,11 @@ function Footer() {
     >
       <div className="relative w-full h-[200vh] -top-[100vh]">
         <div className="sticky w-full h-[100vh] top-0 left-0">
-          <div className="w-full h-[100vh] relative bg-black pt-7 flex items-end">
+          <div className="w-full h-[100vh] relative bg-black pt-5 flex items-end">
             <div className="w-full h-full flex flex-col justify-between">
               <div className="w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-10">
                 <div className="w-full lg:w-[40%] flex flex-col gap-3 px-5">
-                  <h3 className="font-inter uppercase text-lightPrimary font-semibold  text-[7vw] lg:text-[3vw] leading-none">
+                  <h3 className="uppercase text-lightPrimary font-semibold  text-[7vw] lg:text-[3vw] leading-none font-oswald">
                     Ready to transform your business?
                   </h3>
                   <p className="font-light">

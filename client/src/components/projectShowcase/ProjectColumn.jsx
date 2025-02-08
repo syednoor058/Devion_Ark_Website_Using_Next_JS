@@ -1,6 +1,7 @@
 import gsap from "gsap";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { IoBookOutline } from "react-icons/io5";
+import ActionButton from "../buttons/ActionButton";
 function ProjectColumn({
   caption,
   title,
@@ -72,7 +73,7 @@ function ProjectColumn({
     <div
       ref={projectCard}
       onClick={() => setActiveCard(projectNum)}
-      className={`relative border-r border-darkSecondary px-5 pt-5 flex flex-col justify-between items-center cursor-pointer overflow-hidden ${
+      className={`relative border-r border-darkSecondary px-5 pt-5 flex flex-col gap-5 justify-between items-center cursor-pointer overflow-hidden ${
         activeCard === projectNum
           ? "w-[150rem] transform origin-left"
           : "w-[60rem]"
@@ -106,11 +107,11 @@ function ProjectColumn({
       <div
         className={`w-full ${
           activeCard === projectNum ? "text-base" : "text-sm"
-        } h-[15%] text-darkPrimary z-[2]`}
+        } text-darkPrimary z-[2]`}
       >
         {caption}
       </div>
-      <div className="w-full h-[30%] z-[2] flex flex-col gap-7 justify-center items-center">
+      <div className="w-full z-[2] flex flex-col gap-7 justify-center items-center">
         <h2
           className={`font-oswald font-bold ${
             activeCard === projectNum ? "text-5xl" : "text-2xl"
@@ -120,24 +121,28 @@ function ProjectColumn({
         </h2>
       </div>
       <div
-        className={`w-full h-[15%] z-[2] ${
+        className={`w-full h-full z-[2] ${
           activeCard === projectNum ? "flex" : "hidden"
         } justify-center items-center`}
       >
-        <Link
-          href={forward}
-          className="relative  overflow-hidden  border-[2px] border-darkPrimary group"
-        >
-          <div className="inline-flex">
-            <span className="px-8 py-3 text-darkPrimary group-hover:text-lightPrimary duration-500 z-[2] ">
-              Learn More
-            </span>
-            <div className="w-full h-full bg-darkPrimary absolute top-0 left-0 -translate-x-full group-hover:translate-x-0 duration-500 z-[1] "></div>
+        <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center">
+            <ActionButton
+              forwardTo=""
+              label="Learn More"
+              labelColor="text-darkPrimary group-hover:text-lightPrimary"
+              bgColor="bg-darkPrimary"
+              labelSize="text-lg"
+              borderColor="border-darkPrimary"
+              iconColor="text-lightPrimary"
+              iconSize="text-2xl"
+              icon={<IoBookOutline />}
+            />
           </div>
-        </Link>
+        </div>
       </div>
 
-      <div className="w-full h-[40%] text-darkPrimary text-[250px] font-light z-[2] leading-none text-center font-poppins">
+      <div className="w-full text-darkPrimary text-[250px] font-light z-[2] leading-none text-center font-poppins">
         {projectNum}
       </div>
 
