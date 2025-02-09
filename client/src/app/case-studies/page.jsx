@@ -3,6 +3,12 @@ import { FaEarthAmericas } from "react-icons/fa6";
 import { IoBookOutline } from "react-icons/io5";
 import { LuMouse } from "react-icons/lu";
 
+export const metadata = {
+  title: "Case Studies - Real Digital Transformation Success | Devion Ark",
+  description:
+    "Explore our case studies to see how Devion Ark has transformed businesses with innovative IT solutions. Discover real success stories in custom software, digital marketing, and web development that drive measurable growth.",
+};
+
 function ProjectListCard({
   bgColor,
   projectCategory,
@@ -34,7 +40,7 @@ function ProjectListCard({
           </video>
         </div>
         <div
-          className={`font-oswald font-semibold uppercase ${titleTextColor} text-[2.5vw] leading-tight`}
+          className={`font-oswald font-semibold uppercase ${titleTextColor} text-[6vw] lg:text-[2.5vw] leading-tight`}
         >
           <h2>{projectTitle}</h2>
         </div>
@@ -68,11 +74,11 @@ function CaseStudies() {
 
       <div className="w-full h-full relative">
         <div className="w-full flex flex-col gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
-          <div className="w-full flex flex-col font-oswald font-bold uppercase text-center lg:text-start ">
-            <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[5.5vw] lg:text-[5vw] ">
+          <div className="w-full flex flex-col font-oswald font-bold uppercase">
+            <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[6.5vw] lg:text-[5vw] ">
               <h1 className="">Blueprints of Innovation:</h1>
             </div>
-            <div className="w-full leading-none text-lightPrimary text-[14vw] lg:text-[8vw]">
+            <div className="w-full leading-none text-lightPrimary text-[18vw] lg:text-[8vw]">
               <h1>
                 Our{" "}
                 <span className="text-accentColor text-[18vw] lg:text-[8vw]">
@@ -82,7 +88,7 @@ function CaseStudies() {
             </div>
           </div>
           <div className="w-full flex justify-end">
-            <p className="w-full lg:w-[50%] text-[5vw] lg:text-[1.5vw] font-light text-lightSecondary leading-tight lg:pt-5 text-end">
+            <p className="w-full lg:w-[50%] text-[4vw] lg:text-[1.5vw] font-light text-lightSecondary leading-tight lg:pt-5 text-start lg:text-end">
               Explore our curated collection of real-world success stories where
               innovation meets impact. Our case studies highlight transformative
               projects in software development, digital marketing, responsive
@@ -98,10 +104,10 @@ function CaseStudies() {
                 label="Explore Case Studies"
                 labelColor="text-lightPrimary group-hover:text-darkPrimary"
                 bgColor="bg-lightPrimary"
-                labelSize="text-2xl"
+                labelSize="text-base lg:text-2xl"
                 borderColor="border-lightPrimary"
                 iconColor="text-darkPrimary"
-                iconSize="text-4xl"
+                iconSize="text-xl lg:text-4xl"
                 icon={<FaEarthAmericas />}
               />
             </div>
@@ -126,8 +132,8 @@ function CaseStudies() {
       {/* Project List Section */}
 
       <div className="w-full px-5 lg:px-20 bg-black py-10 lg:py-20">
-        <div className="w-full flex flex-col gap-5 lg:gap-10">
-          <div className="w-full text-accentColor font-oswald font-bold uppercase text-center text-[8vw] lg:text-[7vw]">
+        <div className="w-full flex flex-col gap-10 lg:gap-20">
+          <div className="w-full text-accentColor font-oswald font-bold uppercase text-start lg:text-center text-[8vw] lg:text-[7vw] leading-none">
             <h2>Crafting Digital Success</h2>
           </div>
           <div className="w-full h-full">

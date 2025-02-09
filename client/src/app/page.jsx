@@ -129,10 +129,10 @@ function ServiceCard({ serviceIndex, serviceTitle, background, forwardTo }) {
       </div>
       <div className="w-full flex flex-row gap-10 justify-between items-center z-[11]">
         <div className="w-full flex flex-row items-center gap-7 relative z-[11]">
-          <p className="w-[5%] lg:w-[8%] font-bold text-[5vw] lg:text-[3.5vw] leading-none text-accentColor font-oswald hidden lg:inline-block">
+          <p className="w-[5%] lg:w-[8%] font-bold text-[7vw] lg:text-[3.5vw] leading-none text-accentColor font-oswald hidden lg:inline-block">
             {serviceIndex}
           </p>
-          <h2 className="text-[5vw] lg:text-[3.5vw] font-oswald font-bold uppercase leading-tight">
+          <h2 className="text-[7vw] lg:text-[3.5vw] font-oswald font-bold uppercase leading-tight">
             {serviceTitle}
           </h2>
         </div>
@@ -208,7 +208,7 @@ export default function Home() {
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 bg-opacity-15"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 left-[50%] bg-opacity-15"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 right-20 bg-opacity-15"></div>
-        <h2 className="w-full lg:w-[50%] text-lightPrimary font-bold text-[7vw] lg:text-[3.5vw] uppercase font-oswald px-3 lg:px-0 leading-tight">
+        <h2 className="w-full lg:w-[50%] text-lightPrimary font-bold text-[8vw] lg:text-[3.5vw] uppercase font-oswald px-3 lg:px-0 leading-tight">
           <span className="text-accentColor">Brands</span> we&apos;ve partnered
           with{" "}
         </h2>
@@ -261,7 +261,7 @@ export default function Home() {
               ></div>
             </div>
             <div className="flex flex-col gap-2 uppercase font-titleFont text-lightTitleText">
-              <h2 className="text-[7vw] lg:text-[4vw] leading-tight overflow-hidden font-medium font-oswald">
+              <h2 className="text-[8vw] lg:text-[4vw] leading-tight overflow-hidden font-medium font-oswald">
                 <span id="who-title-1" className="inline-block">
                   Empowering your Business to Reach{" "}
                   <span id="who-title-3" className="inline-block font-bold">
@@ -328,35 +328,40 @@ export default function Home() {
 
       {/* Portfolio Section */}
 
-      <div className="w-full bg-black text-darkSecondary py-5 lg:py-10 px-5 lg:px-20 flex justify-center">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
-          <div className="w-full rounded-xl bg-accentColor p-5">
-            <div className="w-full flex flex-col gap-3">
-              <div className="font-bold font-oswald text-7xl  text-darkPrimary">
-                3+
-              </div>
-              <div className="font-light text-xl">
-                <p>Years of transformative expertise</p>
+      <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
+        <div className="w-full flex flex-col gap-10">
+          <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col pb-5 border-b-dashed-custom leading-none border-b border-lightSecondary border-dashed">
+            <h3>Portfolio</h3>
+          </div>
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
+            <div className="w-full rounded-xl bg-accentColor p-5">
+              <div className="w-full flex flex-col gap-3">
+                <div className="font-bold font-oswald text-7xl  text-darkPrimary">
+                  3+
+                </div>
+                <div className="font-light text-darkSecondary text-lg">
+                  <p>Years of transformative expertise</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-full rounded-xl bg-accentColor p-5">
-            <div className="w-full flex flex-col gap-3">
-              <div className="font-bold font-oswald text-7xl  text-darkPrimary">
-                20+
-              </div>
-              <div className="font-light text-xl">
-                <p>Cutting-edge projects delivered</p>
+            <div className="w-full rounded-xl bg-accentColor p-5">
+              <div className="w-full flex flex-col gap-3">
+                <div className="font-bold font-oswald text-7xl text-darkPrimary">
+                  20+
+                </div>
+                <div className="font-light text-darkSecondary">
+                  <p>Cutting-edge projects delivered</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-full rounded-xl bg-accentColor p-5">
-            <div className="w-full flex flex-col gap-3">
-              <div className="font-bold font-oswald text-7xl  text-darkPrimary">
-                12+
-              </div>
-              <div className="font-light text-xl">
-                <p>Happy clients worldwide</p>
+            <div className="w-full rounded-xl bg-accentColor p-5">
+              <div className="w-full flex flex-col gap-3">
+                <div className="font-bold font-oswald text-7xl text-darkPrimary">
+                  12+
+                </div>
+                <div className="font-light text-darkSecondary">
+                  <p>Happy clients worldwide</p>
+                </div>
               </div>
             </div>
           </div>
@@ -384,7 +389,7 @@ export default function Home() {
               className="w-[2px] h-5 lg:h-7 bg-accentColor"
             ></div>
           </div>
-          <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
+          <h2 className="px-5 lg:px-20 text-[8vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
             The Solutions that drive <br />
             <span className="text-accentColor font-bold">Your Success</span>
           </h2>
@@ -493,7 +498,7 @@ export default function Home() {
                 <GoDotFill />
               </div>
             </div>
-            <p className="w-full text-base lg:text-lg font-light overflow-hidden pt-5 leading-tight">
+            <p className="w-full text-lg font-light overflow-hidden pt-5 leading-tight">
               See how we&apos;ve turned challenges into opportunities and ideas
               into impactful solutions. Our case studies showcase real-world
               examples of how we&apos;ve helped businesses grow, optimize

@@ -32,7 +32,7 @@ function Footer() {
             <div className="w-full h-full flex flex-col justify-between">
               <div className="w-full flex flex-col lg:flex-row justify-between gap-5 lg:gap-10">
                 <div className="w-full lg:w-[40%] flex flex-col gap-3 px-5">
-                  <h3 className="uppercase text-lightPrimary font-semibold  text-[7vw] lg:text-[3vw] leading-none font-oswald">
+                  <h3 className="uppercase text-lightPrimary font-semibold  text-[8vw] lg:text-[3vw] leading-none font-oswald">
                     Ready to transform your business?
                   </h3>
                   <p className="font-light">
@@ -60,7 +60,7 @@ function Footer() {
                     </div>
                   </form>
 
-                  <p className="text-sm font-light">
+                  <p className="font-light">
                     By signing up, you understand and agree that your data will
                     be collected and used subject to our{" "}
                     <span className="underline underline-offset-2">

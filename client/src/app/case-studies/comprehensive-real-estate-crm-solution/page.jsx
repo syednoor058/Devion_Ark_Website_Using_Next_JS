@@ -6,13 +6,24 @@ import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import sikderFoundationLogo from "../../../../public/partners/sikder_foundation.png";
+import projectImg3 from "../../../../public/projects/comprehensive_crm_system/crm_enhanced_performance.jpg";
+import projectImg2 from "../../../../public/projects/comprehensive_crm_system/crm_optimize_data.jpg";
+import projectImg1 from "../../../../public/projects/comprehensive_crm_system/crm_project_background.jpg";
+import projectImg4 from "../../../../public/projects/comprehensive_crm_system/crm_sclable_product.jpg";
+
+export const metadata = {
+  title: "Real Estate CRM Case Study - Advanced Solutions by Devion Ark",
+  description:
+    "Discover how our cutting-edge CRM system revolutionized real estate management. This case study details streamlined inventory management, integrated customer data, and scalable project workflows that empower real estate success.",
+};
+
 function ComprehensiveRealEstateCRMProject() {
   return (
     <>
       <div className="w-full pt-5 pb-10 lg:pb-20 px-5 lg:px-20 bg-darkPrimary text-lightSecondary">
         <div className="w-full flex flex-col gap-5 lg:gap-10">
           <div>
-            <div className="w-72 overflow-hidden relative -ml-10 -mb-4">
+            <div className="w-32 lg:w-72 overflow-hidden relative -ml-5 lg:-ml-10 -mb-4">
               <Image
                 src={sikderFoundationLogo}
                 alt="sikder-foundation-logo"
@@ -20,32 +31,32 @@ function ComprehensiveRealEstateCRMProject() {
               />
             </div>
           </div>
-          <div className="text-lightPrimary font-oswald font-bold text-[5.5vw]">
+          <div className="text-lightPrimary font-oswald font-bold text-[9vw] lg:text-[5.5vw]">
             <h1 className="leading-tight uppercase">
               Empowering <span className="text-accentColor">real estate</span>{" "}
               success through innovative{" "}
               <span className="text-accentColor">CRM systems</span>
             </h1>
           </div>
-          <div className="w-full flex flex-row text-nowrap pt-10">
-            <div className="flex flex-row gap-16">
-              <div className="flex flex-col gap-2 font-light">
+          <div className="w-full flex flex-col lg:flex-row gap-10 text-nowrap pt-10">
+            <div className="flex flex-col lg:flex-row gap-3 lg:gap-16">
+              <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
                 <div>Client</div>
                 <div className="text-lightPrimary">Sikder Foundation LTD</div>
               </div>
-              <div className="flex flex-col gap-2 font-light">
+              <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
                 <div>Category</div>
                 <div className="text-lightPrimary">
                   Automation Software, CRM System
                 </div>
               </div>
-              <div className="flex flex-col gap-2 font-light">
+              <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
                 <div>Timeframe</div>
                 <div className="text-lightPrimary">3 Months 19 Days</div>
               </div>
             </div>
-            <div className="w-full flex justify-end">
-              <div className="w-full flex justify-end">
+            <div className="w-full flex justify-start lg:justify-end">
+              <div className="w-full flex justify-start lg:justify-end">
                 <ActionButton
                   forwardTo=""
                   label="Visit Website"
@@ -62,7 +73,7 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
-      <div className="w-full aspect-video overflow-hidden relative rounded-3xl">
+      <div className="w-full aspect-video overflow-hidden relative rounded-lg lg:rounded-3xl">
         <video className="w-full object-cover" loop autoPlay muted playsInline>
           <source src="/videos/crm_software_promo_video.mp4" />
         </video>
@@ -74,7 +85,7 @@ function ComprehensiveRealEstateCRMProject() {
               <div className="font-light text-lightSecondary text-xl">
                 <h3>Overview</h3>
               </div>
-              <p className="font-bold text-[2.5vw] text-accentColor font-oswald leading-tight">
+              <p className="font-bold text-[7vw] lg:text-[2.5vw] text-accentColor font-oswald leading-tight">
                 Sikder Foundation Limited is emerging as one of the fast growing
                 real estate company established in 2007 with the vision to
                 delivery the best quality, un-parallel commitment, unique
@@ -89,26 +100,26 @@ function ComprehensiveRealEstateCRMProject() {
                 <div className="font-light text-lightSecondary text-xl">
                   <h3>Deliverables</h3>
                 </div>
-                <div className="w-full flex flex-wrap gap-2">
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                <div className="w-full flex flex-wrap gap-1 lg:gap-2 text-xs lg:text-sm">
+                  <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Inventory Management
                   </div>
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                  <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Customer Data Handling
                   </div>
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                  <div className="font-light   px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Project Management
                   </div>
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                  <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Employee Management
                   </div>
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                  <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Authentication
                   </div>
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                  <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Role-based Access
                   </div>
-                  <div className="font-light text-sm  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
+                  <div className="font-light   px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Product Listing & Catelog
                   </div>
                 </div>
@@ -119,11 +130,11 @@ function ComprehensiveRealEstateCRMProject() {
       </div>
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full flex flex-col gap-10 lg:gap-20">
-          <div className="w-full text-lightPrimary font-bold font-oswald text-[5.5vw] flex flex-col gap-5 leading-none">
+          <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col gap-5 leading-none">
             <h3>Impact</h3>
             <div className="w-full h-[1px] bg-lightSecondary"></div>
           </div>
-          <div className="w-full grid grid-cols-3 gap-5 lg:gap-10">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
             <div className="w-full rounded-xl bg-darkPrimary p-5">
               <div className="w-full flex flex-col gap-3">
                 <div className="font-bold font-oswald text-7xl  text-accentColor">
@@ -160,7 +171,7 @@ function ComprehensiveRealEstateCRMProject() {
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
               <h3>Project Background</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -178,12 +189,14 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
-            <div className="w-full aspect-video rounded-2xl bg-accentColor"></div>
+            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+              <Image src={projectImg1} alt="crm system project background" />
+            </div>
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
               <h3>Optimized Data Management</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -202,12 +215,14 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
-            <div className="w-full aspect-video rounded-2xl bg-accentColor"></div>
+            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+              <Image src={projectImg2} alt="crm system optimized data" />
+            </div>
           </div>
         </div>
       </div>
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
-        <div className="w-full text-lightPrimary font-bold font-oswald text-[5.5vw] leading-none">
+        <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none">
           <h3>Features</h3>
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -265,7 +280,7 @@ function ComprehensiveRealEstateCRMProject() {
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
               <h3>Enhanced Performance</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -284,12 +299,14 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
-            <div className="w-full aspect-video rounded-2xl bg-accentColor"></div>
+            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+              <Image src={projectImg3} alt="crm system performance enhance" />
+            </div>
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
               <h3>Scalable Development</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -299,17 +316,19 @@ function ComprehensiveRealEstateCRMProject() {
                 The CRM system was architected using a modular approach,
                 enabling seamless integration of additional features and
                 handling of increased data volumes as the business expands.
-                Whether it’s accommodating a larger inventory or integrating new
-                marketing channels, our scalable design ensures that the system
-                evolves alongside the company’s needs. This forward-thinking
-                approach guarantees that the CRM remains a valuable asset well
-                into the future, without requiring a complete overhaul as
-                demands grow.
+                Whether it&apos;s accommodating a larger inventory or
+                integrating new marketing channels, our scalable design ensures
+                that the system evolves alongside the company&apos;s needs. This
+                forward-thinking approach guarantees that the CRM remains a
+                valuable asset well into the future, without requiring a
+                complete overhaul as demands grow.
               </p>
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
-            <div className="w-full aspect-video rounded-2xl bg-accentColor"></div>
+            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+              <Image src={projectImg4} alt="crm system scalable product" />
+            </div>
           </div>
         </div>
       </div>
@@ -317,7 +336,7 @@ function ComprehensiveRealEstateCRMProject() {
         <div className="w-full h-full flex flex-col lg:flex-row gap-10 items-stretch">
           <div className="w-full flex lg:w-[60%] rounded-2xl bg-darkSecondary p-5 text-lightSecondary">
             <div className="w-full h-full flex flex-col gap-5 lg:gap-10 justify-between">
-              <div className="font-light text-3xl">
+              <div className="font-light text-2xl lg:text-3xl">
                 <p>
                   "Working with Devion Ark transformed our real estate
                   operations. Their CRM streamlined our inventory and client
@@ -328,8 +347,8 @@ function ComprehensiveRealEstateCRMProject() {
                   business."
                 </p>
               </div>
-              <div className="w-full flex flex-row-reverse gap-5 items-center justify-between">
-                <div className="w-[200px] overflow-hidden relative">
+              <div className="w-full flex flex-col lg:flex-row-reverse gap-5 items-center justify-between">
+                <div className="hidden lg:inline-flex lg:w-[200px] overflow-hidden relative">
                   <Image
                     src={sikderFoundationLogo}
                     alt="sikder foundation logo"
@@ -355,8 +374,8 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
           </div>
           <div className="w-full lg:w-[40%] flex rounded-2xl bg-accentColor p-5">
-            <div className="flex flex-col gap-5 lg:gap-10">
-              <div className="font-bold font-oswald text-darkPrimary leading-none text-[4vw]">
+            <div className="flex flex-col gap-10">
+              <div className="font-bold font-oswald text-darkPrimary leading-none text-[8vw] lg:text-[4vw]">
                 <h5>Let&apos;s build something amazing together!</h5>
               </div>
               <div className="flex flex-col gap-3">
@@ -370,7 +389,7 @@ function ComprehensiveRealEstateCRMProject() {
                     sx={{ width: 68, height: 68 }}
                   />
                   <div className="flex flex-col leading-none">
-                    <h3 className="font-bold text-darkPrimary text-lg">
+                    <h3 className="font-bold text-darkPrimary text-lg leading-none">
                       Syed Shaeduzzaman Noor
                     </h3>
                     <p className="text-sm text-darkSecondary font-light">
@@ -381,13 +400,13 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
               <div className="">
                 <div className="flex flex-col gap-3">
-                  <div className="inline-flex w-fit text-2xl px-10 py-4 rounded-full bg-darkPrimary text-lightPrimary">
+                  <div className="inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full bg-darkPrimary text-lightPrimary">
                     <a className="flex flex-row gap-5 items-center">
                       LinkedIn
                       <FaLinkedinIn />
                     </a>
                   </div>
-                  <div className=" inline-flex w-fit text-2xl px-10 py-4 rounded-full border border-darkPrimary text-darkPrimary">
+                  <div className=" inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full border border-darkPrimary text-darkPrimary">
                     <a className="flex flex-row gap-5 items-center">
                       Whatsapp
                       <FaWhatsapp />

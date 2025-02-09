@@ -49,10 +49,10 @@ function Services() {
                 label="Get Started"
                 labelColor="text-lightPrimary group-hover:text-darkPrimary"
                 bgColor="bg-lightPrimary"
-                labelSize="text-2xl"
+                labelSize="text-lg lg:text-2xl"
                 borderColor="border-lightPrimary"
                 iconColor="text-darkPrimary"
-                iconSize="text-4xl"
+                iconSize="text-2xl lg:text-4xl"
                 icon={<LuArrowUpRight />}
               />
             </div>
@@ -146,7 +146,7 @@ function Services() {
               </div>
             </div>
             <div className="w-full h-full flex flex-col lg:flex-row gap-5 lg:gap-10 items-stretch">
-              <div className="w-full lg:w-[30%] flex h-full bg-accentColor rounded-xl p-5">
+              <div className="w-full lg:w-[30%] flex bg-accentColor rounded-xl p-5">
                 <div className="w-full h-full flex flex-col gap-5">
                   <div className="text-darkPrimary text-[9vw] lg:text-[3.5vw] font-semibold leading-none font-oswald">
                     <h3>Search Engine Optimization</h3>

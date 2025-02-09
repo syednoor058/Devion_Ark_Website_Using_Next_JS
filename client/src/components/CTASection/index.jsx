@@ -7,7 +7,7 @@ import ActionButton from "../buttons/ActionButton";
 function CTASection() {
   return (
     <div className="w-full h-full bg-accentColor text-darkSecondary">
-      <div className="w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 py-10 lg:py-20 px-5 lg:px-20">
+      <div className="w-full h-full flex flex-col lg:flex-row justify-center items-center gap-10 py-10 lg:py-20 px-5 lg:px-20">
         <div className="w-full lg:w-1/3 flex flex-row gap-3 justify-center items-center text-2xl">
           <Link
             href=""
