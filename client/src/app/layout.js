@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, nofollow" />
       </head>
       <body
         className={`w-full ${inter.variable} ${roboto.variable} ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden`}
