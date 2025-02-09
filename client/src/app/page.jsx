@@ -31,7 +31,13 @@ function TestimonialCard({ image, name, position, company, review }) {
         <div className="flex flex-row-reverse gap-5 items-center">
           <div>
             <div className="w-16 aspect-square rounded-full overflow-hidden relative">
-              <Image src={image} alt={name} fill className="object-cover" />
+              <Image
+                placeholder="blur"
+                src={image}
+                alt={name}
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-2 items-end">
@@ -71,7 +77,13 @@ function TestimonialCard2({ image, name, position, company, review }) {
         <div className="flex flex-row gap-5 items-center">
           <div>
             <div className="w-16 aspect-square rounded-full overflow-hidden relative">
-              <Image src={image} alt={name} fill className="object-cover" />
+              <Image
+                placeholder="blur"
+                src={image}
+                alt={name}
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -104,6 +116,7 @@ function PartnersCard({ brandImg, brandAlt }) {
   return (
     <div className="w-full h-full border border-lightSecondary border-opacity-15">
       <Image
+        placeholder="blur"
         src={brandImg}
         alt={brandAlt}
         className="w-full h-full object-fill"
@@ -122,6 +135,7 @@ function ServiceCard({ serviceIndex, serviceTitle, background, forwardTo }) {
             autoPlay
             loop
             muted
+            playsInline
           >
             <source src={background} />
           </video>
@@ -170,7 +184,7 @@ export default function Home() {
             </div>
             <div className="w-full lg:w-[35%] flex flex-col gap-3 rounded-sm">
               <div className="w-full aspect-video overflow-hidden relative rounded-sm">
-                <video className="w-full" loop muted autoPlay>
+                <video className="w-full" loop muted autoPlay playsInline>
                   <source src="/videos/devion_ark_showreel_2024.mp4" />
                 </video>
               </div>
@@ -330,7 +344,7 @@ export default function Home() {
 
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full flex flex-col gap-10">
-          <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col pb-5 border-b-dashed-custom leading-none border-b border-lightSecondary border-dashed">
+          <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col pb-5 border-b-dashed-custom leading-none border-b border-lightSecondary border-dashed uppercase">
             <h3>Portfolio</h3>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">

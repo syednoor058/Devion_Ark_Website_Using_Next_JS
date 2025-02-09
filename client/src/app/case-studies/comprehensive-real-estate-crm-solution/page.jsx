@@ -25,6 +25,7 @@ function ComprehensiveRealEstateCRMProject() {
           <div>
             <div className="w-32 lg:w-72 overflow-hidden relative -ml-5 lg:-ml-10 -mb-4">
               <Image
+                placeholder="blur"
                 src={sikderFoundationLogo}
                 alt="sikder-foundation-logo"
                 className="w-full h-full object-fill"
@@ -190,7 +191,11 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
           <div className="w-full lg:w-[50%]">
             <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
-              <Image src={projectImg1} alt="crm system project background" />
+              <Image
+                placeholder="blur"
+                src={projectImg1}
+                alt="crm system project background"
+              />
             </div>
           </div>
         </div>
@@ -216,7 +221,11 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
           <div className="w-full lg:w-[50%]">
             <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
-              <Image src={projectImg2} alt="crm system optimized data" />
+              <Image
+                placeholder="blur"
+                src={projectImg2}
+                alt="crm system optimized data"
+              />
             </div>
           </div>
         </div>
@@ -300,7 +309,11 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
           <div className="w-full lg:w-[50%]">
             <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
-              <Image src={projectImg3} alt="crm system performance enhance" />
+              <Image
+                placeholder="blur"
+                src={projectImg3}
+                alt="crm system performance enhance"
+              />
             </div>
           </div>
         </div>
@@ -327,7 +340,11 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
           <div className="w-full lg:w-[50%]">
             <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
-              <Image src={projectImg4} alt="crm system scalable product" />
+              <Image
+                placeholder="blur"
+                src={projectImg4}
+                alt="crm system scalable product"
+              />
             </div>
           </div>
         </div>
@@ -350,6 +367,7 @@ function ComprehensiveRealEstateCRMProject() {
               <div className="w-full flex flex-col lg:flex-row-reverse gap-5 items-center justify-between">
                 <div className="hidden lg:inline-flex lg:w-[200px] overflow-hidden relative">
                   <Image
+                    placeholder="blur"
                     src={sikderFoundationLogo}
                     alt="sikder foundation logo"
                     className="w-full"

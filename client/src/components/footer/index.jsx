@@ -166,6 +166,7 @@ function Footer() {
                 <Marquee autoFill={true}>
                   <div className="w-[480px] lg:w-[1300px] aspect-[7.6/1] relative mx-4 lg:mx-8">
                     <Image
+                      placeholder="blur"
                       src="/footer_logo.png"
                       alt="footer-logo"
                       fill

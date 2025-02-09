@@ -81,6 +81,7 @@ function Navbar() {
         >
           <Link href="/" className={`w-full relative z-[1003]`}>
             <Image
+              placeholder="blur"
               src={logo}
               alt="devion_ark_logo"
               className="w-auto h-14 object-fit"
@@ -180,6 +181,7 @@ function Navbar() {
                   <div className="w-full">
                     <div className="relative w-full aspect-[4.3478/1]">
                       <Image
+                        placeholder="blur"
                         src="/nav_expand_logo.png"
                         alt="devion-ark-logo"
                         fill
@@ -242,26 +244,22 @@ function Navbar() {
             bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
           }`}
         >
-          <div className="w-[15%] flex justify-center items-center border-r border-lightSecondary text-2xl z-[1003]">
-            <div
-              className="text-lightPrimary cursor-pointer"
-              onClick={() => setMenuExpand((prevMenuExpand) => !prevMenuExpand)}
-            >
-              <MenuIcon expand={menuExpand} />
-            </div>
-          </div>
           <div className="w-[50%] flex justify-center items-center px-5 z-[1003]">
             <div className="w-full relative">
               <Image
+                placeholder="blur"
                 src={darkLogoMobile}
                 alt="devion_ark_logo"
                 className="w-full h-auto object-cover"
               />
             </div>
           </div>
-          <div className="w-[15%]  flex justify-center items-center border-l border-lightSecondary text-2xl text-lightPrimary z-[1003]">
-            <div>
-              <FaRegPaperPlane />
+          <div className="w-[15%] flex justify-center items-center text-2xl z-[1003]">
+            <div
+              className="text-lightPrimary cursor-pointer"
+              onClick={() => setMenuExpand((prevMenuExpand) => !prevMenuExpand)}
+            >
+              <MenuIcon expand={menuExpand} />
             </div>
           </div>
         </div>
