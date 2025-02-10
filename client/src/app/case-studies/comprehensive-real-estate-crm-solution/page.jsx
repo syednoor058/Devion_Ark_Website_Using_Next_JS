@@ -22,8 +22,8 @@ function ComprehensiveRealEstateCRMProject() {
     <>
       <div className="w-full pt-5 pb-10 lg:pb-20 px-5 lg:px-20 bg-darkPrimary text-lightSecondary">
         <div className="w-full flex flex-col gap-5 lg:gap-10">
-          <div>
-            <div className="w-32 lg:w-72 overflow-hidden relative -ml-5 lg:-ml-10 -mb-4">
+          {/* <div>
+            <div className="w-32 lg:w-60 overflow-hidden relative -ml-5 lg:-ml-10 -mb-10">
               <Image
                 placeholder="blur"
                 src={sikderFoundationLogo}
@@ -31,7 +31,7 @@ function ComprehensiveRealEstateCRMProject() {
                 className="w-full h-full object-fill"
               />
             </div>
-          </div>
+          </div> */}
           <div className="text-lightPrimary font-oswald font-bold text-[9vw] lg:text-[5.5vw]">
             <h1 className="leading-tight uppercase">
               Empowering <span className="text-accentColor">real estate</span>{" "}
@@ -39,46 +39,65 @@ function ComprehensiveRealEstateCRMProject() {
               <span className="text-accentColor">CRM systems</span>
             </h1>
           </div>
-          <div className="w-full flex flex-col lg:flex-row gap-10 text-nowrap pt-10">
-            <div className="flex flex-col lg:flex-row gap-3 lg:gap-16">
-              <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
-                <div>Client</div>
-                <div className="text-lightPrimary">Sikder Foundation LTD</div>
-              </div>
-              <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
-                <div>Category</div>
-                <div className="text-lightPrimary">
-                  Automation Software, CRM System
+          <div className="w-full flex justify-between items-end gap-10 lg:gap-20">
+            <div className="w-full lg:w-[65%] flex flex-col gap-10 text-nowrap">
+              <div className="flex flex-col lg:flex-row gap-3 lg:gap-16">
+                <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
+                  <div>Client</div>
+                  <div className="text-lightPrimary">Sikder Foundation LTD</div>
+                </div>
+                <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
+                  <div>Category</div>
+                  <div className="text-lightPrimary">
+                    Automation Software, CRM System
+                  </div>
+                </div>
+                <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
+                  <div>Timeframe</div>
+                  <div className="text-lightPrimary">3 Months 19 Days</div>
                 </div>
               </div>
-              <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
-                <div>Timeframe</div>
-                <div className="text-lightPrimary">3 Months 19 Days</div>
+              <div className="w-full flex justify-start">
+                <div className="w-full flex justify-start">
+                  <ActionButton
+                    forwardTo=""
+                    label="Visit Website"
+                    labelSize="text-2xl"
+                    labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                    borderColor="border-lightPrimary"
+                    bgColor="bg-lightPrimary"
+                    iconColor="text-darkPrimary"
+                    iconSize="text-4xl"
+                    icon={<FaEarthAmericas />}
+                  />
+                </div>
               </div>
             </div>
-            <div className="w-full flex justify-start lg:justify-end">
-              <div className="w-full flex justify-start lg:justify-end">
-                <ActionButton
-                  forwardTo=""
-                  label="Visit Website"
-                  labelSize="text-2xl"
-                  labelColor="text-lightPrimary group-hover:text-darkPrimary"
-                  borderColor="border-lightPrimary"
-                  bgColor="bg-lightPrimary"
-                  iconColor="text-darkPrimary"
-                  iconSize="text-4xl"
-                  icon={<FaEarthAmericas />}
-                />
+            <div className="w-full lg:w-[35%] flex flex-col gap-3">
+              <div className="w-full aspect-video overflow-hidden relative rounded-sm">
+                <video
+                  className="w-full object-cover"
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                >
+                  <source src="/videos/crm_software_promo_video.mp4" />
+                </video>
+              </div>
+              <div className="w-full flex flex-col items-end text-sm font-light px-5 lg:px-0">
+                <div className="w-full text-start lg:text-end">
+                  Comprehensive CRM System Solutions
+                </div>
+                <div className="w-full text-start lg:text-end">
+                  Showreel (2024-2025)
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full aspect-video overflow-hidden relative rounded-lg lg:rounded-3xl">
-        <video className="w-full object-cover" loop autoPlay muted playsInline>
-          <source src="/videos/crm_software_promo_video.mp4" />
-        </video>
-      </div>
+
       <div className="w-full  px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20">
           <div className="w-full lg:w-[50%]">

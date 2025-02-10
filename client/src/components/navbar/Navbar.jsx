@@ -16,6 +16,7 @@ import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
+import navExpandLogo from "../../../public/nav_expand_logo.png";
 import ActionButton from "../buttons/ActionButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
@@ -36,7 +37,7 @@ function Navbar() {
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Case Studies", path: "/case-studies" },
-    { label: "Blog", path: "/blog" },
+    { label: "Blogs", path: "/blogs" },
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
   ];
@@ -182,7 +183,7 @@ function Navbar() {
                     <div className="relative w-full aspect-[4.3478/1]">
                       <Image
                         placeholder="blur"
-                        src="/nav_expand_logo.png"
+                        src={navExpandLogo}
                         alt="devion-ark-logo"
                         fill
                         className="object-cover"

@@ -6,6 +6,7 @@ import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
+import footerLogo from "../../../public/footer_logo.png";
 import ActionButton from "../buttons/ActionButton";
 
 function AddressInfo({ icon, title, value }) {
@@ -167,7 +168,7 @@ function Footer() {
                   <div className="w-[480px] lg:w-[1300px] aspect-[7.6/1] relative mx-4 lg:mx-8">
                     <Image
                       placeholder="blur"
-                      src="/footer_logo.png"
+                      src={footerLogo}
                       alt="footer-logo"
                       fill
                       className="object-cover"

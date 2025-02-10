@@ -11,6 +11,8 @@ import { FaStar } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoArrowUpRight, GoDotFill } from "react-icons/go";
 import { LuMouse } from "react-icons/lu";
+import farhanMasum from "../../public//testimonials/farhan_masum.webp";
+import mustafaMehedi from "../../public//testimonials/mehedi.webp";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.png";
 import elevate from "../../public/partners/elevate.png";
 import indigo from "../../public/partners/indigo_company.png";
@@ -23,6 +25,8 @@ import qahafLogo from "../../public/partners/qahaf.png";
 import sikderFoundationLogo from "../../public/partners/sikder_foundation.png";
 import sweetCakes from "../../public/partners/sweet_cakes.png";
 import travel from "../../public/partners/travel.png";
+import azizulHoque from "../../public/testimonials/azizul.webp";
+import rakibShikdar from "../../public/testimonials/rakib.webp";
 
 function TestimonialCard({ image, name, position, company, review }) {
   return (
@@ -259,20 +263,15 @@ export default function Home() {
       {/* Who We Are Section */}
 
       <div
-        className={`w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-[url('/backgrounds/bg-zig-zag.svg')] bg-fit relative overflow-hidden`}
+        className={`w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-black bg-fit relative overflow-hidden`}
       >
         <div className="flex flex-col lg:flex-row gap-7 lg:gap-20 relative z-[5]">
           <div className="w-full lg:w-[65%] flex flex-col gap-5 lg:gap-10">
-            <div className="flex flex-row gap-2 items-center overflow-hidden">
-              <div className="uppercase font-semibold text-sm sm:text-lg overflow-hidden">
-                <span id="who-we-are" className="inline-block">
-                  Who We Are
-                </span>
+            <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
+              <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
+                <span className="inline-block">Who We Are</span>
               </div>
-              <div
-                id="who-bar"
-                className="w-[2px] h-4 lg:h-7 bg-accentColor"
-              ></div>
+              <div className="w-[2px] flex bg-accentColor"></div>
             </div>
             <div className="flex flex-col gap-2 uppercase font-titleFont text-lightTitleText">
               <h2 className="text-[8vw] lg:text-[4vw] leading-tight overflow-hidden font-medium font-oswald">
@@ -342,7 +341,7 @@ export default function Home() {
 
       {/* Portfolio Section */}
 
-      <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
+      {/* <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full flex flex-col gap-10">
           <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col pb-5 border-b-dashed-custom leading-none border-b border-lightSecondary border-dashed uppercase">
             <h3>Portfolio</h3>
@@ -380,7 +379,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Our Services Section */}
 
@@ -392,16 +391,11 @@ export default function Home() {
           <div className="w-[1px] h-full bg-gray-800"></div>
         </div>
         <div className="flex flex-col gap-5 lg:gap-10 z-[2]">
-          <div className="flex flex-row gap-2 items-center px-5 lg:px-20">
-            <div className="uppercase font-semibold text-sm lg:text-lg overflow-hidden">
-              <p id="who-we-are" className="inline-block">
-                Our Services
-              </p>
+          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none px-5 lg:px-20">
+            <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
+              <span className="inline-block">Our Services</span>
             </div>
-            <div
-              id="who-bar"
-              className="w-[2px] h-5 lg:h-7 bg-accentColor"
-            ></div>
+            <div className="w-[2px] flex bg-accentColor"></div>
           </div>
           <h2 className="px-5 lg:px-20 text-[8vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
             The Solutions that drive <br />
@@ -482,16 +476,11 @@ export default function Home() {
       <div className="w-full bg-[url('/backgrounds/bg-wavey-fingerprint.svg')] bg-fit flex flex-col">
         <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden py-10 lg:py-20">
           <div className="w-full lg:w-[60%] flex flex-col gap-5 lg:gap-10 ps-5 lg:ps-20 pe-5 lg:pe-10">
-            <div className="flex flex-row gap-2 items-center">
-              <div className="uppercase font-semibold text-sm lg:text-lg overflow-hidden">
-                <p id="who-we-are" className="inline-block">
-                  Featured Case Studies
-                </p>
+            <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
+              <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
+                <span className="inline-block">Case Studies</span>
               </div>
-              <div
-                id="case-study-bar"
-                className="w-[2px] h-5 lg:h-7 bg-accentColor"
-              ></div>
+              <div className="w-[2px] flex bg-accentColor"></div>
             </div>
             <h2 className="w-full text-[10vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-none font-bold">
               Our Works In
@@ -545,7 +534,7 @@ export default function Home() {
               <Marquee autoFill={true} pauseOnClick={true}>
                 <div className="flex mx-[10px]">
                   <TestimonialCard
-                    image="/testimonials/mehedi.webp"
+                    image={mustafaMehedi}
                     name="Syed Mustafa Mehedi"
                     position="Founder & CEO"
                     company="QAHAF"
@@ -554,7 +543,7 @@ export default function Home() {
                 </div>
                 <div className="flex mx-[10px]">
                   <TestimonialCard
-                    image="/testimonials/farhan_masum.webp"
+                    image={farhanMasum}
                     name="Kazi Farhan Masum"
                     position="Founder & CEO"
                     company="PuppetBrush Digital Solutions"
@@ -563,7 +552,7 @@ export default function Home() {
                 </div>
                 <div className="flex mx-[10px]">
                   <TestimonialCard
-                    image="/testimonials/rakib.webp"
+                    image={rakibShikdar}
                     name="Rakib Shikdar"
                     position="Founder & CEO"
                     company="Kick-off The Jersey Galleria"
@@ -572,7 +561,7 @@ export default function Home() {
                 </div>
                 <div className="flex mx-[10px]">
                   <TestimonialCard
-                    image="/testimonials/azizul.webp"
+                    image={azizulHoque}
                     name="MD Azizul Hoque"
                     position="Founder & CEO"
                     company="InterAiD"
@@ -585,7 +574,7 @@ export default function Home() {
               <Marquee autoFill={true} pauseOnClick={true} direction="right">
                 <div className="flex mx-[10px]">
                   <TestimonialCard2
-                    image="/testimonials/mehedi.webp"
+                    image={mustafaMehedi}
                     name="Syed Mustafa Mehedi"
                     position="Founder & CEO"
                     company="QAHAF"
@@ -594,7 +583,7 @@ export default function Home() {
                 </div>
                 <div className="flex mx-[10px]">
                   <TestimonialCard2
-                    image="/testimonials/farhan_masum.webp"
+                    image={farhanMasum}
                     name="Kazi Farhan Masum"
                     position="Founder & CEO"
                     company="PuppetBrush Digital Solutions"
@@ -603,7 +592,7 @@ export default function Home() {
                 </div>
                 <div className="flex mx-[10px]">
                   <TestimonialCard2
-                    image="/testimonials/rakib.webp"
+                    image={rakibShikdar}
                     name="Rakib Shikdar"
                     position="Founder & CEO"
                     company="Kick-off The Jersey Galleria"
@@ -612,7 +601,7 @@ export default function Home() {
                 </div>
                 <div className="flex mx-[10px]">
                   <TestimonialCard2
-                    image="/testimonials/azizul.webp"
+                    image={azizulHoque}
                     name="MD Azizul Hoque"
                     position="Founder & CEO"
                     company="InterAiD"
@@ -729,13 +718,12 @@ export default function Home() {
 
       <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden">
         <div className="flex flex-col lg:flex-row">
-          <div className="w-full lg:w-[40%] flex flex-col">
-            <div className="w-full uppercase font-oswald text-[8vw] lg:text-[3.5vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none text-darkSecondary bg-lightPrimary py-5 lg:py-20">
+          <div className="w-full lg:w-[40%] flex">
+            <div className="w-full h-full uppercase font-oswald text-[8vw] lg:text-[6vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none text-darkSecondary bg-lightPrimary py-10 lg:py-20">
               Frequently Asked{" "}
               <span className="text-accentColor">Questions</span>
               <span>(FAQ)</span>
             </div>
-            <div className="w-full aspect-video hidden lg:inline-block bg-black"></div>
           </div>
           <FAQSection />
         </div>
