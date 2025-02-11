@@ -3,9 +3,7 @@ import Image from "next/image";
 import { IoBookOutline } from "react-icons/io5";
 import { LuArrowUpRight } from "react-icons/lu";
 import { MdOutlineArrowForward } from "react-icons/md";
-import blogCover1 from "../../../public/blogs_cover/blog_1_cover.webp";
-import blogCover2 from "../../../public/blogs_cover/blog_2_cover.webp";
-import blogCover3 from "../../../public/blogs_cover/blog_3_cover.webp";
+import blogCover1 from "../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
 
 function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
   return (
@@ -155,31 +153,19 @@ function Blogs() {
           </div>
           <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-gray-800">
             <BlogCard
-              title="How much does it cost to design a website"
+              title="IS SEO Dead? Will AEO Take Over the Industry in 2025?"
               cover={blogCover1}
-              category={["Cost Guide", "Web Design"]}
-              desc="In this article, we'll break down the key factors influencing web design costs and help you determine whether a particular offer aligns with your business goals"
-              forwardTo=""
-              date="10 February, 2025"
-              author="Alex Seagul, Inha Tolochenko"
-            />
-            <BlogCard
-              cover={blogCover2}
-              title="Why Webflow is the best platform for businesses in 2025"
-              category={["web Flow", "Low-code Development", "UI/UX"]}
-              desc="This article explores how an advanced Webflow website-building platform can help companies save resources and simplify website development. We’ll explain why a combination of flexibility, powerful tools, and scalability is ideal for businesses looking for efficient and high-performance solutions."
-              forwardTo=""
-              date="27 January, 2025"
-              author="Rhaegnar Lothbrook, Kathelyn Stark"
-            />
-            <BlogCard
-              cover={blogCover3}
-              title="Revamping the Ministry of Foreign Affairs website: the vision of Obriy Design Büro"
-              category={["Redesign", "Ui Design", "Government"]}
-              desc="In a world where users are used to top digital services, government websites must meet these expectations to reinforce Ukraine’s image and facilitate seamless interactions. Our redesign approach goes beyond a simple update. We aim to transform the website into a resource that highlights Ukraine's modernity and openness."
-              forwardTo=""
-              date="14 December, 2024"
-              author="Michael Schofield, Arthur Morgan"
+              category={[
+                "SEO",
+                "AEO",
+                "Search Engine Optimization",
+                "Answer Engine Optimization",
+                "Search Engine Marketing",
+              ]}
+              desc="In this article, we'll break down the key factors influencing web search and help you determine whether SEO or AEO aligns with your business goals in 2025."
+              forwardTo="/blogs/is-seo-dead-will-aeo-take-over-the-industry-in-2025"
+              date="December 13, 2024"
+              author="Naim Rahman"
             />
           </div>
         </div>
