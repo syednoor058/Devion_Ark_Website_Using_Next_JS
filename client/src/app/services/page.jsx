@@ -23,10 +23,10 @@ function Services() {
       <div className="w-full h-full relative">
         <div className="w-full flex flex-col gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
           <div className="w-full flex flex-col font-oswald font-bold uppercase text-start lg:text-end ">
-            <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[5.5vw] lg:text-[5vw] ">
+            <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[5.5vw] lg:text-[5.8vw] ">
               <h1 className="">Empowering Your Business with</h1>
             </div>
-            <div className="w-full leading-none text-lightPrimary text-[12.5vw] lg:text-[8vw]">
+            <div className="w-full leading-none text-lightPrimary text-[12.5vw] lg:text-[8.3vw]">
               <h1>
                 Cutting-Edge{" "}
                 <span className="text-accentColor text-[18vw] lg:text-[8vw]">

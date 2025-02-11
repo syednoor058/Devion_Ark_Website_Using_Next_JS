@@ -17,6 +17,7 @@ import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
 import navExpandLogo from "../../../public/nav_expand_logo.png";
+import AnimatedText from "../animations/AnimatedText";
 import ActionButton from "../buttons/ActionButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
@@ -92,14 +93,14 @@ function Navbar() {
             className={`w-full flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
           >
             <div
-              className=" flex flex-row gap-2 items-center px-10 cursor-pointer"
+              className=" flex flex-row gap-2 items-center px-10 cursor-pointer group"
               onClick={() => setMenuExpand((prevMenu) => !prevMenu)}
             >
               <div>
                 <MenuIcon expand={menuExpand} />
               </div>
               <div className="font-oswald font-semibold  uppercase text-lg">
-                Menu
+                <AnimatedText text="Menu" />
               </div>
             </div>
             <div className="ps-10">
@@ -143,9 +144,9 @@ function Navbar() {
                         pathname === navLink.path
                           ? "text-accentColor"
                           : "text-lightSecondary hover:text-lightPrimary"
-                      } hover:tracking-widest text-[4.5vw] font-bold uppercase font-oswald leading-none duration-500`}
+                      } text-[4.5vw] font-bold uppercase font-oswald leading-none duration-500`}
                     >
-                      {navLink.label}
+                      <AnimatedText text={navLink.label} />
                     </div>
                   </Link>
                 ))}
@@ -286,7 +287,7 @@ function Navbar() {
                         : "text-lightSecondary hover:text-lightPrimary"
                     }  duration-500 text-[14vw] font-bold uppercase font-oswald leading-none`}
                   >
-                    {navLink.label}
+                    <AnimatedText text={navLink.label} />
                   </div>
                 </Link>
               ))}

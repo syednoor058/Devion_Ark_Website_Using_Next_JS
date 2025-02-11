@@ -1,5 +1,6 @@
 // import Link from "next/link";
 import Link from "next/link";
+import AnimatedText from "../animations/AnimatedText";
 
 function ActionButton({
   forwardTo,
@@ -24,7 +25,7 @@ function ActionButton({
             <h4
               className={`relative z-10 block transition-colors duration-500 ${labelColor} ${labelSize} capitalize whitespace-nowrap`}
             >
-              {label}
+              <AnimatedText text={label} />
             </h4>
             {/* Background Hover Effect */}
             <div

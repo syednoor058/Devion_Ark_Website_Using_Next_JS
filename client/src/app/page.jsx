@@ -1,3 +1,4 @@
+import AnimatedText from "@/components/animations/AnimatedText";
 import CircularTextAnimation from "@/components/animations/CircularTextAnimation";
 import FAQSection from "@/components/faq";
 import ProjectShowcase from "@/components/projectShowcase";
@@ -9,8 +10,8 @@ import { BiSolidQuoteLeft, BiSolidQuoteRight } from "react-icons/bi";
 import { CgQuote } from "react-icons/cg";
 import { FaStar } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
-import { GoArrowUpRight, GoDotFill } from "react-icons/go";
-import { LuMouse } from "react-icons/lu";
+import { GoDotFill } from "react-icons/go";
+import { LuArrowUpRight, LuMouse } from "react-icons/lu";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.png";
@@ -151,11 +152,14 @@ function ServiceCard({ serviceIndex, serviceTitle, background, forwardTo }) {
             {serviceIndex}
           </p>
           <h2 className="text-[7vw] lg:text-[3.5vw] font-oswald font-bold uppercase leading-tight">
-            {serviceTitle}
+            <AnimatedText text={serviceTitle} />
           </h2>
         </div>
-        <Link href={forwardTo} className="text-[7vw] lg:text-[5vw] z-[11]">
-          <GoArrowUpRight />
+        <Link
+          href={forwardTo}
+          className="text-[7vw] lg:text-[5vw] z-[11] rotate-45 group-hover:rotate-0 duration-500 group-hover:text-accentColor"
+        >
+          <LuArrowUpRight />
         </Link>
       </div>
     </div>
@@ -170,10 +174,10 @@ export default function Home() {
       <div className="w-full h-full">
         <div className="w-full h-full flex flex-col pb-10 pt-5 gap-5">
           <div className="w-full flex flex-col px-5 lg:px-20">
-            <div className="uppercase font-oswald font-bold text-[6vw] lg:text-5xl leading-none">
+            <div className="uppercase font-oswald font-bold text-[6vw] lg:text-[6.3vw] leading-none">
               <h1>Transforming your ideas into</h1>
             </div>
-            <div className="uppercase font-oswald font-bold text-[25vw] lg:text-[12.5vw] text-lightPrimary leading-none">
+            <div className="uppercase font-oswald font-bold text-[25.6vw] lg:text-[12.8vw] text-lightPrimary leading-none">
               <h1>
                 <span className="text-accentColor">Digital</span> Reality
               </h1>
@@ -397,7 +401,7 @@ export default function Home() {
             </div>
             <div className="w-[2px] flex bg-accentColor"></div>
           </div>
-          <h2 className="px-5 lg:px-20 text-[8vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
+          <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
             The Solutions that drive <br />
             <span className="text-accentColor font-bold">Your Success</span>
           </h2>
@@ -445,13 +449,13 @@ export default function Home() {
             />
             <ServiceCard
               serviceIndex="03"
-              serviceTitle="Social Media Marketing (SMM)"
+              serviceTitle="Social Media Marketing"
               forwardTo=""
               background="/services/social_media_marketing_background.mp4"
             />
             <ServiceCard
               serviceIndex="04"
-              serviceTitle="Search Engine Marketing (SEM)"
+              serviceTitle="Search Engine Marketing"
               forwardTo=""
               background="/services/search_engine_marketing_background.mp4"
             />
