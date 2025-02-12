@@ -1,6 +1,6 @@
 const AnimatedText = ({ text }) => {
   return (
-    <div className="group relative overflow-hidden leading-none">
+    <div className="group relative overflow-hidden leading-tight">
       <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-full">
         {text}
       </span>

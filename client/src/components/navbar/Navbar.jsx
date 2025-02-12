@@ -111,11 +111,13 @@ function Navbar() {
                     label="Get A Quote"
                     labelColor="text-lightPrimary group-hover:text-darkPrimary"
                     bgColor="bg-lightPrimary"
-                    labelSize="text-sm"
+                    labelSize="text-base"
                     borderColor="border-lightPrimary"
                     iconColor="text-darkPrimary"
                     iconSize="text-lg"
                     icon={<FaRegPaperPlane />}
+                    paddingX="px-3"
+                    paddingY="p-2"
                   />
                 </div>
               </div>
@@ -156,7 +158,7 @@ function Navbar() {
                   <div className="w-full h-full flex flex-row gap-20">
                     <div className="flex flex-col gap-2 text-nowrap">
                       <div className="font-bold uppercase text-lightPrimary">
-                        Resources
+                        Legals
                       </div>
                       <div>Privacy Policy</div>
                       <div>Terms Of Use</div>
@@ -186,7 +188,6 @@ function Navbar() {
                         placeholder="blur"
                         src={navExpandLogo}
                         alt="devion-ark-logo"
-                        fill
                         className="object-cover"
                       />
                     </div>
@@ -239,6 +240,8 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Navbar */}
 
       <div className="w-full flex lg:hidden relative">
         <div

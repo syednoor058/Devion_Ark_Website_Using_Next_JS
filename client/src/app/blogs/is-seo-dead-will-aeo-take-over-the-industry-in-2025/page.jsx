@@ -27,7 +27,9 @@ function MoreBlogCard({ cover, title, forwardTo }) {
       </div>
       <Link href={forwardTo} className="group">
         <div className="w-full flex flex-row gap-5 justify-between">
-          <div className="text-xl lg:text-2xl text-lightPrimary">{title}</div>
+          <div className="text-xl lg:text-2xl text-lightPrimary group-hover:underline underline-offset-4 duration-500">
+            {title}
+          </div>
           <div className="text-2xl lg:text-4xl">
             <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
           </div>
@@ -352,7 +354,7 @@ function Blog1() {
       </div>
 
       {/* Share Links */}
-      <div className="px-5 lg:px-20 flex flex-row gap-5 items-center text-base lg:text-xl pb-10 lg:pb-20">
+      <div className="px-5 lg:px-20 flex flex-row gap-5 items-center text-base lg:text-xl pb-10 lg:pb-20 pt-5 lg:pt-10">
         <div className="flex flex-row gap-2 items-center">
           <IoMdShare /> Share:
         </div>
@@ -364,8 +366,13 @@ function Blog1() {
         </div>
       </div>
 
+      {/* Divider */}
+      <div className="px-5 lg:px-20">
+        <div className="w-full h-[1px] bg-gray-800"></div>
+      </div>
+
       {/* More Blogs */}
-      <div className="w-full px-5 lg:px-20 pt-5 lg:pt-10 pb-10 lg:pb-20 flex flex-col gap-5 lg:gap-10">
+      <div className="w-full px-5 lg:px-20 pt-10 lg:pt-20 pb-10 lg:pb-20 flex flex-col gap-5 lg:gap-10">
         <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden">
           <div className="uppercase flex font-light text-base sm:text-lg overflow-hidden text-accentColor leading-none">
             <span className="inline-block">More Blogs</span>

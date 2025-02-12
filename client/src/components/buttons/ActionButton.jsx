@@ -12,6 +12,8 @@ function ActionButton({
   iconColor,
   iconSize,
   icon,
+  paddingX = "px-5",
+  paddingY = "py-3",
 }) {
   return (
     <div className="inline-flex group">
@@ -19,7 +21,7 @@ function ActionButton({
         <div className="inline-flex">
           {/* Text Container */}
           <div
-            className={`relative px-5 py-3 border-2 overflow-hidden ${borderColor}`}
+            className={`relative ${paddingX} ${paddingY} border-2 overflow-hidden ${borderColor}`}
           >
             {/* Label Text */}
             <h4

@@ -84,7 +84,7 @@ function Blogs() {
             <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[7.5vw] lg:text-[5vw] ">
               <h1 className="">Digital Insights For</h1>
             </div>
-            <div className="w-full leading-none text-lightPrimary text-[21vw] lg:text-[8vw]">
+            <div className="w-full leading-none text-lightPrimary text-[20vw] lg:text-[8vw]">
               <h1>
                 Business{" "}
                 <span className="text-accentColor text-[22vw] lg:text-[8vw]">

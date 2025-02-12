@@ -172,25 +172,23 @@ export default function Home() {
       {/* Landing Section */}
 
       <div className="w-full h-full">
-        <div className="w-full h-full flex flex-col pb-10 pt-5 gap-5">
-          <div className="w-full flex flex-col px-5 lg:px-20">
-            <div className="uppercase font-oswald font-bold text-[6vw] lg:text-[6.3vw] leading-none">
-              <h1>Transforming your ideas into</h1>
-            </div>
-            <div className="uppercase font-oswald font-bold text-[25.6vw] lg:text-[12.8vw] text-lightPrimary leading-none">
-              <h1>
-                <span className="text-accentColor">Digital</span> Reality
-              </h1>
-            </div>
-          </div>
-          <div className="w-full flex flex-col lg:flex-row gap-5 justify-between items-end px-0 lg:px-20">
+        <div className="w-full h-full flex flex-col pb-10 pt-5 gap-10 lg:gap-16">
+          <h1 className="w-full flex flex-col px-5 lg:px-20">
+            <span className="uppercase font-oswald font-bold text-[12vw] lg:text-[6.3vw] leading-none">
+              Transforming your ideas into
+            </span>
+            <span className="uppercase font-oswald font-bold text-[12vw] lg:text-[12.8vw] text-lightPrimary leading-none">
+              <span className="text-accentColor">Digital</span> Reality
+            </span>
+          </h1>
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-16 justify-between items-end px-0 lg:px-20">
             <div className="w-full lg:w-[50%] h-full flex flex-row items-end px-5 lg:px-0">
               <p className="pt-0 lg:pt-4 font-light leading-tight text-[5vw] lg:text-[2.5vw]">
                 We Deliver Data-Backed SEO, Social Media Campaigns, and Business
                 Software Designed to Scale Your Revenue.
               </p>
             </div>
-            <div className="w-full lg:w-[35%] flex flex-col gap-3 rounded-sm">
+            <div className="w-full lg:w-[35%] flex flex-col gap-5 rounded-sm">
               <div className="w-full aspect-video overflow-hidden relative rounded-sm">
                 <video className="w-full" loop muted autoPlay playsInline>
                   <source src="/videos/devion_ark_showreel_2024.mp4" />
