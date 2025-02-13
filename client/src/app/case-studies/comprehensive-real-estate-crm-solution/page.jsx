@@ -20,8 +20,9 @@ export const metadata = {
 function ComprehensiveRealEstateCRMProject() {
   return (
     <>
+      {/* Landing Section  */}
       <div className="w-full pt-5 pb-10 lg:pb-20 px-5 lg:px-20 bg-darkPrimary text-lightSecondary">
-        <div className="w-full flex flex-col gap-5 lg:gap-10">
+        <div className="w-full flex flex-col gap-10">
           <div className="text-lightPrimary font-oswald font-bold text-[7vw] lg:text-[5.5vw]">
             <h1 className="leading-tight uppercase">
               Empowering <span className="text-accentColor">real estate</span>{" "}
@@ -88,8 +89,9 @@ function ComprehensiveRealEstateCRMProject() {
         </div>
       </div>
 
+      {/* Overview Section */}
       <div className="w-full  px-5 lg:px-20 py-10 lg:py-20 bg-black">
-        <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20">
+        <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-16">
           <div className="w-full lg:w-[50%]">
             <div className="w-full flex flex-col gap-5 lg:gap-10">
               <div className="font-light text-lightSecondary text-xl">
@@ -138,8 +140,10 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
+
+      {/* Impact Section  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
-        <div className="w-full flex flex-col gap-10 lg:gap-20">
+        <div className="w-full flex flex-col gap-10 lg:gap-16">
           <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col gap-5 leading-none">
             <h3>Impact</h3>
             <div className="w-full h-[1px] bg-lightSecondary"></div>
@@ -178,10 +182,12 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
+
+      {/* Image Desc Section 1  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
               <h3>Project Background</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -210,7 +216,7 @@ function ComprehensiveRealEstateCRMProject() {
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
               <h3>Optimized Data Management</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -239,8 +245,10 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
+
+      {/* Features  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
-        <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none">
+        <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
           <h3>Features</h3>
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -295,10 +303,12 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
+
+      {/* Image Desc Section 2  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
               <h3>Enhanced Performance</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -328,7 +338,7 @@ function ComprehensiveRealEstateCRMProject() {
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
+            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
               <h3>Scalable Development</h3>
             </div>
             <div className="font-light text-base text-lightSecondary">
@@ -358,6 +368,8 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
+
+      {/* Testimonial  */}
       <div className="w-full h-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full h-full flex flex-col lg:flex-row gap-10 items-stretch">
           <div className="w-full flex lg:w-[60%] rounded-2xl bg-darkSecondary p-5 text-lightSecondary">

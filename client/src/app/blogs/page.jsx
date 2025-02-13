@@ -79,20 +79,18 @@ function Blogs() {
       {/* Landing Section */}
 
       <div className="w-full h-full relative">
-        <div className="w-full flex flex-col gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
-          <div className="w-full flex flex-col font-oswald font-bold uppercase text-start">
-            <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[7.5vw] lg:text-[5vw] ">
-              <h1 className="">Digital Insights For</h1>
-            </div>
-            <div className="w-full leading-none text-lightPrimary text-[20vw] lg:text-[8vw]">
-              <h1>
-                Business{" "}
-                <span className="text-accentColor text-[22vw] lg:text-[8vw]">
-                  Growth
-                </span>
-              </h1>
-            </div>
-          </div>
+        <div className="w-full flex flex-col gap-10 lg:gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
+          <h1 className="w-full flex flex-col font-oswald font-bold uppercase text-start">
+            <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[7.5vw] lg:text-[5vw] ">
+              Digital Insights For
+            </span>
+            <span className="w-full leading-none text-lightPrimary text-[20vw] lg:text-[8vw]">
+              Business{" "}
+              <span className="text-accentColor text-[22vw] lg:text-[8vw]">
+                Growth
+              </span>
+            </span>
+          </h1>
           <div className="w-full">
             <p className="w-full text-[5vw] lg:text-[2vw] font-light text-lightSecondary leading-tight lg:pt-5">
               Welcome to the Devion Ark Blog, your resource for cutting-edge
@@ -144,11 +142,11 @@ function Blogs() {
 
       {/* Blog List Section */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
-        <div className="w-full flex flex-col gap-10 lg:gap-20">
+        <div className="w-full flex flex-col gap-10 lg:gap-16">
           <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden">
-            <div className="uppercase flex font-light text-base sm:text-lg overflow-hidden text-accentColor leading-none">
+            <h6 className="uppercase flex font-light text-base sm:text-lg overflow-hidden text-accentColor leading-none">
               <span className="inline-block">Blogs</span>
-            </div>
+            </h6>
             <div className="w-[2px] flex bg-lightPrimary"></div>
           </div>
           <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-gray-800">

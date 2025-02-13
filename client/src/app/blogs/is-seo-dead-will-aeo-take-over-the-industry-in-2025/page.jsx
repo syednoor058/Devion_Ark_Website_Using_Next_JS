@@ -53,7 +53,7 @@ function Blog1() {
       <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-5 lg:px-20 pb-5 lg:pb-10 font-light text-lightSecondary">
         <div className="flex flex-col gap-7 lg:gap-20">
           <Link href="/blogs">
-            <div className="w-full flex flex-row gap-2 lg:gap-5 text-sm lg:text-lg uppercase items-center">
+            <div className="w-full flex flex-row gap-2 lg:gap-5 text-sm lg:text-lg items-center">
               <LuArrowLeft /> Back To Blog
             </div>
           </Link>

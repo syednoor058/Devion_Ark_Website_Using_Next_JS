@@ -21,20 +21,18 @@ function Services() {
       {/* Landing Section */}
 
       <div className="w-full h-full relative">
-        <div className="w-full flex flex-col gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
-          <div className="w-full flex flex-col font-oswald font-bold uppercase text-start lg:text-end ">
-            <div className="w-full text-lightSecondary leading-tight lg:leading-none text-[5vw] lg:text-[5.8vw] ">
-              <h1 className="">Empowering Your Business with</h1>
-            </div>
-            <div className="w-full leading-none text-lightPrimary text-[12vw] lg:text-[8.3vw]">
-              <h1>
-                Cutting-Edge{" "}
-                <span className="text-accentColor text-[18vw] lg:text-[8vw]">
-                  Solutions
-                </span>
-              </h1>
-            </div>
-          </div>
+        <div className="w-full flex flex-col gap-10 lg:gap-16 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
+          <h1 className="w-full flex flex-col font-oswald font-bold uppercase text-start lg:text-end ">
+            <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[9vw] lg:text-[5.8vw]">
+              Empowering Your Business with
+            </span>
+            <span className="w-full leading-none text-lightPrimary text-[12vw] lg:text-[8.3vw]">
+              Cutting-Edge{" "}
+              <span className="text-accentColor text-[18vw] lg:text-[8vw]">
+                Solutions
+              </span>
+            </span>
+          </h1>
           <div className="w-full">
             <p className="w-full lg:w-[50%] text-[5vw] lg:text-[2vw] font-light text-lightSecondary leading-tight lg:pt-5">
               We craft tailored digital experiences-driving measurable growth,
@@ -77,12 +75,12 @@ function Services() {
       {/* Service List Section */}
 
       <div className="w-full px-5 lg:px-20 bg-black py-10 lg:py-20">
-        <div className="w-full flex flex-col gap-5 lg:gap-10">
+        <div className="w-full flex flex-col gap-10 lg:gap-16">
           <div className="w-full text-accentColor font-oswald font-bold uppercase text-center text-[8vw] lg:text-[7vw]">
             <h2>At your service</h2>
           </div>
-          <div className="w-full h-full flex flex-col gap-5 lg:gap-10">
-            <div className="w-full flex flex-col lg:flex-row gap-5 lg:gap-10">
+          <div className="w-full h-full flex flex-col gap-10">
+            <div className="w-full flex flex-col lg:flex-row gap-10">
               <div className="w-full lg:w-[50%] rounded-xl bg-lightPrimary p-5">
                 <div className="w-full flex flex-col gap-5">
                   <div className="text-darkPrimary text-[9vw] lg:text-[4vw] font-semibold leading-none font-oswald">
@@ -145,7 +143,7 @@ function Services() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-full flex flex-col lg:flex-row gap-5 lg:gap-10 items-stretch">
+            <div className="w-full h-full flex flex-col lg:flex-row gap-10 items-stretch">
               <div className="w-full lg:w-[30%] flex bg-accentColor rounded-xl p-5">
                 <div className="w-full h-full flex flex-col gap-5">
                   <div className="text-darkPrimary text-[9vw] lg:text-[3.5vw] font-semibold leading-none font-oswald">
@@ -163,7 +161,7 @@ function Services() {
                 </div>
               </div>
               <div className="w-full lg:w-[70%] h-full flex">
-                <div className="w-full flex flex-col gap-5 lg:gap-10">
+                <div className="w-full flex flex-col gap-10">
                   <div className="w-full h-full rounded-xl p-5 bg-lightPrimary">
                     <div className="w-full h-full flex flex-col lg:flex-row gap-5 items-center">
                       <div className="w-full lg:w-[70%] flex flex-col gap-5 ">
@@ -198,7 +196,7 @@ function Services() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full flex flex-col lg:flex-row gap-5 lg:gap-10">
+                  <div className="w-full flex flex-col lg:flex-row gap-10">
                     <div className="w-full lg:w-[50%] rounded-xl bg-darkPrimary p-5">
                       <div className="w-full flex flex-col gap-5">
                         <div className="w-full flex flex-row gap-5">

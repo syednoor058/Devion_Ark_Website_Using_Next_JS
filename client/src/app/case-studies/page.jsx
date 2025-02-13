@@ -73,20 +73,20 @@ function CaseStudies() {
       {/* Landing Section */}
 
       <div className="w-full h-full relative">
-        <div className="w-full flex flex-col gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
+        <div className="w-full flex flex-col gap-10 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
           <h1 className="w-full flex flex-col font-oswald font-bold uppercase">
-            <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[6.5vw] lg:text-[5vw] ">
+            <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[9vw] lg:text-[7vw] ">
               Blueprints of Innovation:
             </span>
-            <span className="w-full leading-none text-lightPrimary text-[18vw] lg:text-[8vw]">
+            <span className="w-full leading-none text-lightPrimary text-[18vw] lg:text-[9vw]">
               Our{" "}
-              <span className="text-accentColor text-[18vw] lg:text-[8vw]">
+              <span className="text-accentColor text-[18vw] lg:text-[10vw]">
                 Case Studies
               </span>
             </span>
           </h1>
           <div className="w-full flex justify-end">
-            <p className="w-full lg:w-[50%] text-[4vw] lg:text-[1.5vw] font-light text-lightSecondary leading-tight lg:pt-5 text-start">
+            <p className="w-full lg:w-[60%] text-[4.5vw] lg:text-[1.5vw] font-light text-lightSecondary leading-tight lg:pt-5 text-start">
               Explore our curated collection of real-world success stories where
               innovation meets impact. Our case studies highlight transformative
               projects in software development, digital marketing, responsive
@@ -130,12 +130,12 @@ function CaseStudies() {
       {/* Project List Section */}
 
       <div className="w-full px-5 lg:px-20 bg-black py-10 lg:py-20">
-        <div className="w-full flex flex-col gap-10 lg:gap-20">
-          <div className="w-full text-accentColor font-oswald font-bold uppercase text-start lg:text-center text-[8vw] lg:text-[7vw] leading-none">
+        <div className="w-full flex flex-col gap-10 lg:gap-16">
+          <div className="w-full text-accentColor font-oswald font-bold uppercase text-start lg:text-center text-[8vw] lg:text-[7vw] leading-tight">
             <h2>Crafting Digital Success</h2>
           </div>
           <div className="w-full h-full">
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
               <ProjectListCard
                 forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
                 bgColor="bg-darkPrimary"

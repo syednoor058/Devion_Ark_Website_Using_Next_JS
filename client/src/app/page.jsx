@@ -40,7 +40,6 @@ function TestimonialCard({ image, name, position, company, review }) {
                 placeholder="blur"
                 src={image}
                 alt={name}
-                fill
                 className="object-cover"
               />
             </div>
@@ -86,7 +85,6 @@ function TestimonialCard2({ image, name, position, company, review }) {
                 placeholder="blur"
                 src={image}
                 alt={name}
-                fill
                 className="object-cover"
               />
             </div>
@@ -224,7 +222,7 @@ export default function Home() {
 
       {/* Partners Section */}
 
-      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-5 leading-none w-full h-full lg:px-20 relative">
+      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative">
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 bg-opacity-15"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 left-[50%] bg-opacity-15"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 right-20 bg-opacity-15"></div>
@@ -232,7 +230,7 @@ export default function Home() {
           <span className="text-accentColor">Brands</span> we&apos;ve partnered
           with{" "}
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-6 mt-3 lg:mt-7 relative px-3 lg:px-0">
+        <div className="grid grid-cols-2 lg:grid-cols-6 relative px-3 lg:px-0">
           <div className="w-full h-full absolute top-0 flex flex-col justify-between">
             <div className="w-full h-[1px] bg-lightSecondary bg-opacity-25"></div>
             <div className="w-full h-[1px] bg-lightSecondary bg-opacity-25"></div>
@@ -267,12 +265,12 @@ export default function Home() {
       <div
         className={`w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-black bg-fit relative overflow-hidden`}
       >
-        <div className="flex flex-col lg:flex-row gap-7 lg:gap-20 relative z-[5]">
-          <div className="w-full lg:w-[65%] flex flex-col gap-5 lg:gap-10">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 relative z-[5]">
+          <div className="w-full lg:w-[65%] flex flex-col gap-10 lg:gap-16">
             <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-              <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
+              <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
                 <span className="inline-block">Who We Are</span>
-              </div>
+              </h6>
               <div className="w-[2px] flex bg-accentColor"></div>
             </div>
             <div className="flex flex-col gap-2 uppercase font-titleFont text-lightTitleText">
@@ -287,7 +285,7 @@ export default function Home() {
               <div className="w-full hidden lg:flex justify-start lg:justify-end"></div>
             </div>
           </div>
-          <div className="w-full lg:w-[35%] flex flex-col gap-7 lg:gap-20 justify-end">
+          <div className="w-full lg:w-[35%] flex flex-col gap-10 lg:gap-16 justify-end">
             <div className="w-full flex flex-col justify-start items-start gap-3">
               <AvatarGroup>
                 <Avatar
@@ -341,48 +339,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Portfolio Section */}
-
-      {/* <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
-        <div className="w-full flex flex-col gap-10">
-          <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col pb-5 border-b-dashed-custom leading-none border-b border-lightSecondary border-dashed uppercase">
-            <h3>Portfolio</h3>
-          </div>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
-            <div className="w-full rounded-xl bg-accentColor p-5">
-              <div className="w-full flex flex-col gap-3">
-                <div className="font-bold font-oswald text-7xl  text-darkPrimary">
-                  3+
-                </div>
-                <div className="font-light text-darkSecondary text-lg">
-                  <p>Years of transformative expertise</p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full rounded-xl bg-accentColor p-5">
-              <div className="w-full flex flex-col gap-3">
-                <div className="font-bold font-oswald text-7xl text-darkPrimary">
-                  20+
-                </div>
-                <div className="font-light text-darkSecondary">
-                  <p>Cutting-edge projects delivered</p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full rounded-xl bg-accentColor p-5">
-              <div className="w-full flex flex-col gap-3">
-                <div className="font-bold font-oswald text-7xl text-darkPrimary">
-                  12+
-                </div>
-                <div className="font-light text-darkSecondary">
-                  <p>Happy clients worldwide</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Our Services Section */}
 
       <div className="w-full py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
@@ -392,24 +348,21 @@ export default function Home() {
           <div className="w-[1px] h-full bg-gray-800"></div>
           <div className="w-[1px] h-full bg-gray-800"></div>
         </div>
-        <div className="flex flex-col gap-5 lg:gap-10 z-[2]">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none px-5 lg:px-20">
+        <div className="flex flex-col gap-10 lg:gap-16 z-[2]">
+          <h6 className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none px-5 lg:px-20">
             <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
               <span className="inline-block">Our Services</span>
             </div>
             <div className="w-[2px] flex bg-accentColor"></div>
-          </div>
-          <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium">
-            The Solutions that drive <br />
+          </h6>
+          <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium flex flex-col">
+            <span>The Solutions that drive</span>
             <span className="text-accentColor font-bold">Your Success</span>
           </h2>
         </div>
-        <div className="w-full flex flex-col sm:flex-row justify-start px-5 sm:px-7 lg:px-10 xl:px-20 gap-7 z-[2]">
-          <div className="w-full sm:w-[60%] xl:w-[40%] text-base lg:text-lg font-light overflow-hidden leading-tight">
-            <span
-              id="what-we-do-desc"
-              className="block overflow-hidden  backdrop-blur-[1px] py-3 bg-darkPrimary"
-            >
+        <div className="w-full flex flex-col sm:flex-row justify-start px-5  lg:px-20 gap-7 z-[2]">
+          <p className="w-full lg:w-[40%] text-base lg:text-lg font-light overflow-hidden leading-tight">
+            <span className="block overflow-hidden  backdrop-blur-[1px] py-3 bg-darkPrimary">
               We specialise in developing solutions that help your business
               prosper in the digital age. From intuitive software to attractive
               websites to strategic marketing and flawless testing, we match
@@ -417,8 +370,8 @@ export default function Home() {
               guarantees that every project we do promotes development,
               increases visibility, and delivers long-term value.
             </span>
-          </div>
-          <div className="w-full sm:w-[40%] lg:w-[60%] flex flex-row gap-5 items-center justify-end">
+          </p>
+          <div className="w-full lg:w-[60%] flex flex-row gap-5 items-center justify-end">
             <div className="text-7xl lg:text-9xl xl:text-[200px] leading-none font-thin text-accentColor overflow-hidden">
               <span id="growth-rate" className="inline-block font-poppins">
                 1.5
@@ -475,24 +428,24 @@ export default function Home() {
 
       {/* Project Showcase Section */}
 
-      <div className="w-full bg-[url('/backgrounds/bg-wavey-fingerprint.svg')] bg-fit flex flex-col">
-        <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden py-10 lg:py-20">
-          <div className="w-full lg:w-[60%] flex flex-col gap-5 lg:gap-10 ps-5 lg:ps-20 pe-5 lg:pe-10">
+      <div className="w-full bg-black bg-fit flex flex-col">
+        <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden gap-10 lg:gap-0 py-10 lg:py-20">
+          <div className="w-full lg:w-[60%] flex flex-col gap-10 lg:gap-16 px-5 lg:px-20">
             <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-              <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
+              <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
                 <span className="inline-block">Case Studies</span>
-              </div>
+              </h6>
               <div className="w-[2px] flex bg-accentColor"></div>
             </div>
-            <h2 className="w-full text-[10vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-none font-bold">
-              Our Works In
-              <br />
+            <h2 className="w-full text-[10vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-none font-bold flex flex-col">
+              <span>Our Works In</span>
+
               <span className="text-accentColor font-extrabold text-[14vw] lg:text-[6.5vw]">
                 Action
               </span>
             </h2>
           </div>
-          <div className="w-full lg:w-[40%] flex flex-col items-end ps-5 lg:ps-0 pe-5 lg:pe-20">
+          <div className="w-full lg:w-[40%] flex flex-col gap-10 lg:gap-16 items-end ps-5 lg:ps-0 pe-5 lg:pe-20">
             <div className="w-[30%] aspect-square rounded-full flex justify-center items-center relative text-lightPrimary">
               <CircularTextAnimation
                 text="evion Ark . Devion Ark . Devion Ark . D"
@@ -503,7 +456,7 @@ export default function Home() {
                 <GoDotFill />
               </div>
             </div>
-            <p className="w-full text-lg font-light overflow-hidden pt-5 leading-tight">
+            <p className="w-full text-lg font-light overflow-hidden leading-tight">
               See how we&apos;ve turned challenges into opportunities and ideas
               into impactful solutions. Our case studies showcase real-world
               examples of how we&apos;ve helped businesses grow, optimize
@@ -721,11 +674,11 @@ export default function Home() {
       <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-[40%] flex">
-            <div className="w-full h-full uppercase font-oswald text-[8vw] lg:text-[6vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none text-darkSecondary bg-lightPrimary py-10 lg:py-20">
+            <h2 className="w-full h-full uppercase font-oswald text-[8vw] lg:text-[6vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none text-darkSecondary bg-lightPrimary py-10 lg:py-20">
               Frequently Asked{" "}
               <span className="text-accentColor">Questions</span>
               <span>(FAQ)</span>
-            </div>
+            </h2>
           </div>
           <FAQSection />
         </div>
