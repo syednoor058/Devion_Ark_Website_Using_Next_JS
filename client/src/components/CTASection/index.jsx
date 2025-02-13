@@ -42,7 +42,8 @@ function CTASection() {
             <ActionButton
               forwardTo=""
               label="Book A Call"
-              labelColor="text-darkPrimary group-hover:text-lightPrimary"
+              labelColor="text-darkPrimary font-semibold"
+              labelHoverColor="group-hover:text-lightPrimary"
               bgColor="bg-darkPrimary"
               labelSize="text-base lg:text-lg"
               borderColor="border-darkPrimary"

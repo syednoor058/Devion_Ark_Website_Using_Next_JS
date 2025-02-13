@@ -130,7 +130,8 @@ function ProjectColumn({
             <ActionButton
               forwardTo=""
               label="Learn More"
-              labelColor="text-darkPrimary group-hover:text-lightPrimary"
+              labelColor="text-darkPrimary font-semibold"
+              labelHoverColor="group-hover:text-lightPrimary"
               bgColor="bg-darkPrimary"
               labelSize="text-lg"
               borderColor="border-darkPrimary"

@@ -1,12 +1,13 @@
 // import Link from "next/link";
 import Link from "next/link";
-import AnimatedText from "../animations/AnimatedText";
+import AnimatedLetter from "../animations/AnimatedLetter";
 
 function ActionButton({
   forwardTo,
   label,
   labelSize,
   labelColor,
+  labelHoverColor = "",
   borderColor,
   bgColor,
   iconColor,
@@ -25,9 +26,9 @@ function ActionButton({
           >
             {/* Label Text */}
             <h4
-              className={`relative z-10 block transition-colors duration-500 ${labelColor} ${labelSize} capitalize whitespace-nowrap`}
+              className={`relative z-10 block transition-colors duration-500 ${labelColor} ${labelSize} capitalize whitespace-nowrap pt-1`}
             >
-              <AnimatedText text={label} />
+              <AnimatedLetter text={label} hoverText={labelHoverColor} />
             </h4>
             {/* Background Hover Effect */}
             <div
@@ -38,7 +39,7 @@ function ActionButton({
       </Link>
       {/* Icon Container */}
       <div
-        className={`h-full aspect-square flex justify-center items-center ${iconSize} transition-colors duration-500 ${bgColor} ${iconColor}`}
+        className={`h-full aspect-square flex justify-center items-center ${iconSize} transition-colors duration-[350ms] ease-in-out  ${bgColor} ${iconColor}`}
       >
         {icon}
       </div>

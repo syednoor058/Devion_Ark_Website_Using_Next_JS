@@ -1,12 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 import { BsHandIndexThumbFill } from "react-icons/bs";
-import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import footerLogo from "../../../public/footer_logo.png";
+import AnimatedLetter from "../animations/AnimatedLetter";
 import ActionButton from "../buttons/ActionButton";
 
 function AddressInfo({ icon, title, value }) {
@@ -49,7 +48,8 @@ function Footer() {
                         <ActionButton
                           forwardTo=""
                           label="Subscribe"
-                          labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                          labelColor="text-lightPrimary font-semibold"
+                          labelHoverColor="group-hover:text-darkPrimary"
                           bgColor="bg-lightPrimary"
                           labelSize="text-base"
                           borderColor="border-lightPrimary"
@@ -64,18 +64,22 @@ function Footer() {
                   <p className="font-light">
                     By signing up, you understand and agree that your data will
                     be collected and used subject to our{" "}
-                    <span className="underline underline-offset-2">
-                      Privacy Policy
-                    </span>{" "}
+                    <Link href="/privacy-policy">
+                      <span className="hover:underline underline-offset-2">
+                        Privacy Policy
+                      </span>
+                    </Link>{" "}
                     and{" "}
-                    <span className="underline underline-offset-2">
-                      Terms of Use
-                    </span>
+                    <Link href="/terms-of-use">
+                      <span className="hover:underline underline-offset-2">
+                        Terms of Use
+                      </span>
+                    </Link>
                     .
                   </p>
                 </div>
                 <div className="w-full lg:w-[40%] flex flex-col gap-10 justify-between px-5">
-                  <div className="flex flex-row gap-10 ">
+                  <div className="flex flex-row gap-10 text-lg">
                     <div className="w-full flex flex-col gap-3 lg:gap-7">
                       <div className="uppercase font-semibold text-lightPrimary">
                         Contact Us
@@ -101,16 +105,36 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="w-full flex flex-col gap-3">
+              <div className="w-full flex flex-col gap-3 text-lg">
                 <div className="w-full hidden lg:flex flex-row gap-20 px-5">
                   <div className="w-[10%] uppercase font-semibold text-lightPrimary">
                     Resources
                   </div>
                   <div className="w-[90%] flex flex-row gap-10 font-light">
-                    <div>Privacy Poilicy</div>
-                    <div>Terms of Use</div>
-                    <div>Cookies Policy</div>
-                    <div>Contact</div>
+                    <Link href="">
+                      <AnimatedLetter
+                        text="Privacy Poilicy"
+                        hoverText="text-accentColor"
+                      />
+                    </Link>
+                    <Link href="">
+                      <AnimatedLetter
+                        text="Terms of Use"
+                        hoverText="text-accentColor"
+                      />
+                    </Link>
+                    <Link href="">
+                      <AnimatedLetter
+                        text="Cookies Policy"
+                        hoverText="text-accentColor"
+                      />
+                    </Link>
+                    <Link href="">
+                      <AnimatedLetter
+                        text="Contact"
+                        hoverText="text-accentColor"
+                      />
+                    </Link>
                   </div>
                 </div>
 
@@ -119,42 +143,42 @@ function Footer() {
                     Connect
                   </div>
                   <div className="w-[90%] flex flex-row gap-10 font-light">
-                    <div className="flex flex-row items-center gap-2">
-                      <span>
-                        <FaFacebookF />
-                      </span>
-                      Facebook
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <span>
-                        <AiFillInstagram />
-                      </span>
-                      Instagram
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <span>
-                        <FaLinkedinIn />
-                      </span>
-                      LinkedIn
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <span>
-                        <FaYoutube />
-                      </span>
-                      YouTube
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <span>
-                        <FaXTwitter />
-                      </span>
-                      Twitter (X)
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <span>
-                        <AiOutlineTikTok />
-                      </span>
-                      Tiktok
-                    </div>
+                    <a href="" className="flex flex-row items-center gap-2">
+                      <AnimatedLetter
+                        text="Facebook"
+                        hoverText="text-accentColor"
+                      />
+                    </a>
+                    <a href="" className="flex flex-row items-center gap-2">
+                      <AnimatedLetter
+                        text="Instagram"
+                        hoverText="text-accentColor"
+                      />
+                    </a>
+                    <a href="" className="flex flex-row items-center gap-2">
+                      <AnimatedLetter
+                        text="LinkedIn"
+                        hoverText="text-accentColor"
+                      />
+                    </a>
+                    <a href="" className="flex flex-row items-center gap-2">
+                      <AnimatedLetter
+                        text="Youtube"
+                        hoverText="text-accentColor"
+                      />
+                    </a>
+                    <a href="" className="flex flex-row items-center gap-2">
+                      <AnimatedLetter
+                        text="Twitter"
+                        hoverText="text-accentColor"
+                      />
+                    </a>
+                    <a href="" className="flex flex-row items-center gap-2">
+                      <AnimatedLetter
+                        text="Whatsapp"
+                        hoverText="text-accentColor"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>

@@ -21,7 +21,7 @@ function Services() {
       {/* Landing Section */}
 
       <div className="w-full h-full relative">
-        <div className="w-full flex flex-col gap-10 lg:gap-16 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
+        <div className="w-full flex flex-col gap-10 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
           <h1 className="w-full flex flex-col font-oswald font-bold uppercase text-start lg:text-end ">
             <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[9vw] lg:text-[5.8vw]">
               Empowering Your Business with
@@ -45,13 +45,16 @@ function Services() {
               <ActionButton
                 forwardTo=""
                 label="Get Started"
-                labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                labelColor="text-lightPrimary font-semibold"
+                labelHoverColor="group-hover:text-darkPrimary"
                 bgColor="bg-lightPrimary"
                 labelSize="text-lg lg:text-2xl"
                 borderColor="border-lightPrimary"
                 iconColor="text-darkPrimary"
                 iconSize="text-2xl lg:text-4xl"
-                icon={<LuArrowUpRight />}
+                icon={
+                  <LuArrowUpRight className="rotate-45 group-hover:rotate-0 transition duration-[350ms]" />
+                }
               />
             </div>
           </div>
@@ -97,7 +100,8 @@ function Services() {
                       <ActionButton
                         forwardTo=""
                         label="Explore Our Works"
-                        labelColor="text-darkPrimary group-hover:text-lightPrimary"
+                        labelColor="text-darkPrimary font-semibold"
+                        labelHoverColor="group-hover:text-lightPrimary"
                         bgColor="bg-darkPrimary"
                         labelSize="text-sm lg:text-lg"
                         borderColor="border-darkPrimary"
@@ -129,7 +133,8 @@ function Services() {
                         <ActionButton
                           forwardTo=""
                           label="Explore More"
-                          labelColor="text-accentColor group-hover:text-darkPrimary"
+                          labelColor="text-accentColor font-semibold"
+                          labelHoverColor="group-hover:text-darkPrimary"
                           bgColor="bg-accentColor"
                           labelSize="text-sm lg:text-base"
                           borderColor="border-accentColor"
@@ -180,7 +185,8 @@ function Services() {
                             <ActionButton
                               forwardTo=""
                               label="Learn More"
-                              labelColor="text-darkPrimary group-hover:text-lightPrimary"
+                              labelColor="text-darkPrimary font-semibold"
+                              labelHoverColor="group-hover:text-lightPrimary"
                               bgColor="bg-darkPrimary"
                               labelSize="text-lg"
                               borderColor="border-darkPrimary"

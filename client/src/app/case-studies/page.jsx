@@ -1,6 +1,6 @@
 import ActionButton from "@/components/buttons/ActionButton";
+import { BiBookReader } from "react-icons/bi";
 import { FaEarthAmericas } from "react-icons/fa6";
-import { IoBookOutline } from "react-icons/io5";
 import { LuMouse } from "react-icons/lu";
 
 export const metadata = {
@@ -52,13 +52,14 @@ function ProjectListCard({
             <ActionButton
               forwardTo={forwardTo}
               label="Learn More"
-              labelColor={`${titleTextColor} group-hover:${btnTextHoverColor}`}
+              labelColor={`${titleTextColor} font-normal`}
+              labelHoverColor={`group-hover:${btnTextHoverColor}`}
               bgColor={btnBgColor}
               labelSize="text-base"
               borderColor={btnBorderColor}
               iconColor={btnTextHoverColor}
-              iconSize="text-xl"
-              icon={<IoBookOutline />}
+              iconSize="text-2xl"
+              icon={<BiBookReader />}
             />
           </div>
         </div>
@@ -100,7 +101,8 @@ function CaseStudies() {
               <ActionButton
                 forwardTo=""
                 label="Explore Case Studies"
-                labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                labelColor="text-lightPrimary font-semibold"
+                labelHoverColor="group-hover:text-darkPrimary"
                 bgColor="bg-lightPrimary"
                 labelSize="text-base lg:text-2xl"
                 borderColor="border-lightPrimary"

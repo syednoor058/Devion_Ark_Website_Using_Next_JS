@@ -28,7 +28,8 @@ function ProjectMobileColumn({ caption, video, title, forward, projectNum }) {
               <ActionButton
                 forwardTo=""
                 label="Learn More"
-                labelColor="text-darkPrimary group-hover:text-lightPrimary"
+                labelColor="text-darkPrimary font-semibold"
+                labelHoverColor="group-hover:text-lightPrimary"
                 bgColor="bg-darkPrimary"
                 labelSize="text-base"
                 borderColor="border-darkPrimary"

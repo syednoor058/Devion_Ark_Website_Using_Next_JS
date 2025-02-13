@@ -1,6 +1,6 @@
 import ActionButton from "@/components/buttons/ActionButton";
 import Image from "next/image";
-import { IoBookOutline } from "react-icons/io5";
+import { BiBookReader } from "react-icons/bi";
 import { LuArrowUpRight } from "react-icons/lu";
 import { MdOutlineArrowForward } from "react-icons/md";
 import blogCover1 from "../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
@@ -56,13 +56,14 @@ function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
                 <ActionButton
                   forwardTo={forwardTo}
                   label="Read More"
-                  labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                  labelColor="text-lightPrimary font-normal"
+                  labelHoverColor="group-hover:text-darkPrimary"
                   bgColor="bg-lightPrimary"
                   labelSize="text-base"
                   borderColor="border-lightPrimary"
                   iconColor="text-darkPrimary"
-                  iconSize="text-xl"
-                  icon={<IoBookOutline />}
+                  iconSize="text-2xl"
+                  icon={<BiBookReader className="" />}
                 />
               </div>
             </div>
@@ -105,13 +106,16 @@ function Blogs() {
               <ActionButton
                 forwardTo=""
                 label="Visit Blogs"
-                labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                labelColor="text-lightPrimary font-normal"
+                labelHoverColor="group-hover:text-darkPrimary"
                 bgColor="bg-lightPrimary"
                 labelSize="text-lg lg:text-2xl"
                 borderColor="border-lightPrimary"
                 iconColor="text-darkPrimary"
                 iconSize="text-2xl lg:text-4xl"
-                icon={<LuArrowUpRight className=" rotate-180" />}
+                icon={
+                  <LuArrowUpRight className="rotate-180 group-hover:-rotate-0 transition duration-[350ms]" />
+                }
               />
             </div>
           </div>

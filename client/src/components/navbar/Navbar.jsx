@@ -4,20 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaRegPaperPlane,
-  FaYoutube,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaRegPaperPlane } from "react-icons/fa";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
 import navExpandLogo from "../../../public/nav_expand_logo.png";
-import AnimatedText from "../animations/AnimatedText";
+import AnimatedLetter from "../animations/AnimatedLetter";
 import ActionButton from "../buttons/ActionButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
@@ -99,8 +92,8 @@ function Navbar() {
               <div>
                 <MenuIcon expand={menuExpand} />
               </div>
-              <div className="font-oswald font-semibold  uppercase text-lg">
-                <AnimatedText text="Menu" />
+              <div className="font-oswald font-semibold  uppercase text-lg pt-1">
+                <AnimatedLetter text="Menu" />
               </div>
             </div>
             <div className="ps-10">
@@ -109,7 +102,8 @@ function Navbar() {
                   <ActionButton
                     forwardTo=""
                     label="Get A Quote"
-                    labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                    labelColor="text-lightPrimary font-semibold"
+                    labelHoverColor="group-hover:text-darkPrimary"
                     bgColor="bg-lightPrimary"
                     labelSize="text-base"
                     borderColor="border-lightPrimary"
@@ -134,7 +128,7 @@ function Navbar() {
         >
           <div className="w-full h-full flex flex-col gap-10 pt-14">
             <div className="w-full h-[80%] flex flex-row gap-20 mt-10">
-              <div className="w-[50%] h-full ps-20 flex flex-col gap-2">
+              <div className="w-[50%] h-full ps-20 flex flex-col">
                 {navLinks.map((navLink, index) => (
                   <Link
                     href={navLink.path}
@@ -145,24 +139,46 @@ function Navbar() {
                       className={`w-full ${
                         pathname === navLink.path
                           ? "text-accentColor"
-                          : "text-lightSecondary hover:text-lightPrimary"
+                          : "text-lightSecondary"
                       } text-[4.5vw] font-bold uppercase font-oswald leading-none duration-500`}
                     >
-                      <AnimatedText text={navLink.label} />
+                      <AnimatedLetter
+                        text={navLink.label}
+                        hoverText={`${
+                          pathname === navLink.path
+                            ? "text-accentColor"
+                            : "text-lightPrimary"
+                        }`}
+                      />
                     </div>
                   </Link>
                 ))}
               </div>
-              <div className="w-[50%] h-full pe-20 flex items-end text-sm">
+              <div className="w-[50%] h-full pe-20 flex items-end text-lg">
                 <div className="w-full h-full flex flex-col justify-end gap-5">
                   <div className="w-full h-full flex flex-row gap-20">
                     <div className="flex flex-col gap-2 text-nowrap">
                       <div className="font-bold uppercase text-lightPrimary">
                         Legals
                       </div>
-                      <div>Privacy Policy</div>
-                      <div>Terms Of Use</div>
-                      <div>Cookies Policy</div>
+                      <Link href="">
+                        <AnimatedLetter
+                          text="Privacy Policy"
+                          hoverText="text-accentColor"
+                        />
+                      </Link>
+                      <Link href="">
+                        <AnimatedLetter
+                          text="Terms of Use"
+                          hoverText="text-accentColor"
+                        />
+                      </Link>
+                      <Link href="">
+                        <AnimatedLetter
+                          text="Cookies Policy"
+                          hoverText="text-accentColor"
+                        />
+                      </Link>
                     </div>
                     <div className="w-full flex flex-col gap-2">
                       <AddressInfo
@@ -195,48 +211,6 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div className=" w-full h-[20%] flex flex-col justify-end gap-2">
-              <div className="w-full h-[1px] bg-gray-700 "></div>
-              <div className="w-full flex flex-row gap-10 items-center py-5 px-20 justify-between">
-                <div className="font-semibold text-lightPrimary">Links:</div>
-                <div className="flex flex-row items-center gap-2">
-                  <span>
-                    <FaFacebookF />
-                  </span>
-                  Facebook
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <span>
-                    <AiFillInstagram />
-                  </span>
-                  Instagram
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <span>
-                    <FaLinkedinIn />
-                  </span>
-                  LinkedIn
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <span>
-                    <FaYoutube />
-                  </span>
-                  YouTube
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <span>
-                    <FaXTwitter />
-                  </span>
-                  Twitter (X)
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <span>
-                    <AiOutlineTikTok />
-                  </span>
-                  Tiktok
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -251,12 +225,14 @@ function Navbar() {
         >
           <div className="w-[50%] flex justify-center items-center px-5 z-[1003]">
             <div className="w-full relative">
-              <Image
-                placeholder="blur"
-                src={darkLogoMobile}
-                alt="devion_ark_logo"
-                className="w-full h-auto object-cover"
-              />
+              <Link href="/">
+                <Image
+                  placeholder="blur"
+                  src={darkLogoMobile}
+                  alt="devion_ark_logo"
+                  className="w-full h-auto object-cover"
+                />
+              </Link>
             </div>
           </div>
           <div className="w-[15%] flex justify-center items-center text-2xl z-[1003]">
@@ -290,21 +266,10 @@ function Navbar() {
                         : "text-lightSecondary hover:text-lightPrimary"
                     }  duration-500 text-[14vw] font-bold uppercase font-oswald leading-none`}
                   >
-                    <AnimatedText text={navLink.label} />
+                    <AnimatedLetter text={navLink.label} />
                   </div>
                 </Link>
               ))}
-            </div>
-            <div className="w-full ps-5 pe-10">
-              <div className="w-full h-[1px] bg-gray-800"></div>
-              <div className=" w-full flex flex-row gap-2 justify-between py-5 text-lg">
-                <FaFacebookF />
-                <FaLinkedinIn />
-                <FaYoutube />
-                <FaXTwitter />
-                <AiFillInstagram />
-                <AiOutlineTikTok />
-              </div>
             </div>
           </div>
         </div>

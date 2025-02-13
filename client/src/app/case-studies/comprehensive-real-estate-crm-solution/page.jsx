@@ -1,3 +1,4 @@
+import AnimatedLetter from "@/components/animations/AnimatedLetter";
 import ActionButton from "@/components/buttons/ActionButton";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
@@ -54,7 +55,8 @@ function ComprehensiveRealEstateCRMProject() {
                     forwardTo=""
                     label="Visit Website"
                     labelSize="text-2xl"
-                    labelColor="text-lightPrimary group-hover:text-darkPrimary"
+                    labelColor="text-lightPrimary font-semibold"
+                    labelHoverColor="group-hover:text-darkPrimary"
                     borderColor="border-lightPrimary"
                     bgColor="bg-lightPrimary"
                     iconColor="text-darkPrimary"
@@ -439,15 +441,19 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
               <div className="">
                 <div className="flex flex-col gap-3">
-                  <div className="inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full bg-darkPrimary text-lightPrimary">
-                    <a className="flex flex-row gap-5 items-center">
-                      LinkedIn
+                  <div className="inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full bg-darkPrimary text-lightPrimary group">
+                    <a href="" className="flex flex-row gap-5 items-center ">
+                      <span className="pt-1">
+                        <AnimatedLetter text="LinkedIn" />
+                      </span>
                       <FaLinkedinIn />
                     </a>
                   </div>
-                  <div className=" inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full border border-darkPrimary text-darkPrimary">
-                    <a className="flex flex-row gap-5 items-center">
-                      Whatsapp
+                  <div className=" inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full border border-darkPrimary text-darkPrimary group">
+                    <a href="" className="flex flex-row gap-5 items-center ">
+                      <span className="pt-1">
+                        <AnimatedLetter text="Whatsapp" />
+                      </span>
                       <FaWhatsapp />
                     </a>
                   </div>

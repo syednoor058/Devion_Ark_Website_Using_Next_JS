@@ -1,3 +1,4 @@
+import AnimatedLetter from "@/components/animations/AnimatedLetter";
 import SendToTop from "@/components/sendToTop/SendToTop";
 import Image from "next/image";
 import Link from "next/link";
@@ -54,7 +55,13 @@ function Blog1() {
         <div className="flex flex-col gap-7 lg:gap-20">
           <Link href="/blogs">
             <div className="w-full flex flex-row gap-2 lg:gap-5 text-sm lg:text-lg items-center">
-              <LuArrowLeft /> Back To Blog
+              <LuArrowLeft />{" "}
+              <span className="pt-1">
+                <AnimatedLetter
+                  text="Back To Blog"
+                  hoverText="text-accentColor"
+                />
+              </span>
             </div>
           </Link>
           <div className="flex flex-col gap-5 lg:gap-10">
