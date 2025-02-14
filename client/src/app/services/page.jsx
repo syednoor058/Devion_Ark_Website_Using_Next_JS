@@ -1,8 +1,9 @@
 import LottieAnimation from "@/components/animations/LottieAnimation";
-import ActionButton from "@/components/buttons/ActionButton";
+import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import { FaBookOpen } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
-import { IoBookOutline } from "react-icons/io5";
-import { LuArrowUpRight, LuMouse } from "react-icons/lu";
+import { FiArrowLeft } from "react-icons/fi";
+import { LuMouse } from "react-icons/lu";
 import dollarAnimation from "../../../public/animations/business.json";
 import SEMAnimation from "../../../public/animations/sem.json";
 import SEOAnimation from "../../../public/animations/seo.json";
@@ -42,18 +43,16 @@ function Services() {
           </div>
           <div className="w-full flex justify-end">
             <div className="w-full lg:w-[50%] flex justify-start lg:justify-end">
-              <ActionButton
+              <CustomShapeButton
                 forwardTo=""
                 label="Get Started"
-                labelColor="text-lightPrimary font-semibold"
-                labelHoverColor="group-hover:text-darkPrimary"
-                bgColor="bg-lightPrimary"
-                labelSize="text-lg lg:text-2xl"
-                borderColor="border-lightPrimary"
-                iconColor="text-darkPrimary"
-                iconSize="text-2xl lg:text-4xl"
+                paddingX="px-5"
+                paddingY="py-4"
+                textStyle="text-lg font-semibold text-darkPrimary"
+                backgroundColor="bg-lightPrimary"
+                hoverBgColor="bg-accentColor"
                 icon={
-                  <LuArrowUpRight className="rotate-45 group-hover:rotate-0 transition duration-[350ms]" />
+                  <FiArrowLeft className="text-xl text-darkPrimary group-hover:rotate-45 transition duration-[350ms]" />
                 }
               />
             </div>
@@ -84,7 +83,13 @@ function Services() {
           </div>
           <div className="w-full h-full flex flex-col gap-10">
             <div className="w-full flex flex-col lg:flex-row gap-10">
-              <div className="w-full lg:w-[50%] rounded-xl bg-lightPrimary p-5">
+              <div
+                className="w-full lg:w-[50%] bg-lightPrimary p-5"
+                style={{
+                  clipPath:
+                    "polygon(28px 0%, calc(100% - 28px) 0%, 100% 28px, 100% 100%, calc(100% - 28px) 100%, 28px 100%, 0px 100%, 0px 0px)",
+                }}
+              >
                 <div className="w-full flex flex-col gap-5">
                   <div className="text-darkPrimary text-[9vw] lg:text-[4vw] font-semibold leading-none font-oswald">
                     <h3>Custom Software Development</h3>
@@ -95,25 +100,32 @@ function Services() {
                     challenges with precision, ensuring seamless integration and
                     long-term scalability.
                   </p>
-                  <div className="w-full flex justify-end">
-                    <div className="w-full flex justify-end">
-                      <ActionButton
+                  <div className="w-full flex justify-start lg:justify-end">
+                    <div className="w-full flex justify-start lg:justify-end">
+                      <CustomShapeButton
                         forwardTo=""
-                        label="Explore Our Works"
-                        labelColor="text-darkPrimary font-semibold"
-                        labelHoverColor="group-hover:text-lightPrimary"
-                        bgColor="bg-darkPrimary"
-                        labelSize="text-sm lg:text-lg"
-                        borderColor="border-darkPrimary"
-                        iconColor="text-lightPrimary"
-                        iconSize="text-lg lg:text-2xl"
-                        icon={<FaEarthAmericas />}
+                        label="Explore More"
+                        paddingX="px-5"
+                        paddingY="py-4"
+                        textStyle="text-lg font-normal text-lightPrimary"
+                        hoverText="text-darkPrimary"
+                        backgroundColor="bg-darkPrimary"
+                        hoverBgColor="bg-accentColor"
+                        icon={
+                          <FaEarthAmericas className="text-xl text-lightPrimary group-hover:text-darkPrimary group-hover:rotate-45 transition duration-[350ms]" />
+                        }
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-[50%] rounded-xl bg-darkSecondary p-5">
+              <div
+                className="w-full lg:w-[50%] bg-darkSecondary p-5"
+                style={{
+                  clipPath:
+                    "polygon(28px 0%, calc(100% - 28px) 0%, 100% 28px, 100% 100%, calc(100% - 28px) 100%, 28px 100%, 0px 100%, 0px 0px)",
+                }}
+              >
                 <div className="w-full h-full flex flex-col lg:flex-row gap-5">
                   <div className="w-full lg:w-[30%] h-full">
                     <LottieAnimation animationFile={webDevelopmentAnimation} />
@@ -128,19 +140,19 @@ function Services() {
                       responsive layouts, and seamless navigation—all designed
                       to engage visitors and boost conversions.
                     </p>
-                    <div className="w-full flex justify-end">
-                      <div className="w-full flex justify-end">
-                        <ActionButton
+                    <div className="w-full flex justify-start lg:justify-end">
+                      <div className="w-full flex justify-start lg:justify-end">
+                        <CustomShapeButton
                           forwardTo=""
                           label="Explore More"
-                          labelColor="text-accentColor font-semibold"
-                          labelHoverColor="group-hover:text-darkPrimary"
-                          bgColor="bg-accentColor"
-                          labelSize="text-sm lg:text-base"
-                          borderColor="border-accentColor"
-                          iconColor="text-darkPrimary"
-                          iconSize="text-lg lg:text-xl"
-                          icon={<FaEarthAmericas />}
+                          paddingX="px-5"
+                          paddingY="py-4"
+                          textStyle="text-lg font-normal text-darkPrimary"
+                          backgroundColor="bg-lightPrimary"
+                          hoverBgColor="bg-accentColor"
+                          icon={
+                            <FaEarthAmericas className="text-xl text-darkPrimary group-hover:rotate-45 transition duration-[350ms]" />
+                          }
                         />
                       </div>
                     </div>
@@ -149,7 +161,13 @@ function Services() {
               </div>
             </div>
             <div className="w-full h-full flex flex-col lg:flex-row gap-10 items-stretch">
-              <div className="w-full lg:w-[30%] flex bg-accentColor rounded-xl p-5">
+              <div
+                className="w-full lg:w-[30%] flex bg-accentColor p-5"
+                style={{
+                  clipPath:
+                    "polygon(28px 0%, calc(100% - 28px) 0%, 100% 28px, 100% 100%, calc(100% - 28px) 100%, 28px 100%, 0px 100%, 0px 0px)",
+                }}
+              >
                 <div className="w-full h-full flex flex-col gap-5">
                   <div className="text-darkPrimary text-[9vw] lg:text-[3.5vw] font-semibold leading-none font-oswald">
                     <h3>Search Engine Optimization</h3>
@@ -167,7 +185,13 @@ function Services() {
               </div>
               <div className="w-full lg:w-[70%] h-full flex">
                 <div className="w-full flex flex-col gap-10">
-                  <div className="w-full h-full rounded-xl p-5 bg-lightPrimary">
+                  <div
+                    className="w-full h-full p-5 bg-lightPrimary"
+                    style={{
+                      clipPath:
+                        "polygon(28px 0%, calc(100% - 28px) 0%, 100% 28px, 100% 100%, calc(100% - 28px) 100%, 28px 100%, 0px 100%, 0px 0px)",
+                    }}
+                  >
                     <div className="w-full h-full flex flex-col lg:flex-row gap-5 items-center">
                       <div className="w-full lg:w-[70%] flex flex-col gap-5 ">
                         <div className="text-darkPrimary text-[9vw] lg:text-[4vw] font-semibold leading-none font-oswald">
@@ -182,17 +206,18 @@ function Services() {
                         </p>
                         <div className="w-full flex">
                           <div className="w-full flex">
-                            <ActionButton
+                            <CustomShapeButton
                               forwardTo=""
                               label="Learn More"
-                              labelColor="text-darkPrimary font-semibold"
-                              labelHoverColor="group-hover:text-lightPrimary"
-                              bgColor="bg-darkPrimary"
-                              labelSize="text-lg"
-                              borderColor="border-darkPrimary"
-                              iconColor="text-lightPrimary"
-                              iconSize="text-2xl"
-                              icon={<IoBookOutline />}
+                              paddingX="px-5"
+                              paddingY="py-4"
+                              textStyle="text-lg font-normal text-lightPrimary"
+                              hoverText="text-darkPrimary"
+                              backgroundColor="bg-darkPrimary"
+                              hoverBgColor="bg-accentColor"
+                              icon={
+                                <FaBookOpen className="text-xl text-lightPrimary group-hover:text-darkPrimary group-hover:rotate-45 transition duration-[350ms]" />
+                              }
                             />
                           </div>
                         </div>
@@ -203,7 +228,13 @@ function Services() {
                     </div>
                   </div>
                   <div className="w-full flex flex-col lg:flex-row gap-10">
-                    <div className="w-full lg:w-[50%] rounded-xl bg-darkPrimary p-5">
+                    <div
+                      className="w-full lg:w-[50%] bg-darkPrimary p-5"
+                      style={{
+                        clipPath:
+                          "polygon(28px 0%, calc(100% - 28px) 0%, 100% 28px, 100% 100%, calc(100% - 28px) 100%, 28px 100%, 0px 100%, 0px 0px)",
+                      }}
+                    >
                       <div className="w-full flex flex-col gap-5">
                         <div className="w-full flex flex-row gap-5">
                           <div className="w-[70%]">
@@ -224,7 +255,13 @@ function Services() {
                         </ul>
                       </div>
                     </div>
-                    <div className="w-full lg:w-[50%] rounded-xl bg-accentColor p-5">
+                    <div
+                      className="w-full lg:w-[50%] bg-accentColor p-5"
+                      style={{
+                        clipPath:
+                          "polygon(28px 0%, calc(100% - 28px) 0%, 100% 28px, 100% 100%, calc(100% - 28px) 100%, 28px 100%, 0px 100%, 0px 0px)",
+                      }}
+                    >
                       <div className="w-full flex flex-col gap-5">
                         <div className="w-full flex flex-row gap-5">
                           <div className="w-[70%]">

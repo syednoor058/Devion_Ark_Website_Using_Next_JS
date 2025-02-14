@@ -4,14 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaRegPaperPlane } from "react-icons/fa";
-import { IoMdMail, IoMdPin } from "react-icons/io";
+import { IoIosChatboxes, IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import logo from "../../../public/dark_mode_logo.png";
 import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
 import navExpandLogo from "../../../public/nav_expand_logo.png";
 import AnimatedLetter from "../animations/AnimatedLetter";
-import ActionButton from "../buttons/ActionButton";
+import CustomShapeButton from "../buttons/CustomShapeButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
 function AddressInfo({ icon, title, value }) {
@@ -50,7 +49,7 @@ function Navbar() {
       setHidden(false);
     }
     if (latestY > 25) {
-      setBgColor("bg-black");
+      setBgColor("backdrop-blur-sm");
     } else {
       setBgColor("bg-transparent");
     }
@@ -66,13 +65,13 @@ function Navbar() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className={`sticky top-0 z-[1000] ${bgColor}`}
+      className={`w-full fixed left-0 top-0 z-[1000] ${bgColor}`}
     >
       <div className="w-full hidden lg:flex relative">
         <div
           className={`w-full h-full flex flex-row gap-5 justify-between items-center ${
-            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
-          } px-20 z-[1002] py-3`}
+            bgColor === "bg-transparent" ? "bg-transparent" : "backdrop-blur-lg"
+          } px-20 z-[1002] py-1`}
         >
           <Link href="/" className={`w-full relative z-[1003]`}>
             <Image
@@ -92,26 +91,25 @@ function Navbar() {
               <div>
                 <MenuIcon expand={menuExpand} />
               </div>
-              <div className="font-oswald font-semibold  uppercase text-lg pt-1">
-                <AnimatedLetter text="Menu" />
+              <div className="font-normal  uppercase text-lg">
+                <AnimatedLetter text="Menu" hoverText="text-lightPrimary" />
               </div>
             </div>
-            <div className="ps-10">
+            <div>
               <div className="w-full flex justify-end">
                 <div className="w-full flex justify-end">
-                  <ActionButton
-                    forwardTo=""
+                  <CustomShapeButton
                     label="Get A Quote"
-                    labelColor="text-lightPrimary font-semibold"
-                    labelHoverColor="group-hover:text-darkPrimary"
-                    bgColor="bg-lightPrimary"
-                    labelSize="text-base"
-                    borderColor="border-lightPrimary"
-                    iconColor="text-darkPrimary"
-                    iconSize="text-lg"
-                    icon={<FaRegPaperPlane />}
-                    paddingX="px-3"
-                    paddingY="p-2"
+                    textStyle="text-lg font-normal text-darkPrimary"
+                    hoverText="text-darkPrimary"
+                    backgroundColor="bg-lightPrimary"
+                    hoverBgColor="bg-accentColor"
+                    paddingX="ps-4 pe-5"
+                    paddingY="py-3"
+                    fontGap="gap-2"
+                    icon={
+                      <IoIosChatboxes className="text-2xl font-darkPrimary" />
+                    }
                   />
                 </div>
               </div>
@@ -264,7 +262,7 @@ function Navbar() {
                       pathname === navLink.path
                         ? "text-accentColor"
                         : "text-lightSecondary hover:text-lightPrimary"
-                    }  duration-500 text-[14vw] font-bold uppercase font-oswald leading-none`}
+                    }  duration-500 text-[10vw] font-bold uppercase font-oswald leading-none`}
                   >
                     <AnimatedLetter text={navLink.label} />
                   </div>

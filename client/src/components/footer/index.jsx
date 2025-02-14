@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { BsHandIndexThumbFill } from "react-icons/bs";
+import { FaBell } from "react-icons/fa";
 import { IoMdMail, IoMdPin } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import footerLogo from "../../../public/footer_logo.png";
 import AnimatedLetter from "../animations/AnimatedLetter";
-import ActionButton from "../buttons/ActionButton";
+import CustomShapeButton from "../buttons/CustomShapeButton";
 
 function AddressInfo({ icon, title, value }) {
   return (
@@ -40,22 +40,23 @@ function Footer() {
                   </p>
                   <form className="w-full flex flex-col gap-2">
                     <input
-                      className="px-5 py-3 rounded-sm"
+                      className="px-5 py-3 rounded-sm outline-none border bg-transparent text-lightSecondary"
                       placeholder="Enter your email address"
                     />
                     <div className="w-full flex justify-start">
                       <div className="w-full flex justify-start">
-                        <ActionButton
-                          forwardTo=""
+                        <CustomShapeButton
                           label="Subscribe"
-                          labelColor="text-lightPrimary font-semibold"
-                          labelHoverColor="group-hover:text-darkPrimary"
-                          bgColor="bg-lightPrimary"
-                          labelSize="text-base"
-                          borderColor="border-lightPrimary"
-                          iconColor="text-darkPrimary"
-                          iconSize="text-xl"
-                          icon={<BsHandIndexThumbFill />}
+                          backgroundColor="bg-lightPrimary"
+                          hoverBgColor="bg-accentColor"
+                          textStyle="text-lg font-semibold text-darkPrimary"
+                          hoverText="text-darkPrimary"
+                          paddingX="px-4"
+                          paddingY="py-3"
+                          fontGap="gap-2"
+                          icon={
+                            <FaBell className="text-base text-darkPrimary transition duration-[350ms]" />
+                          }
                         />
                       </div>
                     </div>

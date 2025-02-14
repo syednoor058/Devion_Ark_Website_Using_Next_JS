@@ -1,6 +1,6 @@
 const AnimatedLetter = ({ text, hoverText = "" }) => {
   return (
-    <div className="group relative overflow-hidden leading-tight">
+    <div className="group relative overflow-hidden leading-none mt-1">
       <div className="overflow-hidden">
         {text.split("").map((l, i) =>
           l === " " ? (

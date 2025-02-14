@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn, FaPhone } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import ActionButton from "../buttons/ActionButton";
+import CustomShapeButton from "../buttons/CustomShapeButton";
 
 function CTASection() {
   return (
@@ -39,17 +39,15 @@ function CTASection() {
         </div>
         <div className="w-full lg:w-1/3 flex justify-end">
           <div className="w-full flex justify-center">
-            <ActionButton
-              forwardTo=""
+            <CustomShapeButton
               label="Book A Call"
-              labelColor="text-darkPrimary font-semibold"
-              labelHoverColor="group-hover:text-lightPrimary"
-              bgColor="bg-darkPrimary"
-              labelSize="text-base lg:text-lg"
-              borderColor="border-darkPrimary"
-              iconColor="text-lightPrimary"
-              iconSize="text-xl lg:text-2xl"
-              icon={<FaPhone />}
+              paddingX="px-5"
+              paddingY="py-4"
+              fontGap="gap-3"
+              textStyle="text-lg font-light text-lightPrimary"
+              icon={
+                <FaPhone className="text-lg text-lightPrimary group-hover:text-darkPrimary duration-[350ms]" />
+              }
             />
           </div>
         </div>
