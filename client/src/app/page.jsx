@@ -129,7 +129,7 @@ function PartnersCard({ brandImg, brandAlt }) {
   );
 }
 
-function ServiceCard({ serviceIndex, serviceTitle, forwardTo }) {
+function ServiceCard2({ serviceIndex, serviceTitle, forwardTo }) {
   return (
     <div className="w-full h-full border-x border-b border-gray-800 text-lightPrimary  px-4 lg:px-7 py-5 hover:py-10 lg:hover:py-20 lg:py-10 duration-500 bg-darkPrimary relative group">
       <div className="w-full flex flex-row gap-10 justify-between items-center z-[11]">
@@ -149,6 +149,24 @@ function ServiceCard({ serviceIndex, serviceTitle, forwardTo }) {
         </Link>
       </div>
     </div>
+  );
+}
+
+function ServiceCard({ serviceTitle, forwardTo }) {
+  return (
+    <Link href={forwardTo} className="w-full group  ">
+      <div className="px-4 lg:px-0 lg:ps-5 lg:pe-20 py-5 group-hover:py-10 duration-[350ms]  relative overflow-hidden">
+        <div className="flex flex-row gap-5 justify-between items-center relative z-[3]">
+          <span>
+            <LuArrowUpRight className="text-4xl rotate-45 text-accentColor group-hover:text-darkPrimary group-hover:rotate-0 transition duration-[350ms]" />
+          </span>
+          <h3 className="text-4xl inline-block uppercase font-medium text-lightPrimary">
+            <AnimatedText text={serviceTitle} hoverText="text-darkPrimary" />
+          </h3>
+        </div>
+        <div className="w-full h-full absolute bg-lightPrimary inset-0 z-[1] -translate-y-full group-hover:translate-y-0 transition duration-[350ms]"></div>
+      </div>
+    </Link>
   );
 }
 
@@ -198,7 +216,7 @@ export default function Home() {
                 <CustomShapeButton
                   label="Case Study"
                   textStyle="text-lg font-normal text-darkPrimary"
-                  paddingX="ps-4 pe-5"
+                  paddingX="ps-4 pe-6"
                   paddingY="py-4"
                   fontGap="gap-2"
                   backgroundColor="bg-lightPrimary"
@@ -293,7 +311,7 @@ export default function Home() {
               <CustomShapeButton
                 label="Learn More"
                 textStyle="text-lg font-normal text-darkPrimary"
-                paddingX="ps-4 pe-5"
+                paddingX="ps-4 pe-6"
                 paddingY="py-4"
                 fontGap="gap-2"
                 backgroundColor="bg-lightPrimary"
@@ -437,9 +455,9 @@ export default function Home() {
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 bg-opacity-15"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 left-[50%] bg-opacity-15"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 right-20 bg-opacity-15"></div>
-        <h2 className="w-full lg:w-[50%] text-lightPrimary font-bold text-[8vw] lg:text-[3.5vw] uppercase font-oswald px-3 lg:px-0 leading-tight">
-          <span className="text-accentColor">Brands</span> we&apos;ve partnered
-          with{" "}
+        <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-3xl lg:text-5xl font-oswald leading-[1.10]">
+          The <span className="text-accentColor italic">brands</span> we&apos;ve
+          partnered with
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-6 relative px-3 lg:px-0">
           <div className="w-full h-full absolute top-0 flex flex-col justify-between">
@@ -473,13 +491,61 @@ export default function Home() {
 
       {/* Our Services Section */}
 
-      <div className="w-full py-10 lg:py-20 flex flex-col bg-darkPrimary gap-5 lg:gap-10 relative overflow-hidden">
-        <div className="w-full h-full flex flex-row justify-between absolute top-0 z-[1] overflow-hidden px-5 lg:px-20">
-          <div className="w-[1px] h-full bg-gray-800"></div>
-          <div className="w-[1px] h-full bg-gray-800"></div>
-          <div className="w-[1px] h-full bg-gray-800"></div>
-          <div className="w-[1px] h-full bg-gray-800"></div>
+      <div className="bg-darkSecondary py-10 lg:py-20 relative font-light text-lightSecondary">
+        <div className="flex flex-row">
+          <div className="w-full lg:w-[40%] border-b border-lightSecondary/30">
+            <div className="flex flex-col">
+              <div className="w-full aspect-[9/11] bg-black"></div>
+              <div className="px-4 py-5 lg:py-10">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Dolorum natus qui necessitatibus corrupti sed sunt quia
+                distinctio et fugiat provident, odit aspernatur consequatur,
+                officia harum?Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Similique, at.
+              </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-[60%] border border-lightSecondary/30">
+            <div className="flex flex-col">
+              <div className="border-t border-lightSecondary/30">
+                <ServiceCard
+                  forwardTo=""
+                  serviceTitle="Custom Software Solutions"
+                />
+              </div>
+              <div className="border-t border-lightSecondary/30">
+                <ServiceCard forwardTo="" serviceTitle="Website Development" />
+              </div>
+              <div className="border-t border-lightSecondary/30">
+                <ServiceCard
+                  forwardTo=""
+                  serviceTitle="Search Engine Optimization"
+                />
+              </div>
+              <div className="border-t border-lightSecondary/30">
+                <ServiceCard
+                  forwardTo=""
+                  serviceTitle="Social Media Marketing"
+                />
+              </div>
+              <div className="border-t border-lightSecondary/30">
+                <ServiceCard
+                  forwardTo=""
+                  serviceTitle="Search Engine Marketing"
+                />
+              </div>
+              <div className="border-y border-lightSecondary/30">
+                <ServiceCard
+                  forwardTo=""
+                  serviceTitle="Business Consultation"
+                />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div className="w-full py-10 lg:py-20 flex flex-col bg-darkSecondary gap-5 lg:gap-10 relative overflow-hidden">
         <div className="flex flex-col gap-10 lg:gap-16 z-[2]">
           <h6 className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none px-5 lg:px-20">
             <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
@@ -554,7 +620,68 @@ export default function Home() {
 
       {/* Project Showcase Section */}
 
-      <div className="w-full bg-black bg-fit flex flex-col">
+      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
+        <div className="flex flex-col lg:flex-row px-4 lg:px-5">
+          <div className="w-full flex lg:w-[25%] px-4 py-5 lg:py-10 border-x border-lightSecondary/30">
+            <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase">
+              <p>Case Studies</p>
+              <p>Featured Works</p>
+            </div>
+          </div>
+          <div className="w-full lg:w-[50%] px-4 py-5 lg:py-10 border-x border-lightSecondary/30 lg:border-x-0">
+            <div className="w-full flex flex-col gap-5 lg:gap-10">
+              <h2 className="text-lightPrimary font-oswald leading-[1.10] text-3xl lg:text-5xl font-medium">
+                Crafting{" "}
+                <span className="text-accentColor italic">
+                  creative solutions
+                </span>{" "}
+                at all scales.
+              </h2>
+              <p className="text-base lg:text-lg">
+                See how we've turned challenges into opportunities and ideas
+                into impactful solutions. Our case studies showcase real-world
+                examples of how we've helped businesses grow, optimize
+                operations, and achieve their goals. Each story reflects our
+                commitment to innovation, collaboration, and delivering
+                measurable results.
+              </p>
+            </div>
+          </div>
+          <div className="w-full flex lg:w-[25%] px-4 py-5 lg:py-10 border-x  border-lightSecondary/30">
+            <div className="w-full flex flex-row lg:flex-col justify-between items-end">
+              <div className="w-[30%] lg:w-full flex lg:justify-center">
+                <div className="w-full lg:w-[50%] aspect-square rounded-full flex justify-center items-center relative text-lightPrimary">
+                  <CircularTextAnimation
+                    text="evion Ark . Devion Ark . Devion Ark . D"
+                    radius="40"
+                    textColor="text-lightPrimary"
+                  />
+                  <div className="text-xl absolute w-full h-full top-0 left-0 flex justify-center items-center text-lightPrimary">
+                    <GoDotFill />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <CustomShapeButton
+                  label="View All"
+                  textStyle="text-lg font-normal text-darkPrimary"
+                  paddingX="ps-4 pe-6"
+                  paddingY="py-4"
+                  fontGap="gap-2"
+                  backgroundColor="bg-lightPrimary"
+                  hoverBgColor="bg-accentColor"
+                  icon={
+                    <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <ProjectShowcase />
+      </div>
+
+      {/* <div className="w-full bg-black bg-fit flex flex-col">
         <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden gap-10 lg:gap-0 py-10 lg:py-20">
           <div className="w-full lg:w-[60%] flex flex-col gap-10 lg:gap-16 px-5 lg:px-20">
             <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
@@ -593,7 +720,7 @@ export default function Home() {
           </div>
         </div>
         <ProjectShowcase />
-      </div>
+      </div> */}
 
       {/* Testimonial Section */}
 

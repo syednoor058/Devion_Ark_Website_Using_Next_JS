@@ -49,7 +49,7 @@ function Navbar() {
       setHidden(false);
     }
     if (latestY > 25) {
-      setBgColor("backdrop-blur-sm");
+      setBgColor("bg-transparent");
     } else {
       setBgColor("bg-transparent");
     }
@@ -70,7 +70,7 @@ function Navbar() {
       <div className="w-full hidden lg:flex relative">
         <div
           className={`w-full h-full flex flex-row gap-5 justify-between items-center ${
-            bgColor === "bg-transparent" ? "bg-transparent" : "backdrop-blur-lg"
+            bgColor === "bg-transparent" ? "bg-transparent" : "bg-transparent"
           } px-20 z-[1002] py-1`}
         >
           <Link href="/" className={`w-full relative z-[1003]`}>

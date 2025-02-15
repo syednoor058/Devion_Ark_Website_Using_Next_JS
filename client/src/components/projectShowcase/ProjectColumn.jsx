@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import { IoBookOutline } from "react-icons/io5";
-import ActionButton from "../buttons/ActionButton";
+import { FiArrowDownLeft } from "react-icons/fi";
+import CustomShapeButton from "../buttons/CustomShapeButton";
 function ProjectColumn({
   caption,
   title,
@@ -127,17 +127,18 @@ function ProjectColumn({
       >
         <div className="w-full flex justify-center">
           <div className="w-full flex justify-center">
-            <ActionButton
-              forwardTo=""
+            <CustomShapeButton
               label="Learn More"
-              labelColor="text-darkPrimary font-semibold"
-              labelHoverColor="group-hover:text-lightPrimary"
-              bgColor="bg-darkPrimary"
-              labelSize="text-lg"
-              borderColor="border-darkPrimary"
-              iconColor="text-lightPrimary"
-              iconSize="text-2xl"
-              icon={<IoBookOutline />}
+              textStyle="text-lg font-normal text-lightPrimary"
+              hoverText="text-darkPrimary"
+              paddingX="ps-4 pe-6"
+              paddingY="py-4"
+              fontGap="gap-2"
+              backgroundColor="bg-darkPrimary"
+              hoverBgColor="bg-accentColor"
+              icon={
+                <FiArrowDownLeft className="text-xl text-lightPrimary group-hover:text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+              }
             />
           </div>
         </div>

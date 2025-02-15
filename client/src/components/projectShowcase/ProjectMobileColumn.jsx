@@ -1,5 +1,5 @@
-import { IoBookOutline } from "react-icons/io5";
-import ActionButton from "../buttons/ActionButton";
+import { FiArrowDownLeft } from "react-icons/fi";
+import CustomShapeButton from "../buttons/CustomShapeButton";
 
 function ProjectMobileColumn({ caption, video, title, forward, projectNum }) {
   return (
@@ -25,17 +25,19 @@ function ProjectMobileColumn({ caption, video, title, forward, projectNum }) {
         <div className="w-full flex justify-center z-[5]">
           <div className="w-full flex justify-center">
             <div className="w-full flex justify-center">
-              <ActionButton
-                forwardTo=""
+              <CustomShapeButton
+                forwardTo={forward}
                 label="Learn More"
-                labelColor="text-darkPrimary font-semibold"
-                labelHoverColor="group-hover:text-lightPrimary"
-                bgColor="bg-darkPrimary"
-                labelSize="text-base"
-                borderColor="border-darkPrimary"
-                iconColor="text-lightPrimary"
-                iconSize="text-xl"
-                icon={<IoBookOutline />}
+                textStyle="text-lg font-normal text-lightPrimary"
+                hoverText="text-darkPrimary"
+                paddingX="ps-4 pe-6"
+                paddingY="py-4"
+                fontGap="gap-2"
+                backgroundColor="bg-darkPrimary"
+                hoverBgColor="bg-accentColor"
+                icon={
+                  <FiArrowDownLeft className="text-xl text-lightPrimary group-hover:text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                }
               />
             </div>
           </div>

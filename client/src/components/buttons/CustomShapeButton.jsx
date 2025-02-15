@@ -23,7 +23,7 @@ function CustomShapeButton({
       }}
     >
       <div
-        className={`relative z-[5] flex flex-row-reverse ${fontGap} items-center`}
+        className={`relative z-[5] flex flex-row-reverse ${fontGap} items-center whitespace-nowrap`}
       >
         <span>
           <AnimatedLetter text={label} hoverText={hoverText} />
