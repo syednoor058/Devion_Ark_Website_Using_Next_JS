@@ -157,11 +157,11 @@ export default function Home() {
     <main className="font-roboto">
       {/* Landing Section */}
 
-      <div className="w-full h-full bg-darkPrimary bg-gradient-to-t from-darkSecondary to-transparent bg-blend-normal pt-16 relative font-light text-lightSecondary">
+      <div className="w-full h-full bg-darkPrimary bg-gradient-to-t from-darkSecondary to-transparent bg-blend-normal pt-20 lg:pt-16 relative font-light text-lightSecondary pb-10 lg:pb-20">
         <div className="w-full flex flex-col">
           <div className="w-full lg:h-[30vh] flex justify-end items-end px-4 lg:px-20">
-            <div className="w-full lg:w-[60%] pb-5">
-              <h1 className="text-lightPrimary font-oswald leading-[1.10]  uppercase text-2xl sm:text-3xl lg:text-6xl">
+            <div className="w-full lg:w-[58%] pb-5">
+              <h1 className="text-lightPrimary font-oswald leading-[1.10]  uppercase text-4xl lg:text-6xl">
                 Transforming your ideas <br /> into{" "}
                 <span className="text-accentColor italic font-bold">
                   digital reality
@@ -194,7 +194,7 @@ export default function Home() {
                   business.&quot;
                 </p>
               </div>
-              <div className="py-5 lg:py-10 px-4 lg:px-0 lg:ps-20 lg:pe-5 border-t border-lightSecondary/30">
+              <div className="py-5 lg:py-7 h-full flex items-center px-4 lg:px-0 lg:ps-20 lg:pe-5 border-t border-lightSecondary/30">
                 <CustomShapeButton
                   label="Case Study"
                   textStyle="text-lg font-normal text-darkPrimary"
@@ -279,7 +279,82 @@ export default function Home() {
 
       {/* Who We Are Section */}
 
-      <div
+      <div className="w-full lg:h-screen bg-darkSecondary relative font-light text-lightSecondary py-10 lg:py-20">
+        <div className="relative z-[3] flex flex-col lg:flex-row  justify-between px-4 lg:px-20">
+          <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
+            <p className="text-xl lg:text-4xl text-lightPrimary font-medium">
+              We are more than just a service provider — we are your{" "}
+              <span className="text-accentColor italic">strategic partner</span>
+              . Our mission is to empower your business with tailored{" "}
+              <span className="text-accentColor italic">digital solutions</span>{" "}
+              that drive growth, enhance visibility, and maximize impact.
+            </p>
+            <div>
+              <CustomShapeButton
+                label="Learn More"
+                textStyle="text-lg font-normal text-darkPrimary"
+                paddingX="ps-4 pe-5"
+                paddingY="py-4"
+                fontGap="gap-2"
+                backgroundColor="bg-lightPrimary"
+                hoverBgColor="bg-accentColor"
+                icon={
+                  <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                }
+              />
+            </div>
+          </div>
+          <div className="w-full h-full lg:absolute top-0 left-0 inset-0 flex justify-center items-center -z-[1]">
+            <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden bg-[url(/gif/metal_glitch.gif)] bg-no-repeat bg-contain lg:translate-x-[12%]"></div>
+          </div>
+          <div className="w-full lg:w-[30%]">
+            <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-5">
+              <AvatarGroup>
+                <Avatar
+                  alt="Md Azizul Hoque"
+                  src="/testimonials/azizul.webp"
+                  sx={{ width: 48, height: 48 }}
+                />
+
+                <Avatar
+                  alt="Syed Mustafa Mehedi"
+                  src="/testimonials/mehedi.webp"
+                  sx={{
+                    width: 48,
+                    height: 48,
+                  }}
+                />
+
+                <Avatar
+                  alt="Rakib Shikder"
+                  src="/testimonials/rakib.webp"
+                  sx={{ width: 48, height: 48 }}
+                />
+                <Avatar
+                  alt="Kazi Farhan Masum"
+                  src="/testimonials/farhan_masum.webp"
+                  sx={{ width: 48, height: 48 }}
+                />
+                <Avatar sx={{ width: 48, height: 48, bgcolor: "#121212" }}>
+                  8+
+                </Avatar>
+              </AvatarGroup>
+              <div className="overflow-hidden font-light">
+                <span className="inline-block">
+                  We have{" "}
+                  <span className="text-lightPrimary italic">
+                    12+ satisfied clients
+                  </span>{" "}
+                  all around the world. We are empowering business to reach new
+                  heights.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div
         className={`w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-darkSecondary bg-fit relative overflow-hidden`}
       >
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 relative z-[5]">
@@ -354,7 +429,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Partners Section */}
 

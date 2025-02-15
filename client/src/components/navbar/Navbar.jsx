@@ -218,7 +218,7 @@ function Navbar() {
       <div className="w-full flex lg:hidden relative">
         <div
           className={`w-full h-full flex flex-row gap-5 justify-between items-center py-4  z-[1002] ${
-            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
+            bgColor === "bg-transparent" ? "bg-transparent" : "backdrop-blur-lg"
           }`}
         >
           <div className="w-[50%] flex justify-center items-center px-5 z-[1003]">
