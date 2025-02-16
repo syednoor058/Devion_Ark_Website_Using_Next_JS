@@ -4,11 +4,11 @@ const AnimatedLetter = ({ text, hoverText = "" }) => {
       <div className="overflow-hidden">
         {text.split("").map((l, i) =>
           l === " " ? (
-            <span>&nbsp;</span>
+            <span key={i}>&nbsp;</span>
           ) : (
             <span
-              className="inline-block transition duration-[250ms] ease-in-out group-hover:-translate-y-full overflow-hidden"
               key={i}
+              className="inline-block transition duration-[250ms] ease-in-out group-hover:-translate-y-full overflow-hidden"
               style={{ transitionDelay: `${i * 25}ms` }}
             >
               {l}
@@ -19,10 +19,10 @@ const AnimatedLetter = ({ text, hoverText = "" }) => {
       <div className={`absolute inset-0 overflow-hidden ${hoverText}`}>
         {text.split("").map((l, i) =>
           l === " " ? (
-            <span>&nbsp;</span>
+            <span key={i}>&nbsp;</span>
           ) : (
             <span
-              className={`inline-block transition duration-[250ms] ease-in-out translate-y-[110%] group-hover:translate-y-0 overflow-hidden`}
+              className={`inline-block transition duration-[250ms] ease-in-out translate-y-[115%] group-hover:translate-y-0 overflow-hidden`}
               key={i}
               style={{ transitionDelay: `${i * 25}ms` }}
             >

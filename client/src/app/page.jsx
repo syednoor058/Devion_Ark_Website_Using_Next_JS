@@ -15,6 +15,7 @@ import { GoDotFill } from "react-icons/go";
 import { LuArrowUpRight } from "react-icons/lu";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
+import groupPhoto from "../../public/about/old-garage.jpg";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.png";
 import elevate from "../../public/partners/elevate.png";
 import indigo from "../../public/partners/indigo_company.png";
@@ -27,6 +28,7 @@ import qahafLogo from "../../public/partners/qahaf.png";
 import sikderFoundationLogo from "../../public/partners/sikder_foundation.png";
 import sweetCakes from "../../public/partners/sweet_cakes.png";
 import travel from "../../public/partners/travel.png";
+import streetSigns from "../../public/street_signs.jpg";
 import azizulHoque from "../../public/testimonials/azizul.webp";
 import rakibShikdar from "../../public/testimonials/rakib.webp";
 
@@ -129,38 +131,15 @@ function PartnersCard({ brandImg, brandAlt }) {
   );
 }
 
-function ServiceCard2({ serviceIndex, serviceTitle, forwardTo }) {
-  return (
-    <div className="w-full h-full border-x border-b border-gray-800 text-lightPrimary  px-4 lg:px-7 py-5 hover:py-10 lg:hover:py-20 lg:py-10 duration-500 bg-darkPrimary relative group">
-      <div className="w-full flex flex-row gap-10 justify-between items-center z-[11]">
-        <div className="w-full flex flex-row items-center gap-7 relative z-[11]">
-          <p className="w-[5%] lg:w-[8%] font-bold text-[7vw] lg:text-[3.5vw] leading-none text-accentColor font-oswald hidden lg:inline-block">
-            {serviceIndex}
-          </p>
-          <h2 className="text-[7vw] lg:text-[3.5vw] font-oswald font-bold uppercase leading-tight">
-            <AnimatedText text={serviceTitle} />
-          </h2>
-        </div>
-        <Link
-          href={forwardTo}
-          className="text-[7vw] lg:text-[5vw] z-[11] rotate-45 group-hover:rotate-0 duration-500 group-hover:text-accentColor"
-        >
-          <LuArrowUpRight />
-        </Link>
-      </div>
-    </div>
-  );
-}
-
 function ServiceCard({ serviceTitle, forwardTo }) {
   return (
     <Link href={forwardTo} className="w-full group  ">
-      <div className="px-4 lg:px-0 lg:ps-5 lg:pe-20 py-5 group-hover:py-10 duration-[350ms]  relative overflow-hidden">
+      <div className="px-4 lg:px-0 lg:ps-5 lg:pe-20 py-4 lg:py-5 group-hover:py-8 lg:group-hover:py-10 duration-[350ms]  relative overflow-hidden">
         <div className="flex flex-row gap-5 justify-between items-center relative z-[3]">
           <span>
-            <LuArrowUpRight className="text-4xl rotate-45 text-accentColor group-hover:text-darkPrimary group-hover:rotate-0 transition duration-[350ms]" />
+            <LuArrowUpRight className="text-xl lg:text-4xl rotate-45 text-accentColor group-hover:text-darkPrimary group-hover:rotate-0 transition duration-[350ms]" />
           </span>
-          <h3 className="text-4xl inline-block uppercase font-medium text-lightPrimary">
+          <h3 className="text-xl lg:text-4xl inline-block uppercase font-medium text-lightPrimary">
             <AnimatedText text={serviceTitle} hoverText="text-darkPrimary" />
           </h3>
         </div>
@@ -175,9 +154,9 @@ export default function Home() {
     <main className="font-roboto">
       {/* Landing Section */}
 
-      <div className="w-full h-full bg-darkPrimary bg-gradient-to-t from-darkSecondary to-transparent bg-blend-normal pt-20 lg:pt-16 relative font-light text-lightSecondary pb-10 lg:pb-20">
+      <div className="w-full h-full bg-darkSecondary pt-10 relative font-light text-lightSecondary pb-10 lg:pb-20">
         <div className="w-full flex flex-col">
-          <div className="w-full lg:h-[30vh] flex justify-end items-end px-4 lg:px-20">
+          <div className="w-full flex justify-end items-end px-4 lg:px-20">
             <div className="w-full lg:w-[58%] pb-5">
               <h1 className="text-lightPrimary font-oswald leading-[1.10]  uppercase text-4xl lg:text-6xl">
                 Transforming your ideas <br /> into{" "}
@@ -192,7 +171,7 @@ export default function Home() {
             <div className="w-full lg:w-[43%] flex flex-col">
               <div className="py-5 lg:py-10 flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-10">
                 <div className="w-full flex flex-row items-center gap-5">
-                  <div className="p-3 aspect-square rounded-full bg-lightPrimary flex justify-center items-center text-darkPrimary font-semibold">
+                  <div className="w-12 h-12 rounded-full bg-lightPrimary flex justify-center items-center text-darkPrimary font-semibold">
                     SF
                   </div>
                   <div className="flex flex-col gap-1 leading-[1.1]">
@@ -216,7 +195,7 @@ export default function Home() {
                 <CustomShapeButton
                   label="Case Study"
                   textStyle="text-lg font-normal text-darkPrimary"
-                  paddingX="ps-4 pe-6"
+                  paddingX="ps-4 pe-8"
                   paddingY="py-4"
                   fontGap="gap-2"
                   backgroundColor="bg-lightPrimary"
@@ -227,7 +206,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-full lg:w-[57%] h-full flex lg:border-l border-lightSecondary/30 overflow-hidden relative">
+            <div className="w-full lg:w-[57%] flex lg:border-l border-lightSecondary/30 overflow-hidden relative">
               <video
                 className="w-full h-full object-cover"
                 loop
@@ -235,72 +214,19 @@ export default function Home() {
                 autoPlay
                 playsInline
               >
-                <source src="/videos/devion_ark_showreel_2024.mp4" />
+                <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739689640/devion_ark_showreel_2024_ronun7.mp4" />
               </video>
             </div>
           </div>
         </div>
       </div>
 
-      {/* <div className="w-full h-full bg-darkPrimary bg-gradient-to-t from-darkSecondary to-transparent bg-blend-normal pt-16 relative">
-        <div className="w-full h-full flex flex-col pb-10 pt-5 gap-10 lg:gap-16 relative z-[3]">
-          <h1 className="w-full px-5 lg:px-20 text-center">
-            <span className="text-lightPrimary font-oswald text-[7vw] leading-[1.10] text-center uppercase">
-              Transforming Your Ideas <br />
-              Into{" "}
-              <span className="text-accentColor italic font-bold">
-                Digital Reality
-              </span>
-              .
-            </span>
-          </h1>
-          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-16 justify-between items-end px-0 lg:px-20">
-            <div className="w-full lg:w-[50%] h-full flex flex-row items-end px-5 lg:px-0">
-              <p className="pt-0 lg:pt-4 font-light leading-tight text-[5vw] lg:text-[2.5vw]">
-                We Deliver Data-Backed SEO, Social Media Campaigns, and Business
-                Software Designed to Scale Your Revenue.
-              </p>
-            </div>
-            <div className="w-full lg:w-[50%] flex flex-col gap-5 rounded-sm">
-              <div className="w-full aspect-video overflow-hidden relative rounded-sm">
-                <video className="w-full" loop muted autoPlay playsInline>
-                  <source src="/videos/devion_ark_showreel_2024.mp4" />
-                </video>
-              </div>
-              <div className="w-full flex flex-col items-end text-sm font-light px-5 lg:px-0">
-                <div className="w-full text-start lg:text-end">
-                  Devion Ark Digital Solutions
-                </div>
-                <div className="w-full text-start lg:text-end">
-                  Showreel (2023-2024)
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full px-20 hidden lg:flex flex-row justify-between gap-5 font-light pt-10">
-            <div className="w-1/3 flex justify-start items-center">
-              &copy;2024-2025
-            </div>
-            <div className="w-1/3 flex justify-center items-center gap-2">
-              <span>
-                <LuMouse />
-              </span>
-              Scroll Down To Explore
-            </div>
-            <div className="w-1/3 flex justify-end items-center">
-              All Rights Reserved By Devion Ark
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Who We Are Section */}
 
       <div className="w-full lg:h-screen bg-darkSecondary relative font-light text-lightSecondary py-10 lg:py-20">
         <div className="relative z-[3] flex flex-col lg:flex-row  justify-between px-4 lg:px-20">
           <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
-            <p className="text-xl lg:text-4xl text-lightPrimary font-medium">
+            <p className="text-2xl lg:text-4xl text-lightPrimary font-medium">
               We are more than just a service provider — we are your{" "}
               <span className="text-accentColor italic">strategic partner</span>
               . Our mission is to empower your business with tailored{" "}
@@ -311,7 +237,7 @@ export default function Home() {
               <CustomShapeButton
                 label="Learn More"
                 textStyle="text-lg font-normal text-darkPrimary"
-                paddingX="ps-4 pe-6"
+                paddingX="ps-4 pe-8"
                 paddingY="py-4"
                 fontGap="gap-2"
                 backgroundColor="bg-lightPrimary"
@@ -323,7 +249,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full h-full lg:absolute top-0 left-0 inset-0 flex justify-center items-center -z-[1]">
-            <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden bg-[url(/gif/metal_glitch.gif)] bg-no-repeat bg-contain lg:translate-x-[12%]"></div>
+            <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden bg-[url(https://res.cloudinary.com/de8g5laai/image/upload/v1739692170/metal_glitch_opwjsp.gif)] bg-no-repeat bg-contain lg:translate-x-[12%]"></div>
           </div>
           <div className="w-full lg:w-[30%]">
             <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-5">
@@ -372,142 +298,44 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div
-        className={`w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 bg-darkSecondary bg-fit relative overflow-hidden`}
-      >
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 relative z-[5]">
-          <div className="w-full lg:w-[65%] flex flex-col gap-10 lg:gap-16">
-            <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-              <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-                <span className="inline-block">Who We Are</span>
-              </h6>
-              <div className="w-[2px] flex bg-accentColor"></div>
-            </div>
-            <div className="flex flex-col gap-2 uppercase font-titleFont text-lightTitleText">
-              <h2 className="text-[8vw] lg:text-[4vw] leading-tight overflow-hidden font-medium font-oswald">
-                <span id="who-title-1" className="inline-block">
-                  Empowering your Business to Reach{" "}
-                  <span id="who-title-3" className="inline-block font-bold">
-                    New <span className="text-accentColor">heights</span>!
-                  </span>
-                </span>
-              </h2>
-              <div className="w-full hidden lg:flex justify-start lg:justify-end"></div>
-            </div>
-          </div>
-          <div className="w-full lg:w-[35%] flex flex-col gap-10 lg:gap-16 justify-end">
-            <div className="w-full flex flex-col justify-start items-start gap-3">
-              <AvatarGroup>
-                <Avatar
-                  alt="Md Azizul Hoque"
-                  src="/testimonials/azizul.webp"
-                  sx={{ width: 56, height: 56 }}
-                />
-
-                <Avatar
-                  alt="Syed Mustafa Mehedi"
-                  src="/testimonials/mehedi.webp"
-                  sx={{
-                    width: 56,
-                    height: 56,
-                  }}
-                />
-
-                <Avatar
-                  alt="Rakib Shikder"
-                  src="/testimonials/rakib.webp"
-                  sx={{ width: 56, height: 56 }}
-                />
-                <Avatar
-                  alt="Kazi Farhan Masum"
-                  src="/testimonials/farhan_masum.webp"
-                  sx={{ width: 56, height: 56 }}
-                />
-                <Avatar sx={{ width: 56, height: 56, bgcolor: "#414141" }}>
-                  8+
-                </Avatar>
-              </AvatarGroup>
-              <div className="overflow-hidden font-light">
-                <span id="who-subdesc" className="inline-block">
-                  We have{" "}
-                  <span className="font-medium underline underline-offset-4 text-lightTitleText">
-                    12+ satisfied clients
-                  </span>{" "}
-                  all around the world.
-                </span>
-              </div>
-            </div>
-            <div className="text-base lg:text-lg overflow-hidden font-light leading-tight">
-              <span id="who-desc" className="inline-block">
-                We are more than just a service provider — we are your strategic
-                partner. Our mission is to empower your business with tailored
-                digital solutions that drive growth, enhance visibility, and
-                maximize impact.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* Partners Section */}
-
-      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative border-y border-lightSecondary/15">
-        <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 bg-opacity-15"></div>
-        <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 left-[50%] bg-opacity-15"></div>
-        <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary top-0 right-20 bg-opacity-15"></div>
-        <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-3xl lg:text-5xl font-oswald leading-[1.10]">
-          The <span className="text-accentColor italic">brands</span> we&apos;ve
-          partnered with
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-6 relative px-3 lg:px-0">
-          <div className="w-full h-full absolute top-0 flex flex-col justify-between">
-            <div className="w-full h-[1px] bg-lightSecondary bg-opacity-25"></div>
-            <div className="w-full h-[1px] bg-lightSecondary bg-opacity-25"></div>
-            <div className="w-full h-[1px] bg-lightSecondary bg-opacity-25"></div>
-          </div>
-          <PartnersCard brandImg={interAidLogo} brandAlt="interaid_logo" />
-          <PartnersCard
-            brandImg={sikderFoundationLogo}
-            brandAlt="sikder_foundation_logo"
-          />
-          <PartnersCard brandImg={kickOffLogo} brandAlt="kick_off_logo" />
-          <PartnersCard
-            brandImg={puppetbrushLogo}
-            brandAlt="puppetbrush_logo"
-          />
-          <PartnersCard brandImg={qahafLogo} brandAlt="qahaf_logo" />
-          <PartnersCard brandImg={sweetCakes} brandAlt="sweet_cakes_logo" />
-          <PartnersCard brandImg={travel} brandAlt="travel_logo" />
-          <PartnersCard
-            brandImg={annaKitchen}
-            brandAlt="ananna_khan_kitchen_logo"
-          />
-          <PartnersCard brandImg={indigo} brandAlt="indigo_company_logo" />
-          <PartnersCard brandImg={moonStudio} brandAlt="moon_studio_logo" />
-          <PartnersCard brandImg={oxw} brandAlt="olivia_walker_logo" />
-          <PartnersCard brandImg={elevate} brandAlt="elevate_logo" />
-        </div>
-      </div>
-
       {/* Our Services Section */}
 
-      <div className="bg-darkSecondary py-10 lg:py-20 relative font-light text-lightSecondary">
-        <div className="flex flex-row">
+      <div className="bg-darkSecondary relative font-light text-lightSecondary">
+        <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-[40%] border-b border-lightSecondary/30">
             <div className="flex flex-col">
-              <div className="w-full aspect-[9/11] bg-black"></div>
+              <div className="w-full aspect-[9/11] relative overflow-hidden">
+                <Image
+                  placeholder="blur"
+                  src={streetSigns}
+                  alt="street signs saying one way"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="px-4 py-5 lg:py-10">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorum natus qui necessitatibus corrupti sed sunt quia
-                distinctio et fugiat provident, odit aspernatur consequatur,
-                officia harum?Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Similique, at.
+                <div className="w-full flex flex-col gap-5">
+                  <div className="w-full flex">
+                    <p className="text-sm font-medium text-lightPrimary uppercase px-5 py-2 rounded-full border border-accentColor">
+                      Our Services
+                    </p>
+                  </div>
+
+                  <p className="text-lg lg:text-base">
+                    We specialise in developing solutions that help your
+                    business prosper in the digital age. From intuitive software
+                    to attractive websites to strategic marketing and flawless
+                    testing, we match technology with business objectives. Our
+                    comprehensive approach guarantees that every project we do
+                    promotes development, increases visibility, and delivers
+                    long-term value.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-[60%] border border-lightSecondary/30">
+          <div className="w-full lg:w-[60%] lg:border border-lightSecondary/30">
             <div className="flex flex-col">
-              <div className="border-t border-lightSecondary/30">
+              <div className="">
                 <ServiceCard
                   forwardTo=""
                   serviceTitle="Custom Software Solutions"
@@ -545,99 +373,41 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full py-10 lg:py-20 flex flex-col bg-darkSecondary gap-5 lg:gap-10 relative overflow-hidden">
-        <div className="flex flex-col gap-10 lg:gap-16 z-[2]">
-          <h6 className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none px-5 lg:px-20">
-            <div className="uppercase font-light text-base sm:text-lg overflow-hidden">
-              <span className="inline-block">Our Services</span>
-            </div>
-            <div className="w-[2px] flex bg-accentColor"></div>
-          </h6>
-          <h2 className="px-5 lg:px-20 text-[7vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-tight font-medium flex flex-col">
-            <span>The Solutions that drive</span>
-            <span className="text-accentColor font-bold">Your Success</span>
-          </h2>
-        </div>
-        <div className="w-full flex flex-col sm:flex-row justify-start px-5  lg:px-20 gap-7 z-[2]">
-          <p className="w-full lg:w-[40%] text-base lg:text-lg font-light overflow-hidden leading-tight">
-            <span className="block overflow-hidden  backdrop-blur-[1px] py-3 bg-darkPrimary">
-              We specialise in developing solutions that help your business
-              prosper in the digital age. From intuitive software to attractive
-              websites to strategic marketing and flawless testing, we match
-              technology with business objectives. Our comprehensive approach
-              guarantees that every project we do promotes development,
-              increases visibility, and delivers long-term value.
-            </span>
-          </p>
-          <div className="w-full lg:w-[60%] flex flex-row gap-5 items-center justify-end">
-            <div className="text-7xl lg:text-9xl xl:text-[200px] leading-none font-thin text-accentColor overflow-hidden">
-              <span id="growth-rate" className="inline-block font-poppins">
-                1.5
-                <span className="text-5xl lg:text-7xl xl:text-9xl font-medium">
-                  X
-                </span>
-              </span>
-            </div>
-            <div className="uppercase">Average Growth rate</div>
-          </div>
-        </div>
+      {/* Image Section  */}
 
-        <div className="px-5 lg:px-20 z-[2]">
-          <div className="border-t border-gray-800 flex flex-col">
-            <ServiceCard
-              serviceIndex="01"
-              serviceTitle="Software System Development"
-              forwardTo=""
-            />
-            <ServiceCard
-              serviceIndex="02"
-              serviceTitle="Modern Website Development"
-              forwardTo=""
-            />
-            <ServiceCard
-              serviceIndex="03"
-              serviceTitle="Social Media Marketing"
-              forwardTo=""
-            />
-            <ServiceCard
-              serviceIndex="04"
-              serviceTitle="Search Engine Marketing"
-              forwardTo=""
-            />
-            <ServiceCard
-              serviceIndex="05"
-              serviceTitle="Search Engine Optimization"
-              forwardTo=""
-            />
-            <ServiceCard
-              serviceIndex="06"
-              serviceTitle="Business Consultation"
-              forwardTo=""
-            />
-          </div>
-        </div>
+      <div className="w-full overflow-hidden relative">
+        <Image
+          placeholder="blur"
+          src={groupPhoto}
+          alt="a hiker hiking mountain"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Project Showcase Section */}
 
-      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
+      <div className="bg-darkSecondary pb-10 lg:pb-20 flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
         <div className="flex flex-col lg:flex-row px-4 lg:px-5">
-          <div className="w-full flex lg:w-[25%] px-4 py-5 lg:py-10 border-x border-lightSecondary/30">
+          <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30">
             <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase">
-              <p>Case Studies</p>
-              <p>Featured Works</p>
+              <div className="w-full flex whitespace-nowrap">
+                <p className="text-sm text-lightPrimary px-5 py-2 rounded-full border border-accentColor leading-none">
+                  Case Studies
+                </p>
+              </div>
+              <p className="whitespace-nowrap">+{"  "}Featured Works</p>
             </div>
           </div>
-          <div className="w-full lg:w-[50%] px-4 py-5 lg:py-10 border-x border-lightSecondary/30 lg:border-x-0">
+          <div className="w-full lg:w-[55%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30 lg:border-x-0">
             <div className="w-full flex flex-col gap-5 lg:gap-10">
-              <h2 className="text-lightPrimary font-oswald leading-[1.10] text-3xl lg:text-5xl font-medium">
+              <h2 className="text-lightPrimary font-oswald leading-[1.10] text-4xl lg:text-5xl font-medium">
                 Crafting{" "}
                 <span className="text-accentColor italic">
                   creative solutions
                 </span>{" "}
                 at all scales.
               </h2>
-              <p className="text-base lg:text-lg">
+              <p className="text-xl lg:text-lg">
                 See how we've turned challenges into opportunities and ideas
                 into impactful solutions. Our case studies showcase real-world
                 examples of how we've helped businesses grow, optimize
@@ -647,9 +417,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="w-full flex lg:w-[25%] px-4 py-5 lg:py-10 border-x  border-lightSecondary/30">
+          <div className="w-full flex lg:w-[20%] px-4 lg:px-7 py-5 lg:py-20 border-x  border-lightSecondary/30">
             <div className="w-full flex flex-row lg:flex-col justify-between items-end">
-              <div className="w-[30%] lg:w-full flex lg:justify-center">
+              <div className="w-[30%] lg:w-full flex lg:justify-end">
                 <div className="w-full lg:w-[50%] aspect-square rounded-full flex justify-center items-center relative text-lightPrimary">
                   <CircularTextAnimation
                     text="evion Ark . Devion Ark . Devion Ark . D"
@@ -665,7 +435,7 @@ export default function Home() {
                 <CustomShapeButton
                   label="View All"
                   textStyle="text-lg font-normal text-darkPrimary"
-                  paddingX="ps-4 pe-6"
+                  paddingX="ps-4 pe-8"
                   paddingY="py-4"
                   fontGap="gap-2"
                   backgroundColor="bg-lightPrimary"
@@ -679,6 +449,46 @@ export default function Home() {
           </div>
         </div>
         <ProjectShowcase />
+      </div>
+
+      {/* Partners Section */}
+
+      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative border-y-0 border-t lg:border-y border-lightSecondary/30">
+        <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0"></div>
+        <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 left-[50%]"></div>
+        <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 right-20 "></div>
+        <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-3xl lg:text-5xl font-oswald leading-[1.10] px-4">
+          The <span className="text-accentColor italic">brands</span> we&apos;ve
+          partnered with
+        </h2>
+        <div className="grid grid-cols-2 lg:grid-cols-6 relative px-3 lg:px-0">
+          <div className="w-full h-full absolute top-0 flex flex-col justify-between">
+            <div className="w-full h-[1px] bg-lightSecondary/30"></div>
+            <div className="w-full h-[1px] bg-lightSecondary/30"></div>
+            <div className="w-full h-[1px] bg-lightSecondary/30"></div>
+          </div>
+          <PartnersCard brandImg={interAidLogo} brandAlt="interaid_logo" />
+          <PartnersCard
+            brandImg={sikderFoundationLogo}
+            brandAlt="sikder_foundation_logo"
+          />
+          <PartnersCard brandImg={kickOffLogo} brandAlt="kick_off_logo" />
+          <PartnersCard
+            brandImg={puppetbrushLogo}
+            brandAlt="puppetbrush_logo"
+          />
+          <PartnersCard brandImg={qahafLogo} brandAlt="qahaf_logo" />
+          <PartnersCard brandImg={sweetCakes} brandAlt="sweet_cakes_logo" />
+          <PartnersCard brandImg={travel} brandAlt="travel_logo" />
+          <PartnersCard
+            brandImg={annaKitchen}
+            brandAlt="ananna_khan_kitchen_logo"
+          />
+          <PartnersCard brandImg={indigo} brandAlt="indigo_company_logo" />
+          <PartnersCard brandImg={moonStudio} brandAlt="moon_studio_logo" />
+          <PartnersCard brandImg={oxw} brandAlt="olivia_walker_logo" />
+          <PartnersCard brandImg={elevate} brandAlt="elevate_logo" />
+        </div>
       </div>
 
       {/* <div className="w-full bg-black bg-fit flex flex-col">

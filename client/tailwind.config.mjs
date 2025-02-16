@@ -14,7 +14,7 @@ export default {
         lightPrimary: "#FFFFFF",
         lightSecondary: "#999999",
         darkPrimary: "#121212",
-        darkSecondary: "#1B1B1B",
+        darkSecondary: "#121212",
         accentColor: "#c8f31d",
         lightTitleText: "#FFFFFF",
         lightBodyText: "#999999",

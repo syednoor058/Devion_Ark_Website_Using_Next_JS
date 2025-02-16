@@ -131,7 +131,7 @@ function ProjectColumn({
               label="Learn More"
               textStyle="text-lg font-normal text-lightPrimary"
               hoverText="text-darkPrimary"
-              paddingX="ps-4 pe-6"
+              paddingX="ps-4 pe-8"
               paddingY="py-4"
               fontGap="gap-2"
               backgroundColor="bg-darkPrimary"
