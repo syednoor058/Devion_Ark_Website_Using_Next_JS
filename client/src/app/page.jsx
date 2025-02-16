@@ -171,8 +171,8 @@ export default function Home() {
             <div className="w-full lg:w-[43%] flex flex-col">
               <div className="py-5 lg:py-10 flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-10">
                 <div className="w-full flex flex-row items-center gap-5">
-                  <div className="w-12 h-12 rounded-full bg-lightPrimary flex justify-center items-center text-darkPrimary font-semibold">
-                    SF
+                  <div className="w-12 h-12 rounded-full bg-accentColor flex justify-center items-center text-darkPrimary font-semibold">
+                    RH
                   </div>
                   <div className="flex flex-col gap-1 leading-[1.1]">
                     <p className="text-lightPrimary font-semibold">
@@ -386,7 +386,7 @@ export default function Home() {
 
       {/* Project Showcase Section */}
 
-      <div className="bg-darkSecondary pb-10 lg:pb-20 flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
+      <div className="bg-darkSecondary flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
         <div className="flex flex-col lg:flex-row px-4 lg:px-5">
           <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30">
             <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase">
@@ -491,53 +491,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="w-full bg-black bg-fit flex flex-col">
-        <div className="w-full flex flex-col lg:flex-row lg:justify-between relative overflow-hidden gap-10 lg:gap-0 py-10 lg:py-20">
-          <div className="w-full lg:w-[60%] flex flex-col gap-10 lg:gap-16 px-5 lg:px-20">
-            <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-              <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-                <span className="inline-block">Case Studies</span>
-              </h6>
-              <div className="w-[2px] flex bg-accentColor"></div>
-            </div>
-            <h2 className="w-full text-[10vw] lg:text-[5.5vw] font-oswald uppercase text-lightPrimary leading-none font-bold flex flex-col">
-              <span>Our Works In</span>
-
-              <span className="text-accentColor font-extrabold text-[14vw] lg:text-[6.5vw]">
-                Action
-              </span>
-            </h2>
-          </div>
-          <div className="w-full lg:w-[40%] flex flex-col gap-10 lg:gap-16 items-end ps-5 lg:ps-0 pe-5 lg:pe-20">
-            <div className="w-[30%] aspect-square rounded-full flex justify-center items-center relative text-lightPrimary">
-              <CircularTextAnimation
-                text="evion Ark . Devion Ark . Devion Ark . D"
-                radius="40"
-                textColor="text-lightPrimary"
-              />
-              <div className="text-xl absolute w-full h-full top-0 left-0 flex justify-center items-center text-lightPrimary">
-                <GoDotFill />
-              </div>
-            </div>
-            <p className="w-full text-lg font-light overflow-hidden leading-tight">
-              See how we&apos;ve turned challenges into opportunities and ideas
-              into impactful solutions. Our case studies showcase real-world
-              examples of how we&apos;ve helped businesses grow, optimize
-              operations, and achieve their goals. Each story reflects our
-              commitment to innovation, collaboration, and delivering measurable
-              results.
-            </p>
-          </div>
-        </div>
-        <ProjectShowcase />
-      </div> */}
-
       {/* Testimonial Section */}
 
       <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-black overflow-x-hidden">
         <div className="w-full h-full flex flex-col lg:gap-20 justify-between">
-          <div className="w-full h-full ps-5 lg:ps-20 flex flex-row  relative border-b border-gray-700">
-            <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor font-inter text-[14vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-gray-700 pb-5 lg:pb-0">
+          <div className="w-full h-full ps-4 lg:ps-20 flex flex-row  relative border-b border-lightSecondary/30">
+            <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor font-inter text-[14vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-lightSecondary/30 pb-5 lg:pb-0">
               Clients talk
             </h2>
 
@@ -630,7 +589,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex lg:hidden flex-col">
-            <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
+            <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-4 py-5">
               <div className="flex flex-row gap-2">
                 <p className=" font-light leading-tight">
                   With their SEO expertise and digital marketing campaigns, we
@@ -654,7 +613,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
+            <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-5 py-5">
               <div className="flex flex-row-reverse items-start gap-2">
                 <p className="font-light leading-tight text-end">
                   Our business grew faster than we imagined after partnering
@@ -679,7 +638,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
+            <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-5 py-5">
               <div className="flex flex-row gap-2">
                 <p className="font-light leading-tight">
                   They developed an E-commerce web application for my jersey
@@ -704,7 +663,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border-b border-gray-800 flex flex-col gap-5 px-5 py-5">
+            <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-5 py-5">
               <div className="flex flex-row-reverse items-start gap-2">
                 <p className="font-light leading-tight text-end">
                   We relied on them for software development, and they exceeded
@@ -734,16 +693,30 @@ export default function Home() {
 
       {/* FAQ Section */}
 
-      <div className="w-full text-lightSecondary bg-darkSecondary relative overflow-hidden">
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full lg:w-[40%] flex">
-            <h2 className="w-full h-full uppercase font-oswald text-[8vw] lg:text-[6vw] font-bold flex flex-col gap-2 ps-5 lg:ps-20 pe-5 lg:pe-10 leading-none text-darkSecondary bg-lightPrimary py-10 lg:py-20">
-              Frequently Asked{" "}
-              <span className="text-accentColor">Questions</span>
-              <span>(FAQ)</span>
-            </h2>
+      <div className="w-full font-light text-lightSecondary text-base lg:text-lg py-10 lg:py-20 px-4 lg:px-20 bg-darkPrimary">
+        <div className="flex flex-col gap-10">
+          <div className="w-full flex flex-col-reverse lg:flex-row gap-10 justify-between">
+            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-3xl lg:text-6xl font-medium fonr-oswald text-lightPrimary leading-[1.10]">
+              <h2>Have doubts?</h2>
+              <h2>
+                We&apos;re here to{" "}
+                <span className="italic text-accentColor">answer</span> all.
+              </h2>
+            </div>
+            <div className="w-full h-full lg:w-[20%] flex lg:justify-end items-center gap-3">
+              <div className="w-10 h-10 rounded-full border border-dashed border-lightSecondary/30 bg-darkSecondary flex justify-center items-center leading-none">
+                06
+              </div>
+              <div className=" h-full font-medium text-lightPrimary uppercase px-5 py-2 rounded-full border border-accentColor leading-none">
+                FAQ
+              </div>
+            </div>
           </div>
-          <FAQSection />
+          <div className="w-full flex lg:justify-end">
+            <div className="w-full lg:w-[70%]">
+              <FAQSection />
+            </div>
+          </div>
         </div>
       </div>
     </main>

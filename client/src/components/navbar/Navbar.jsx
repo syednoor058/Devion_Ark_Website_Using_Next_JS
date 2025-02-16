@@ -4,23 +4,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { IoIosChatboxes, IoMdMail, IoMdPin } from "react-icons/io";
-import { MdPhone } from "react-icons/md";
-import logo from "../../../public/dark_mode_logo.png";
-import darkLogoMobile from "../../../public/dark_mode_logo_mobile.png";
-import navExpandLogo from "../../../public/nav_expand_logo.png";
+import { FiArrowDownLeft } from "react-icons/fi";
+import { GoDotFill } from "react-icons/go";
+import { MdOutlineArrowForward } from "react-icons/md";
+import blogCover from "../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import {
+  default as darkLogoMobile,
+  default as logo,
+} from "../../../public/footer_logo.png";
 import AnimatedLetter from "../animations/AnimatedLetter";
 import CustomShapeButton from "../buttons/CustomShapeButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
-function AddressInfo({ icon, title, value }) {
+function MoreBlogCard({ cover, title, forwardTo }) {
   return (
-    <div className="w-full flex flex-row gap-5 font-light leading-none">
-      <div className="w-[25%] flex flex-row gap-2">
-        <span>{icon}</span>
-        {title}:
+    <div className="w-full flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
+        <div className="w-full overflow-hidden relative rounded-sm">
+          <Image
+            placeholder="blur"
+            src={cover}
+            alt={title}
+            className="w-full object-cover"
+          />
+        </div>
+        <div className="w-full h-[1px] bg-gray-500"></div>
       </div>
-      <div className="w-[75%] leading-tight">{value}</div>
+      <Link href={forwardTo} className="group">
+        <div className="w-full flex flex-row gap-5 justify-between">
+          <div className="text-2xl text-lightPrimary group-hover:underline underline-offset-4 duration-[350ms]">
+            {title}
+          </div>
+          <div className="text-2xl lg:text-4xl">
+            <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }
@@ -34,10 +53,17 @@ function Navbar() {
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
   ];
+
+  const socialLinks = [
+    { label: "Facebook", url: "/" },
+    { label: "LinkedIn", url: "/" },
+    { label: "Instagram", url: "/" },
+    { label: "Whatsapp", url: "/" },
+    { label: "Twitter", url: "/" },
+  ];
   const pathname = usePathname(); // Get the current path
   const [menuExpand, setMenuExpand] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [bgColor, setBgColor] = useState("bg-transparent");
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latestY) => {
@@ -47,11 +73,6 @@ function Navbar() {
       setHidden(true);
     } else {
       setHidden(false);
-    }
-    if (latestY > 25) {
-      setBgColor("bg-Secondary");
-    } else {
-      setBgColor("bg-transparent");
     }
   });
   return (
@@ -65,33 +86,31 @@ function Navbar() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className={`w-full sticky left-0 top-0 z-[1000] ${bgColor}`}
+      className={`w-full sticky left-0 top-0 z-[1000] bg-darkPrimary`}
     >
       <div className="w-full hidden lg:flex relative">
         <div
-          className={`w-full h-full flex flex-row gap-5 justify-between items-center ${
-            bgColor === "bg-transparent" ? "bg-transparent" : "bg-darkSecondary"
-          } px-20 z-[1002] py-1`}
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-3 bg-darkPrimary`}
         >
           <Link href="/" className={`w-full relative z-[1003]`}>
             <Image
               placeholder="blur"
               src={logo}
               alt="devion_ark_logo"
-              className="w-auto h-14 object-fit"
+              className="w-auto h-5 object-fit"
             />
           </Link>
           <div
             className={`w-full flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
           >
             <div
-              className=" flex flex-row gap-2 items-center px-10 cursor-pointer group"
+              className=" flex flex-row gap-1 items-center px-10 cursor-pointer group"
               onClick={() => setMenuExpand((prevMenu) => !prevMenu)}
             >
               <div>
                 <MenuIcon expand={menuExpand} />
               </div>
-              <div className="font-normal  uppercase text-lg">
+              <div className="font-normal text-base">
                 <AnimatedLetter text="Menu" hoverText="text-lightPrimary" />
               </div>
             </div>
@@ -100,15 +119,15 @@ function Navbar() {
                 <div className="w-full flex justify-end">
                   <CustomShapeButton
                     label="Get A Quote"
-                    textStyle="text-lg font-normal text-darkPrimary"
+                    textStyle="text-sm font-normal text-darkPrimary"
                     hoverText="text-darkPrimary"
                     backgroundColor="bg-lightPrimary"
                     hoverBgColor="bg-accentColor"
-                    paddingX="ps-4 pe-5"
-                    paddingY="py-3"
-                    fontGap="gap-2"
+                    paddingX="ps-2 pe-5"
+                    paddingY="py-2"
+                    fontGap="gap-1"
                     icon={
-                      <IoIosChatboxes className="text-2xl font-darkPrimary" />
+                      <FiArrowDownLeft className="text-base text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
                     }
                   />
                 </div>
@@ -118,94 +137,89 @@ function Navbar() {
         </div>
 
         <div
-          className={`w-full h-screen overflow-hidden ${
-            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
-          } fixed top-0 left-0 transform ${
+          className={`w-full h-screen overflow-hidden bg-darkPrimary fixed top-0 left-0 transform ${
             menuExpand ? "translate-y-0" : "-translate-y-full"
           } duration-1000 ease-in-out`}
         >
-          <div className="w-full h-full flex flex-col gap-10 pt-14">
-            <div className="w-full h-[80%] flex flex-row gap-20 mt-10">
-              <div className="w-[50%] h-full ps-20 flex flex-col">
-                {navLinks.map((navLink, index) => (
-                  <Link
-                    href={navLink.path}
-                    key={index}
-                    onClick={() => setMenuExpand(false)}
-                  >
-                    <div
-                      className={`w-full ${
-                        pathname === navLink.path
-                          ? "text-accentColor"
-                          : "text-lightSecondary"
-                      } text-[4.5vw] font-bold uppercase font-oswald leading-none duration-500`}
-                    >
-                      <AnimatedLetter
-                        text={navLink.label}
-                        hoverText={`${
-                          pathname === navLink.path
-                            ? "text-accentColor"
-                            : "text-lightPrimary"
-                        }`}
-                      />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-              <div className="w-[50%] h-full pe-20 flex items-end text-lg">
-                <div className="w-full h-full flex flex-col justify-end gap-5">
-                  <div className="w-full h-full flex flex-row gap-20">
-                    <div className="flex flex-col gap-2 text-nowrap">
-                      <div className="font-bold uppercase text-lightPrimary">
-                        Legals
-                      </div>
-                      <Link href="">
-                        <AnimatedLetter
-                          text="Privacy Policy"
-                          hoverText="text-accentColor"
-                        />
-                      </Link>
-                      <Link href="">
-                        <AnimatedLetter
-                          text="Terms of Use"
-                          hoverText="text-accentColor"
-                        />
-                      </Link>
-                      <Link href="">
-                        <AnimatedLetter
-                          text="Cookies Policy"
-                          hoverText="text-accentColor"
-                        />
-                      </Link>
-                    </div>
-                    <div className="w-full flex flex-col gap-2">
-                      <AddressInfo
-                        icon={<IoMdMail />}
-                        title="Email"
-                        value="info@devionark.com"
-                      />
-                      <AddressInfo
-                        icon={<MdPhone />}
-                        title="Phone"
-                        value="+8801782734573"
-                      />
-                      <AddressInfo
-                        icon={<IoMdPin />}
-                        title="Address"
-                        value="Holding No. 08, Tootpare Central Rd, Khulna Sadar, Khulna-9100, Bangladesh"
-                      />
+          <div className="w-full h-full flex flex-col justify-between gap-10 pt-14 text-lightSecondary">
+            <div className="w-full h-full flex flex-row gap-10 justify-between px-20 mt-10">
+              <div className="w-[45%] flex items-end">
+                <div className="w-full flex flex-col gap-5">
+                  <div className="flex overflow-hidden">
+                    <div className="text-sm uppercase text-lightPrimary fonr-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                      <p className="flex flex-row gap-2 items-center">
+                        <span>
+                          <GoDotFill className="text-xs" />
+                        </span>
+                        Latest News
+                      </p>
                     </div>
                   </div>
                   <div className="w-full">
-                    <div className="relative w-full aspect-[4.3478/1]">
-                      <Image
-                        placeholder="blur"
-                        src={navExpandLogo}
-                        alt="devion-ark-logo"
-                        className="object-cover"
-                      />
-                    </div>
+                    <MoreBlogCard
+                      title="How much does it cost to design a website"
+                      forwardTo=""
+                      cover={blogCover}
+                    />
                   </div>
+                </div>
+              </div>
+              <div className="w-[35%] h-full flex items-end ps-10">
+                <div className="flex flex-col gap-1">
+                  {navLinks.map((navLink, index) => (
+                    <Link
+                      href={navLink.path}
+                      key={index}
+                      onClick={() => setMenuExpand(false)}
+                    >
+                      <div
+                        className={`w-full ${
+                          pathname === navLink.path
+                            ? "text-accentColor"
+                            : "text-lightSecondary"
+                        } text-5xl font-medium font-oswald leading-none duration-[350ms] whitespace-nowrap uppercase`}
+                      >
+                        <AnimatedLetter
+                          text={navLink.label}
+                          hoverText={`${
+                            pathname === navLink.path
+                              ? "text-accentColor"
+                              : "text-lightPrimary"
+                          }`}
+                        />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div className="w-[20%]">
+                <div className="flex flex-col items-end gap-1">
+                  {socialLinks.map((social, index) => (
+                    <a href={social.url} key={index}>
+                      <div
+                        className={`w-full text-lightSecondary text-base font-medium leading-none duration-[350ms] whitespace-nowrap uppercase`}
+                      >
+                        <AnimatedLetter
+                          text={social.label}
+                          hoverText="text-lightPrimary"
+                        />
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="w-full px-20 py-10">
+              <div className="flex flex-row gap-20">
+                <div className="flex flex-col gap-3 leading-none">
+                  <p className="text-lightPrimary whitespace-nowrap">
+                    Devion Ark Digital Solutions
+                  </p>
+                  <p>&copy; 2022-2025</p>
+                </div>
+                <div className="flex flex-col gap-3 leading-none">
+                  <p>info@devionark.com</p>
+                  <p>+880 1782 734573</p>
                 </div>
               </div>
             </div>
@@ -217,18 +231,16 @@ function Navbar() {
 
       <div className="w-full flex lg:hidden relative">
         <div
-          className={`w-full h-full flex flex-row gap-5 justify-between items-center py-4  z-[1002] ${
-            bgColor === "bg-transparent" ? "bg-transparent" : "backdrop-blur-lg"
-          }`}
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center py-4  z-[1002] bg-darkPrimary`}
         >
-          <div className="w-[50%] flex justify-center items-center px-5 z-[1003]">
+          <div className="flex justify-center items-center px-5 z-[1003]">
             <div className="w-full relative">
               <Link href="/">
                 <Image
                   placeholder="blur"
                   src={darkLogoMobile}
                   alt="devion_ark_logo"
-                  className="w-full h-auto object-cover"
+                  className="w-auto h-4 object-cover"
                 />
               </Link>
             </div>
@@ -243,14 +255,12 @@ function Navbar() {
           </div>
         </div>
         <div
-          className={`w-screen h-screen overflow-x-hidden overflow-y-auto ${
-            bgColor === "bg-transparent" ? "bg-darkPrimary" : "bg-black"
-          } fixed top-0 left-0 transform ${
+          className={`w-full h-screen overflow-x-hidden overflow-y-auto bg-darkPrimary fixed top-0 left-0 transform ${
             menuExpand ? "translate-y-0" : "-translate-y-full"
           } duration-1000 ease-in-out z-[999]`}
         >
           <div className="w-full h-full pt-20 flex flex-col gap-10 justify-between z-[1001]">
-            <div className="w-full flex flex-col gap-2 px-5">
+            <div className="w-full h-full flex flex-col justify-end gap-2 px-5">
               {navLinks.map((navLink, index) => (
                 <Link
                   href={navLink.path}
@@ -262,12 +272,22 @@ function Navbar() {
                       pathname === navLink.path
                         ? "text-accentColor"
                         : "text-lightSecondary hover:text-lightPrimary"
-                    }  duration-500 text-[10vw] font-bold uppercase font-oswald leading-none`}
+                    }  duration-500 text-3xl font-bold uppercase font-oswald leading-none`}
                   >
                     <AnimatedLetter text={navLink.label} />
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="w-full flex flex-row gap-5 justify-between text-sm font-light py-5 px-4">
+              <div>
+                <p>&copy; 202-2025</p>
+              </div>
+              <div className="text-lightPrimary uppercase font-normal">
+                <p>
+                  Devion <span className="text-accentColor">Ark</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

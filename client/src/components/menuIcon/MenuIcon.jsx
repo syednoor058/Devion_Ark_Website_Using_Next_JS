@@ -1,7 +1,7 @@
 function MenuIcon({ expand }) {
   return (
-    <div className="w-6 aspect-square flex justify-center items-center ">
-      <div className="w-full h-4 lg:h-2 relative rounded-full ">
+    <div className="w-6 lg:w-4 aspect-square flex justify-center items-center ">
+      <div className="w-full h-4 lg:h-[6px] relative rounded-full ">
         <div
           className={`w-full h-[1px] rounded-full ${
             expand ? "top-[50%] rotate-45" : "top-0 rotate-0"

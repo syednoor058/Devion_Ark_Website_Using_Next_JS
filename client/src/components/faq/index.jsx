@@ -3,7 +3,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import React from "react";
 
@@ -35,13 +34,12 @@ function FAQSection() {
   };
 
   return (
-    <div className="w-full lg:w-[60%] lg:pe-20 lg:pt-5 lg:ps-10">
-      <div className="border-gray-800 border-b py-3">
+    <div className="w-full">
+      <div className="border-lightSecondary/30 border-b py-5">
         <Accordion
           elevation={0}
           expanded={expanded1}
           onChange={handleExpansion1}
-          slots={{ transition: Fade }}
           slotProps={{ transition: { timeout: 400 } }}
           sx={[
             expanded1
@@ -68,7 +66,7 @@ function FAQSection() {
             aria-controls="panel1-content"
             id="panel1-header"
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#ffffff",
               borderBottomWidth: "1px",
               borderColor: "#999999",
@@ -78,7 +76,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "16px",
+                fontSize: "24px",
               }}
             >
               How long does it take to complete a project?
@@ -86,14 +84,14 @@ function FAQSection() {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#999999",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 300,
               }}
             >
@@ -105,12 +103,11 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-gray-800 border-b py-3">
+      <div className=" border-lightSecondary/30 border-b py-5">
         <Accordion
           elevation={0}
           expanded={expanded2}
           onChange={handleExpansion2}
-          slots={{ transition: Fade }}
           slotProps={{ transition: { timeout: 400 } }}
           sx={[
             expanded2
@@ -137,7 +134,7 @@ function FAQSection() {
             aria-controls="panel2-content"
             id="panel2-header"
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#ffffff",
               borderColor: "#999999",
             }}
@@ -146,7 +143,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "16px",
+                fontSize: "24px",
               }}
             >
               Do you provide ongoing support after the project is completed?
@@ -154,14 +151,14 @@ function FAQSection() {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#999999",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 300,
               }}
             >
@@ -173,12 +170,11 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-gray-800 border-b py-3">
+      <div className=" border-lightSecondary/30 border-b py-5">
         <Accordion
           elevation={0}
           expanded={expanded3}
           onChange={handleExpansion3}
-          slots={{ transition: Fade }}
           slotProps={{ transition: { timeout: 400 } }}
           sx={[
             expanded3
@@ -205,7 +201,7 @@ function FAQSection() {
             aria-controls="panel3-content"
             id="panel3-header"
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#ffffff",
               borderBottomWidth: "1px",
               borderColor: "#999999",
@@ -215,7 +211,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "16px",
+                fontSize: "24px",
               }}
             >
               Can you work with existing branding and design?
@@ -223,14 +219,14 @@ function FAQSection() {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#999999",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 300,
               }}
             >
@@ -242,12 +238,11 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-gray-800 border-b py-3">
+      <div className=" border-lightSecondary/30 border-b py-5">
         <Accordion
           elevation={0}
           expanded={expanded4}
           onChange={handleExpansion4}
-          slots={{ transition: Fade }}
           slotProps={{ transition: { timeout: 400 } }}
           sx={[
             expanded4
@@ -274,7 +269,7 @@ function FAQSection() {
             aria-controls="panel4-content"
             id="panel4-header"
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#ffffff",
               borderBottomWidth: "1px",
               borderColor: "#999999",
@@ -284,7 +279,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "16px",
+                fontSize: "24px",
               }}
             >
               What is your pricing structure?
@@ -292,14 +287,14 @@ function FAQSection() {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#999999",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 300,
               }}
             >
@@ -311,12 +306,11 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-gray-800 border-b py-3">
+      <div className=" border-lightSecondary/30 border-b py-5">
         <Accordion
           elevation={0}
           expanded={expanded5}
           onChange={handleExpansion5}
-          slots={{ transition: Fade }}
           slotProps={{ transition: { timeout: 400 } }}
           sx={[
             expanded5
@@ -343,7 +337,7 @@ function FAQSection() {
             aria-controls="panel5-content"
             id="panel5-header"
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#ffffff",
               borderBottomWidth: "1px",
               borderColor: "#999999",
@@ -353,7 +347,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "16px",
+                fontSize: "24px",
               }}
             >
               How do you measure the success of your projects?
@@ -361,14 +355,14 @@ function FAQSection() {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#999999",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 300,
               }}
             >
@@ -385,7 +379,6 @@ function FAQSection() {
           elevation={0}
           expanded={expanded6}
           onChange={handleExpansion6}
-          slots={{ transition: Fade }}
           slotProps={{ transition: { timeout: 400 } }}
           sx={[
             expanded6
@@ -412,7 +405,7 @@ function FAQSection() {
             aria-controls="panel6-content"
             id="panel6-header"
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#ffffff",
               borderBottomWidth: "1px",
               borderColor: "#999999",
@@ -422,7 +415,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "16px",
+                fontSize: "24px",
               }}
             >
               Do you offer custom solutions for unique business needs?
@@ -430,14 +423,14 @@ function FAQSection() {
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#121212",
               color: "#999999",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "14px",
+                fontSize: "18px",
                 fontWeight: 300,
               }}
             >
