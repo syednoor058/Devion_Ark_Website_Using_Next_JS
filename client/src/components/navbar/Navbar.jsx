@@ -92,14 +92,25 @@ function Navbar() {
         <div
           className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-3 bg-darkPrimary`}
         >
-          <Link href="/" className={`w-full relative z-[1003]`}>
-            <Image
-              placeholder="blur"
-              src={logo}
-              alt="devion_ark_logo"
-              className="w-auto h-5 object-fit"
-            />
-          </Link>
+          <div className="w-full flex flex-row justify-start items-center text-lightSecondary z-[1003] gap-10">
+            <Link href="/" className={`w-full relative z-[1003]`}>
+              <Image
+                placeholder="blur"
+                src={logo}
+                alt="devion_ark_logo"
+                className="w-auto h-5 object-fit"
+              />
+            </Link>
+            <div className="flex flex-row gap-3 items-center text-lightPrimary font-normal text-sm">
+              <div>
+                <GoDotFill />
+              </div>
+              <p className="flex flex-col whitespace-nowrap leading-none">
+                <span>Rewrite the Rules</span>
+                <span>of Digital.</span>
+              </p>
+            </div>
+          </div>
           <div
             className={`w-full flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
           >

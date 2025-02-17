@@ -161,7 +161,7 @@ function Footer() {
                       </p>
                       <form className="w-full flex flex-col gap-1">
                         <input
-                          className="p-3 lg:p-4 outline-none border bg-transparent text-lightSecondary"
+                          className="p-3 outline-none border bg-transparent text-lightSecondary"
                           placeholder="Enter your email address"
                         />
                         <div className="w-full flex justify-start">

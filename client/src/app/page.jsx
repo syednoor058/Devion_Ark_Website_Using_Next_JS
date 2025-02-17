@@ -16,6 +16,7 @@ import { LuArrowUpRight } from "react-icons/lu";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
 import groupPhoto from "../../public/about/old-garage.jpg";
+import blogCover from "../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.png";
 import elevate from "../../public/partners/elevate.png";
 import indigo from "../../public/partners/indigo_company.png";
@@ -146,6 +147,39 @@ function ServiceCard({ serviceTitle, forwardTo }) {
         <div className="w-full h-full absolute bg-lightPrimary inset-0 z-[1] -translate-y-full group-hover:translate-y-0 transition duration-[350ms]"></div>
       </div>
     </Link>
+  );
+}
+
+function MoreBlogCard({ cover, title, date, forwardTo }) {
+  return (
+    <div className="w-full flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
+        <div className="w-full overflow-hidden relative rounded-sm">
+          <Image
+            placeholder="blur"
+            src={cover}
+            alt={title}
+            className="w-full object-cover"
+          />
+        </div>
+        <div className="w-full h-[1px] bg-gray-500"></div>
+      </div>
+      <div>
+        <p className="font-light text-base lg:text-lg text-lightSecondary">
+          {date}
+        </p>
+      </div>
+      <Link href={forwardTo} className="group">
+        <div className="w-full flex flex-row gap-5 justify-between">
+          <div className="text-2xl lg:text-4xl text-lightPrimary group-hover:underline underline-offset-4 duration-500">
+            {title}
+          </div>
+          <div className="text-3xl lg:text-6xl">
+            <LuArrowUpRight className="rotate-45 group-hover:rotate-0 duration-500 text-accentColor font-light" />
+          </div>
+        </div>
+      </Link>
+    </div>
   );
 }
 
@@ -314,10 +348,15 @@ export default function Home() {
               </div>
               <div className="px-4 py-5 lg:py-10">
                 <div className="w-full flex flex-col gap-5">
-                  <div className="w-full flex">
-                    <p className="text-sm font-medium text-lightPrimary uppercase px-5 py-2 rounded-full border border-accentColor">
-                      Our Services
-                    </p>
+                  <div className="flex overflow-hidden">
+                    <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                      <p className="flex flex-row gap-2 items-center">
+                        <span>
+                          <GoDotFill className="text-xs" />
+                        </span>
+                        Our Services
+                      </p>
+                    </div>
                   </div>
 
                   <p className="text-lg lg:text-base">
@@ -390,10 +429,15 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row px-4 lg:px-5">
           <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30">
             <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase">
-              <div className="w-full flex whitespace-nowrap">
-                <p className="text-sm text-lightPrimary px-5 py-2 rounded-full border border-accentColor leading-none">
-                  Case Studies
-                </p>
+              <div className="flex overflow-hidden">
+                <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                  <p className="flex flex-row gap-2 items-center">
+                    <span>
+                      <GoDotFill className="text-xs" />
+                    </span>
+                    Case Studies
+                  </p>
+                </div>
               </div>
               <p className="whitespace-nowrap">+{"  "}Featured Works</p>
             </div>
@@ -691,6 +735,28 @@ export default function Home() {
         </div>
       </div>
 
+      {/* More Blogs */}
+      <div className="w-full px-4 lg:px-20 py-10 lg:py-20 gap-10 flex flex-col">
+        <div className="flex overflow-hidden">
+          <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+            <p className="flex flex-row gap-2 items-center">
+              <span>
+                <GoDotFill className="text-xs" />
+              </span>
+              Latest News
+            </p>
+          </div>
+        </div>
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+          <MoreBlogCard
+            title="How much does it cost to design a website"
+            forwardTo=""
+            date="14 December, 2024"
+            cover={blogCover}
+          />
+        </div>
+      </div>
+
       {/* FAQ Section */}
 
       <div className="w-full font-light text-lightSecondary text-base lg:text-lg py-10 lg:py-20 px-4 lg:px-20 bg-darkPrimary">
@@ -707,8 +773,15 @@ export default function Home() {
               <div className="w-10 h-10 rounded-full border border-dashed border-lightSecondary/30 bg-darkSecondary flex justify-center items-center leading-none">
                 06
               </div>
-              <div className=" h-full font-medium text-lightPrimary uppercase px-5 py-2 rounded-full border border-accentColor leading-none">
-                FAQ
+              <div className="flex overflow-hidden">
+                <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                  <p className="flex flex-row gap-2 items-center">
+                    <span>
+                      <GoDotFill className="text-xs" />
+                    </span>
+                    FAQ
+                  </p>
+                </div>
               </div>
             </div>
           </div>
