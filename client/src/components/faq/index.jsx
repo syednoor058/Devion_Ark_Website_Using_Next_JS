@@ -35,7 +35,7 @@ function FAQSection() {
 
   return (
     <div className="w-full">
-      <div className="border-lightSecondary/30 border-b py-5">
+      <div className="border-lightSecondary/30 border-b pb-5">
         <Accordion
           elevation={0}
           expanded={expanded1}
@@ -76,7 +76,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "24px",
+                fontSize: "20px",
               }}
             >
               How long does it take to complete a project?
@@ -91,7 +91,7 @@ function FAQSection() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: 300,
               }}
             >
@@ -143,7 +143,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "24px",
+                fontSize: "20px",
               }}
             >
               Do you provide ongoing support after the project is completed?
@@ -158,7 +158,7 @@ function FAQSection() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: 300,
               }}
             >
@@ -211,7 +211,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "24px",
+                fontSize: "20px",
               }}
             >
               Can you work with existing branding and design?
@@ -226,7 +226,7 @@ function FAQSection() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: 300,
               }}
             >
@@ -279,7 +279,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "24px",
+                fontSize: "20px",
               }}
             >
               What is your pricing structure?
@@ -294,7 +294,7 @@ function FAQSection() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: 300,
               }}
             >
@@ -347,7 +347,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "24px",
+                fontSize: "20px",
               }}
             >
               How do you measure the success of your projects?
@@ -362,7 +362,7 @@ function FAQSection() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: 300,
               }}
             >
@@ -415,7 +415,7 @@ function FAQSection() {
               sx={{
                 fontFamily: "Poppins",
                 fontWeight: 300,
-                fontSize: "24px",
+                fontSize: "20px",
               }}
             >
               Do you offer custom solutions for unique business needs?
@@ -430,7 +430,7 @@ function FAQSection() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "18px",
+                fontSize: "16px",
                 fontWeight: 300,
               }}
             >

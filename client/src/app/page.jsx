@@ -696,7 +696,7 @@ export default function Home() {
       <div className="w-full font-light text-lightSecondary text-base lg:text-lg py-10 lg:py-20 px-4 lg:px-20 bg-darkPrimary">
         <div className="flex flex-col gap-10">
           <div className="w-full flex flex-col-reverse lg:flex-row gap-10 justify-between">
-            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-3xl lg:text-6xl font-medium fonr-oswald text-lightPrimary leading-[1.10]">
+            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-3xl lg:text-6xl font-medium font-oswald text-lightPrimary leading-[1.10]">
               <h2>Have doubts?</h2>
               <h2>
                 We&apos;re here to{" "}

@@ -118,12 +118,13 @@ function Navbar() {
               <div className="w-full flex justify-end">
                 <div className="w-full flex justify-end">
                   <CustomShapeButton
-                    label="Get A Quote"
+                    label="Let's Talk"
+                    bend="10px"
                     textStyle="text-sm font-normal text-darkPrimary"
                     hoverText="text-darkPrimary"
                     backgroundColor="bg-lightPrimary"
                     hoverBgColor="bg-accentColor"
-                    paddingX="ps-2 pe-5"
+                    paddingX="ps-2 pe-4"
                     paddingY="py-2"
                     fontGap="gap-1"
                     icon={
@@ -146,7 +147,7 @@ function Navbar() {
               <div className="w-[45%] flex items-end">
                 <div className="w-full flex flex-col gap-5">
                   <div className="flex overflow-hidden">
-                    <div className="text-sm uppercase text-lightPrimary fonr-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                    <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
                       <p className="flex flex-row gap-2 items-center">
                         <span>
                           <GoDotFill className="text-xs" />

@@ -4,6 +4,7 @@ import AnimatedLetter from "../animations/AnimatedLetter";
 function CustomShapeButton({
   label,
   forwardTo = "",
+  bend = "16px",
   paddingX = "px-8",
   paddingY = "py-4",
   textStyle = "text-lg font-normal text-lightPrimary",
@@ -18,8 +19,7 @@ function CustomShapeButton({
       href={forwardTo}
       className={`inline-block ${paddingX} ${paddingY} ${textStyle} ${backgroundColor} duration-[350ms] ease-in-out transition-colors group overflow-hidden relative`}
       style={{
-        clipPath:
-          "polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0px 100%, 0px 0px)",
+        clipPath: `polygon(${bend} 0%, calc(100% - ${bend}) 0%, 100% ${bend}, 100% 100%, calc(100% - ${bend}) 100%, ${bend} 100%, 0px 100%, 0px 0px)`,
       }}
     >
       <div
