@@ -1,7 +1,9 @@
-import ActionButton from "@/components/buttons/ActionButton";
-import { BiBookReader } from "react-icons/bi";
-import { FaEarthAmericas } from "react-icons/fa6";
-import { LuMouse } from "react-icons/lu";
+import AnimatedLetter from "@/components/animations/AnimatedLetter";
+import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import Image from "next/image";
+import Link from "next/link";
+import { FiArrowDownLeft } from "react-icons/fi";
+import cover from "../../../public/services/service_cover.jpg";
 
 export const metadata = {
   title: "Case Studies - Real Digital Transformation Success | Devion Ark",
@@ -9,58 +11,65 @@ export const metadata = {
     "Explore our case studies to see how Devion Ark has transformed businesses with innovative IT solutions. Discover real success stories in custom software, digital marketing, and web development that drive measurable growth.",
 };
 
-function ProjectListCard({
-  bgColor,
-  projectCategory,
-  bodyTextColor,
-  video,
-  projectTitle,
-  titleTextColor,
-  projectDesc,
-  btnBgColor,
-  btnBorderColor,
-  btnTextHoverColor,
-  forwardTo,
-}) {
+function ProjectCard({ title, desc, features, video, reverse = "0" }) {
   return (
-    <div className={`w-full rounded ${bgColor} p-5`}>
-      <div className="w-full flex flex-col gap-5">
-        <div className={`${bodyTextColor} font-light uppercase `}>
-          <h5>{projectCategory}</h5>
-        </div>
-        <div className="w-full aspect-video overflow-hidden relative">
-          <video
-            className="w-full object-cover"
-            loop
-            autoPlay
-            muted
-            playsInline
-          >
-            <source src={video} />
-          </video>
+    <div className="w-full">
+      <div className="flex flex-col gap-7 lg:gap-10">
+        <div className="w-full flex flex-col lg:flex-row gap-5 lg:gap-20">
+          <div className="w-full lg:w-[55%] text-2xl lg:text-5xl font-normal text-lightPrimary">
+            <h2>{title}</h2>
+          </div>
+          <div className="w-full h-full lg:w-[45%] flex flex-wrap gap-2 lg:gap-3 text-xs lg:text-base leading-none text-lightSecondary">
+            {features.map((feature, i) => (
+              <p
+                key={i}
+                className="inline-flex items-center justify-center h-[28px] lg:h-[34px] px-2 lg:px-3 py-1 m-0 whitespace-nowrap rounded-full border border-accentColor leading-none"
+              >
+                {feature}
+              </p>
+            ))}
+          </div>
         </div>
         <div
-          className={`font-oswald font-semibold uppercase ${titleTextColor} text-[6vw] lg:text-[2.5vw] leading-tight`}
+          className={`flex flex-col ${
+            reverse === "0" ? "lg:flex-row" : "lg:flex-row-reverse"
+          } gap-10 lg:gap-20 lg:items-stretch`}
         >
-          <h2>{projectTitle}</h2>
-        </div>
-        <div className={`${bodyTextColor} font-light`}>
-          <p>{projectDesc}</p>
-        </div>
-        <div className="w-full flex">
-          <div className="w-full flex">
-            <ActionButton
-              forwardTo={forwardTo}
-              label="Learn More"
-              labelColor={`${titleTextColor} font-normal`}
-              labelHoverColor={`group-hover:${btnTextHoverColor}`}
-              bgColor={btnBgColor}
-              labelSize="text-base"
-              borderColor={btnBorderColor}
-              iconColor={btnTextHoverColor}
-              iconSize="text-2xl"
-              icon={<BiBookReader />}
-            />
+          <div className="w-full lg:w-[45%] flex flex-col gap-5 lg:gap-10">
+            <div className="text-base lg:text-xl font-normal">
+              <p>{desc}</p>
+            </div>
+            <div>
+              <div className="w-full h-full flex">
+                <CustomShapeButton
+                  label="Learn More"
+                  forwardTo="/contact-us"
+                  textStyle="text-lg font-normal text-darkPrimary"
+                  hoverText="text-darkPrimary"
+                  backgroundColor="bg-lightPrimary"
+                  hoverBgColor="bg-accentColor"
+                  paddingX="ps-4 pe-8"
+                  paddingY="py-4"
+                  fontGap="gap-2"
+                  icon={
+                    <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-[55%] flex justify-between gap-5">
+            <div className="w-full aspect-video relative overflow-hidden rounded p-3 bg-darkSecondary">
+              <video
+                className="w-full h-full object-cover"
+                loop
+                muted
+                autoPlay
+                playsInline
+              >
+                <source src={video} />
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -73,100 +82,206 @@ function CaseStudies() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full h-full relative">
-        <div className="w-full flex flex-col gap-10 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
-          <h1 className="w-full flex flex-col font-oswald font-bold uppercase">
-            <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[9vw] lg:text-[7vw] ">
-              Blueprints of Innovation:
-            </span>
-            <span className="w-full leading-none text-lightPrimary text-[18vw] lg:text-[9vw]">
-              Our{" "}
-              <span className="text-accentColor text-[18vw] lg:text-[10vw]">
-                Case Studies
-              </span>
-            </span>
-          </h1>
+      <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-20 text-lightSecondary font-light">
+        <div className="w-full flex flex-col gap-10 lg:gap-20 justify-end">
+          <div className="w-full flex flex-col lg:flex-row justify-between">
+            <div className="lg:w-[25%] hidden lg:flex flex-row gap-10">
+              <div className="flex flex-col gap-2 text-base">
+                <div className="whitespace-nowrap">
+                  <AnimatedLetter
+                    text="Real Estate"
+                    hoverText="text-accentColor"
+                  />
+                </div>
+                <div className="whitespace-nowrap">
+                  <AnimatedLetter
+                    text="Education"
+                    hoverText="text-accentColor"
+                  />
+                </div>
+                <div className="whitespace-nowrap">
+                  <AnimatedLetter
+                    text="Clothing"
+                    hoverText="text-accentColor"
+                  />
+                </div>
+                <div className="whitespace-nowrap">
+                  <AnimatedLetter
+                    text="E-commerce"
+                    hoverText="text-accentColor"
+                  />
+                </div>
+                <div className="whitespace-nowrap">
+                  <AnimatedLetter
+                    text="Cats Food"
+                    hoverText="text-accentColor"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 text-base ">
+                <AnimatedLetter text="Dev Tools" hoverText="text-accentColor" />
+                <AnimatedLetter
+                  text="Documentation"
+                  hoverText="text-accentColor"
+                />
+                <AnimatedLetter
+                  text="References"
+                  hoverText="text-accentColor"
+                />
+                <AnimatedLetter text="Tutorials" hoverText="text-accentColor" />
+              </div>
+            </div>
+            <div className="w-full lg:w-[70%] ">
+              <div className="w-full flex flex-col gap-5 lg:gap-10">
+                <div className="text-lightPrimary text-4xl lg:text-7xl font-medium font-oswald">
+                  <h1 className="leading-[1.10]">
+                    Blueprints of Innovation:{" "}
+                    <span className="text-accentColor italic font-bold uppercase">
+                      Case Studies
+                    </span>
+                  </h1>
+                </div>
+                <div className="w-full flex flex-row gap-10 items-center">
+                  <div>
+                    <CustomShapeButton
+                      label="Get Started"
+                      textStyle="text-lg font-normal text-darkPrimary"
+                      paddingX="ps-4 pe-8"
+                      paddingY="py-4"
+                      fontGap="gap-2"
+                      backgroundColor="bg-lightPrimary"
+                      hoverBgColor="bg-accentColor"
+                      icon={
+                        <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                      }
+                    />
+                  </div>
+                  <div>
+                    <Link
+                      href="/about"
+                      className="text-lightPrimary text-lg font-normal"
+                    >
+                      <AnimatedLetter
+                        text="About Us"
+                        hoverText="text-accentColor"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="w-full flex justify-end">
-            <p className="w-full lg:w-[60%] text-[4.5vw] lg:text-[1.5vw] font-light text-lightSecondary leading-tight lg:pt-5 text-start">
-              Explore our curated collection of real-world success stories where
-              innovation meets impact. Our case studies highlight transformative
-              projects in software development, digital marketing, responsive
-              web design, and SEO optimization. Uncover the creative strategies
-              and breakthrough solutions that power business growth at Devion
-              Ark.
+            <div className="w-full">
+              <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between">
+                <div className="w-full lg:w-[60%] text-lg lg:text-2xl font-normal text-lightSecondary lg:pt-5 lg:border-t border-lightSecondary/30">
+                  <p className="lg:leading-relaxed">
+                    Explore our curated collection of real-world success stories
+                    where innovation meets impact. Our case studies highlight
+                    transformative projects in software development, digital
+                    marketing, responsive web design, and SEO optimization.
+                  </p>
+                </div>
+                <div className="w-full h-full lg:w-[40%] p-2 rounded bg-darkSecondary">
+                  <div className="w-full h-full flex flex-col gap-3">
+                    <div className="w-full aspect-video relative overflow-hidden rounded-sm">
+                      <video
+                        className="w-full h-full object-cover"
+                        loop
+                        muted
+                        autoPlay
+                        playsInline
+                      >
+                        <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739689640/devion_ark_showreel_2024_ronun7.mp4" />
+                      </video>
+                    </div>
+                    <div className="text-base font-light">
+                      <p>Showreel 2022-2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Cover Image  */}
+
+      <div className="w-full aspect-[1.33/1] lg:aspect-auto overflow-hidden relative">
+        <Image
+          placeholder="blur"
+          src={cover}
+          alt="two friends are sitting infront a laptop"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Introduction Section  */}
+
+      <div className="w-full px-4 lg:px-20 py-10 lg:py-20 flex justify-end font-light text-lightSecondary bg-darkPrimary">
+        <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
+          <div className="w-full flex lg:justify-end">
+            <div className="w-full lg:w-[80%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
+              <h1 className="leading-[1.15]">
+                Struggling to Stand Out in a Crowded{" "}
+                <span className="text-accentColor italic leading-[1.15]">
+                  Digital World
+                </span>{" "}
+                ?
+              </h1>
+            </div>
+          </div>
+          <div className="w-full lg:w-[90%] flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl lg:text-end font-normal">
+            <p>
+              You&apos;re not alone — 74% of businesses feel invisible online.
+              At Devion Ark, we turn that silence into a roar. With 3+ years of
+              proven strategies, 20+ success stories, and tailored SEO, social
+              media, and software solutions, we don&apos;t just get you seen —
+              we get you remembered.{" "}
             </p>
-          </div>
-          <div className="w-full flex justify-start">
-            <div className="w-full lg:w-[50%] flex justify-start lg:justify-start">
-              <ActionButton
-                forwardTo=""
-                label="Explore Case Studies"
-                labelColor="text-lightPrimary font-semibold"
-                labelHoverColor="group-hover:text-darkPrimary"
-                bgColor="bg-lightPrimary"
-                labelSize="text-base lg:text-2xl"
-                borderColor="border-lightPrimary"
-                iconColor="text-darkPrimary"
-                iconSize="text-xl lg:text-4xl"
-                icon={<FaEarthAmericas />}
-              />
-            </div>
-          </div>
-          <div className="w-full hidden lg:flex flex-row justify-between gap-5 font-light pt-10">
-            <div className="w-1/3 flex justify-start items-center">
-              &copy;2024-2025
-            </div>
-            <div className="w-1/3 flex justify-center items-center gap-2">
-              <span>
-                <LuMouse />
-              </span>
-              Scroll Down To Explore
-            </div>
-            <div className="w-1/3 flex justify-end items-center">
-              All Rights Reserved By Devion Ark
-            </div>
+            <p>
+              Ready to finally break through? Start with a free, no-strings
+              consultation today
+            </p>
           </div>
         </div>
       </div>
 
       {/* Project List Section */}
 
-      <div className="w-full px-5 lg:px-20 bg-black py-10 lg:py-20">
-        <div className="w-full flex flex-col gap-10 lg:gap-16">
-          <div className="w-full text-accentColor font-oswald font-bold uppercase text-start lg:text-center text-[8vw] lg:text-[7vw] leading-tight">
-            <h2>Crafting Digital Success</h2>
-          </div>
-          <div className="w-full h-full">
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <ProjectListCard
-                forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
-                bgColor="bg-darkPrimary"
-                projectCategory="Custom Software Development"
-                bodyTextColor="text-lightSecondary"
-                video="/videos/crm_software_promo_video.mp4"
-                projectTitle="Comprehensive Real Estate CRM Solution"
-                titleTextColor="text-lightPrimary"
-                projectDesc="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
-                btnBgColor="bg-lightPrimary"
-                btnBorderColor="border-lightPrimary"
-                btnTextHoverColor="text-darkPrimary"
-              />
-              <ProjectListCard
-                forwardTo=""
-                bgColor="bg-lightPrimary"
-                projectCategory="Web Application Development"
-                bodyTextColor="text-darkSecondary"
-                video="/videos/sportswear_ecommerce_promo_video.mp4"
-                projectTitle="Dynamic Sportswear E-Commerce Platform"
-                titleTextColor="text-darkPrimary"
-                projectDesc="An intuitive and scalable e-commerce website tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking.
-"
-                btnBgColor="bg-darkPrimary"
-                btnBorderColor="border-darkPrimary"
-                btnTextHoverColor="text-lightPrimary"
-              />
-            </div>
-          </div>
+      <div className="w-full flex flex-col px-4 lg:px-20 bg-black">
+        <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
+          <ProjectCard
+            video="https://res.cloudinary.com/de8g5laai/video/upload/v1739689633/crm_software_promo_video_sdysuq.mp4"
+            title="Comprehensive Real Estate CRM Solution"
+            desc="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
+            features={[
+              "CRM System",
+              "Custom Software",
+              "Inventory Management",
+              "Leads Storage",
+              "Employee Assign",
+              "Project Handle",
+              "Real Estate",
+            ]}
+          />
+        </div>
+        <div className="py-10 lg:py-20">
+          <ProjectCard
+            reverse="1"
+            video="https://res.cloudinary.com/de8g5laai/video/upload/v1739988780/sportswear_ecommerce_promo_video_fmbpaj.mp4"
+            title="Dynamic Sportswear E-Commerce Platform"
+            desc="An intuitive and scalable e-commerce website tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking."
+            features={[
+              "E-commerce",
+              "Product List",
+              "Track Order",
+              "Customer Solutions",
+              "Dynamic Category",
+              "Data Security",
+            ]}
+          />
         </div>
       </div>
     </main>

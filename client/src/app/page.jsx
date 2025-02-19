@@ -747,7 +747,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           <MoreBlogCard
             title="How much does it cost to design a website"
             forwardTo=""

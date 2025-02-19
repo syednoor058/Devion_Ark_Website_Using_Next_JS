@@ -50,7 +50,7 @@ function ServiceCard({ title, desc, features, imgs, reverse = "0" }) {
           <div className="w-full lg:w-[55%] text-3xl lg:text-6xl font-normal text-lightPrimary">
             <h2>{title}</h2>
           </div>
-          <div className="w-full lg:w-[45%] flex flex-wrap gap-2 lg:gap-3 text-xs lg:text-base leading-none text-lightSecondary">
+          <div className="w-full h-full lg:w-[45%] flex flex-wrap gap-2 lg:gap-3 text-xs lg:text-base leading-none text-lightSecondary">
             {features.map((feature, i) => (
               <p
                 key={i}
@@ -219,9 +219,12 @@ function Services() {
         <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
           <div className="w-full flex lg:justify-end">
             <div className="w-full lg:w-[80%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
-              <h1 className="">
+              <h1 className="leading-[1.15]">
                 Struggling to Stand Out in a Crowded{" "}
-                <span className="text-accentColor italic">Digital World</span> ?
+                <span className="text-accentColor italic leading-[1.15]">
+                  Digital World
+                </span>{" "}
+                ?
               </h1>
             </div>
           </div>
