@@ -121,8 +121,8 @@ function Navbar() {
               <div>
                 <MenuIcon expand={menuExpand} />
               </div>
-              <div className="font-normal text-base">
-                <AnimatedLetter text="Menu" hoverText="text-lightPrimary" />
+              <div className="font-normal text-base text-lightPrimary">
+                <AnimatedLetter text="Menu" hoverText="text-accentColor" />
               </div>
             </div>
             <div>
@@ -272,7 +272,7 @@ function Navbar() {
           } duration-1000 ease-in-out z-[999]`}
         >
           <div className="w-full h-full pt-20 flex flex-col gap-10 justify-between z-[1001]">
-            <div className="w-full h-full flex flex-col justify-end gap-2 px-5">
+            <div className="w-full h-full flex flex-col justify-center gap-2 px-5">
               {navLinks.map((navLink, index) => (
                 <Link
                   href={navLink.path}

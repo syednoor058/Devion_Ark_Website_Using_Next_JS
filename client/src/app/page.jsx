@@ -171,7 +171,7 @@ function MoreBlogCard({ cover, title, date, forwardTo }) {
       </div>
       <Link href={forwardTo} className="group">
         <div className="w-full flex flex-row gap-5 justify-between">
-          <div className="text-2xl lg:text-4xl text-lightPrimary group-hover:underline underline-offset-4 duration-500">
+          <div className="text-2xl lg:text-4xl text-lightPrimary group-hover:underline underline-offset-4 duration-500 leading-tight">
             {title}
           </div>
           <div className="text-3xl lg:text-6xl">
@@ -188,7 +188,7 @@ export default function Home() {
     <main className="font-roboto">
       {/* Landing Section */}
 
-      <div className="w-full h-full bg-darkSecondary pt-10 relative font-light text-lightSecondary pb-10 lg:pb-20">
+      <div className="w-full h-full bg-darkPrimary pt-10 relative font-light text-lightSecondary pb-10 lg:pb-20">
         <div className="w-full flex flex-col">
           <div className="w-full flex justify-end items-end px-4 lg:px-20">
             <div className="w-full lg:w-[58%] pb-5">
@@ -257,7 +257,7 @@ export default function Home() {
 
       {/* Who We Are Section */}
 
-      <div className="w-full lg:h-screen bg-darkSecondary relative font-light text-lightSecondary py-10 lg:py-20">
+      <div className="w-full lg:h-screen bg-darkPrimary relative font-light text-lightSecondary py-10 lg:py-20">
         <div className="relative z-[3] flex flex-col lg:flex-row  justify-between px-4 lg:px-20">
           <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
             <p className="text-2xl lg:text-4xl text-lightPrimary font-medium">
@@ -334,7 +334,7 @@ export default function Home() {
 
       {/* Our Services Section */}
 
-      <div className="bg-darkSecondary relative font-light text-lightSecondary">
+      <div className="bg-darkPrimary relative font-light text-lightSecondary">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-[40%] border-b border-lightSecondary/30">
             <div className="flex flex-col">
@@ -425,7 +425,7 @@ export default function Home() {
 
       {/* Project Showcase Section */}
 
-      <div className="bg-darkSecondary flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
+      <div className="bg-darkPrimary flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
         <div className="flex flex-col lg:flex-row px-4 lg:px-5">
           <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30">
             <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase">
@@ -497,7 +497,7 @@ export default function Home() {
 
       {/* Partners Section */}
 
-      <div className="bg-darkSecondary py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative border-y-0 border-t lg:border-y border-lightSecondary/30">
+      <div className="bg-darkPrimary py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative border-y-0 border-t lg:border-y border-lightSecondary/30">
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 left-[50%]"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 right-20 "></div>
@@ -736,7 +736,7 @@ export default function Home() {
       </div>
 
       {/* More Blogs */}
-      <div className="w-full px-4 lg:px-20 py-10 lg:py-20 gap-10 flex flex-col">
+      <div className="w-full px-4 lg:px-20 py-10 lg:py-20 gap-10 flex flex-col bg-darkSecondary">
         <div className="flex overflow-hidden">
           <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
             <p className="flex flex-row gap-2 items-center">
@@ -747,7 +747,13 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <MoreBlogCard
+            title="How much does it cost to design a website"
+            forwardTo=""
+            date="14 December, 2024"
+            cover={blogCover}
+          />
           <MoreBlogCard
             title="How much does it cost to design a website"
             forwardTo=""

@@ -122,7 +122,7 @@ function Footer() {
                           </a>
                         ))}
                       </div>
-                      <div className="w-full lg:hidden flex flex-row justify-between gap-5 text-sm">
+                      <div className="w-full h-full lg:hidden flex flex-row justify-between items-end gap-5 text-sm">
                         <p>&copy;2025</p>
                         <p className="text-end">All rights reserved</p>
                       </div>
