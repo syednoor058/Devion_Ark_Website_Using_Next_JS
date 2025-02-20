@@ -1,16 +1,17 @@
-import ActionButton from "@/components/buttons/ActionButton";
+import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
-import { BiBookReader } from "react-icons/bi";
-import { LuArrowUpRight } from "react-icons/lu";
+import { FiArrowDownLeft } from "react-icons/fi";
+import { GoDotFill } from "react-icons/go";
 import { MdOutlineArrowForward } from "react-icons/md";
 import blogCover1 from "../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import cover from "../../../public/projects/case-study-cover.jpg";
 
 function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
   return (
     <div className="w-full py-5 lg:py-10 group">
       <div className="w-full flex flex-col lg:flex-row gap-5 lg:gap-10 items-stretch">
         <div className="w-full lg:w-[50%] flex">
-          <div className="w-full flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-5 justify-between">
             <div className="w-full flex flex-row gap-5 justify-between font-light text-3xl lg:text-4xl text-lightPrimary leading-none">
               <div>
                 <h2>{title}</h2>
@@ -52,20 +53,20 @@ function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
               <div className="w-auto lg:text-nowrap leading-tight">{date}</div>
             </div>
             <div className="w-full flex">
-              <div className="w-full flex">
-                <ActionButton
-                  forwardTo={forwardTo}
-                  label="Read More"
-                  labelColor="text-lightPrimary font-normal"
-                  labelHoverColor="group-hover:text-darkPrimary"
-                  bgColor="bg-lightPrimary"
-                  labelSize="text-base"
-                  borderColor="border-lightPrimary"
-                  iconColor="text-darkPrimary"
-                  iconSize="text-2xl"
-                  icon={<BiBookReader className="" />}
-                />
-              </div>
+              <CustomShapeButton
+                label="Read More"
+                forwardTo={forwardTo}
+                textStyle="text-lg font-normal text-darkPrimary"
+                hoverText="text-darkPrimary"
+                backgroundColor="bg-lightPrimary"
+                hoverBgColor="bg-accentColor"
+                paddingX="ps-4 pe-8"
+                paddingY="py-4"
+                fontGap="gap-2"
+                icon={
+                  <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                }
+              />
             </div>
           </div>
         </div>
@@ -79,79 +80,97 @@ function Blogs() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full h-full relative">
-        <div className="w-full flex flex-col gap-10 lg:gap-5 px-5 lg:px-20 pb-10 lg:pb-20 pt-5 lg:pt-10">
-          <h1 className="w-full flex flex-col font-oswald font-bold uppercase text-start">
-            <span className="w-full text-lightSecondary leading-tight lg:leading-none text-[7.5vw] lg:text-[5vw] ">
-              Digital Insights For
-            </span>
-            <span className="w-full leading-none text-lightPrimary text-[20vw] lg:text-[8vw]">
-              Business{" "}
-              <span className="text-accentColor text-[22vw] lg:text-[8vw]">
-                Growth
-              </span>
-            </span>
-          </h1>
-          <div className="w-full">
-            <p className="w-full text-[5vw] lg:text-[2vw] font-light text-lightSecondary leading-tight lg:pt-5">
-              Welcome to the Devion Ark Blog, your resource for cutting-edge
-              trends, expert tips, and actionable strategies in digital
-              transformation. Here, we share real-world success stories and
-              industry insights that empower you to drive growth and enhance
-              your online presence."
-            </p>
-          </div>
-          <div className="w-full flex justify-end">
-            <div className="w-full lg:w-[50%] flex justify-start lg:justify-end">
-              <ActionButton
+      <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary flex items-end py-10 lg:py-20 text-lightSecondary font-light">
+        <div className="flex flex-col gap-10 lg:gap-20">
+          <div className="w-full px-4 lg:px-20 flex flex-col gap-5 lg:gap-10">
+            <h1 className="text-lightPrimary text-5xl lg:text-8xl font-medium font-oswald leading-none">
+              Lates{" "}
+              <span className="text-accentColor italic font-bold leading-none">
+                news
+              </span>{" "}
+              and updates.
+            </h1>
+            <div>
+              <CustomShapeButton
+                label="Learn More"
                 forwardTo=""
-                label="Visit Blogs"
-                labelColor="text-lightPrimary font-normal"
-                labelHoverColor="group-hover:text-darkPrimary"
-                bgColor="bg-lightPrimary"
-                labelSize="text-lg lg:text-2xl"
-                borderColor="border-lightPrimary"
-                iconColor="text-darkPrimary"
-                iconSize="text-2xl lg:text-4xl"
+                textStyle="text-lg font-normal text-darkPrimary"
+                hoverText="text-darkPrimary"
+                backgroundColor="bg-lightPrimary"
+                hoverBgColor="bg-accentColor"
+                paddingX="ps-4 pe-8"
+                paddingY="py-4"
+                fontGap="gap-2"
                 icon={
-                  <LuArrowUpRight className="rotate-180 group-hover:-rotate-0 transition duration-[350ms]" />
+                  <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
                 }
               />
             </div>
           </div>
-          <div className="w-full hidden lg:flex flex-row justify-between gap-5 font-light pt-10">
-            <div className="w-1/3 flex justify-start items-center">
-              <div className="flex flex-col gap-1 font-light">
-                <div>Most Viewed</div>
-                <div className="text-lightPrimary">
-                  Why Webflow is the best platform for businesses in 2025
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 px-4 lg:px-20">
+            <div className="w-full lg:w-[60%] lg:pt-5 lg:border-t border-lightSecondary/30">
+              <p className="font-normal text-xl lg:text-[22px] lg:leading-normal">
+                Welcome to the Devion Ark Blog, your resource for cutting-edge
+                trends, expert tips, and actionable strategies in digital
+                transformation. Here, we share real-world success stories and
+                industry insights that empower you to drive growth and enhance
+                your online presence.
+              </p>
+            </div>
+            <div className="w-full lg:w-[40%] text-base lg:text-lg p-2 bg-darkSecondary">
+              <div className="w-full flex flex-col gap-3 ">
+                <div>
+                  <p className="text-lg font-light text-lightPrimary">
+                    Top Content
+                  </p>
                 </div>
-              </div>
-            </div>
-            <div className=" flex justify-center items-center gap-2">
-              <div className="flex flex-col gap-1 font-light">
-                <div>Top Writer</div>
-                <div className="text-lightPrimary">Edward Kennway</div>
-              </div>
-            </div>
-            <div className=" flex justify-end items-center">
-              <div className="flex flex-col gap-1 font-light">
-                <div>Total Contents</div>
-                <div className="text-lightPrimary">03</div>
+                <div className="w-full flex flex-col gap-3 group">
+                  <div className="w-full relative overflow-hidden rounded-sm">
+                    <Image
+                      placeholder="blur"
+                      src={blogCover1}
+                      alt="top blog cover"
+                      className="w-full h-full overflow-hidden"
+                    />
+                  </div>
+                  <div className="flex flex-row gap-5">
+                    <p className="text-lightPrimary leading-tight">
+                      IS SEO Dead? Will AEO Take Over the Industry in 2025?
+                    </p>
+                    <span>
+                      <MdOutlineArrowForward className="text-4xl group-hover:-rotate-45 duration-500 text-accentColor font-light" />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Cover Image  */}
+
+      <div className="w-full aspect-[1.33/1] lg:aspect-auto overflow-hidden relative">
+        <Image
+          placeholder="blur"
+          src={cover}
+          alt="two friends are sitting infront a laptop"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Blog List Section */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full flex flex-col gap-10 lg:gap-16">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden">
-            <h6 className="uppercase flex font-light text-base sm:text-lg overflow-hidden text-accentColor leading-none">
-              <span className="inline-block">Blogs</span>
-            </h6>
-            <div className="w-[2px] flex bg-lightPrimary"></div>
+          <div className="flex overflow-hidden">
+            <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+              <p className="flex flex-row gap-2 items-center">
+                <span>
+                  <GoDotFill className="text-xs" />
+                </span>
+                Blogs
+              </p>
+            </div>
           </div>
           <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-gray-800">
             <BlogCard

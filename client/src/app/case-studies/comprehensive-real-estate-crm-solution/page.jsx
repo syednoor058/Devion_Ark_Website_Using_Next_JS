@@ -1,16 +1,16 @@
 import AnimatedLetter from "@/components/animations/AnimatedLetter";
-import ActionButton from "@/components/buttons/ActionButton";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 import { BsDatabaseCheck, BsRobot } from "react-icons/bs";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { FaEarthAmericas } from "react-icons/fa6";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import sikderFoundationLogo from "../../../../public/partners/sikder_foundation.png";
-import projectImg3 from "../../../../public/projects/comprehensive_crm_system/crm_enhanced_performance.jpg";
-import projectImg2 from "../../../../public/projects/comprehensive_crm_system/crm_optimize_data.jpg";
-import projectImg1 from "../../../../public/projects/comprehensive_crm_system/crm_project_background.jpg";
-import projectImg4 from "../../../../public/projects/comprehensive_crm_system/crm_sclable_product.jpg";
+import dataOptm2 from "../../../../public/projects/comprehensive_crm_system/data-opt-2.jpg";
+import dataOptm1 from "../../../../public/projects/comprehensive_crm_system/data-optm-1.jpg";
+import performanceImg from "../../../../public/projects/comprehensive_crm_system/performance.jpg";
+import projectBackground from "../../../../public/projects/comprehensive_crm_system/project-background.jpg";
+import scaleDev1 from "../../../../public/projects/comprehensive_crm_system/scale-dev-1.jpg";
+import scaleDev2 from "../../../../public/projects/comprehensive_crm_system/scale-dev-2.png";
 
 export const metadata = {
   title: "Real Estate CRM Case Study - Advanced Solutions by Devion Ark",
@@ -20,72 +20,66 @@ export const metadata = {
 
 function ComprehensiveRealEstateCRMProject() {
   return (
-    <>
+    <main>
       {/* Landing Section  */}
-      <div className="w-full pt-5 pb-10 lg:pb-20 px-5 lg:px-20 bg-darkPrimary text-lightSecondary">
-        <div className="w-full flex flex-col gap-10">
-          <div className="text-lightPrimary font-oswald font-bold text-[7vw] lg:text-[5.5vw]">
-            <h1 className="leading-tight uppercase">
-              Empowering <span className="text-accentColor">real estate</span>{" "}
-              success through innovative{" "}
-              <span className="text-accentColor">CRM systems</span>
+
+      <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary flex items-end pt-10 lg:pt-20 text-lightSecondary font-light">
+        <div className="flex flex-col gap-10 lg:gap-20">
+          <div className="w-full lg:w-[70%] px-4 lg:px-20">
+            <h1 className="text-lightPrimary text-4xl lg:text-7xl font-medium font-oswald leading-tight">
+              Comprehensive Real Estate{" "}
+              <span className="text-accentColor italic font-bold leading-tight">
+                CRM
+              </span>{" "}
+              Solution
             </h1>
           </div>
-          <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-end gap-10 lg:gap-20">
-            <div className="w-full lg:w-[65%] flex flex-col gap-10 text-nowrap">
-              <div className="flex flex-col lg:flex-row gap-3 lg:gap-16">
-                <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
-                  <div>Client</div>
-                  <div className="text-lightPrimary">Sikder Foundation LTD</div>
-                </div>
-                <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
-                  <div>Category</div>
-                  <div className="text-lightPrimary">
-                    Automation Software, CRM System
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 px-4 lg:px-20">
+            <div className="w-full lg:w-[60%] lg:pt-5 lg:border-t border-lightSecondary/30">
+              <p className="font-normal text-xl lg:text-[22px] lg:leading-normal">
+                A powerful CRM system for real estate professionals, providing
+                automated lead management, property listing organization, client
+                follow-ups, and in-depth analytics to streamline operations.
+              </p>
+            </div>
+            <div className="w-full lg:w-[40%] text-base lg:text-lg">
+              <div className="w-full flex flex-row gap-5 justify-between">
+                <div className="flex flex-col gap-3">
+                  <div>
+                    <p>Vendor</p>
+                  </div>
+                  <div>
+                    <p>Category</p>
+                  </div>
+                  <div>
+                    <p>Timeframe</p>
                   </div>
                 </div>
-                <div className="flex flex-row lg:flex-col gap-1 lg:gap-2 font-light justify-between text-sm lg:text-base">
-                  <div>Timeframe</div>
-                  <div className="text-lightPrimary">3 Months 19 Days</div>
-                </div>
-              </div>
-              <div className="w-full flex justify-start">
-                <div className="w-full flex justify-start">
-                  <ActionButton
-                    forwardTo=""
-                    label="Visit Website"
-                    labelSize="text-2xl"
-                    labelColor="text-lightPrimary font-semibold"
-                    labelHoverColor="group-hover:text-darkPrimary"
-                    borderColor="border-lightPrimary"
-                    bgColor="bg-lightPrimary"
-                    iconColor="text-darkPrimary"
-                    iconSize="text-4xl"
-                    icon={<FaEarthAmericas />}
-                  />
+                <div className="flex flex-col gap-3 text-lightPrimary">
+                  <div>
+                    <p>Sikder Foundation LTD</p>
+                  </div>
+                  <div>
+                    <p>Automation Software, CRM System</p>
+                  </div>
+                  <div>
+                    <p>3 Months 19 Days</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[35%] flex flex-col gap-3">
-              <div className="w-full aspect-video overflow-hidden relative rounded-sm">
-                <video
-                  className="w-full object-cover"
-                  loop
-                  autoPlay
-                  muted
-                  playsInline
-                >
-                  <source src="/videos/crm_software_promo_video.mp4" />
-                </video>
-              </div>
-              <div className="w-full flex flex-col items-end text-sm font-light">
-                <div className="w-full text-start lg:text-end">
-                  Comprehensive CRM System Solutions
-                </div>
-                <div className="w-full text-start lg:text-end">
-                  Showreel (2024-2025)
-                </div>
-              </div>
+          </div>
+          <div className="w-full">
+            <div className="w-full aspect-video overflow-hidden relative">
+              <video
+                className="w-full h-full object-cover"
+                loop
+                muted
+                autoPlay
+                playsInline
+              >
+                <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739689633/crm_software_promo_video_sdysuq.mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -99,13 +93,15 @@ function ComprehensiveRealEstateCRMProject() {
               <div className="font-light text-lightSecondary text-xl">
                 <h3>Overview</h3>
               </div>
-              <p className="font-bold text-[7vw] lg:text-[2.5vw] text-accentColor font-oswald leading-tight">
-                Sikder Foundation Limited is emerging as one of the fast growing
-                real estate company established in 2007 with the vision to
-                delivery the best quality, un-parallel commitment, unique
-                architectural design & ultimate comfort to our valued customers
-                in today and the days to come.
-              </p>
+              <div className="">
+                <p className="font-medium text-[7vw] lg:text-[2.5vw] text-accentColor leading-tight ">
+                  Sikder Foundation Limited is emerging as one of the fast
+                  growing real estate company established in 2007 with the
+                  vision to delivery the best quality, un-parallel commitment,
+                  unique architectural design & ultimate comfort to our valued
+                  customers in today and the days to come.
+                </p>
+              </div>
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
@@ -146,39 +142,60 @@ function ComprehensiveRealEstateCRMProject() {
       {/* Impact Section  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full flex flex-col gap-10 lg:gap-16">
-          <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] flex flex-col gap-5 leading-none">
-            <h3>Impact</h3>
-            <div className="w-full h-[1px] bg-lightSecondary"></div>
+          <div className="w-full text-lightPrimary font-bold font-oswald text-3xl lg:text-6xl flex flex-col gap-5 leading-none">
+            <h2>Impact</h2>
+            <div className="w-full h-[1px] bg-lightSecondary/30"></div>
           </div>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
-            <div className="w-full rounded-xl bg-darkPrimary p-5">
-              <div className="w-full flex flex-col gap-3">
-                <div className="font-bold font-oswald text-7xl  text-accentColor">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="flex flex-col gap-5">
+              <div className="flex">
+                <div className="block text-accentColor text-4xl lg:text-6xl font-bold font-oswald">
                   130%
                 </div>
-                <div className="font-light text-lightSecondary text-lg">
-                  <p>Operational efficiency</p>
-                </div>
+              </div>
+              <div className="text-2xl leading-none font-semibold text-lightPrimary">
+                <h4 className="leading-tight">Operational efficiency</h4>
+              </div>
+              <div className="font-light text-lightSecondary">
+                <p>
+                  Our CRM centralizes property listings from multiple data
+                  sources, ensuring agents always have access to accurate and
+                  up-to-date information.
+                </p>
               </div>
             </div>
-            <div className="w-full rounded-xl bg-darkPrimary p-5">
-              <div className="w-full flex flex-col gap-3">
-                <div className="font-bold font-oswald text-7xl text-accentColor">
+            <div className="flex flex-col gap-5">
+              <div className="flex">
+                <div className="block rounded-2xl text-accentColor text-4xl lg:text-6xl font-bold font-oswald">
                   25%
                 </div>
-                <div className="font-light text-lightSecondary">
-                  <p>Increased conversion rate</p>
-                </div>
+              </div>
+              <div className="text-2xl leading-none font-semibold text-lightPrimary">
+                <h4 className="leading-tight">Increased conversion rate</h4>
+              </div>
+              <div className=" font-light text-lightSecondary">
+                <p>
+                  Gain a 360-degree view of your customers with our advanced
+                  data analytics. Our system captures and organizes client
+                  insights.
+                </p>
               </div>
             </div>
-            <div className="w-full rounded-xl bg-darkPrimary p-5">
-              <div className="w-full flex flex-col gap-3">
-                <div className="font-bold font-oswald text-7xl text-accentColor">
+            <div className="flex flex-col gap-5">
+              <div className="flex">
+                <div className="block rounded-2xl text-accentColor text-4xl lg:text-6xl font-bold font-oswald">
                   37%
                 </div>
-                <div className="font-light text-lightSecondary">
-                  <p>Higher customer retention</p>
-                </div>
+              </div>
+              <div className="text-2xl leading-none font-semibold text-lightPrimary">
+                <h4 className="leading-tight">Higher customer retention</h4>
+              </div>
+              <div className=" font-light text-lightSecondary">
+                <p>
+                  Streamline your operations with automated processes that
+                  handle task scheduling, project tracking, and real-time
+                  reporting.
+                </p>
               </div>
             </div>
           </div>
@@ -188,11 +205,11 @@ function ComprehensiveRealEstateCRMProject() {
       {/* Image Desc Section 1  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 ">
-          <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
-              <h3>Project Background</h3>
+          <div className="w-full lg:w-[50%] flex flex-col gap-10">
+            <div className="w-full text-lightPrimary font-medium font-oswald text-3xl lg:text-6xl leading-tight">
+              <h2>Project background</h2>
             </div>
-            <div className="font-light text-base text-lightSecondary">
+            <div className="font-light text-xl text-lightSecondary">
               <p>
                 Our client, a prominent real estate firm, was facing growing
                 challenges with managing property listings, client data, and
@@ -207,21 +224,22 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
-            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+            <div className="w-full rounded-sm overflow-hidden relative">
               <Image
                 placeholder="blur"
-                src={projectImg1}
+                src={projectBackground}
                 alt="crm system project background"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 ">
-          <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
-              <h3>Optimized Data Management</h3>
+          <div className="w-full lg:w-[50%] flex flex-col gap-10">
+            <div className="w-full text-lightPrimary font-medium font-oswald text-3xl lg:text-6xl">
+              <h3 className="leading-tight">Optimized data management</h3>
             </div>
-            <div className="font-light text-base text-lightSecondary">
+            <div className="font-light text-xl text-lightSecondary">
               <p>
                 A major pain point for our client was the chaotic handling of
                 vast amounts of data—from detailed property listings to complex
@@ -236,12 +254,21 @@ function ComprehensiveRealEstateCRMProject() {
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-[50%]">
-            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+          <div className="w-full lg:w-[50%] flex flex-row gap-5 justify-between">
+            <div className="w-auto h-auto rounded-sm overflow-hidden relative">
               <Image
                 placeholder="blur"
-                src={projectImg2}
+                src={dataOptm1}
                 alt="crm system optimized data"
+                className="w-auto h-auto object-cover"
+              />
+            </div>
+            <div className="w-auto h-auto rounded-sm overflow-hidden relative">
+              <Image
+                placeholder="blur"
+                src={dataOptm2}
+                alt="crm system optimized data (2)"
+                className="w-auto h-auto object-cover"
               />
             </div>
           </div>
@@ -250,8 +277,9 @@ function ComprehensiveRealEstateCRMProject() {
 
       {/* Features  */}
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
-        <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-none uppercase">
-          <h3>Features</h3>
+        <div className="w-full text-lightPrimary font-bold font-oswald text-3xl lg:text-6xl flex flex-col gap-5 leading-none">
+          <h2>Features</h2>
+          <div className="w-full h-[1px] bg-lightSecondary/30"></div>
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="flex flex-col gap-5">
@@ -260,8 +288,10 @@ function ComprehensiveRealEstateCRMProject() {
                 <LiaStoreAltSolid />
               </div>
             </div>
-            <div className="font-oswald text-2xl leading-none font-semibold text-lightPrimary">
-              <h4>Unified inventory management</h4>
+            <div className="text-2xl leading-none font-semibold text-lightPrimary">
+              <h4 className="leading-tight">
+                Unified inventory management system
+              </h4>
             </div>
             <div className="font-light text-lightSecondary">
               <p>
@@ -277,8 +307,10 @@ function ComprehensiveRealEstateCRMProject() {
                 <BsDatabaseCheck />
               </div>
             </div>
-            <div className="font-oswald text-2xl leading-none font-semibold text-lightPrimary">
-              <h4>Comprehensive Client Data Insights</h4>
+            <div className="text-2xl leading-none font-semibold text-lightPrimary">
+              <h4 className="leading-tight">
+                Comprehensive Client Data Insights
+              </h4>
             </div>
             <div className=" font-light text-lightSecondary">
               <p>
@@ -293,8 +325,10 @@ function ComprehensiveRealEstateCRMProject() {
                 <BsRobot />
               </div>
             </div>
-            <div className="font-oswald text-2xl leading-none font-semibold text-lightPrimary">
-              <h4>Automated Workflow and Reporting</h4>
+            <div className="text-2xl leading-none font-semibold text-lightPrimary">
+              <h4 className="leading-tight">
+                Automated Workflow and Reporting
+              </h4>
             </div>
             <div className=" font-light text-lightSecondary">
               <p>
@@ -310,10 +344,10 @@ function ComprehensiveRealEstateCRMProject() {
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20 bg-black flex flex-col gap-10 lg:gap-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
-              <h3>Enhanced Performance</h3>
+            <div className="w-full text-lightPrimary font-medium font-oswald text-3xl lg:text-6xl">
+              <h2 className="leading-tight">Enhanced Performance</h2>
             </div>
-            <div className="font-light text-base text-lightSecondary">
+            <div className="font-light text-lg text-lightSecondary">
               <p>
                 Performance is key in any dynamic CRM system. Our solution was
                 built with a focus on speed and responsiveness. We implemented
@@ -329,21 +363,22 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
           </div>
           <div className="w-full lg:w-[50%]">
-            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+            <div className="w-full rounded-sm overflow-hidden relative">
               <Image
                 placeholder="blur"
-                src={projectImg3}
+                src={performanceImg}
                 alt="crm system performance enhance"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 ">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
-            <div className="w-full text-lightPrimary font-bold font-oswald text-[8vw] lg:text-[5.5vw] leading-tight uppercase">
-              <h3>Scalable Development</h3>
+            <div className="w-full text-lightPrimary font-medium font-oswald text-3xl lg:text-6xl">
+              <h2 className="leading-tight">Scalable Development</h2>
             </div>
-            <div className="font-light text-base text-lightSecondary">
+            <div className="font-light text-lg text-lightSecondary">
               <p>
                 Anticipating the future growth of our client’s business,
                 scalability was a core component of our development strategy.
@@ -359,12 +394,21 @@ function ComprehensiveRealEstateCRMProject() {
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-[50%]">
-            <div className="w-full rounded-xl lg:rounded-2xl overflow-hidden relative">
+          <div className="w-full lg:w-[50%] flex flex-row gap-5 justify-between">
+            <div className="w-auto h-auto rounded-sm overflow-hidden relative">
               <Image
                 placeholder="blur"
-                src={projectImg4}
-                alt="crm system scalable product"
+                src={scaleDev1}
+                alt="crm system scale development"
+                className="w-auto h-auto object-cover"
+              />
+            </div>
+            <div className="w-auto h-auto rounded-sm overflow-hidden relative">
+              <Image
+                placeholder="blur"
+                src={scaleDev2}
+                alt="crm system scale development (2)"
+                className="w-auto h-auto object-cover"
               />
             </div>
           </div>
@@ -374,9 +418,9 @@ function ComprehensiveRealEstateCRMProject() {
       {/* Testimonial  */}
       <div className="w-full h-full px-5 lg:px-20 py-10 lg:py-20 bg-black">
         <div className="w-full h-full flex flex-col lg:flex-row gap-10 items-stretch">
-          <div className="w-full flex lg:w-[60%] rounded-2xl bg-darkSecondary p-5 text-lightSecondary">
-            <div className="w-full h-full flex flex-col gap-5 lg:gap-10 justify-between">
-              <div className="font-light text-2xl lg:text-3xl">
+          <div className="w-full flex lg:w-[60%] rounded-lg bg-darkSecondary p-5 text-lightSecondary">
+            <div className="w-full h-full flex flex-col gap-5 lg:gap-10 justify-between items-stretch">
+              <div className="font-light text-xl">
                 <p>
                   "Working with Devion Ark transformed our real estate
                   operations. Their CRM streamlined our inventory and client
@@ -402,7 +446,7 @@ function ComprehensiveRealEstateCRMProject() {
                     src="/testimonials/azizul.webp"
                     sx={{ width: 60, height: 60 }}
                   />
-                  <div className="flex flex-col leading-none text-lg">
+                  <div className="flex flex-col leading-none text-lg gap-2">
                     <h3 className="font-bold text-lightPrimary">
                       Md Farhan Sikder
                     </h3>
@@ -414,10 +458,12 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-[40%] flex rounded-2xl bg-accentColor p-5">
-            <div className="flex flex-col gap-10">
-              <div className="font-bold font-oswald text-darkPrimary leading-none text-[8vw] lg:text-[4vw]">
-                <h5>Let&apos;s build something amazing together!</h5>
+          <div className="w-full lg:w-[40%] flex rounded-lg bg-lightPrimary p-5">
+            <div className="flex flex-col gap-6 lg:gap-10">
+              <div className="font-bold font-oswald text-darkPrimary text-3xl lg:text-4xl">
+                <h5 className="leading-none">
+                  Let&apos;s build something amazing together!
+                </h5>
               </div>
               <div className="flex flex-col gap-3">
                 <div className="text-darkSecondary font-light">
@@ -429,7 +475,7 @@ function ComprehensiveRealEstateCRMProject() {
                     src="/owners/syed_shaeduzzaman_noor.png"
                     sx={{ width: 68, height: 68 }}
                   />
-                  <div className="flex flex-col leading-none">
+                  <div className="flex flex-col leading-none gap-2">
                     <h3 className="font-bold text-darkPrimary text-lg leading-none">
                       Syed Shaeduzzaman Noor
                     </h3>
@@ -441,17 +487,17 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
               <div className="">
                 <div className="flex flex-col gap-3">
-                  <div className="inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full bg-darkPrimary text-lightPrimary group">
+                  <div className="inline-flex w-fit text-xl px-5 py-2 rounded-full bg-darkPrimary text-lightPrimary group">
                     <a href="" className="flex flex-row gap-5 items-center ">
-                      <span className="pt-1">
+                      <span>
                         <AnimatedLetter text="LinkedIn" />
                       </span>
                       <FaLinkedinIn />
                     </a>
                   </div>
-                  <div className=" inline-flex w-fit text-xl lg:text-2xl px-5 lg:px-10 py-2 lg:py-4 rounded-full border border-darkPrimary text-darkPrimary group">
+                  <div className=" inline-flex w-fit text-xl px-5 py-2 rounded-full border border-darkPrimary text-darkPrimary group">
                     <a href="" className="flex flex-row gap-5 items-center ">
-                      <span className="pt-1">
+                      <span>
                         <AnimatedLetter text="Whatsapp" />
                       </span>
                       <FaWhatsapp />
@@ -463,7 +509,7 @@ function ComprehensiveRealEstateCRMProject() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 

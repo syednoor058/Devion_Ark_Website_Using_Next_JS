@@ -3,7 +3,7 @@ import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowDownLeft } from "react-icons/fi";
-import cover from "../../../public/services/service_cover.jpg";
+import cover from "../../../public/projects/case-study-cover.jpg";
 
 export const metadata = {
   title: "Case Studies - Real Digital Transformation Success | Devion Ark",
@@ -11,7 +11,14 @@ export const metadata = {
     "Explore our case studies to see how Devion Ark has transformed businesses with innovative IT solutions. Discover real success stories in custom software, digital marketing, and web development that drive measurable growth.",
 };
 
-function ProjectCard({ title, desc, features, video, reverse = "0" }) {
+function ProjectCard({
+  title,
+  desc,
+  features,
+  video,
+  reverse = "0",
+  forwardTo = "",
+}) {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-7 lg:gap-10">
@@ -43,7 +50,7 @@ function ProjectCard({ title, desc, features, video, reverse = "0" }) {
               <div className="w-full h-full flex">
                 <CustomShapeButton
                   label="Learn More"
-                  forwardTo="/contact-us"
+                  forwardTo={forwardTo}
                   textStyle="text-lg font-normal text-darkPrimary"
                   hoverText="text-darkPrimary"
                   backgroundColor="bg-lightPrimary"
@@ -253,6 +260,7 @@ function CaseStudies() {
       <div className="w-full flex flex-col px-4 lg:px-20 bg-black">
         <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
           <ProjectCard
+            forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
             video="https://res.cloudinary.com/de8g5laai/video/upload/v1739689633/crm_software_promo_video_sdysuq.mp4"
             title="Comprehensive Real Estate CRM Solution"
             desc="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."

@@ -56,10 +56,10 @@ function Footer() {
         <div className="sticky w-full h-[100vh] top-0 left-0">
           <div className="w-full h-[100vh] relative bg-black pt-5 lg:pt-10 flex items-end">
             <div className="w-full h-full flex flex-col gap-10 justify-between">
-              <div className="w-full flex flex-col-reverse lg:flex-row lg:border-b border-lightSecondary/30 px-4 lg:px-10">
+              <div className="w-full h-full flex flex-col-reverse lg:flex-row  px-4 lg:px-10">
                 <div className="w-full flex lg:w-[50%] pb-5 lg:pb-10 lg:pe-10 ">
                   <div className="w-full flex flex-col gap-5 justify-between">
-                    <div className="flex flex-col gap-10">
+                    <div className="w-full h-full flex flex-col gap-10">
                       <div className="hidden lg:flex flex-col gap-3 text-sm lg:text-lg font-light">
                         <div className="flex flex-col">
                           <p>08 Tootpara Central Rd,</p>
@@ -108,20 +108,6 @@ function Footer() {
                           ))}
                         </div>
                       </div>
-                      <div className="w-full flex lg:hidden flex-row gap-2 justify-between text-sm font-light">
-                        {socialLinks.map((social, index) => (
-                          <a href={social.url} key={index}>
-                            <div
-                              className={`w-full text-lightPrimary font-medium leading-none duration-[350ms] whitespace-nowrap`}
-                            >
-                              <AnimatedLetter
-                                text={social.label}
-                                hoverText="text-accentColor"
-                              />
-                            </div>
-                          </a>
-                        ))}
-                      </div>
                       <div className="w-full h-full lg:hidden flex flex-row justify-between items-end gap-5 text-sm">
                         <p>&copy;2025</p>
                         <p className="text-end">All rights reserved</p>
@@ -146,9 +132,9 @@ function Footer() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full lg:w-[50%] pb-5 lg:pb-10 border-l-0 lg:border-l border-lightSecondary/30 lg:ps-10">
+                <div className="w-full flex lg:w-[50%] pb-5 lg:pb-10 lg:ps-10">
                   <div className="flex flex-col gap-5 justify-between">
-                    <div className="w-full flex flex-col gap-5">
+                    <div className="w-full flex flex-col gap-3">
                       <h2 className="text-lightPrimary font-semibold  text-3xl lg:text-5xl font-oswald leading-[1.10]">
                         Ready to transform your{" "}
                         <span className="text-accentColor italic">
@@ -159,7 +145,7 @@ function Footer() {
                       <p className="font-light text-base lg:text-lg">
                         Sign up for counsiling, latest updates, and offers!
                       </p>
-                      <form className="w-full flex flex-col gap-1">
+                      <form className="w-full flex flex-col gap-3">
                         <input
                           className="p-3 outline-none border bg-transparent text-lightSecondary"
                           placeholder="Enter your email address"
@@ -188,11 +174,11 @@ function Footer() {
                         and Terms of Use.
                       </p>
                     </div>
-                    <div className="w-full lg:flex hidden flex-row gap-2 justify-between">
+                    <div className="w-full h-full flex flex-row gap-2 justify-between items-end">
                       {socialLinks.map((social, index) => (
                         <a href={social.url} key={index}>
                           <div
-                            className={`w-full text-lightPrimary text-base font-medium leading-none duration-[350ms] whitespace-nowrap`}
+                            className={`w-full text-lightPrimary text-sm lg:text-base font-medium leading-none duration-[350ms] whitespace-nowrap`}
                           >
                             <AnimatedLetter
                               text={social.label}
