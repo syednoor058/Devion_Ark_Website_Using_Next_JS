@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BsTools } from "react-icons/bs";
 import { CgSandClock } from "react-icons/cg";
+import { GoDotFill } from "react-icons/go";
 import { MdOutlinePeopleAlt, MdOutlineSupport } from "react-icons/md";
 import { RiBriefcaseFill } from "react-icons/ri";
 import { TiLockOpenOutline } from "react-icons/ti";
@@ -17,14 +18,15 @@ function page() {
       {/* Landing Section */}
       <div className="w-full px-5 lg:px-20 pt-5 lg:pt-10 pb-5 lg:pb-10">
         <div className="w-full flex flex-col gap-10 lg:gap-16">
-          <h1 className="uppercase font-oswald font-bold text-[12vw] lg:text-[8vw] leading-none text-lightPrimary flex flex-col">
+          <h1 className="uppercase font-oswald font-semibold text-3xl lg:text-6xl leading-none text-lightPrimary flex flex-col">
             <span>Our Journey of</span>{" "}
             <span>
-              <span className="text-accentColor">Precision</span> and Passion
+              <span className="text-accentColor italic">Precision</span> and
+              Passion
             </span>
           </h1>
           <div className="w-full flex flex-col-reverse lg:flex-row-reverse gap-10 lg:gap-16 items-end">
-            <div className="w-full lg:w-[40%] overflow-hidden rounded-sm relative">
+            <div className="w-full lg:w-[20%] overflow-hidden rounded-sm relative">
               <Image
                 placeholder="blur"
                 src={aboutLandingImg}
@@ -32,7 +34,7 @@ function page() {
                 className="w-full object-cover"
               />
             </div>
-            <p className="w-full lg:w-[60%] font-light text-lightSecondary text-xl lg:text-4xl">
+            <p className="w-full lg:w-[80%] font-light text-lightSecondary text-xl lg:text-3xl">
               Welcome to Devion Ark, where digital transformation meets human
               ambition. Founded in 2021, we&apos;re not just another IT agency —
               we&apos;re problem solvers, growth architects, and relentless
@@ -49,15 +51,19 @@ function page() {
       {/* Start Story Section  */}
       <div className="w-full text-lightSecondary font-light py-10 lg:py-20 px-5 lg:px-20 text-base lg:text-xl leading-tight">
         <div className="w-full flex flex-col gap-10 lg:gap-16">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-            <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-              <span className="inline-block">Our Story</span>
-            </h6>
-            <div className="w-[2px] flex bg-accentColor"></div>
+          <div className="flex overflow-hidden">
+            <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+              <p className="flex flex-row gap-2 items-center uppercase">
+                <span>
+                  <GoDotFill className="text-xs" />
+                </span>
+                Our Stories
+              </p>
+            </div>
           </div>
-          <h2 className="text-lightPrimary font-oswald font-bold text-[8vw] lg:text-[6.5vw] uppercase leading-tight lg:leading-none">
-            From Garage to Global: How{" "}
-            <span className="text-accentColor">Devion Ark</span> Began
+          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
+            How <span className="text-accentColor uppercase">Devion Ark</span>{" "}
+            began
           </h2>
           <div className="flex flex-col gap-5">
             <p>
@@ -111,16 +117,19 @@ function page() {
       {/* Our Missions Section  */}
       <div className="w-full text-lightSecondary font-light py-10 lg:py-20 px-5 lg:px-20 text-base lg:text-xl leading-tight">
         <div className="flex flex-col gap-10 lg:gap-16">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-            <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-              <span className="inline-block">Our Missions</span>
-            </h6>
-            <div className="w-[2px] flex bg-accentColor"></div>
+          <div className="flex overflow-hidden">
+            <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+              <p className="flex flex-row gap-2 items-center uppercase">
+                <span>
+                  <GoDotFill className="text-xs" />
+                </span>
+                Our Missions
+              </p>
+            </div>
           </div>
-          <h2 className="text-lightPrimary font-oswald font-bold text-[7.5vw] lg:text-[5vw] uppercase leading-tight lg:leading-none">
-            Why We Exist: More Than{" "}
-            <span className="text-accentColor">Metrics</span>, It’s About
-            Momentum
+          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
+            More than <span className="text-accentColor">metrics</span>, it’s
+            about momentum
           </h2>
           <div className="w-full flex flex-col lg:flex-row gap-10 justify-between">
             <div className="w-full lg:w-[60%] flex flex-col gap-5">
@@ -204,16 +213,19 @@ function page() {
       {/* How We Work Section  */}
       <div className="w-full text-lightSecondary font-light py-10 lg:py-20 px-5 lg:px-20 text-base lg:text-xl leading-tight">
         <div className="flex flex-col gap-10 lg:gap-16">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-            <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-              <span className="inline-block">How We Work</span>
-            </h6>
-            <div className="w-[2px] flex bg-accentColor"></div>
+          <div className="flex overflow-hidden">
+            <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+              <p className="flex flex-row gap-2 items-center uppercase">
+                <span>
+                  <GoDotFill className="text-xs" />
+                </span>
+                Our Strategy
+              </p>
+            </div>
           </div>
-          <h2 className="text-lightPrimary font-oswald font-bold text-[7.5vw] lg:text-[5vw] uppercase leading-tight lg:leading-none">
-            Precision, Not Guesswork: Our{" "}
-            <span className="text-accentColor">Process</span> for Guaranteed
-            Growth
+          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl  leading-tight lg:leading-none">
+            Our <span className="text-accentColor">process</span> for guaranteed
+            growth
           </h2>
 
           <div className="w-full flex flex-col lg:flex-row-reverse gap-10 justify-between">
@@ -273,18 +285,22 @@ function page() {
         </div>
       </div>
 
-      {/* How We Work Section  */}
+      {/* Why choose us Section  */}
       <div className="w-full text-lightSecondary font-light py-10 lg:py-20 px-5 lg:px-20 text-base lg:text-xl leading-tight">
         <div className="flex flex-col gap-10 lg:gap-16">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-            <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-              <span className="inline-block">Why Choose Us</span>
-            </h6>
-            <div className="w-[2px] flex bg-accentColor"></div>
+          <div className="flex overflow-hidden">
+            <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+              <p className="flex flex-row gap-2 items-center uppercase">
+                <span>
+                  <GoDotFill className="text-xs" />
+                </span>
+                Why us
+              </p>
+            </div>
           </div>
-          <h2 className="text-lightPrimary font-oswald font-bold text-[7.5vw] lg:text-[5vw] uppercase leading-tight lg:leading-none">
-            The <span className="text-accentColor">Devion Ark</span> Difference:
-            Where Expertise Meets Execution
+          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
+            Where expertise meets{" "}
+            <span className="text-accentColor italic">execution</span>.
           </h2>
           <div className="w-full">
             <div className="w-full flex flex-col gap-5">
@@ -402,20 +418,24 @@ function page() {
       {/* Meet The Team Section  */}
       <div className="w-full text-lightSecondary font-light py-10 lg:py-20 px-5 lg:px-20 text-base lg:text-xl leading-tight">
         <div className="flex flex-col gap-10 lg:gap-16">
-          <div className="flex flex-row gap-2 lg:gap-3 items-stretch overflow-hidden leading-none">
-            <h6 className="uppercase font-light text-base sm:text-lg overflow-hidden">
-              <span className="inline-block">Meet The Team</span>
-            </h6>
-            <div className="w-[2px] flex bg-accentColor"></div>
+          <div className="flex overflow-hidden">
+            <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+              <p className="flex flex-row gap-2 items-center uppercase">
+                <span>
+                  <GoDotFill className="text-xs" />
+                </span>
+                The Team
+              </p>
+            </div>
           </div>
-          <h2 className="text-lightPrimary font-oswald font-bold text-[7.5vw] lg:text-[5vw] uppercase leading-tight lg:leading-none">
-            The Minds Behind the <span className="text-accentColor">Magic</span>
-            : Passionate, Proven & Prepared
+          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
+            The minds behind the{" "}
+            <span className="text-accentColor italic">magic</span>.
           </h2>
           <div className="w-full">
             <div className="w-full flex flex-col gap-5">
               <div className="flex flex-col gap-5">
-                <p className="italic text-[5vw] lg:text-[3vw] leading-tight">
+                <p className="italic text-2xl lg:text-4xl leading-tight">
                   We’re engineers, artists, and data nerds united by one goal:
                   your success.
                 </p>

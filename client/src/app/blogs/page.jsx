@@ -87,11 +87,9 @@ function Blogs() {
       <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary flex items-end py-10 lg:py-20 text-lightSecondary font-light">
         <div className="flex flex-col gap-10 lg:gap-20">
           <div className="w-full px-4 lg:px-20 flex flex-col gap-5 lg:gap-10">
-            <h1 className="text-lightPrimary text-5xl lg:text-8xl font-medium font-oswald leading-none">
+            <h1 className="text-lightPrimary text-5xl lg:text-8xl font-semibold uppercase font-oswald leading-none">
               Latest{" "}
-              <span className="text-accentColor italic font-bold leading-none">
-                news
-              </span>{" "}
+              <span className="text-accentColor italic leading-none">news</span>{" "}
               and updates.
             </h1>
             <div>

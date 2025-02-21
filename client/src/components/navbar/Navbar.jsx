@@ -59,7 +59,6 @@ function Navbar() {
     { label: "LinkedIn", url: "/" },
     { label: "Instagram", url: "/" },
     { label: "Whatsapp", url: "/" },
-    { label: "Twitter", url: "/" },
   ];
   const pathname = usePathname(); // Get the current path
   const [menuExpand, setMenuExpand] = useState(false);
@@ -284,7 +283,7 @@ function Navbar() {
                       pathname === navLink.path
                         ? "text-accentColor"
                         : "text-lightSecondary hover:text-lightPrimary"
-                    }  duration-500 text-3xl font-bold uppercase font-oswald leading-none`}
+                    }  duration-500 text-5xl font-bold uppercase font-oswald leading-none`}
                   >
                     <AnimatedLetter text={navLink.label} />
                   </div>

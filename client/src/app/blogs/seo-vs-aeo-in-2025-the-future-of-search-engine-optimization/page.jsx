@@ -54,7 +54,7 @@ function Blog1() {
       <SendToTop />
       {/* Blog Landing Section */}
       <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-5 lg:px-20 pb-10 lg:pb-20 font-light text-lightSecondary">
-        <div className="flex flex-col gap-7 lg:gap-20">
+        <div className="flex flex-col gap-8 lg:gap-16">
           <Link href="/blogs">
             <div className="w-full flex flex-row gap-2 text-sm lg:text-lg items-center text-lightPrimary">
               <LuArrowLeft className="text-base lg:text-xl" />{" "}
@@ -63,7 +63,7 @@ function Blog1() {
               </span>
             </div>
           </Link>
-          <div className="flex flex-col gap-5 lg:gap-10">
+          <div className="flex flex-col gap-8 lg:gap-16">
             <div className="text-3xl lg:text-7xl font-semibold leading-none text-lightPrimary font-oswald">
               <h1>
                 SEO vs AEO in 2025: The Future of Search Engine Optimization

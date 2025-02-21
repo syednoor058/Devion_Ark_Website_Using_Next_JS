@@ -24,20 +24,17 @@ function Footer() {
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Case Studies", path: "/case-studies" },
-    { label: "Blogs", path: "/blogs" },
   ];
   const navLinks2 = [
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
-    { label: "Developer Team", path: "/" },
-    { label: "Career", path: "/" },
+    { label: "Blogs", path: "/blogs" },
   ];
 
   const navLinks3 = [
     { label: "Privacy Policy", path: "/" },
     { label: "Cookies Policy", path: "/" },
-    { label: "Toolbox", path: "/" },
-    { label: "Success Stories", path: "/" },
+    { label: "Career", path: "/" },
   ];
 
   const socialLinks = [
@@ -54,11 +51,11 @@ function Footer() {
     >
       <div className="relative w-full h-[200vh] -top-[100vh]">
         <div className="sticky w-full h-[100vh] top-0 left-0">
-          <div className="w-full h-[100vh] relative bg-black pt-5 lg:pt-10 flex items-end">
+          <div className="w-full h-[100vh] relative bg-black pt-5 lg:pt-10 flex">
             <div className="w-full h-full flex flex-col gap-10 justify-between">
               <div className="w-full h-full flex flex-col-reverse lg:flex-row  px-4 lg:px-10">
-                <div className="w-full flex lg:w-[50%] pb-5 lg:pb-10 lg:pe-10 ">
-                  <div className="w-full flex flex-col gap-5 justify-between">
+                <div className="w-full h-full flex lg:w-[50%] pb-5 lg:pb-10 lg:pe-10 ">
+                  <div className="w-full h-full flex flex-col gap-5 justify-between">
                     <div className="w-full h-full flex flex-col gap-10">
                       <div className="hidden lg:flex flex-col gap-3 text-sm lg:text-lg font-light">
                         <div className="flex flex-col">
@@ -72,9 +69,14 @@ function Footer() {
                       </div>
                       <div className="w-full grid grid-cols-3 gap-4 lg:gap-7 text-sm font-light lg:font-normal lg:text-lg leading-none">
                         <div className="flex flex-col gap-2 ">
+                          <div>
+                            <p className="text-lightPrimary font-medium">
+                              Quick Links
+                            </p>
+                          </div>
                           {navLinks1.map((nav, i) => (
                             <Link href={nav.path} key={i}>
-                              <span className="text-lightPrimary">
+                              <span className="text-lightSecondary">
                                 <AnimatedLetter
                                   text={nav.label}
                                   hoverText="text-accentColor"
@@ -84,9 +86,14 @@ function Footer() {
                           ))}
                         </div>
                         <div className="flex flex-col gap-2 ">
+                          <div>
+                            <p className="text-lightPrimary font-medium">
+                              Resources
+                            </p>
+                          </div>
                           {navLinks2.map((nav, i) => (
                             <Link href={nav.path} key={i}>
-                              <span className="text-lightPrimary">
+                              <span className="text-lightSecondary">
                                 <AnimatedLetter
                                   text={nav.label}
                                   hoverText="text-accentColor"
@@ -96,9 +103,14 @@ function Footer() {
                           ))}
                         </div>
                         <div className="flex flex-col gap-2 ">
+                          <div>
+                            <p className="text-lightPrimary font-medium">
+                              Legals
+                            </p>
+                          </div>
                           {navLinks3.map((nav, i) => (
                             <Link href={nav.path} key={i}>
-                              <span className="text-lightPrimary">
+                              <span className="text-lightSecondary">
                                 <AnimatedLetter
                                   text={nav.label}
                                   hoverText="text-accentColor"
@@ -174,7 +186,7 @@ function Footer() {
                         and Terms of Use.
                       </p>
                     </div>
-                    <div className="w-full h-full flex flex-row gap-2 justify-between items-end">
+                    <div className="w-full h-full flex flex-row gap-2 justify-between items-end py-7 lg:py-0">
                       {socialLinks.map((social, index) => (
                         <a href={social.url} key={index}>
                           <div

@@ -140,10 +140,10 @@ function CaseStudies() {
             </div>
             <div className="w-full lg:w-[70%] ">
               <div className="w-full flex flex-col gap-5 lg:gap-10">
-                <div className="text-lightPrimary text-4xl lg:text-7xl font-medium font-oswald">
+                <div className="text-lightPrimary text-3xl lg:text-7xl font-semibold uppercase font-oswald">
                   <h1 className="leading-[1.10]">
                     Blueprints of Innovation:{" "}
-                    <span className="text-accentColor italic font-bold uppercase">
+                    <span className="text-accentColor italic uppercase">
                       Case Studies
                     </span>
                   </h1>
@@ -229,7 +229,7 @@ function CaseStudies() {
       <div className="w-full px-4 lg:px-20 py-10 lg:py-20 flex justify-end font-light text-lightSecondary bg-darkPrimary">
         <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
           <div className="w-full flex lg:justify-end">
-            <div className="w-full lg:w-[85%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
+            <div className="w-full lg:w-[85%] text-2xl lg:text-5xl  text-lightPrimary font-medium">
               <h1 className="leading-[1.15]">
                 Proven results,{" "}
                 <span className="leading-[1.15] italic text-accentColor">

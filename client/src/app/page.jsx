@@ -171,10 +171,10 @@ function MoreBlogCard({ cover, title, date, forwardTo }) {
       </div>
       <Link href={forwardTo} className="group">
         <div className="w-full flex flex-row gap-5 justify-between">
-          <div className="text-2xl lg:text-4xl text-lightPrimary group-hover:underline underline-offset-4 duration-500 leading-tight">
+          <div className="text-xl lg:text-3xl text-lightPrimary group-hover:underline underline-offset-4 duration-500 leading-tight">
             {title}
           </div>
-          <div className="text-3xl lg:text-6xl">
+          <div className="text-3xl lg:text-5xl">
             <LuArrowUpRight className="rotate-45 group-hover:rotate-0 duration-500 text-accentColor font-light" />
           </div>
         </div>
@@ -192,11 +192,9 @@ export default function Home() {
         <div className="w-full flex flex-col">
           <div className="w-full flex justify-end items-end px-4 lg:px-20">
             <div className="w-full lg:w-[58%] pb-5">
-              <h1 className="text-lightPrimary font-oswald leading-[1.10]  uppercase text-4xl lg:text-6xl">
+              <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-3xl lg:text-5xl uppercase">
                 Transforming your ideas <br /> into{" "}
-                <span className="text-accentColor italic font-bold">
-                  digital reality
-                </span>
+                <span className="text-accentColor italic">digital reality</span>
                 .
               </h1>
             </div>
@@ -501,7 +499,7 @@ export default function Home() {
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 left-[50%]"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 right-20 "></div>
-        <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-3xl lg:text-5xl font-oswald leading-[1.10] px-4">
+        <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-4xl lg:text-5xl font-oswald leading-[1.10] px-4">
           The <span className="text-accentColor italic">brands</span> we&apos;ve
           partnered with
         </h2>
@@ -749,14 +747,8 @@ export default function Home() {
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           <MoreBlogCard
-            title="How much does it cost to design a website"
-            forwardTo=""
-            date="14 December, 2024"
-            cover={blogCover}
-          />
-          <MoreBlogCard
-            title="How much does it cost to design a website"
-            forwardTo=""
+            title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
+            forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"
             date="14 December, 2024"
             cover={blogCover}
           />
@@ -768,7 +760,7 @@ export default function Home() {
       <div className="w-full font-light text-lightSecondary text-base lg:text-lg py-10 lg:py-20 px-4 lg:px-20 bg-darkPrimary">
         <div className="flex flex-col gap-10">
           <div className="w-full flex flex-col-reverse lg:flex-row gap-10 justify-between">
-            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-3xl lg:text-6xl font-medium font-oswald text-lightPrimary leading-[1.10]">
+            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-4xl lg:text-5xl font-medium font-oswald text-lightPrimary leading-[1.10]">
               <h2>Have doubts?</h2>
               <h2>
                 We&apos;re here to{" "}

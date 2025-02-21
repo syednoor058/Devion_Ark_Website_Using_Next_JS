@@ -19,13 +19,10 @@ function CTASection() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-2 text-3xl lg:text-6xl font-semibold text-darkPrimary font-oswald leading-[1.10]">
-              <h2 className="text-2xl lg:text-5xl leading-[1.10]">
-                Ready to Turn Potential into Profit?
-              </h2>
+            <div className="flex flex-col gap-2 text-4xl lg:text-6xl font-semibold text-darkPrimary font-oswald leading-[1.10]">
               <h2 className="text-bold">
-                Let&apos;s Build Your{" "}
-                <span className="text-lightPrimary italic">Digital Legacy</span>
+                Let&apos;s build your{" "}
+                <span className="text-lightPrimary italic">digital legacy</span>
                 .
               </h2>
             </div>
