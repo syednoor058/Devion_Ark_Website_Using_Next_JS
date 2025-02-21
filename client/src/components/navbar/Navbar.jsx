@@ -86,11 +86,11 @@ function Navbar() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className={`w-full sticky left-0 top-0 z-[1000] bg-darkPrimary`}
+      className={`w-full sticky left-0 top-0 z-[1000] bg-transparent`}
     >
-      <div className="w-full hidden lg:flex relative">
+      <div className="w-full hidden lg:flex relative bg-transparent">
         <div
-          className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-3 bg-darkPrimary`}
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-3 bg-transparent mix-blend-difference`}
         >
           <div className="w-full flex flex-row justify-start items-center text-lightSecondary z-[1003] gap-10">
             <Link href="/" className={`w-full relative z-[1003]`}>
@@ -101,7 +101,7 @@ function Navbar() {
                 className="w-auto h-5 object-fit"
               />
             </Link>
-            <div className="flex flex-row gap-3 items-center text-lightPrimary font-normal text-sm">
+            <div className="flex flex-row gap-3 items-center text-lightPrimary font-normal text-sm mix-blend-difference">
               <div>
                 <GoDotFill />
               </div>
@@ -169,8 +169,8 @@ function Navbar() {
                   </div>
                   <div className="w-full">
                     <MoreBlogCard
-                      title="How much does it cost to design a website"
-                      forwardTo=""
+                      title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
+                      forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"
                       cover={blogCover}
                     />
                   </div>

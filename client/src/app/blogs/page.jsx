@@ -48,7 +48,11 @@ function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
             <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-5 justify-between">
               <div className="w-full flex flex-col gap-1 lg:gap-2">
                 <div>Author</div>
-                <div className="text-lightPrimary">{author}</div>
+                <div className="text-lightPrimary flex flex-col gap-1">
+                  {author.map((auth, i) => (
+                    <p key={i}>{auth}</p>
+                  ))}
+                </div>
               </div>
               <div className="w-auto lg:text-nowrap leading-tight">{date}</div>
             </div>
@@ -84,7 +88,7 @@ function Blogs() {
         <div className="flex flex-col gap-10 lg:gap-20">
           <div className="w-full px-4 lg:px-20 flex flex-col gap-5 lg:gap-10">
             <h1 className="text-lightPrimary text-5xl lg:text-8xl font-medium font-oswald leading-none">
-              Lates{" "}
+              Latest{" "}
               <span className="text-accentColor italic font-bold leading-none">
                 news
               </span>{" "}
@@ -135,7 +139,8 @@ function Blogs() {
                   </div>
                   <div className="flex flex-row gap-5">
                     <p className="text-lightPrimary leading-tight">
-                      IS SEO Dead? Will AEO Take Over the Industry in 2025?
+                      SEO vs AEO in 2025: The Future of Search Engine
+                      Optimization
                     </p>
                     <span>
                       <MdOutlineArrowForward className="text-4xl group-hover:-rotate-45 duration-500 text-accentColor font-light" />
@@ -174,7 +179,7 @@ function Blogs() {
           </div>
           <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-gray-800">
             <BlogCard
-              title="IS SEO Dead? Will AEO Take Over the Industry in 2025?"
+              title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
               cover={blogCover1}
               category={[
                 "SEO",
@@ -183,10 +188,10 @@ function Blogs() {
                 "Answer Engine Optimization",
                 "Search Engine Marketing",
               ]}
-              desc="In this article, we'll break down the key factors influencing web search and help you determine whether SEO or AEO aligns with your business goals in 2025."
-              forwardTo="/blogs/is-seo-dead-will-aeo-take-over-the-industry-in-2025"
+              desc="Is SEO dead, or is it just evolving? In this in-depth blog, we explore the future of SEO (Search Engine Optimization) and the rise of AEO (Answer Engine Optimization) in 2025. Discover how voice search, featured snippets, and structured data are reshaping the digital marketing landscape."
+              forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"
               date="December 13, 2024"
-              author="Naim Rahman"
+              author={["Naim Rahman", "Syed Shaeduzzaman Noor"]}
             />
           </div>
         </div>

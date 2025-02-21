@@ -229,27 +229,28 @@ function CaseStudies() {
       <div className="w-full px-4 lg:px-20 py-10 lg:py-20 flex justify-end font-light text-lightSecondary bg-darkPrimary">
         <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
           <div className="w-full flex lg:justify-end">
-            <div className="w-full lg:w-[80%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
+            <div className="w-full lg:w-[85%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
               <h1 className="leading-[1.15]">
-                Struggling to Stand Out in a Crowded{" "}
-                <span className="text-accentColor italic leading-[1.15]">
-                  Digital World
-                </span>{" "}
-                ?
+                Proven results,{" "}
+                <span className="leading-[1.15] italic text-accentColor">
+                  real stories
+                </span>
+                : how we&apos;ve helped businesses thrive
               </h1>
             </div>
           </div>
           <div className="w-full lg:w-[90%] flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl lg:text-end font-normal">
             <p>
-              You&apos;re not alone — 74% of businesses feel invisible online.
-              At Devion Ark, we turn that silence into a roar. With 3+ years of
-              proven strategies, 20+ success stories, and tailored SEO, social
-              media, and software solutions, we don&apos;t just get you seen —
-              we get you remembered.{" "}
+              Every business has a unique story, but they all share one thing in
+              common: the need for results. At Devion Ark, we&apos;ve partnered
+              with startups, enterprises, and innovators across industries to
+              turn challenges into opportunities. From skyrocketing e-commerce
+              sales to streamlining complex workflows, our case studies are more
+              than numbers — they&apos;re blueprints for success.
             </p>
             <p>
-              Ready to finally break through? Start with a free, no-strings
-              consultation today
+              Ready to see how we can transform your business? Dive into the
+              stories below.
             </p>
           </div>
         </div>
