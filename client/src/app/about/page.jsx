@@ -21,8 +21,7 @@ function page() {
           <h1 className="uppercase font-oswald font-semibold text-3xl lg:text-6xl leading-none text-lightPrimary flex flex-col">
             <span>Our Journey of</span>{" "}
             <span>
-              <span className="text-accentColor italic">Precision</span> and
-              Passion
+              <span className="text-accentColor ">Precision</span> and Passion
             </span>
           </h1>
           <div className="w-full flex flex-col-reverse lg:flex-row-reverse gap-10 lg:gap-16 items-end">
@@ -61,7 +60,7 @@ function page() {
               </p>
             </div>
           </div>
-          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
+          <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none ">
             How <span className="text-accentColor uppercase">Devion Ark</span>{" "}
             began
           </h2>
@@ -191,7 +190,7 @@ function page() {
       {/* Founder Quote  */}
       <div className="w-full text-lightSecondary font-light py-10 lg:py-20 px-5 lg:px-20 text-base lg:text-xl leading-tight">
         <div className="flex flex-col gap-5 lg:gap-10">
-          <div className="italic text-[6vw] lg:text-[4vw] leading-tight">
+          <div className=" text-[6vw] lg:text-[4vw] leading-tight">
             <h3>
               "We’re not here to be another vendor. We’re here to be your growth
               ally."
@@ -300,12 +299,12 @@ function page() {
           </div>
           <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
             Where expertise meets{" "}
-            <span className="text-accentColor italic">execution</span>.
+            <span className="text-accentColor ">execution</span>.
           </h2>
           <div className="w-full">
             <div className="w-full flex flex-col gap-5">
               <div className="flex flex-col gap-5">
-                <p className="italic text-[5vw] lg:text-[3vw] leading-tight">
+                <p className=" text-[5vw] lg:text-[3vw] leading-tight">
                   Why do 87% of clients stay with us from the beginning? Because
                   we deliver what others can’t:
                 </p>
@@ -430,12 +429,12 @@ function page() {
           </div>
           <h2 className="text-lightPrimary font-oswald font-medium text-3xl lg:text-6xl leading-tight lg:leading-none">
             The minds behind the{" "}
-            <span className="text-accentColor italic">magic</span>.
+            <span className="text-accentColor ">magic</span>.
           </h2>
           <div className="w-full">
             <div className="w-full flex flex-col gap-5">
               <div className="flex flex-col gap-5">
-                <p className="italic text-2xl lg:text-4xl leading-tight">
+                <p className=" text-2xl lg:text-4xl leading-tight">
                   We’re engineers, artists, and data nerds united by one goal:
                   your success.
                 </p>
@@ -456,7 +455,7 @@ function page() {
                 <h5 className="text-lightPrimary font-oswald uppercase font-semibold leading-tight text-2xl">
                   Syed Shaeduzzaman Noor
                 </h5>
-                <p className="text-lg lg:text-xl italic">
+                <p className="text-lg lg:text-xl ">
                   Founder, Cheif Technology Officer (CTO)
                 </p>
               </div>
@@ -474,7 +473,7 @@ function page() {
                 <h5 className="text-lightPrimary font-oswald uppercase font-semibold leading-tight text-2xl">
                   Kazi Fahim Sharar
                 </h5>
-                <p className="text-lg lg:text-xl italic">
+                <p className="text-lg lg:text-xl ">
                   Co-founder, Senior SEO Specialist
                 </p>
               </div>
@@ -492,7 +491,7 @@ function page() {
                 <h5 className="text-lightPrimary font-oswald uppercase font-semibold leading-tight text-2xl">
                   Naim Rahman
                 </h5>
-                <p className="text-lg lg:text-xl italic">
+                <p className="text-lg lg:text-xl ">
                   Co-founder, Senior Marketing Officer
                 </p>
               </div>
@@ -510,7 +509,7 @@ function page() {
                 <h5 className="text-lightPrimary font-oswald uppercase font-semibold leading-tight text-2xl">
                   Farhan Fuad
                 </h5>
-                <p className="text-lg lg:text-xl italic">
+                <p className="text-lg lg:text-xl ">
                   Co-founder, Senior Campaign Manager
                 </p>
               </div>

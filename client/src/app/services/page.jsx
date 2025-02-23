@@ -125,7 +125,7 @@ function Services() {
               </div>
               <div className="mt-auto">
                 <p className="text-lightPrimary text-4xl lg:text-7xl font-bold font-oswald leading-[1.10] uppercase">
-                  Our <span className="text-accentColor italic">Services</span>
+                  Our <span className="text-accentColor">Services</span>
                 </p>
               </div>
             </div>
@@ -188,13 +188,19 @@ function Services() {
                     </div>
                   </div>
                 </div>
-                <div className="p-2 w-[50%] aspect-square bg-black rounded">
-                  <AutoSlider
-                    components={[
-                      { img: sliderMock1, title: "About", forwardTo: "/about" },
-                      { img: sliderMock2, title: "Career", forwardTo: "/" },
-                    ]}
-                  />
+                <div className="p-2 w-[50%] aspect-square bg-black rounded flex items-center justify-center">
+                  <div className="w-full aspect-square overflow-hidden ">
+                    <AutoSlider
+                      components={[
+                        {
+                          img: sliderMock1,
+                          title: "About",
+                          forwardTo: "/about",
+                        },
+                        { img: sliderMock2, title: "Career", forwardTo: "/" },
+                      ]}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -221,7 +227,7 @@ function Services() {
             <div className="w-full lg:w-[80%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
               <h1 className="leading-[1.15]">
                 Struggling to Stand Out in a Crowded{" "}
-                <span className="text-accentColor italic leading-[1.15]">
+                <span className="text-accentColor leading-[1.15]">
                   Digital World
                 </span>{" "}
                 ?

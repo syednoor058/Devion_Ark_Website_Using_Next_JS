@@ -22,8 +22,7 @@ export default {
         darkBodyText: "#212529",
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        roboto: ["var(--font-roboto)"],
+        baumans: ["var(--font-baumans)"],
         poppins: ["var(--font-poppins)"],
         oswald: ["var(--font-oswald)"],
       }

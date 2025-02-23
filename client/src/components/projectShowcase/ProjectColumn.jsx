@@ -1,31 +1,23 @@
 import gsap from "gsap";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { FiArrowDownLeft } from "react-icons/fi";
-import CustomShapeButton from "../buttons/CustomShapeButton";
+import { FiArrowUpRight } from "react-icons/fi";
 function ProjectColumn({
   caption,
   title,
-  forward,
-  video,
+  forward = "",
+  img,
   projectNum,
   activeCard,
   setActiveCard,
 }) {
   const projectCard = useRef(null);
-  const videoRef = useRef(null);
 
   const projectCardHover = useRef(null);
   useEffect(() => {
     const projectContainer = projectCard.current;
     const projectHoverComponent = projectCardHover.current;
-    const videoComponent = videoRef.current;
-
-    if (activeCard === projectNum) {
-      videoComponent.play();
-    } else {
-      videoComponent.pause();
-      videoComponent.currentTime = 0;
-    }
 
     if (!projectContainer || activeCard !== projectNum) return;
 
@@ -73,11 +65,11 @@ function ProjectColumn({
     <div
       ref={projectCard}
       onClick={() => setActiveCard(projectNum)}
-      className={`relative border-r border-darkSecondary px-5 pt-5 flex flex-col gap-5 justify-between items-center cursor-pointer overflow-hidden ${
+      className={`h-full relative border-r border-darkSecondary px-5 py-5 flex flex-col gap-5 justify-between items-center cursor-pointer overflow-hidden ${
         activeCard === projectNum
-          ? "w-[150rem] transform origin-left"
+          ? "w-[100rem] transform origin-left"
           : "w-[60rem]"
-      }`}
+      } group`}
       style={{
         transition: "width 0.64s cubic-bezier(0.255, 0.655, 0.02, 0.995)",
       }}
@@ -91,61 +83,44 @@ function ProjectColumn({
         }}
       >
         <div className={`w-full h-full overflow-hidden relative`}>
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
+          <Image
+            placeholder="blur"
+            src={img}
+            alt={title}
             className="w-full h-full object-cover"
-          >
-            <source src={video} />
-          </video>
+          />
         </div>
       </div>
 
-      <div
-        className={`w-full ${
-          activeCard === projectNum ? "text-base" : "text-sm"
-        } text-darkPrimary z-[2]`}
-      >
-        {caption}
-      </div>
-      <div className="w-full z-[2] flex flex-col gap-7 justify-center items-center">
-        <h2
-          className={`font-oswald font-bold ${
-            activeCard === projectNum ? "text-5xl" : "text-2xl"
-          }  text-darkPrimary text-center duration-500`}
+      <div className="h-full flex flex-col justify-between items-center">
+        <div
+          className={`w-full h-[15%] text-base text-darkSecondary z-[2] text-center`}
         >
-          {title}
-        </h2>
-      </div>
-      <div
-        className={`w-full h-full z-[2] ${
-          activeCard === projectNum ? "flex" : "hidden"
-        } justify-center items-center`}
-      >
-        <div className="w-full flex justify-center">
-          <div className="w-full flex justify-center">
-            <CustomShapeButton
-              label="Learn More"
-              textStyle="text-lg font-normal text-lightPrimary"
-              hoverText="text-darkPrimary"
-              paddingX="ps-4 pe-8"
-              paddingY="py-4"
-              fontGap="gap-2"
-              backgroundColor="bg-darkPrimary"
-              hoverBgColor="bg-accentColor"
-              icon={
-                <FiArrowDownLeft className="text-xl text-lightPrimary group-hover:text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-              }
-            />
-          </div>
+          {caption}
         </div>
-      </div>
+        <div className="w-full h-[20%] z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
+          <h2
+            className={`font-normal text-5xl  text-darkSecondary text-center duration-500`}
+          >
+            {title}
+          </h2>
+        </div>
 
-      <div className="w-full text-darkPrimary text-[250px] font-light z-[2] leading-none text-center font-poppins">
-        {projectNum}
+        <div className={`z-[2] h-[15%] flex justify-center items-center`}>
+          <Link
+            href={forward}
+            className={`${activeCard === projectNum ? "flex" : "hidden"}`}
+          >
+            <FiArrowUpRight
+              className={`text-6xl text-darkSecondary  rotate-45  transition duration-[350ms] ${
+                activeCard === projectNum && "group-hover:rotate-0"
+              }`}
+            />
+          </Link>
+        </div>
+        <div className="w-full h-[50%] text-darkSecondary text-[250px] font-semibold z-[2] leading-none text-center flex items-end justify-center font-baumans">
+          {projectNum}
+        </div>
       </div>
 
       <div

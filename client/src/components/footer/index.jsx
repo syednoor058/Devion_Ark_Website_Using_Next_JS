@@ -149,10 +149,7 @@ function Footer() {
                     <div className="w-full flex flex-col gap-3">
                       <h2 className="text-lightPrimary font-semibold  text-3xl lg:text-5xl font-oswald leading-[1.10]">
                         Ready to transform your{" "}
-                        <span className="text-accentColor italic">
-                          business
-                        </span>
-                        ?
+                        <span className="text-accentColor">business</span>?
                       </h2>
                       <p className="font-light text-base lg:text-lg">
                         Sign up for counsiling, latest updates, and offers!

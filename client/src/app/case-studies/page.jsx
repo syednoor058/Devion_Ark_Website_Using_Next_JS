@@ -140,12 +140,9 @@ function CaseStudies() {
             </div>
             <div className="w-full lg:w-[70%] ">
               <div className="w-full flex flex-col gap-5 lg:gap-10">
-                <div className="text-lightPrimary text-3xl lg:text-7xl font-semibold uppercase font-oswald">
+                <div className="text-lightPrimary text-6xl lg:text-9xl font-medium font-oswald uppercase">
                   <h1 className="leading-[1.10]">
-                    Blueprints of Innovation:{" "}
-                    <span className="text-accentColor italic uppercase">
-                      Case Studies
-                    </span>
+                    Case <span className="text-accentColor">Studies</span>
                   </h1>
                 </div>
                 <div className="w-full flex flex-row gap-10 items-center">
@@ -232,7 +229,7 @@ function CaseStudies() {
             <div className="w-full lg:w-[85%] text-2xl lg:text-5xl  text-lightPrimary font-medium">
               <h1 className="leading-[1.15]">
                 Proven results,{" "}
-                <span className="leading-[1.15] italic text-accentColor">
+                <span className="leading-[1.15] text-accentColor">
                   real stories
                 </span>
                 : how we&apos;ve helped businesses thrive

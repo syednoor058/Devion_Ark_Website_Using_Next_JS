@@ -6,9 +6,10 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/Navbar";
 import SmoothScroll from "@/components/smoothScroll";
-import { Oswald, Poppins } from 'next/font/google';
+import { Baumans, Oswald, Poppins } from 'next/font/google';
 const poppins = Poppins({ subsets: ['latin'], weight: ["100","300","400","500","700","900"], variable: "--font-poppins" });
 const oswald = Oswald({ subsets: ['latin'], weight: ["200", "300", "400", "500", "600", "700"], variable: "--font-oswald" });
+const baumans = Baumans({ subsets: ['latin'], weight: ["400"], variable: "--font-baumans" })
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="noindex, nofollow" />
       </head>
       <body
-        className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden`}
+        className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden ${baumans.variable}`}
       >
         <Navbar />
         <SmoothScroll>

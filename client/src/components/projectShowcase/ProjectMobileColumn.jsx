@@ -1,48 +1,48 @@
-import { FiArrowDownLeft } from "react-icons/fi";
-import CustomShapeButton from "../buttons/CustomShapeButton";
+import Image from "next/image";
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
-function ProjectMobileColumn({ caption, video, title, forward, projectNum }) {
+function ProjectMobileColumn({
+  caption,
+  img,
+  title,
+  forward = "",
+  projectNum,
+}) {
   return (
-    <div className="w-full h-screen relative text-darkPrimary border-b border-black">
+    <div className="w-full h-screen relative border-b border-black px-4 py-5">
       <div className="w-full h-full absolute top-0 left-0 z-[1]">
         <div className="w-full h-full overflow-hidden relative z-[1]">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
+          <Image
+            placeholder="blur"
+            src={img}
+            alt={title}
             className="w-full h-full object-cover"
-          >
-            <source src={video} />
-          </video>
+          />
         </div>
       </div>
-      <div className="p-5 w-full h-full flex flex-col justify-between gap-5 ">
-        <div className="w-full z-[5] text-base">{caption}</div>
-        <div className="w-full text-center flex justify-center items-center z-[5] text-3xl lg:text-5xl font-oswald leading-tight font-bold">
-          {title}
+      <div className="h-full flex flex-col justify-between items-center">
+        <div
+          className={`w-full text-base text-darkSecondary z-[2] text-center`}
+        >
+          {caption}
         </div>
-        <div className="w-full flex justify-center z-[5]">
-          <div className="w-full flex justify-center">
-            <div className="w-full flex justify-center">
-              <CustomShapeButton
-                forwardTo={forward}
-                label="Learn More"
-                textStyle="text-lg font-normal text-lightPrimary"
-                hoverText="text-darkPrimary"
-                paddingX="ps-4 pe-8"
-                paddingY="py-4"
-                fontGap="gap-2"
-                backgroundColor="bg-darkPrimary"
-                hoverBgColor="bg-accentColor"
-                icon={
-                  <FiArrowDownLeft className="text-xl text-lightPrimary group-hover:text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-                }
-              />
-            </div>
-          </div>
+        <div className="w-full z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
+          <h2
+            className={`font-normal text-5xl  text-darkSecondary text-center duration-500`}
+          >
+            {title}
+          </h2>
         </div>
-        <div className="w-full text-center flex justify-center items-end z-[5] text-[50vw] leading-none font-poppins">
+
+        <div className={`z-[2] flex justify-center items-center`}>
+          <Link href={forward} className={``}>
+            <FiArrowUpRight
+              className={`text-6xl text-darkSecondary  rotate-45  transition duration-[350ms] group-hover:rotate-0`}
+            />
+          </Link>
+        </div>
+        <div className="w-full text-darkSecondary text-[250px] font-semibold z-[2] leading-none text-center flex items-end justify-center font-baumans">
           {projectNum}
         </div>
       </div>

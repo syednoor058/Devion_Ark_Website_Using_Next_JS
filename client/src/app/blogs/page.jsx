@@ -85,12 +85,11 @@ function Blogs() {
       {/* Landing Section */}
 
       <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary flex items-end py-10 lg:py-20 text-lightSecondary font-light">
-        <div className="flex flex-col gap-10 lg:gap-20">
-          <div className="w-full px-4 lg:px-20 flex flex-col gap-5 lg:gap-10">
-            <h1 className="text-lightPrimary text-5xl lg:text-8xl font-semibold uppercase font-oswald leading-none">
-              Latest{" "}
-              <span className="text-accentColor italic leading-none">news</span>{" "}
-              and updates.
+        <div className="flex flex-col gap-10">
+          <div className="w-full px-4 lg:px-20 flex flex-col gap-5">
+            <h1 className="text-lightPrimary text-5xl lg:text-9xl font-medium uppercase font-oswald leading-none">
+              Latest <span className="text-accentColor leading-none">news</span>
+              .
             </h1>
             <div>
               <CustomShapeButton
@@ -109,9 +108,9 @@ function Blogs() {
               />
             </div>
           </div>
-          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 px-4 lg:px-20">
-            <div className="w-full lg:w-[60%] lg:pt-5 lg:border-t border-lightSecondary/30">
-              <p className="font-normal text-xl lg:text-[22px] lg:leading-normal">
+          <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 px-4 lg:px-20 justify-between">
+            <div className="w-full lg:w-[30%] lg:pt-3 lg:border-t border-lightSecondary/30">
+              <p className="font-normal text-xl lg:text-sm lg:leading-normal">
                 Welcome to the Devion Ark Blog, your resource for cutting-edge
                 trends, expert tips, and actionable strategies in digital
                 transformation. Here, we share real-world success stories and
@@ -119,13 +118,8 @@ function Blogs() {
                 your online presence.
               </p>
             </div>
-            <div className="w-full lg:w-[40%] text-base lg:text-lg p-2 bg-darkSecondary">
+            <div className="w-full lg:w-[40%] text-base lg:text-lg p-3 bg-darkSecondary">
               <div className="w-full flex flex-col gap-3 ">
-                <div>
-                  <p className="text-lg font-light text-lightPrimary">
-                    Top Content
-                  </p>
-                </div>
                 <div className="w-full flex flex-col gap-3 group">
                   <div className="w-full relative overflow-hidden rounded-sm">
                     <Image

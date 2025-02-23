@@ -54,7 +54,7 @@ function Blog1() {
       <SendToTop />
       {/* Blog Landing Section */}
       <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-5 lg:px-20 pb-10 lg:pb-20 font-light text-lightSecondary">
-        <div className="flex flex-col gap-8 lg:gap-16">
+        <div className="flex flex-col gap-8 lg:gap-16 ">
           <Link href="/blogs">
             <div className="w-full flex flex-row gap-2 text-sm lg:text-lg items-center text-lightPrimary">
               <LuArrowLeft className="text-base lg:text-xl" />{" "}
@@ -64,14 +64,15 @@ function Blog1() {
             </div>
           </Link>
           <div className="flex flex-col gap-8 lg:gap-16">
-            <div className="text-3xl lg:text-7xl font-semibold leading-none text-lightPrimary font-oswald">
+            <div className="text-3xl lg:text-7xl font-semibold leading-none text-lightPrimary font-oswald text-center">
               <h1>
-                SEO vs AEO in 2025: The Future of Search Engine Optimization
+                SEO vs AEO in 2025: <br />
+                <span>The Future of Search Engine Optimization</span>
               </h1>
             </div>
-            <div className="flex flex-col lg:flex-row gap-2 lg:gap-10 font-light text-lightSecondary text-base lg:text-lg leading-none">
+            <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-10 font-light text-lightSecondary text-base lg:text-lg leading-none justify-between">
               <div>December 13, 2024</div>
-              <div className="text-lightPrimary flex flex-col gap-1 lg:gap-2">
+              <div className="text-lightPrimary flex flex-col gap-1">
                 <p>Naim Rahman</p>
                 <p>Syed Shaeduzzaman Noor</p>
               </div>
@@ -220,7 +221,9 @@ function Blog1() {
                 <table className="">
                   <thead className="text-lightPrimary fonr-normal bg-darkSecondary">
                     <tr>
-                      <th className="w-[50%] py-3 pe-3">SEO</th>
+                      <th className="w-[50%] border-r border-lightSecondary/30 py-3 pe-3">
+                        SEO
+                      </th>
                       <th className="w-[50%] py-3 ps-3">AEO</th>
                     </tr>
                   </thead>
@@ -337,9 +340,8 @@ function Blog1() {
                 </p>
                 <ul className="pl-5 list-disc">
                   <li>
-                    It drives <span className="italic">organic traffic</span>{" "}
-                    and builds{" "}
-                    <span className="italic">long-term authority</span>.
+                    It drives <span className="">organic traffic</span> and
+                    builds <span className="">long-term authority</span>.
                   </li>
                   <li>
                     It ensures your content is discoverable across all search

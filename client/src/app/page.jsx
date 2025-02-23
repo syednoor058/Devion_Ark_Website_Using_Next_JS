@@ -194,8 +194,7 @@ export default function Home() {
             <div className="w-full lg:w-[58%] pb-5">
               <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-3xl lg:text-5xl uppercase">
                 Transforming your ideas <br /> into{" "}
-                <span className="text-accentColor italic">digital reality</span>
-                .
+                <span className="text-accentColor ">digital reality</span>.
               </h1>
             </div>
           </div>
@@ -260,10 +259,10 @@ export default function Home() {
           <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
             <p className="text-2xl lg:text-4xl text-lightPrimary font-medium">
               We are more than just a service provider — we are your{" "}
-              <span className="text-accentColor italic">strategic partner</span>
-              . Our mission is to empower your business with tailored{" "}
-              <span className="text-accentColor italic">digital solutions</span>{" "}
-              that drive growth, enhance visibility, and maximize impact.
+              <span className="text-accentColor ">strategic partner</span>. Our
+              mission is to empower your business with tailored{" "}
+              <span className="text-accentColor ">digital solutions</span> that
+              drive growth, enhance visibility, and maximize impact.
             </p>
             <div>
               <CustomShapeButton
@@ -318,7 +317,7 @@ export default function Home() {
               <div className="overflow-hidden font-light">
                 <span className="inline-block">
                   We have{" "}
-                  <span className="text-lightPrimary italic">
+                  <span className="text-lightPrimary ">
                     12+ satisfied clients
                   </span>{" "}
                   all around the world. We are empowering business to reach new
@@ -444,10 +443,8 @@ export default function Home() {
             <div className="w-full flex flex-col gap-5 lg:gap-10">
               <h2 className="text-lightPrimary font-oswald leading-[1.10] text-4xl lg:text-5xl font-medium">
                 Crafting{" "}
-                <span className="text-accentColor italic">
-                  creative solutions
-                </span>{" "}
-                at all scales.
+                <span className="text-accentColor ">creative solutions</span> at
+                all scales.
               </h2>
               <p className="text-xl lg:text-lg">
                 See how we've turned challenges into opportunities and ideas
@@ -500,7 +497,7 @@ export default function Home() {
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 left-[50%]"></div>
         <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 right-20 "></div>
         <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-4xl lg:text-5xl font-oswald leading-[1.10] px-4">
-          The <span className="text-accentColor italic">brands</span> we&apos;ve
+          The <span className="text-accentColor ">brands</span> we&apos;ve
           partnered with
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-6 relative px-3 lg:px-0">
@@ -760,11 +757,11 @@ export default function Home() {
       <div className="w-full font-light text-lightSecondary text-base lg:text-lg py-10 lg:py-20 px-4 lg:px-20 bg-darkPrimary">
         <div className="flex flex-col gap-10">
           <div className="w-full flex flex-col-reverse lg:flex-row gap-10 justify-between">
-            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-4xl lg:text-5xl font-medium font-oswald text-lightPrimary leading-[1.10]">
+            <div className="w-full lg:w-[80%] flex flex-col gap-2 text-4xl lg:text-6xl font-medium font-oswald text-lightPrimary leading-[1.10]">
               <h2>Have doubts?</h2>
               <h2>
                 We&apos;re here to{" "}
-                <span className="italic text-accentColor">answer</span> all.
+                <span className=" text-accentColor">answer</span> all.
               </h2>
             </div>
             <div className="w-full h-full lg:w-[20%] flex lg:justify-end items-center gap-3">

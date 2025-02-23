@@ -25,48 +25,53 @@ function ComprehensiveRealEstateCRMProject() {
 
       <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary flex items-end pt-10 lg:pt-20 text-lightSecondary font-light">
         <div className="flex flex-col gap-10 lg:gap-20">
-          <div className="w-full lg:w-[70%] px-4 lg:px-20">
-            <h1 className="text-lightPrimary text-3xl lg:text-6xl font-semibold font-oswald leading-tight uppercase">
-              Comprehensive Real Estate{" "}
-              <span className="text-accentColor italic font-bold leading-tight">
-                CRM
-              </span>{" "}
-              Solution
-            </h1>
+          <div className="w-full px-4 lg:px-20">
+            <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-16">
+              <div className="w-full lg:lg:w-[70%] flex flex-col gap-10">
+                <h1 className="w-full text-lightPrimary text-4xl lg:text-7xl font-semibold font-oswald leading-tight">
+                  Comprehensive real estate{" "}
+                  <span className="text-accentColor font-bold leading-tight">
+                    CRM
+                  </span>{" "}
+                  solution
+                </h1>
+                <div className="w-full lg:w-[60%] text-base lg:text-lg">
+                  <div className="w-full flex flex-row gap-5 justify-between">
+                    <div className="flex flex-col gap-3">
+                      <div>
+                        <p>Vendor</p>
+                      </div>
+                      <div>
+                        <p>Category</p>
+                      </div>
+                      <div>
+                        <p>Timeframe</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-3 text-lightPrimary">
+                      <div>
+                        <p>Sikder Foundation LTD</p>
+                      </div>
+                      <div>
+                        <p>Automation Software, CRM System</p>
+                      </div>
+                      <div>
+                        <p>3 Months 19 Days</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full lg:w-[30%] p-2 bg-darkSecondary rounded-sm aspect-square"></div>
+            </div>
           </div>
-          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 px-4 lg:px-20">
-            <div className="w-full lg:w-[60%] lg:pt-5 lg:border-t border-lightSecondary/30">
-              <p className="font-normal text-xl lg:text-[22px] lg:leading-normal">
+          <div className="w-full flex justify-end px-4 lg:px-20">
+            <div className="w-full lg:w-[70%]">
+              <p className="font-medium text-xl lg:text-2xl lg:leading-normal">
                 A powerful CRM system for real estate professionals, providing
                 automated lead management, property listing organization, client
                 follow-ups, and in-depth analytics to streamline operations.
               </p>
-            </div>
-            <div className="w-full lg:w-[40%] text-base lg:text-lg">
-              <div className="w-full flex flex-row gap-5 justify-between">
-                <div className="flex flex-col gap-3">
-                  <div>
-                    <p>Vendor</p>
-                  </div>
-                  <div>
-                    <p>Category</p>
-                  </div>
-                  <div>
-                    <p>Timeframe</p>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-3 text-lightPrimary">
-                  <div>
-                    <p>Sikder Foundation LTD</p>
-                  </div>
-                  <div>
-                    <p>Automation Software, CRM System</p>
-                  </div>
-                  <div>
-                    <p>3 Months 19 Days</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div className="w-full">
@@ -94,12 +99,15 @@ function ComprehensiveRealEstateCRMProject() {
                 <h3>Overview</h3>
               </div>
               <div className="">
-                <p className="font-medium text-[7vw] lg:text-[2.5vw] text-accentColor leading-tight ">
+                <p className="font-medium text-[7vw] lg:text-[2.5vw] text-lightPrimary leading-tight ">
                   Sikder Foundation Limited is emerging as one of the fast
-                  growing real estate company established in 2007 with the
-                  vision to delivery the best quality, un-parallel commitment,
-                  unique architectural design & ultimate comfort to our valued
-                  customers in today and the days to come.
+                  growing{" "}
+                  <span className="text-accentColor">real estate company</span>{" "}
+                  established in 2007 with the vision to delivery the best
+                  quality, un-parallel commitment, unique{" "}
+                  <span className="text-accentColor">architectural design</span>{" "}
+                  & ultimate comfort to our valued customers in today and the
+                  days to come.
                 </p>
               </div>
             </div>
@@ -349,7 +357,7 @@ function ComprehensiveRealEstateCRMProject() {
             <div className="w-full text-lightPrimary font-medium font-oswald text-2xl lg:text-5xl">
               <h2 className="leading-tight">Enhanced performance</h2>
             </div>
-            <div className="font-light text-lg text-lightSecondary">
+            <div className="font-light text-xl text-lightSecondary">
               <p>
                 Performance is key in any dynamic CRM system. Our solution was
                 built with a focus on speed and responsiveness. We implemented
@@ -380,7 +388,7 @@ function ComprehensiveRealEstateCRMProject() {
             <div className="w-full text-lightPrimary font-medium font-oswald text-2xl lg:text-5xl">
               <h2 className="leading-tight">Scalable development</h2>
             </div>
-            <div className="font-light text-lg text-lightSecondary">
+            <div className="font-light text-xl text-lightSecondary">
               <p>
                 Anticipating the future growth of our client’s business,
                 scalability was a core component of our development strategy.
