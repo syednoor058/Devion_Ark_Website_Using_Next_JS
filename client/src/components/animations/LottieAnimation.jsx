@@ -8,7 +8,6 @@ function LottieAnimation({ animationFile }) {
     <Lottie
       style={{ background: "transparent" }}
       animationData={animationFile}
-      loop
       autoplay
     />
   );

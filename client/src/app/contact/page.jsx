@@ -1,3 +1,5 @@
+import ContactForm from "@/components/forms/ContactForm";
+
 function Contact() {
   return (
     <main>
@@ -29,35 +31,7 @@ function Contact() {
               </div>
             </div>
             <div className="w-full lg:w-[50%]">
-              <form className="flex flex-col gap-3 text-lg">
-                <div className="flex flex-col gap-2">
-                  <label>Name *</label>
-                  <input className="w-full h-full bg-transparent outline-none border border-lightSecondary/30 rounded-sm px-5 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label>Company</label>
-                  <input className="w-full h-full bg-transparent outline-none border border-lightSecondary/30 rounded-sm px-5 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label>Interest in *</label>
-                  <input className="w-full h-full bg-transparent outline-none border border-lightSecondary/30 rounded-sm px-5 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label>Email *</label>
-                  <input className="w-full h-full bg-transparent outline-none border border-lightSecondary/30 rounded-sm px-5 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label>Phone *</label>
-                  <input className="w-full h-full bg-transparent outline-none border border-lightSecondary/30 rounded-sm px-5 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label>Description</label>
-                  <textarea
-                    className="w-full h-full bg-transparent outline-none border border-lightSecondary/30 rounded-sm px-5 py-2"
-                    rows={4}
-                  />
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>

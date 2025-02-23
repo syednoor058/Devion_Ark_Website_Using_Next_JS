@@ -207,8 +207,7 @@ function Footer() {
                       placeholder="blur"
                       src={footerLogo}
                       alt="footer-logo"
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </Marquee>
