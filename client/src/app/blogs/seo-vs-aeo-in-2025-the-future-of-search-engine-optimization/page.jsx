@@ -50,7 +50,7 @@ export const metadata = {
 
 function Blog1() {
   return (
-    <main>
+    <main className="font-poppins">
       <SendToTop />
       {/* Blog Landing Section */}
       <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-5 lg:px-20 pb-10 lg:pb-20 font-light text-lightSecondary">
@@ -64,10 +64,12 @@ function Blog1() {
             </div>
           </Link>
           <div className="flex flex-col gap-8 lg:gap-16">
-            <div className="text-3xl lg:text-7xl font-semibold leading-none text-lightPrimary font-oswald text-center">
+            <div className="text-4xl lg:text-7xl font-semibold leading-none text-lightPrimary font-oswald text-center">
               <h1>
                 SEO vs AEO in 2025: <br />
-                <span>The Future of Search Engine Optimization</span>
+                <span className="font-normal text-3xl lg:text-6xl leading-none">
+                  The Future of Search Engine Optimization
+                </span>
               </h1>
             </div>
             <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-10 font-light text-lightSecondary text-base lg:text-lg leading-none justify-between">
@@ -96,7 +98,7 @@ function Blog1() {
       {/* Blog Description */}
 
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20">
-        <p className="font-light text-lightSecondary/60 text-lg lg:text-2xl">
+        <p className="font-light text-lightPrimary text-lg lg:text-2xl">
           Is SEO dead, or is it just evolving? In this in-depth blog, we explore
           the future of SEO (Search Engine Optimization) and the rise of AEO
           (Answer Engine Optimization) in 2025. Discover how voice search,

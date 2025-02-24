@@ -2,22 +2,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function AutoSlider({ components }) {
-  var settings = {
-    infinite: true,
-    arrows: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-  };
   return (
-    <Slider {...settings}>
+    <Carousel
+      autoPlay
+      showArrows={false}
+      showThumbs={false}
+      infiniteLoop
+      showIndicators={false}
+      stopOnHover
+      showStatus={false}
+    >
       {components.map((comp, i) => (
         <Link
           href={comp.forwardTo}
@@ -29,14 +27,14 @@ function AutoSlider({ components }) {
             alt={comp.title}
             className="w-full h-full object-cover"
           />
-          <div className="w-full h-full absolute inset-0 z-[3] p-2">
+          <div className="w-full aspect-square flex absolute inset-0 z-[3] p-2">
             <div className="w-full h-full flex flex-col justify-between">
               <div className="w-full flex justify-end">
                 <div>
                   <FiArrowUpRight className="text-4xl text-lightPrimary group-hover:text-accentColor transition duration-[350ms]" />
                 </div>
               </div>
-              <div className="text-lightPrimary font-normal text-base">
+              <div className="text-lightPrimary font-normal text-base text-start">
                 {" "}
                 {comp.title}
               </div>
@@ -44,7 +42,7 @@ function AutoSlider({ components }) {
           </div>
         </Link>
       ))}
-    </Slider>
+    </Carousel>
   );
 }
 export default AutoSlider;

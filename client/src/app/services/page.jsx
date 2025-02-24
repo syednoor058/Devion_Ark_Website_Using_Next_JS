@@ -112,11 +112,11 @@ function Services() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-20">
+      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-20">
         <div className="w-full h-full flex flex-col lg:flex-row gap-10 lg:items-stretch ">
           <div className="w-full lg:w-[55%] flex">
             <div className="w-full flex flex-col-reverse lg:flex-col gap-5 lg:gap-10">
-              <div className="w-full lg:w-[60%] border-lightSecondary/30 lg:border-t text-base lg:text-lg">
+              <div className="w-full lg:w-[60%] border-lightSecondary/30 lg:border-t text-lg lg:text-base">
                 <p className="lg:pt-5">
                   We craft tailored digital experiences-driving measurable
                   growth, ensuring your business stands out in today's
@@ -124,7 +124,7 @@ function Services() {
                 </p>
               </div>
               <div className="mt-auto">
-                <p className="text-lightPrimary text-4xl lg:text-7xl font-bold font-oswald leading-[1.10] uppercase">
+                <p className="text-lightPrimary text-6xl lg:text-8xl font-bold font-oswald leading-[1.10] uppercase">
                   Our <span className="text-accentColor">Services</span>
                 </p>
               </div>

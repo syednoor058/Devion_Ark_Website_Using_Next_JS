@@ -292,7 +292,7 @@ function Navbar() {
             </div>
             <div className="w-full flex flex-row gap-5 justify-between text-sm font-light py-5 px-4">
               <div>
-                <p>&copy; 202-2025</p>
+                <p>&copy; 2022-2025</p>
               </div>
               <div className="text-lightPrimary uppercase font-normal">
                 <p>

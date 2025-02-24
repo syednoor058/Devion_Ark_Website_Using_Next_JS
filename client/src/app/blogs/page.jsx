@@ -1,4 +1,5 @@
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import BlogSlider from "@/components/slider/BlogSlider";
 import Image from "next/image";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
@@ -80,12 +81,26 @@ function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
 }
 
 function Blogs() {
+  const blogSliderConstant = [
+    {
+      title: "SEO vs AEO in 2025: The Future of Search Engine Optimization",
+      img: blogCover1,
+      forwardTo:
+        "/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    },
+    {
+      title: "What is the best solution for Machine Learning?",
+      img: blogCover1,
+      forwardTo:
+        "/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    },
+  ];
   return (
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full min-h-[calc(100vh-64px)] bg-darkPrimary flex items-end py-10 lg:py-20 text-lightSecondary font-light">
-        <div className="flex flex-col gap-10">
+      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary flex items-end py-10 lg:py-0 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
+        <div className="w-full flex flex-col gap-10">
           <div className="w-full px-4 lg:px-20 flex flex-col gap-5">
             <h1 className="text-lightPrimary text-5xl lg:text-9xl font-medium uppercase font-oswald leading-none">
               Latest <span className="text-accentColor leading-none">news</span>
@@ -118,26 +133,20 @@ function Blogs() {
                 your online presence.
               </p>
             </div>
-            <div className="w-full lg:w-[40%] text-base lg:text-lg p-3 bg-darkSecondary">
-              <div className="w-full flex flex-col gap-3 ">
-                <div className="w-full flex flex-col gap-3 group">
-                  <div className="w-full relative overflow-hidden rounded-sm">
-                    <Image
-                      placeholder="blur"
-                      src={blogCover1}
-                      alt="top blog cover"
-                      className="w-full h-full overflow-hidden"
-                    />
-                  </div>
-                  <div className="flex flex-row gap-5">
-                    <p className="text-lightPrimary leading-tight">
-                      SEO vs AEO in 2025: The Future of Search Engine
-                      Optimization
-                    </p>
+            <div className="w-full lg:w-[40%] flex flex-col gap-5">
+              <div className="flex overflow-hidden">
+                <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                  <p className="flex flex-row gap-2 items-center">
                     <span>
-                      <MdOutlineArrowForward className="text-4xl group-hover:-rotate-45 duration-500 text-accentColor font-light" />
+                      <GoDotFill className="text-xs" />
                     </span>
-                  </div>
+                    Top Content
+                  </p>
+                </div>
+              </div>
+              <div className="w-full text-base lg:text-lg p-3 bg-darkSecondary">
+                <div className="w-full overflow-hidden">
+                  <BlogSlider components={blogSliderConstant} />
                 </div>
               </div>
             </div>

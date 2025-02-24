@@ -1,7 +1,7 @@
 "use client";
 
 import emailjs from "@emailjs/browser";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { FormControl, MenuItem, Select } from "@mui/material";
 import { useRef, useState } from "react";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
@@ -170,28 +170,26 @@ function ContactForm() {
           onChange={(e) => setCompany(e.target.value)}
         />
       </div>
-      <div className="flex flex-col pt-3 text-lightSecondary">
+      <div className="flex flex-col gap-2 text-lightSecondary">
+        <label>Interest *</label>
         <FormControl fullWidth>
-          <InputLabel
-            id="interest-select"
-            sx={{
-              color: "#999999",
-              "&.Mui-focused": {
-                color: "#999999",
-              },
-            }}
-          >
-            Interest in *
-          </InputLabel>{" "}
-          {/* Added asterisk to match required field */}
           <Select
-            labelId="interest-select"
+            // labelId="interest-select"
             id="interest-select-simple"
             required
+            displayEmpty
             name="from_interest"
             value={interest}
-            label="Interest in *"
+            renderValue={() => {
+              if (interest === "") {
+                return <em>Select a service</em>;
+              }
+
+              return interest;
+            }}
+            // label="Interest in *"
             onChange={(e) => setInterest(e.target.value)}
+            inputProps={{ "aria-label": "Without label" }}
             sx={{
               color: "#999999",
               borderRadius: "4px",
@@ -199,15 +197,15 @@ function ContactForm() {
                 color: "#999999",
               },
               "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#4d4d4d",
+                borderColor: "rgb(153 153 153 / 0.3)",
                 borderWidth: "1px",
               },
               "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#4d4d4d",
+                borderColor: "rgb(153 153 153 / 0.3)",
                 borderWidth: "1px",
               },
               "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#4d4d4d",
+                borderColor: "rgb(153 153 153 / 0.3)",
                 borderWidth: "1px",
               },
             }}
@@ -225,6 +223,9 @@ function ContactForm() {
               },
             }}
           >
+            <MenuItem disabled value="">
+              <em>Select a service</em>
+            </MenuItem>
             {interestList.map((inter, i) => (
               <MenuItem key={i} value={inter.value} name="from_interest">
                 {" "}

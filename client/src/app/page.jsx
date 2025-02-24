@@ -185,22 +185,22 @@ function MoreBlogCard({ cover, title, date, forwardTo }) {
 
 export default function Home() {
   return (
-    <main className="font-roboto">
+    <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full h-full bg-darkPrimary pt-10 relative font-light text-lightSecondary pb-10 lg:pb-20">
-        <div className="w-full flex flex-col">
+      <div className="w-full h-full lg:h-[calc(100vh-60px)] pt-5 lg:pt-10 relative font-light text-lightSecondary bg-darkPrimary">
+        <div className="w-full h-full flex flex-col justify-end">
           <div className="w-full flex justify-end items-end px-4 lg:px-20">
-            <div className="w-full lg:w-[58%] pb-5">
-              <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-3xl lg:text-5xl uppercase">
+            <div className="w-full lg:w-[75%] pb-5">
+              <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-3xl lg:text-7xl uppercase">
                 Transforming your ideas <br /> into{" "}
                 <span className="text-accentColor ">digital reality</span>.
               </h1>
             </div>
           </div>
           <div className="w-full flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 border-b lg:border-t border-lightSecondary/30">
-            <div className="w-full lg:w-[43%] flex flex-col">
-              <div className="py-5 lg:py-10 flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-10">
+            <div className="w-full lg:w-[55%] flex flex-col">
+              <div className="py-5 lg:py-10 flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-20">
                 <div className="w-full flex flex-row items-center gap-5">
                   <div className="w-12 h-12 rounded-full bg-accentColor flex justify-center items-center text-darkPrimary font-semibold">
                     RH
@@ -212,7 +212,7 @@ export default function Home() {
                     <p>Head of Business Development, Sikder Foundation</p>
                   </div>
                 </div>
-                <p className=" text-lightPrimary">
+                <p className=" text-lightPrimary font-light text-base">
                   &quot;Working with Devion Ark transformed our real estate
                   operations. Their CRM streamlined our inventory and client
                   management, drastically reducing errors and boosting
@@ -222,7 +222,7 @@ export default function Home() {
                   business.&quot;
                 </p>
               </div>
-              <div className="py-5 lg:py-7 h-full flex items-center px-4 lg:px-0 lg:ps-20 lg:pe-5 border-t border-lightSecondary/30">
+              <div className="py-5 lg:py-7 h-full flex items-center px-4 lg:px-0 lg:ps-20 lg:pe-5 lg:border-t border-lightSecondary/30">
                 <CustomShapeButton
                   label="Case Study"
                   textStyle="text-lg font-normal text-darkPrimary"
@@ -237,7 +237,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-full lg:w-[57%] flex lg:border-l border-lightSecondary/30 overflow-hidden relative">
+            <div className="w-full lg:w-[45%] aspect-video flex lg:border-l border-lightSecondary/30 overflow-hidden relative">
               <video
                 className="w-full h-full object-cover"
                 loop
@@ -254,7 +254,7 @@ export default function Home() {
 
       {/* Who We Are Section */}
 
-      <div className="w-full lg:h-screen bg-darkPrimary relative font-light text-lightSecondary py-10 lg:py-20">
+      <div className="w-full lg:h-screen bg-darkPrimary relative font-light text-lightSecondary pt-20 pb-10 lg:pt-[160px] lg:pb-20">
         <div className="relative z-[3] flex flex-col lg:flex-row  justify-between px-4 lg:px-20">
           <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
             <p className="text-2xl lg:text-4xl text-lightPrimary font-medium">
@@ -331,7 +331,7 @@ export default function Home() {
 
       {/* Our Services Section */}
 
-      <div className="bg-darkPrimary relative font-light text-lightSecondary">
+      <div className="bg-darkPrimary relative font-light text-lightSecondary pt-10 lg:pt-20">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-[40%] border-b border-lightSecondary/30">
             <div className="flex flex-col">
@@ -731,7 +731,7 @@ export default function Home() {
       </div>
 
       {/* More Blogs */}
-      <div className="w-full px-4 lg:px-20 py-10 lg:py-20 gap-10 flex flex-col bg-darkSecondary">
+      <div className="w-full px-4 lg:px-20 py-10 lg:py-20 gap-10 lg:gap-20 flex flex-col bg-darkSecondary">
         <div className="flex overflow-hidden">
           <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
             <p className="flex flex-row gap-2 items-center">
