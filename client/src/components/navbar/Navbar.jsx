@@ -1,7 +1,6 @@
 "use client";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FiArrowDownLeft } from "react-icons/fi";
@@ -13,6 +12,7 @@ import {
   default as logo,
 } from "../../../public/footer_logo.png";
 import AnimatedLetter from "../animations/AnimatedLetter";
+import TransitionLink from "../animations/TransitionLink";
 import CustomShapeButton from "../buttons/CustomShapeButton";
 import MenuIcon from "../menuIcon/MenuIcon";
 
@@ -30,7 +30,7 @@ function MoreBlogCard({ cover, title, forwardTo }) {
         </div>
         <div className="w-full h-[1px] bg-gray-500"></div>
       </div>
-      <Link href={forwardTo} className="group">
+      <TransitionLink href={forwardTo} className="group">
         <div className="w-full flex flex-row gap-5 justify-between">
           <div className="text-2xl text-lightPrimary group-hover:underline underline-offset-4 duration-[350ms]">
             {title}
@@ -39,13 +39,13 @@ function MoreBlogCard({ cover, title, forwardTo }) {
             <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
           </div>
         </div>
-      </Link>
+      </TransitionLink>
     </div>
   );
 }
 
 function Navbar() {
-  const navLinks = [
+  const navTransitionLinks = [
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Case Studies", path: "/case-studies" },
@@ -54,9 +54,9 @@ function Navbar() {
     { label: "Contact", path: "/contact" },
   ];
 
-  const socialLinks = [
+  const socialTransitionLinks = [
     { label: "Facebook", url: "/" },
-    { label: "LinkedIn", url: "/" },
+    { label: "TransitionLinkedIn", url: "/" },
     { label: "Instagram", url: "/" },
     { label: "Whatsapp", url: "/" },
   ];
@@ -92,14 +92,14 @@ function Navbar() {
           className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-3 bg-transparent mix-blend-difference`}
         >
           <div className="w-full flex flex-row justify-start items-center text-lightSecondary z-[1003] gap-10">
-            <Link href="/" className={`w-full relative z-[1003]`}>
+            <TransitionLink href="/" className={`w-full relative z-[1003]`}>
               <Image
                 placeholder="blur"
                 src={logo}
                 alt="devion_ark_logo"
                 className="w-auto h-5 object-fit"
               />
-            </Link>
+            </TransitionLink>
             <div className="flex flex-row gap-3 items-center text-lightPrimary font-normal text-sm mix-blend-difference">
               <div>
                 <GoDotFill />
@@ -148,7 +148,7 @@ function Navbar() {
         </div>
 
         <div
-          className={`w-full h-screen overflow-hidden bg-darkPrimary fixed top-0 left-0 transform ${
+          className={`w-full h-screen overflow-hidden bg-black fixed top-0 left-0 transform ${
             menuExpand ? "translate-y-0" : "-translate-y-full"
           } duration-1000 ease-in-out`}
         >
@@ -177,35 +177,35 @@ function Navbar() {
               </div>
               <div className="w-[35%] h-full flex items-end ps-10">
                 <div className="flex flex-col gap-1">
-                  {navLinks.map((navLink, index) => (
-                    <Link
-                      href={navLink.path}
+                  {navTransitionLinks.map((navTransitionLink, index) => (
+                    <TransitionLink
+                      href={navTransitionLink.path}
                       key={index}
-                      onClick={() => setMenuExpand(false)}
+                      onNavigate={() => setMenuExpand(false)}
                     >
                       <div
                         className={`w-full ${
-                          pathname === navLink.path
+                          pathname === navTransitionLink.path
                             ? "text-accentColor"
                             : "text-lightSecondary"
                         } text-5xl font-medium font-oswald leading-none duration-[350ms] whitespace-nowrap uppercase`}
                       >
                         <AnimatedLetter
-                          text={navLink.label}
+                          text={navTransitionLink.label}
                           hoverText={`${
-                            pathname === navLink.path
+                            pathname === navTransitionLink.path
                               ? "text-accentColor"
                               : "text-lightPrimary"
                           }`}
                         />
                       </div>
-                    </Link>
+                    </TransitionLink>
                   ))}
                 </div>
               </div>
               <div className="w-[20%]">
                 <div className="flex flex-col items-end gap-1">
-                  {socialLinks.map((social, index) => (
+                  {socialTransitionLinks.map((social, index) => (
                     <a href={social.url} key={index}>
                       <div
                         className={`w-full text-lightSecondary text-base font-medium leading-none duration-[350ms] whitespace-nowrap uppercase`}
@@ -246,14 +246,14 @@ function Navbar() {
         >
           <div className="flex justify-center items-center px-5 z-[1003]">
             <div className="w-full relative">
-              <Link href="/">
+              <TransitionLink href="/">
                 <Image
                   placeholder="blur"
                   src={darkLogoMobile}
                   alt="devion_ark_logo"
                   className="w-auto h-4 object-cover"
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </div>
           <div className="w-[15%] flex justify-center items-center text-2xl z-[1003]">
@@ -266,28 +266,28 @@ function Navbar() {
           </div>
         </div>
         <div
-          className={`w-full h-screen overflow-x-hidden overflow-y-auto bg-darkPrimary fixed top-0 left-0 transform ${
+          className={`w-full h-screen overflow-x-hidden overflow-y-auto bg-black fixed top-0 left-0 transform ${
             menuExpand ? "translate-y-0" : "-translate-y-full"
           } duration-1000 ease-in-out z-[999]`}
         >
           <div className="w-full h-full pt-20 flex flex-col gap-10 justify-between z-[1001]">
             <div className="w-full h-full flex flex-col justify-center gap-2 px-5">
-              {navLinks.map((navLink, index) => (
-                <Link
-                  href={navLink.path}
+              {navTransitionLinks.map((navTransitionLink, index) => (
+                <TransitionLink
+                  href={navTransitionLink.path}
                   key={index}
-                  onClick={() => setMenuExpand(false)}
+                  onNavigate={() => setMenuExpand(false)}
                 >
                   <div
                     className={`w-full ${
-                      pathname === navLink.path
+                      pathname === navTransitionLink.path
                         ? "text-accentColor"
                         : "text-lightSecondary hover:text-lightPrimary"
                     }  duration-500 text-5xl font-bold uppercase font-oswald leading-none`}
                   >
-                    <AnimatedLetter text={navLink.label} />
+                    <AnimatedLetter text={navTransitionLink.label} />
                   </div>
-                </Link>
+                </TransitionLink>
               ))}
             </div>
             <div className="w-full flex flex-row gap-5 justify-between text-sm font-light py-5 px-4">

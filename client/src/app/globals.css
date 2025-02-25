@@ -23,4 +23,14 @@ body {
 html,
 body {
   max-width: 100vw;
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1000ms;
+}
+
+.page-transition {
+  opacity: 0;
+  background: white;
+  transform: translateY(40px);
+  filter: blur(12px);
 }

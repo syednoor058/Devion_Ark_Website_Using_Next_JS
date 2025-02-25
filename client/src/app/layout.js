@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <SmoothScroll>
           {children}
           <CTASection />
-          </SmoothScroll>
+        </SmoothScroll>
         <Footer />
       </body>
     </html>

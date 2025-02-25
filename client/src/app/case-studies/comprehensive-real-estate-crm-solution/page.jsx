@@ -1,4 +1,5 @@
 import AnimatedLetter from "@/components/animations/AnimatedLetter";
+import ImageSlider from "@/components/slider/ImageSlider";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 import { BsDatabaseCheck, BsRobot } from "react-icons/bs";
@@ -11,6 +12,9 @@ import performanceImg from "../../../../public/projects/comprehensive_crm_system
 import projectBackground from "../../../../public/projects/comprehensive_crm_system/project-background.jpg";
 import scaleDev1 from "../../../../public/projects/comprehensive_crm_system/scale-dev-1.jpg";
 import scaleDev2 from "../../../../public/projects/comprehensive_crm_system/scale-dev-2.png";
+import slider1 from "../../../../public/projects/comprehensive_crm_system/slider-1.jpg";
+import slider2 from "../../../../public/projects/comprehensive_crm_system/slider-2.jpg";
+import slider3 from "../../../../public/projects/comprehensive_crm_system/slider-3.jpg";
 
 export const metadata = {
   title: "Real Estate CRM Case Study - Advanced Solutions by Devion Ark",
@@ -62,7 +66,11 @@ function ComprehensiveRealEstateCRMProject() {
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-[30%] p-2 bg-darkSecondary rounded-sm aspect-square"></div>
+              <div className="w-full lg:w-[30%] p-2 bg-darkSecondary rounded aspect-square">
+                <div className="w-full aspect-square overflow-hidden flex justify-center items-center">
+                  <ImageSlider images={[slider1, slider2, slider3]} />
+                </div>
+              </div>
             </div>
           </div>
           <div className="w-full flex justify-end px-4 lg:px-20">
