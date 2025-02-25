@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="noindex, nofollow" />
       </head>
       <body
-        className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden ${baumans.variable}`}
+        className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden ${baumans.variable} relative min-h-screen`}
       >
+        <Navbar />
         <Template>
-          <Navbar />
           <SmoothScroll>    
             {children}
             <CTASection />
