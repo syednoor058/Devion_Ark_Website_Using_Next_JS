@@ -90,95 +90,49 @@ function CaseStudies() {
       {/* Landing Section */}
 
       <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-0 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
-        <div className="w-full flex flex-col gap-10 justify-end">
+        <div className="w-full flex flex-col gap-10 lg:gap-16 justify-end">
           <div className="w-full flex flex-col lg:flex-row justify-between">
-            <div className="lg:w-[25%] hidden lg:flex flex-row gap-10">
-              <div className="flex flex-col gap-2 text-base">
-                <div className="whitespace-nowrap">
-                  <AnimatedLetter
-                    text="Real Estate"
-                    hoverText="text-accentColor"
-                  />
-                </div>
-                <div className="whitespace-nowrap">
-                  <AnimatedLetter
-                    text="Education"
-                    hoverText="text-accentColor"
-                  />
-                </div>
-                <div className="whitespace-nowrap">
-                  <AnimatedLetter
-                    text="Clothing"
-                    hoverText="text-accentColor"
-                  />
-                </div>
-                <div className="whitespace-nowrap">
-                  <AnimatedLetter
-                    text="E-commerce"
-                    hoverText="text-accentColor"
-                  />
-                </div>
-                <div className="whitespace-nowrap">
-                  <AnimatedLetter
-                    text="Cats Food"
-                    hoverText="text-accentColor"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 text-base ">
-                <AnimatedLetter text="Dev Tools" hoverText="text-accentColor" />
-                <AnimatedLetter
-                  text="Documentation"
-                  hoverText="text-accentColor"
-                />
-                <AnimatedLetter
-                  text="References"
-                  hoverText="text-accentColor"
-                />
-                <AnimatedLetter text="Tutorials" hoverText="text-accentColor" />
-              </div>
-            </div>
-            <div className="w-full lg:w-[70%] ">
+            <div className="w-full">
               <div className="w-full flex flex-col gap-5">
-                <div className="text-lightPrimary text-6xl lg:text-9xl font-medium font-oswald uppercase">
+                <div className="text-lightPrimary text-6xl lg:text-9xl xl:text-[150px] font-medium font-oswald uppercase">
                   <h1 className="leading-[1.10]">
                     Case <span className="text-accentColor">Studies</span>
                   </h1>
-                </div>
-                <div className="w-full flex flex-row gap-10 items-center">
-                  <div>
-                    <CustomShapeButton
-                      label="Get Started"
-                      textStyle="text-lg font-normal text-darkPrimary"
-                      paddingX="ps-4 pe-8"
-                      paddingY="py-4"
-                      fontGap="gap-2"
-                      backgroundColor="bg-lightPrimary"
-                      hoverBgColor="bg-accentColor"
-                      icon={
-                        <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-                      }
-                    />
-                  </div>
-                  <div>
-                    <Link
-                      href="/about"
-                      className="text-lightPrimary text-lg font-normal"
-                    >
-                      <AnimatedLetter
-                        text="About Us"
-                        hoverText="text-accentColor"
-                      />
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="w-full flex justify-end">
             <div className="w-full">
-              <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between items-end">
-                <div className="w-full lg:w-[40%] text-lg lg:text-base font-light text-lightSecondary">
+              <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 justify-between items-end">
+                <div className="w-full lg:w-[40%] text-lg lg:text-base font-light text-lightSecondary flex flex-col-reverse lg:flex-col gap-10">
+                  <div className="w-full flex flex-row gap-10 items-center">
+                    <div>
+                      <CustomShapeButton
+                        label="Get Started"
+                        textStyle="text-lg font-normal text-darkPrimary"
+                        paddingX="ps-4 pe-8"
+                        paddingY="py-4"
+                        fontGap="gap-2"
+                        backgroundColor="bg-lightPrimary"
+                        hoverBgColor="bg-accentColor"
+                        icon={
+                          <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                        }
+                      />
+                    </div>
+                    <div>
+                      <Link
+                        href="/about"
+                        className="text-lightPrimary text-lg font-normal"
+                      >
+                        <AnimatedLetter
+                          text="About Us"
+                          hoverText="text-accentColor"
+                        />
+                      </Link>
+                    </div>
+                  </div>
                   <p className="lg:leading-relaxed">
                     Explore our curated collection of real-world success stories
                     where innovation meets impact. Our case studies highlight
