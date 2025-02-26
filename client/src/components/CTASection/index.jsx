@@ -54,7 +54,7 @@ function CTASection() {
                 label="Book A Call"
                 paddingX="ps-4 pe-8"
                 paddingY="py-4"
-                fontGap="gap-3"
+                fontGap="gap-2"
                 textStyle="text-lg font-light text-lightPrimary"
                 icon={
                   <FaPhone className="text-base text-lightPrimary group-hover:text-darkPrimary group-hover:rotate-90 duration-[350ms]" />

@@ -115,9 +115,25 @@ function Services() {
       <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-20">
         <div className="w-full h-full flex flex-col lg:flex-row gap-10 lg:items-stretch ">
           <div className="w-full lg:w-[55%] flex">
-            <div className="w-full flex flex-col-reverse lg:flex-col gap-5 lg:gap-10">
-              <div className="w-full lg:w-[60%] border-lightSecondary/30 lg:border-t text-lg lg:text-base">
-                <p className="lg:pt-5">
+            <div className="w-full flex flex-col-reverse lg:flex-col gap-10">
+              <div className="w-full lg:w-[60%]  text-lg lg:text-base flex flex-col gap-5 ">
+                <div>
+                  <CustomShapeButton
+                    label="Case Studies"
+                    forwardTo="/case-studies"
+                    textStyle="text-lg font-normal text-darkPrimary"
+                    hoverText="text-darkPrimary"
+                    backgroundColor="bg-lightPrimary"
+                    hoverBgColor="bg-accentColor"
+                    paddingX="ps-4 pe-8"
+                    paddingY="py-4"
+                    fontGap="gap-2"
+                    icon={
+                      <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                    }
+                  />
+                </div>
+                <p className="pt-5 border-t border-lightSecondary/30">
                   We craft tailored digital experiences-driving measurable
                   growth, ensuring your business stands out in today's
                   competitive online landscape.

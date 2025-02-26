@@ -38,10 +38,10 @@ function Footer() {
   ];
 
   const socialLinks = [
-    { label: "Facebook", url: "www.facebook.com/devion.ark/" },
-    { label: "LinkedIn", url: "www.linkedin.com/company/devion-ark/" },
-    { label: "Instagram", url: "www.instagram.com/devionark/" },
-    { label: "Whatsapp", url: "www.wa.me/01782734573" },
+    { label: "Facebook", url: "https://www.facebook.com/devion.ark/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/company/devion-ark/" },
+    { label: "Instagram", url: "https://www.instagram.com/devionark/" },
+    { label: "Whatsapp", url: "https://www.wa.me/01782734573" },
   ];
 
   return (
@@ -165,11 +165,11 @@ function Footer() {
                               label="Subscribe"
                               backgroundColor="bg-lightPrimary"
                               hoverBgColor="bg-accentColor"
-                              textStyle="text-lg font-semibold text-darkPrimary"
+                              textStyle="text-lg font-normal text-darkPrimary"
                               hoverText="text-darkPrimary"
-                              paddingX="ps-3 pe-6"
-                              paddingY="py-3"
-                              fontGap="gap-3"
+                              paddingX="ps-4 pe-8"
+                              paddingY="py-4"
+                              fontGap="gap-2"
                               icon={
                                 <FaBell className="text-base text-darkPrimary transition duration-[350ms]" />
                               }
@@ -185,7 +185,12 @@ function Footer() {
                     </div>
                     <div className="w-full h-full flex flex-row gap-2 justify-between items-end py-7 lg:py-0">
                       {socialLinks.map((social, index) => (
-                        <a href={social.url} key={index}>
+                        <a
+                          href={social.url}
+                          key={index}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <div
                             className={`w-full text-lightPrimary text-sm lg:text-base font-medium leading-none duration-[350ms] whitespace-nowrap`}
                           >

@@ -7,8 +7,9 @@ import { FiArrowDownLeft } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import correctAnimation from "../../../public/lottie/correct_lottie.json";
 import wrongAnimation from "../../../public/lottie/cross_lottie.json";
-import AnimatedLetter from "../animations/AnimatedLetter";
 import LottieAnimation from "../animations/LottieAnimation";
+import TextAnimation from "../animations/TextAnimation";
+import CustomShapeBorderButton from "../buttons/CustomShapeBorderButton";
 
 function ContactForm() {
   const form = useRef();
@@ -269,7 +270,7 @@ function ContactForm() {
           rows={4}
         />
       </div>
-      <div className="flex">
+      <div className="flex flex-row gap-5 pt-1">
         <button type="submit">
           <div
             className={`inline-block ps-4 pe-8 py-4 text-lg font-normal text-darkPrimary bg-lightPrimary duration-[350ms] ease-in-out transition-colors group overflow-hidden relative`}
@@ -281,7 +282,7 @@ function ContactForm() {
               className={`relative z-[5] flex flex-row-reverse gap-2 items-center whitespace-nowrap`}
             >
               <span>
-                <AnimatedLetter text="Submit" />
+                <TextAnimation text="Submit" />
               </span>
               <span>
                 <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
@@ -292,6 +293,14 @@ function ContactForm() {
             ></div>
           </div>
         </button>
+        <CustomShapeBorderButton
+          text="Home"
+          forwardTo="/"
+          bg="bg-lightPrimary"
+          bg2="bg-darkPrimary"
+          padd="ps-4 pe-8 py-[15px]"
+          textColor="text-lightPrimary"
+        />
       </div>
     </form>
   );

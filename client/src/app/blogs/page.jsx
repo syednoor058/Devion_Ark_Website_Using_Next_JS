@@ -102,30 +102,30 @@ function Blogs() {
       <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary flex items-end py-10 lg:py-0 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
         <div className="w-full flex flex-col gap-10">
           <div className="w-full px-4 lg:px-20 flex flex-col gap-5">
-            <h1 className="text-lightPrimary text-5xl lg:text-9xl font-medium uppercase font-oswald leading-none">
+            <h1 className="text-lightPrimary text-6xl lg:text-9xl font-medium uppercase font-oswald leading-none">
               Latest <span className="text-accentColor leading-none">news</span>
               .
             </h1>
-            <div>
-              <CustomShapeButton
-                label="Learn More"
-                forwardTo=""
-                textStyle="text-lg font-normal text-darkPrimary"
-                hoverText="text-darkPrimary"
-                backgroundColor="bg-lightPrimary"
-                hoverBgColor="bg-accentColor"
-                paddingX="ps-4 pe-8"
-                paddingY="py-4"
-                fontGap="gap-2"
-                icon={
-                  <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-                }
-              />
-            </div>
           </div>
           <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 px-4 lg:px-20 justify-between">
-            <div className="w-full lg:w-[30%] lg:pt-3 lg:border-t border-lightSecondary/30">
-              <p className="font-normal text-xl lg:text-sm lg:leading-normal">
+            <div className="w-full lg:w-[30%] flex flex-col gap-5">
+              <div>
+                <CustomShapeButton
+                  label="Learn More"
+                  forwardTo="/about"
+                  textStyle="text-lg font-normal text-darkPrimary"
+                  hoverText="text-darkPrimary"
+                  backgroundColor="bg-lightPrimary"
+                  hoverBgColor="bg-accentColor"
+                  paddingX="ps-4 pe-8"
+                  paddingY="py-4"
+                  fontGap="gap-2"
+                  icon={
+                    <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                  }
+                />
+              </div>
+              <p className="font-normal text-xl lg:text-sm lg:leading-normal lg:pt-5 lg:border-t border-lightSecondary/30">
                 Welcome to the Devion Ark Blog, your resource for cutting-edge
                 trends, expert tips, and actionable strategies in digital
                 transformation. Here, we share real-world success stories and

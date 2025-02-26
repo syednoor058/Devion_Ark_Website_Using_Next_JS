@@ -1,7 +1,6 @@
-import AnimatedLetter from "@/components/animations/AnimatedLetter";
+import CustomShapeBorderButton from "@/components/buttons/CustomShapeBorderButton";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
-import Link from "next/link";
 import { FiArrowDownLeft } from "react-icons/fi";
 import cover from "../../../public/projects/case-study-cover.jpg";
 
@@ -105,11 +104,12 @@ function CaseStudies() {
           <div className="w-full flex justify-end">
             <div className="w-full">
               <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 justify-between items-end">
-                <div className="w-full lg:w-[40%] text-lg lg:text-base font-light text-lightSecondary flex flex-col-reverse lg:flex-col gap-10">
+                <div className="w-full lg:w-[40%] text-lg lg:text-base font-light text-lightSecondary flex flex-col-reverse lg:flex-col gap-5">
                   <div className="w-full flex flex-row gap-10 items-center">
                     <div>
                       <CustomShapeButton
                         label="Get Started"
+                        forwardTo="/contact"
                         textStyle="text-lg font-normal text-darkPrimary"
                         paddingX="ps-4 pe-8"
                         paddingY="py-4"
@@ -122,18 +122,17 @@ function CaseStudies() {
                       />
                     </div>
                     <div>
-                      <Link
-                        href="/about"
-                        className="text-lightPrimary text-lg font-normal"
-                      >
-                        <AnimatedLetter
-                          text="About Us"
-                          hoverText="text-accentColor"
-                        />
-                      </Link>
+                      <CustomShapeBorderButton
+                        text="About Us"
+                        forwardTo="/about"
+                        bg="bg-lightPrimary"
+                        bg2="bg-darkPrimary"
+                        padd="ps-4 pe-8 py-[15px]"
+                        textColor="text-lightPrimary"
+                      />
                     </div>
                   </div>
-                  <p className="lg:leading-relaxed">
+                  <p className="lg:leading-relaxed pt-5 lg:border-t border-lightSecondary/30">
                     Explore our curated collection of real-world success stories
                     where innovation meets impact. Our case studies highlight
                     transformative projects in software development, digital

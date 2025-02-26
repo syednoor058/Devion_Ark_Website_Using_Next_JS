@@ -1,9 +1,11 @@
-import AnimatedLetter from "@/components/animations/AnimatedLetter";
+import TextAnimation from "@/components/animations/TextAnimation";
+import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import ImageSlider from "@/components/slider/ImageSlider";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 import { BsDatabaseCheck, BsRobot } from "react-icons/bs";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FiArrowDownLeft } from "react-icons/fi";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import sikderFoundationLogo from "../../../../public/partners/sikder_foundation.png";
 import dataOptm2 from "../../../../public/projects/comprehensive_crm_system/data-opt-2.jpg";
@@ -73,7 +75,23 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
             </div>
           </div>
-          <div className="w-full flex justify-end px-4 lg:px-20">
+          <div className="w-full flex flex-col lg:flex-row gap-10 justify-between px-4 lg:px-20">
+            <div>
+              <CustomShapeButton
+                label="Go Back"
+                forwardTo="/case-studies"
+                textStyle="text-lg font-normal text-darkPrimary"
+                hoverText="text-darkPrimary"
+                backgroundColor="bg-lightPrimary"
+                hoverBgColor="bg-accentColor"
+                paddingX="ps-4 pe-8"
+                paddingY="py-4"
+                fontGap="gap-2"
+                icon={
+                  <FiArrowDownLeft className="text-lg text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                }
+              />
+            </div>
             <div className="w-full lg:w-[40%]">
               <p className=" text-xl lg:text-lg font-light lg:leading-normal">
                 A powerful CRM system for real estate professionals, providing
@@ -504,23 +522,53 @@ function ComprehensiveRealEstateCRMProject() {
                 </div>
               </div>
               <div className="">
-                <div className="flex flex-col gap-3">
-                  <div className="inline-flex w-fit text-xl px-5 py-2 rounded-full bg-darkPrimary text-lightPrimary group">
-                    <a href="" className="flex flex-row gap-5 items-center ">
-                      <span>
-                        <AnimatedLetter text="LinkedIn" />
-                      </span>
-                      <FaLinkedinIn />
-                    </a>
-                  </div>
-                  <div className=" inline-flex w-fit text-xl px-5 py-2 rounded-full border border-darkPrimary text-darkPrimary group">
-                    <a href="" className="flex flex-row gap-5 items-center ">
-                      <span>
-                        <AnimatedLetter text="Whatsapp" />
-                      </span>
-                      <FaWhatsapp />
-                    </a>
-                  </div>
+                <div className="flex flex-row gap-5">
+                  <a
+                    href="https://www.linkedin.com/in/shaednoor/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`inline-block ps-4 pe-8 py-4 text-base font-normal text-lightPrimary bg-darkPrimary duration-[350ms] ease-in-out transition-colors group overflow-hidden relative`}
+                      style={{
+                        clipPath: `polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0px 100%, 0px 0px)`,
+                      }}
+                    >
+                      <div
+                        className={`relative z-[5] flex flex-row-reverse gap-3 items-center whitespace-nowrap`}
+                      >
+                        <span>
+                          <TextAnimation text="LinkedIn" />
+                        </span>
+                        <span>
+                          <FaLinkedinIn className=" text-lightPrimary transition duration-[350ms]" />
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.wa.me/01782734573"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block group"
+                  >
+                    <div
+                      className={`flex bg-darkPrimary p-[1px] overflow-hidden`}
+                      style={{
+                        clipPath: `polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0px 100%, 0px 0px)`,
+                      }}
+                    >
+                      <div
+                        className={`ps-4 pe-8 py-[15px] text-base font-normal leading-none flex flex-row gap-2 items-center bg-lightPrimary text-darkPrimary`}
+                        style={{
+                          clipPath: `polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0px 100%, 0px 0px)`,
+                        }}
+                      >
+                        <FaWhatsapp className="" />
+                        <TextAnimation text="Whatsapp" />
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>

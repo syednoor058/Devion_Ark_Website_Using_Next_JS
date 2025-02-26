@@ -1,5 +1,4 @@
-import AnimatedLetter from "@/components/animations/AnimatedLetter";
-import SendToTop from "@/components/sendToTop/SendToTop";
+import TextAnimation from "@/components/animations/TextAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
@@ -51,7 +50,6 @@ export const metadata = {
 function Blog1() {
   return (
     <main className="font-poppins">
-      <SendToTop />
       {/* Blog Landing Section */}
       <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-5 lg:px-20 pb-10 lg:pb-20 font-light text-lightSecondary">
         <div className="flex flex-col gap-8 lg:gap-16 ">
@@ -59,7 +57,7 @@ function Blog1() {
             <div className="w-full flex flex-row gap-2 text-sm lg:text-lg items-center text-lightPrimary">
               <LuArrowLeft className="text-base lg:text-xl" />{" "}
               <span className="pt-1">
-                <AnimatedLetter text="Back" hoverText="text-accentColor" />
+                <TextAnimation text="Back" hoverText="text-accentColor" />
               </span>
             </div>
           </Link>

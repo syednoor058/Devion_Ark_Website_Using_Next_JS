@@ -145,6 +145,7 @@ function Navbar() {
                 <div className="w-full flex justify-end">
                   <CustomShapeButton
                     label="Let's Talk"
+                    forwardTo="/contact"
                     bend="10px"
                     textStyle="text-sm font-normal text-darkPrimary"
                     hoverText="text-darkPrimary"
