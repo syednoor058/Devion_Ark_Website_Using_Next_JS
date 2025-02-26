@@ -50,6 +50,7 @@ function CTASection() {
             </div>
             <div>
               <CustomShapeButton
+                forwardTo="/contact"
                 label="Book A Call"
                 paddingX="ps-4 pe-8"
                 paddingY="py-4"

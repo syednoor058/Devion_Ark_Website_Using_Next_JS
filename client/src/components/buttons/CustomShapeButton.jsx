@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimatedLetter from "../animations/AnimatedLetter";
+import TextAnimation from "../animations/TextAnimation";
 
 function CustomShapeButton({
   label,
@@ -26,7 +26,7 @@ function CustomShapeButton({
         className={`relative z-[5] flex flex-row-reverse ${fontGap} items-center whitespace-nowrap`}
       >
         <span>
-          <AnimatedLetter text={label} hoverText={hoverText} />
+          <TextAnimation text={label} hoverText={hoverText} />
         </span>
         <span>{icon}</span>
       </div>

@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import { FaBell } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import footerLogo from "../../../public/footer_logo.png";
-import AnimatedLetter from "../animations/AnimatedLetter";
+import TextAnimation from "../animations/TextAnimation";
 import CustomShapeButton from "../buttons/CustomShapeButton";
 
 function AddressInfo({ icon, title, value }) {
@@ -32,16 +32,16 @@ function Footer() {
   ];
 
   const navLinks3 = [
-    { label: "Privacy Policy", path: "/" },
-    { label: "Cookies Policy", path: "/" },
-    { label: "Career", path: "/" },
+    { label: "Privacy Policy", path: "/privacy-policy" },
+    { label: "Cookies Policy", path: "/cookies-policy" },
+    { label: "Terms of Use", path: "/terms-of-use" },
   ];
 
   const socialLinks = [
-    { label: "Facebook", url: "/" },
-    { label: "LinkedIn", url: "/" },
-    { label: "Instagram", url: "/" },
-    { label: "Whatsapp", url: "/" },
+    { label: "Facebook", url: "www.facebook.com/devion.ark/" },
+    { label: "LinkedIn", url: "www.linkedin.com/company/devion-ark/" },
+    { label: "Instagram", url: "www.instagram.com/devionark/" },
+    { label: "Whatsapp", url: "www.wa.me/01782734573" },
   ];
 
   return (
@@ -77,7 +77,7 @@ function Footer() {
                           {navLinks1.map((nav, i) => (
                             <Link href={nav.path} key={i}>
                               <span className="text-lightSecondary">
-                                <AnimatedLetter
+                                <TextAnimation
                                   text={nav.label}
                                   hoverText="text-accentColor"
                                 />
@@ -94,7 +94,7 @@ function Footer() {
                           {navLinks2.map((nav, i) => (
                             <Link href={nav.path} key={i}>
                               <span className="text-lightSecondary">
-                                <AnimatedLetter
+                                <TextAnimation
                                   text={nav.label}
                                   hoverText="text-accentColor"
                                 />
@@ -111,7 +111,7 @@ function Footer() {
                           {navLinks3.map((nav, i) => (
                             <Link href={nav.path} key={i}>
                               <span className="text-lightSecondary">
-                                <AnimatedLetter
+                                <TextAnimation
                                   text={nav.label}
                                   hoverText="text-accentColor"
                                 />
@@ -189,7 +189,7 @@ function Footer() {
                           <div
                             className={`w-full text-lightPrimary text-sm lg:text-base font-medium leading-none duration-[350ms] whitespace-nowrap`}
                           >
-                            <AnimatedLetter
+                            <TextAnimation
                               text={social.label}
                               hoverText="text-accentColor"
                             />

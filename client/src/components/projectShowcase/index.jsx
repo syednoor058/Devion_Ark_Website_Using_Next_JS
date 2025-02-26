@@ -85,7 +85,8 @@ const ProjectShowcase = () => {
       <div className="w-full h-full hidden lg:flex">
         <ProjectColumn
           caption="An intuitive and scalable e-commerce website tailored for sportswear businesses."
-          title="E-Commerce"
+          title1="Sportswear"
+          title2="E-commerce"
           img={eCommerceBack}
           forward=""
           projectNum="1"
@@ -94,7 +95,8 @@ const ProjectShowcase = () => {
         />
         <ProjectColumn
           caption="A powerful CRM system for real estate professionals, providing automation."
-          title="CRM System"
+          title1="Real Estate"
+          title2="CRM System"
           img={realEstateBack}
           forward=""
           projectNum="2"
@@ -103,7 +105,8 @@ const ProjectShowcase = () => {
         />
         <ProjectColumn
           caption="A strategic social media project encompassing performance monitoring to boost online presence."
-          title="Campaigns"
+          title1="Social Ads"
+          title2="Campaigns"
           img={smmBack}
           forward=""
           projectNum="3"
@@ -112,7 +115,8 @@ const ProjectShowcase = () => {
         />
         <ProjectColumn
           caption="A potential strategy to stand out and out perform competitors in google search rank."
-          title="SEO Stuff"
+          title1="Technical"
+          title2="SEO Stuff"
           img={seoBack}
           forward=""
           projectNum="4"
@@ -126,7 +130,8 @@ const ProjectShowcase = () => {
       >
         <ProjectMobileColumn
           caption="An intuitive and scalable e-commerce web application tailored for sportswear businesses."
-          title="E-commerce"
+          title1="Sportswear"
+          title2="E-commerce"
           img={eCommerceBack}
           forward=""
           projectNum="1"
@@ -138,7 +143,8 @@ const ProjectShowcase = () => {
         >
           <ProjectMobileColumn
             caption="A powerful CRM system for real estate professionals, providing automation."
-            title="CRM System"
+            title1="Real Estate"
+            title2="CRM System"
             img={realEstateBack}
             forward=""
             projectNum="2"
@@ -151,7 +157,8 @@ const ProjectShowcase = () => {
         >
           <ProjectMobileColumn
             caption="A strategic social media project encompassing performance monitoring to boost online presence."
-            title="Campaigns"
+            title1="Social Ads"
+            title2="Campaigns"
             img={smmBack}
             forward=""
             projectNum="3"
@@ -164,7 +171,8 @@ const ProjectShowcase = () => {
         >
           <ProjectMobileColumn
             caption="A potential strategy to stand out and out perform competitors in google search rank."
-            title="SEO Stuff"
+            title1="Technical"
+            title2="SEO Stuff"
             img={seoBack}
             forward=""
             projectNum="4"

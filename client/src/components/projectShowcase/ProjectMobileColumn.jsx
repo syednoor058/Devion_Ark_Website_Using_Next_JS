@@ -5,7 +5,8 @@ import { FiArrowUpRight } from "react-icons/fi";
 function ProjectMobileColumn({
   caption,
   img,
-  title,
+  title1,
+  title2,
   forward = "",
   projectNum,
 }) {
@@ -16,7 +17,7 @@ function ProjectMobileColumn({
           <Image
             placeholder="blur"
             src={img}
-            alt={title}
+            alt={title2}
             className="w-full h-full object-cover"
           />
         </div>
@@ -29,9 +30,10 @@ function ProjectMobileColumn({
         </div>
         <div className="w-full z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
           <h2
-            className={`font-normal text-5xl  text-darkSecondary text-center duration-500`}
+            className={`w-full font-normal text-5xl  text-darkSecondary text-center duration-500 flex flex-col gap-2`}
           >
-            {title}
+            <span>{title1}</span>
+            <span>{title2}</span>
           </h2>
         </div>
 

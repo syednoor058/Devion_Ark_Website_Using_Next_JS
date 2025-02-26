@@ -5,7 +5,8 @@ import { useEffect, useRef } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 function ProjectColumn({
   caption,
-  title,
+  title1,
+  title2,
   forward = "",
   img,
   projectNum,
@@ -86,7 +87,7 @@ function ProjectColumn({
           <Image
             placeholder="blur"
             src={img}
-            alt={title}
+            alt={title2}
             className="w-full h-full object-cover"
           />
         </div>
@@ -100,9 +101,10 @@ function ProjectColumn({
         </div>
         <div className="w-full h-[20%] z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
           <h2
-            className={`font-normal text-5xl  text-darkSecondary text-center duration-500`}
+            className={`w-full font-normal text-5xl  text-darkSecondary text-center duration-500 flex flex-col gap-2`}
           >
-            {title}
+            <span>{title1}</span>
+            <span>{title2}</span>
           </h2>
         </div>
 

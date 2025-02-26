@@ -1,5 +1,4 @@
 import AnimatedText from "@/components/animations/AnimatedText";
-import CircularTextAnimation from "@/components/animations/CircularTextAnimation";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import FAQSection from "@/components/faq";
 import ProjectShowcase from "@/components/projectShowcase";
@@ -135,7 +134,7 @@ function PartnersCard({ brandImg, brandAlt }) {
 function ServiceCard({ serviceTitle, forwardTo }) {
   return (
     <Link href={forwardTo} className="w-full group  ">
-      <div className="px-4 lg:px-0 lg:ps-5 lg:pe-20 py-4 lg:py-5 group-hover:py-8 lg:group-hover:py-10 duration-[350ms]  relative overflow-hidden">
+      <div className="px-4 lg:px-0 lg:ps-5 lg:pe-20 py-5 group-hover:py-8 lg:group-hover:py-10 duration-[350ms]  relative overflow-hidden">
         <div className="flex flex-row gap-5 justify-between items-center relative z-[3]">
           <span>
             <LuArrowUpRight className="text-xl lg:text-4xl rotate-45 text-accentColor group-hover:text-darkPrimary group-hover:rotate-0 transition duration-[350ms]" />
@@ -224,6 +223,7 @@ export default function Home() {
               </div>
               <div className="py-5 lg:py-7 h-full flex items-center px-4 lg:px-0 lg:ps-20 lg:pe-5 lg:border-t border-lightSecondary/30">
                 <CustomShapeButton
+                  forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
                   label="Case Study"
                   textStyle="text-lg font-normal text-darkPrimary"
                   paddingX="ps-4 pe-8"
@@ -266,6 +266,7 @@ export default function Home() {
             </p>
             <div>
               <CustomShapeButton
+                forwardTo="/about"
                 label="Learn More"
                 textStyle="text-lg font-normal text-darkPrimary"
                 paddingX="ps-4 pe-8"
@@ -332,8 +333,8 @@ export default function Home() {
       {/* Our Services Section */}
 
       <div className="bg-darkPrimary relative font-light text-lightSecondary pt-10 lg:pt-20">
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full lg:w-[40%] border-b border-lightSecondary/30">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-0">
+          <div className="w-full lg:w-[40%] lg:border-b border-lightSecondary/30">
             <div className="flex flex-col">
               <div className="w-full aspect-[9/11] relative overflow-hidden">
                 <Image
@@ -343,7 +344,7 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="px-4 py-5 lg:py-10">
+              <div className="px-4 py-16 lg:py-10">
                 <div className="w-full flex flex-col gap-5">
                   <div className="flex overflow-hidden">
                     <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
@@ -369,38 +370,38 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-[60%] lg:border border-lightSecondary/30">
+          <div className="w-full lg:w-[60%] border border-lightSecondary/30">
             <div className="flex flex-col">
               <div className="">
                 <ServiceCard
-                  forwardTo=""
+                  forwardTo="/services"
                   serviceTitle="Custom Software Solutions"
                 />
               </div>
               <div className="border-t border-lightSecondary/30">
-                <ServiceCard forwardTo="" serviceTitle="Website Development" />
+                <ServiceCard forwardTo="/services" serviceTitle="Website Development" />
               </div>
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo=""
+                  forwardTo="/services"
                   serviceTitle="Search Engine Optimization"
                 />
               </div>
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo=""
+                  forwardTo="/services"
                   serviceTitle="Social Media Marketing"
                 />
               </div>
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo=""
+                  forwardTo="/services"
                   serviceTitle="Search Engine Marketing"
                 />
               </div>
               <div className="border-y border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo=""
+                  forwardTo="/services"
                   serviceTitle="Business Consultation"
                 />
               </div>
@@ -424,8 +425,8 @@ export default function Home() {
 
       <div className="bg-darkPrimary flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
         <div className="flex flex-col lg:flex-row px-4 lg:px-5">
-          <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30">
-            <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase">
+          <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-10 lg:py-20 border-x border-lightSecondary/30">
+            <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase items-center lg:items-start gap-5">
               <div className="flex overflow-hidden">
                 <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
                   <p className="flex flex-row gap-2 items-center">
@@ -439,14 +440,14 @@ export default function Home() {
               <p className="whitespace-nowrap">+{"  "}Featured Works</p>
             </div>
           </div>
-          <div className="w-full lg:w-[55%] px-4 lg:px-7 py-5 lg:py-20 border-x border-lightSecondary/30 lg:border-x-0">
+          <div className="w-full lg:w-[55%] px-4 lg:px-7 py-0 lg:py-20 border-x border-lightSecondary/30 lg:border-x-0">
             <div className="w-full flex flex-col gap-5 lg:gap-10">
               <h2 className="text-lightPrimary font-oswald leading-[1.10] text-4xl lg:text-5xl font-medium">
                 Crafting{" "}
                 <span className="text-accentColor ">creative solutions</span> at
                 all scales.
               </h2>
-              <p className="text-xl lg:text-lg">
+              <p className="text-lg">
                 See how we've turned challenges into opportunities and ideas
                 into impactful solutions. Our case studies showcase real-world
                 examples of how we've helped businesses grow, optimize
@@ -456,22 +457,11 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="w-full flex lg:w-[20%] px-4 lg:px-7 py-5 lg:py-20 border-x  border-lightSecondary/30">
-            <div className="w-full flex flex-row lg:flex-col justify-between items-end">
-              <div className="w-[30%] lg:w-full flex lg:justify-end">
-                <div className="w-full lg:w-[50%] aspect-square rounded-full flex justify-center items-center relative text-lightPrimary">
-                  <CircularTextAnimation
-                    text="evion Ark . Devion Ark . Devion Ark . D"
-                    radius="40"
-                    textColor="text-lightPrimary"
-                  />
-                  <div className="text-xl absolute w-full h-full top-0 left-0 flex justify-center items-center text-lightPrimary">
-                    <GoDotFill />
-                  </div>
-                </div>
-              </div>
+          <div className="w-full flex lg:w-[20%] px-4 lg:px-7 py-10 lg:py-20 border-x  border-lightSecondary/30">
+            <div className="w-full h-full flex justify-end lg:items-end">
               <div>
                 <CustomShapeButton
+                  forwardTo="/case-studies"
                   label="View All"
                   textStyle="text-lg font-normal text-darkPrimary"
                   paddingX="ps-4 pe-8"

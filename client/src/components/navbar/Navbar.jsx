@@ -10,7 +10,7 @@ import {
   default as darkLogoMobile,
   default as logo,
 } from "../../../public/footer_logo.png";
-import AnimatedLetter from "../animations/AnimatedLetter";
+import TextAnimation from "../animations/TextAnimation";
 
 import Link from "next/link";
 import CustomShapeButton from "../buttons/CustomShapeButton";
@@ -128,7 +128,7 @@ function Navbar() {
                         : "text-lightPrimary"
                     } text-base font-normal leading-none duration-[350ms] whitespace-nowrap`}
                   >
-                    <AnimatedLetter
+                    <TextAnimation
                       text={navLink.label}
                       hoverText={`${
                         pathname === navLink.path
@@ -211,7 +211,7 @@ function Navbar() {
                         : "text-lightSecondary hover:text-lightPrimary"
                     }  duration-500 text-5xl font-bold uppercase font-oswald leading-none`}
                   >
-                    <AnimatedLetter text={navLink.label} />
+                    <TextAnimation text={navLink.label} />
                   </div>
                 </Link>
               ))}
