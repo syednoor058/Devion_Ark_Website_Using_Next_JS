@@ -7,25 +7,26 @@ import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import shaedImg from "../../../../public/owners/syed_shaeduzzaman_noor.png";
-import sikderFoundationLogo from "../../../../public/partners/sikder_foundation.png";
-import dataOptm2 from "../../../../public/projects/comprehensive_crm_system/data-opt-2.jpg";
-import dataOptm1 from "../../../../public/projects/comprehensive_crm_system/data-optm-1.jpg";
-import performanceImg from "../../../../public/projects/comprehensive_crm_system/performance.jpg";
-import projectBackground from "../../../../public/projects/comprehensive_crm_system/project-background.jpg";
-import scaleDev1 from "../../../../public/projects/comprehensive_crm_system/scale-dev-1.jpg";
-import scaleDev2 from "../../../../public/projects/comprehensive_crm_system/scale-dev-2.png";
-import slider1 from "../../../../public/projects/comprehensive_crm_system/slider-1.jpg";
-import slider2 from "../../../../public/projects/comprehensive_crm_system/slider-2.jpg";
-import slider3 from "../../../../public/projects/comprehensive_crm_system/slider-3.jpg";
-import azizulImg from "../../../../public/testimonials/azizul.webp";
+import kickOffLogo from "../../../../public/partners/kick-off.png";
+import projectBackground from "../../../../public/projects/sportswear_ecommerce/background.jpg";
+import mobileFirstImg from "../../../../public/projects/sportswear_ecommerce/mobile-first.jpg";
+import dataOptm1 from "../../../../public/projects/sportswear_ecommerce/opt1.jpg";
+import dataOptm2 from "../../../../public/projects/sportswear_ecommerce/opt2.jpg";
+import scaleDev1 from "../../../../public/projects/sportswear_ecommerce/scale1.jpg";
+import scaleDev2 from "../../../../public/projects/sportswear_ecommerce/scale2.jpg";
+import slider1 from "../../../../public/projects/sportswear_ecommerce/slider1.jpg";
+import slider2 from "../../../../public/projects/sportswear_ecommerce/slider2.jpg";
+import slider3 from "../../../../public/projects/sportswear_ecommerce/slider3.jpg";
+import rakibImg from "../../../../public/testimonials/rakib.webp";
 
 export const metadata = {
-  title: "Real Estate CRM Case Study - Advanced Solutions by Devion Ark",
+  title:
+    "Dynamic Sportswear E-Commerce Platform | Online Products And Sales Management – Devion Ark",
   description:
-    "Discover how our cutting-edge CRM system revolutionized real estate management. This case study details streamlined inventory management, integrated customer data, and scalable project workflows that empower real estate success.",
+    "Struggling with outdated e-commerce systems? Explore how our sportswear web app boosted client sales by 150% and 40% lower cart abandonment with admin dashboards, payment gateways & mobile optimization.",
 };
 
-function ComprehensiveRealEstateCRMProject() {
+function DynamicECommerce() {
   return (
     <main className="font-poppins">
       {/* Landing Section  */}
@@ -35,12 +36,12 @@ function ComprehensiveRealEstateCRMProject() {
           <div className="w-full px-4 lg:px-20">
             <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-16">
               <div className="w-full lg:lg:w-[70%] flex flex-col gap-10">
-                <h1 className="w-full text-lightPrimary text-4xl lg:text-7xl font-semibold font-oswald leading-tight">
-                  Comprehensive real estate{" "}
-                  <span className="text-accentColor font-bold leading-tight">
-                    CRM
+                <h1 className="w-full text-lightPrimary text-4xl lg:text-7xl font-semibold font-oswald leading-none">
+                  Dynamic sportswear{" "}
+                  <span className="text-accentColor font-bold leading-none">
+                    e-commerce
                   </span>{" "}
-                  solution
+                  platform
                 </h1>
                 <div className="w-full lg:w-[60%] text-base lg:text-lg">
                   <div className="w-full flex flex-row gap-5 justify-between">
@@ -57,13 +58,13 @@ function ComprehensiveRealEstateCRMProject() {
                     </div>
                     <div className="flex flex-col gap-2 text-lightPrimary">
                       <div>
-                        <p>Sikder Foundation LTD</p>
+                        <p>Kick-Off: The Jersey Galleria</p>
                       </div>
                       <div>
-                        <p>Automation Software, CRM System</p>
+                        <p>E-commerce, Online shop</p>
                       </div>
                       <div>
-                        <p>3 Months 19 Days</p>
+                        <p>1 Months 27 Days</p>
                       </div>
                     </div>
                   </div>
@@ -95,9 +96,9 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
             <div className="w-full lg:w-[40%]">
               <p className=" text-xl lg:text-lg font-light lg:leading-normal lg:indent-20">
-                A powerful CRM system for real estate professionals, providing
-                automated lead management, property listing organization, client
-                follow-ups, and in-depth analytics to streamline operations.
+                A modern e-commerce platform designed to empower a local
+                sportswear business with seamless product management, secure
+                transactions, and a user-friendly shopping experience.
               </p>
             </div>
           </div>
@@ -110,7 +111,7 @@ function ComprehensiveRealEstateCRMProject() {
                 autoPlay
                 playsInline
               >
-                <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739689633/crm_software_promo_video_sdysuq.mp4" />
+                <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739988780/sportswear_ecommerce_promo_video_fmbpaj.mp4" />
               </video>
             </div>
           </div>
@@ -127,14 +128,12 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
               <div className="">
                 <p className="font-medium text-[7vw] lg:text-[2.5vw] text-lightPrimary leading-tight ">
-                  Sikder Foundation Limited is emerging as one of the fast
-                  growing{" "}
-                  <span className="text-accentColor">real estate company</span>{" "}
-                  established in 2007 with the vision to delivery the best
-                  quality, un-parallel commitment, unique{" "}
-                  <span className="text-accentColor">architectural design</span>{" "}
-                  & ultimate comfort to our valued customers in today and the
-                  days to come.
+                  Kick-Off, the jersey galleria is a up-growing local{" "}
+                  <span className="text-accentColor">sportswear company</span>{" "}
+                  established in 2023. Their main business motive is to deliver
+                  qualityful and unique sports kits and accessories{" "}
+                  <span className="text-accentColor">all over Bangladesh</span>{" "}
+                  within a very short period of time and less costs.
                 </p>
               </div>
             </div>
@@ -147,25 +146,25 @@ function ComprehensiveRealEstateCRMProject() {
                 </div>
                 <div className="w-full flex flex-wrap gap-1 lg:gap-2 text-xs lg:text-sm">
                   <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
-                    Inventory Management
+                    Admin Dashboard
                   </div>
                   <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
-                    Customer Data Handling
+                    Ordering System
                   </div>
                   <div className="font-light   px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
-                    Project Management
+                    Inventory Tracking
                   </div>
                   <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
-                    Employee Management
+                    Data Analytics
                   </div>
                   <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
                     Authentication
                   </div>
                   <div className="font-light  px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
-                    Role-based Access
+                    Mobile-Responsive Design
                   </div>
                   <div className="font-light   px-3 py-2 rounded-full bg-darkSecondary text-lightPrimary">
-                    Product Listing & Catelog
+                    Data Security
                   </div>
                 </div>
               </div>
@@ -185,51 +184,48 @@ function ComprehensiveRealEstateCRMProject() {
             <div className="flex flex-col gap-5">
               <div className="flex">
                 <div className="block text-accentColor text-4xl lg:text-6xl font-bold font-oswald">
-                  130%
+                  150%
                 </div>
               </div>
               <div className="text-2xl leading-none font-medium text-lightPrimary">
-                <h4 className="leading-tight">Operational efficiency</h4>
+                <h4 className="leading-tight">Online sales growth</h4>
               </div>
               <div className="font-light text-lightSecondary">
                 <p>
-                  Our CRM centralizes property listings from multiple data
-                  sources, ensuring agents always have access to accurate and
-                  up-to-date information.
+                  Our platform streamlined product discovery and checkout,
+                  driving repeat purchases and customer loyalty.
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex">
                 <div className="block rounded-2xl text-accentColor text-4xl lg:text-6xl font-bold font-oswald">
-                  25%
+                  40%
                 </div>
               </div>
               <div className="text-2xl leading-none font-medium text-lightPrimary">
-                <h4 className="leading-tight">Increased conversion rate</h4>
+                <h4 className="leading-tight">Reduced cart abandonment</h4>
               </div>
               <div className=" font-light text-lightSecondary">
                 <p>
-                  Gain a 360-degree view of your customers with our advanced
-                  data analytics. Our system captures and organizes client
-                  insights.
+                  Simplified checkout flow and multiple payment options improved
+                  conversion rates.
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex">
                 <div className="block rounded-2xl text-accentColor text-4xl lg:text-6xl font-bold font-oswald">
-                  37%
+                  90%
                 </div>
               </div>
               <div className="text-2xl leading-none font-medium text-lightPrimary">
-                <h4 className="leading-tight">Higher customer retention</h4>
+                <h4 className="leading-tight">Faster product updates</h4>
               </div>
               <div className=" font-light text-lightSecondary">
                 <p>
-                  Streamline your operations with automated processes that
-                  handle task scheduling, project tracking, and real-time
-                  reporting.
+                  Admin tools enabled real-time inventory and pricing
+                  adjustments, along with order management.
                 </p>
               </div>
             </div>
@@ -246,15 +242,13 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
             <div className="font-light text-base lg:text-xl text-lightSecondary">
               <p>
-                Our client, a prominent real estate firm, was facing growing
-                challenges with managing property listings, client data, and
-                project workflows using outdated and disjointed systems. They
-                needed a comprehensive solution that could centralize inventory,
-                streamline customer interactions, and provide real-time insights
-                into ongoing projects. In response, we developed a robust CRM
-                system tailored specifically for the real estate industry,
-                designed to unify data streams and empower their team to work
-                more efficiently.
+                Our client, a growing local sportswear brand, struggled with
+                outdated systems that couldn&apos;t handle dynamic inventory
+                updates or secure online payments. Their existing platform
+                lacked mobile optimization and real-time analytics, leading to
+                missed sales opportunities. We developed a custom e-commerce
+                solution to modernize their operations and scale their digital
+                presence.
               </p>
             </div>
           </div>
@@ -278,16 +272,13 @@ function ComprehensiveRealEstateCRMProject() {
             </div>
             <div className="font-light text-base lg:text-xl text-lightSecondary">
               <p>
-                A major pain point for our client was the chaotic handling of
-                vast amounts of data—from detailed property listings to complex
-                customer records. Our CRM system introduces a centralized data
-                management framework that ensures all critical information is
-                organized, accurate, and easily accessible. By employing
-                advanced data structuring and validation methods, we reduced
-                redundancy, minimized errors, and significantly improved data
-                integrity. This optimization not only streamlined operations but
-                also laid a solid foundation for informed decision-making and
-                effective reporting.
+                The client&apos;s existing website relied on manual inventory
+                updates and lacked mobile optimization, leading to inconsistent
+                product displays and a 50% cart abandonment rate. With no
+                real-time analytics or secure payment gateways, they struggled
+                to compete in Dhaka&apos;s fast-paced sportswear market. Our
+                goal was clear: build a future-proof platform that simplified
+                operations while converting browsers into loyal customers.
               </p>
             </div>
           </div>
@@ -326,16 +317,15 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
             </div>
             <div className="text-2xl leading-none font-medium text-lightPrimary">
-              <h4 className="leading-tight">
-                Unified inventory management system
-              </h4>
+              <h4 className="leading-tight">Dynamic Admin Panel</h4>
             </div>
             <div className="font-light text-lightSecondary">
-              <p>
-                Our CRM centralizes property listings from multiple data
-                sources, ensuring agents always have access to accurate and
-                up-to-date information.
-              </p>
+              <ul className="flex flex-col gap-1 lg:gap-2 ps-5 list-disc">
+                <li>
+                  Add/update categories, products, and pricing in real time.
+                </li>
+                <li>Track inventory levels and sales analytics.</li>
+              </ul>
             </div>
           </div>
           <div className="flex flex-col gap-5">
@@ -345,15 +335,13 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
             </div>
             <div className="text-2xl leading-none font-medium text-lightPrimary">
-              <h4 className="leading-tight">
-                Comprehensive Client Data Insights
-              </h4>
+              <h4 className="leading-tight">Secure Payment Integration</h4>
             </div>
             <div className=" font-light text-lightSecondary">
-              <p>
-                Gain a 360-degree view of your customers with our advanced data
-                analytics. Our system captures and organizes client insights.
-              </p>
+              <ul className="flex flex-col gap-1 lg:gap-2 ps-5 list-disc">
+                <li>Razorpay/Stripe gateway for seamless transactions.</li>
+                <li>SSL encryption and PCI compliance.</li>
+              </ul>
             </div>
           </div>
           <div className="flex flex-col gap-5">
@@ -363,15 +351,13 @@ function ComprehensiveRealEstateCRMProject() {
               </div>
             </div>
             <div className="text-2xl leading-none font-medium text-lightPrimary">
-              <h4 className="leading-tight">
-                Automated Workflow and Reporting
-              </h4>
+              <h4 className="leading-tight">Customer-Centric UI/UX</h4>
             </div>
             <div className=" font-light text-lightSecondary">
-              <p>
-                Streamline your operations with automated processes that handle
-                task scheduling, project tracking, and real-time reporting.
-              </p>
+              <ul className="flex flex-col gap-1 lg:gap-2 ps-5 list-disc">
+                <li>Mobile-first design with intuitive product filtering.</li>
+                <li>Guest checkout and order tracking.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -382,20 +368,17 @@ function ComprehensiveRealEstateCRMProject() {
         <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 pb-10 lg:pb-20">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
             <div className="w-full text-lightPrimary font-medium font-oswald text-4xl lg:text-5xl">
-              <h2 className="leading-tight">Enhanced performance</h2>
+              <h2 className="leading-tight">Mobile-first Sales</h2>
             </div>
             <div className="font-light text-base lg:text-xl text-lightSecondary">
               <p>
-                Performance is key in any dynamic CRM system. Our solution was
-                built with a focus on speed and responsiveness. We implemented
-                efficient data retrieval techniques, caching mechanisms, and
-                optimized query handling to ensure that users experience minimal
-                lag even during peak usage. The result is a fluid, user-friendly
-                interface that allows real estate professionals to access and
-                update information in real time, thereby enhancing overall
-                productivity. This performance upgrade directly contributes to
-                smoother operations and a better user experience across the
-                board.
+                Recognizing that 78% of Bangladesh&apos;s e-commerce traffic
+                comes from mobile devices, we prioritized responsive design and
+                one-tap checkout flows. The result? A seamless shopping
+                experience across devices, reducing load times by 40% and
+                increasing mobile conversions by 65%. Features like size charts
+                with AR previews and SMS order tracking further bridged the
+                online-offline gap for local buyers.
               </p>
             </div>
           </div>
@@ -403,7 +386,7 @@ function ComprehensiveRealEstateCRMProject() {
             <div className="w-full rounded-sm overflow-hidden relative">
               <Image
                 placeholder="blur"
-                src={performanceImg}
+                src={mobileFirstImg}
                 alt="crm system performance enhance"
                 className="w-full h-full object-cover"
               />
@@ -413,21 +396,17 @@ function ComprehensiveRealEstateCRMProject() {
         <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 pt-10 lg:pt-20">
           <div className="w-full lg:w-[50%] flex flex-col gap-5">
             <div className="w-full text-lightPrimary font-medium font-oswald text-4xl lg:text-5xl">
-              <h2 className="leading-tight">Scalable development</h2>
+              <h2 className="leading-tight">Scalable infrastructure </h2>
             </div>
             <div className="font-light text-base lg:text-xl text-lightSecondary">
               <p>
-                Anticipating the future growth of our client’s business,
-                scalability was a core component of our development strategy.
-                The CRM system was architected using a modular approach,
-                enabling seamless integration of additional features and
-                handling of increased data volumes as the business expands.
-                Whether it&apos;s accommodating a larger inventory or
-                integrating new marketing channels, our scalable design ensures
-                that the system evolves alongside the company&apos;s needs. This
-                forward-thinking approach guarantees that the CRM remains a
-                valuable asset well into the future, without requiring a
-                complete overhaul as demands grow.
+                During peak seasons like Eid and cricket tournaments, traffic
+                surges threatened the client&apos;s old system. We engineered
+                the platform using React.js and cloud-based microservices,
+                enabling it to handle 5x concurrent users without lag. Automated
+                inventory syncing with local warehouses prevented overselling,
+                while dynamic pricing tools helped capitalize on trending
+                products.
               </p>
             </div>
           </div>
@@ -459,20 +438,19 @@ function ComprehensiveRealEstateCRMProject() {
             <div className="w-full h-full flex flex-col gap-10 justify-between items-stretch">
               <div className="font-light text-lg lg:text-xl">
                 <p>
-                  "Working with Devion Ark transformed our real estate
-                  operations. Their CRM streamlined our inventory and client
-                  management, drastically reducing errors and boosting
-                  conversions. Automated workflows and real-time reporting
-                  empowered our team to make smart, data-driven decisions. We
-                  highly recommend Devion Ark for driving success in our
-                  business."
+                  "I asked devion ark to develope an E-commerce web application
+                  for my soprtswear business! Their effort and dedication really
+                  helped me to organize my business in much optimized way. The
+                  most loveble thing is they actually can understand what
+                  clients want and their requirments! Totally satisfied with
+                  their works! Their services are highly recommended!"
                 </p>
               </div>
               <div className="w-full flex flex-col lg:flex-row-reverse gap-5 items-center justify-between">
                 <div className="hidden lg:inline-flex lg:w-[200px] overflow-hidden relative">
                   <Image
                     placeholder="blur"
-                    src={sikderFoundationLogo}
+                    src={kickOffLogo}
                     alt="sikder foundation logo"
                     className="w-full"
                   />
@@ -480,18 +458,16 @@ function ComprehensiveRealEstateCRMProject() {
                 <div className="w-full flex flex-row items-center gap-3">
                   <div className="w-[60px] h-[60px] aspect-square rounded-full overflow-hidden relative">
                     <Image
-                      alt="azizul hoque"
-                      src={azizulImg}
+                      alt="rakib shikder"
+                      src={rakibImg}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex flex-col leading-none text-lg gap-2">
                     <h3 className="font-bold text-lightPrimary">
-                      Md Farhan Sikder
+                      Rakib Shikder
                     </h3>
-                    <p className="text-sm font-light">
-                      Cheif Executive Officer
-                    </p>
+                    <p className="text-sm font-light">Founder & CEO</p>
                   </div>
                 </div>
               </div>
@@ -584,4 +560,4 @@ function ComprehensiveRealEstateCRMProject() {
   );
 }
 
-export default ComprehensiveRealEstateCRMProject;
+export default DynamicECommerce;

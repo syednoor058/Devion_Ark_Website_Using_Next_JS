@@ -1,17 +1,17 @@
-import TextAnimation from "@/components/animations/TextAnimation";
+import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
-import { IoMdShare } from "react-icons/io";
-import { LuArrowLeft } from "react-icons/lu";
 import { MdOutlineArrowForward } from "react-icons/md";
 import blogImg1 from "../../../../public/blog-1-images/1.jpg";
 import blogImg2 from "../../../../public/blog-1-images/2.jpg";
 import blogImg3 from "../../../../public/blog-1-images/3.jpg";
 import blogCover from "../../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import naimPic from "../../../../public/owners/naim_rahman.webp";
+import shaedPic from "../../../../public/owners/syed_shaeduzzaman_noor.png";
 function MoreBlogCard({ cover, title, forwardTo }) {
   return (
     <div className="w-full flex flex-col gap-3">
@@ -48,41 +48,17 @@ export const metadata = {
 };
 
 function Blog1() {
+  const shareLinks = [
+    { icon: <FaFacebookF />, url: "/" },
+    { icon: <FaLinkedin />, url: "/" },
+    { icon: <FaXTwitter />, url: "/" },
+    { icon: <FaGoogle />, url: "/" },
+  ];
+
   return (
     <main className="font-poppins">
-      {/* Blog Landing Section */}
-      <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-5 lg:px-20 pb-10 lg:pb-20 font-light text-lightSecondary">
-        <div className="flex flex-col gap-8 lg:gap-16 ">
-          <Link href="/blogs">
-            <div className="w-full flex flex-row gap-2 text-sm lg:text-lg items-center text-lightPrimary">
-              <LuArrowLeft className="text-base lg:text-xl" />{" "}
-              <span className="pt-1">
-                <TextAnimation text="Back" hoverText="text-accentColor" />
-              </span>
-            </div>
-          </Link>
-          <div className="flex flex-col gap-8 lg:gap-16">
-            <div className="text-4xl lg:text-7xl font-semibold leading-none text-lightPrimary font-oswald text-center">
-              <h1>
-                SEO vs AEO in 2025: <br />
-                <span className="font-normal text-3xl lg:text-6xl leading-none">
-                  The Future of Search Engine Optimization
-                </span>
-              </h1>
-            </div>
-            <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-10 font-light text-lightSecondary text-base lg:text-lg leading-none justify-between">
-              <div>December 13, 2024</div>
-              <div className="text-lightPrimary flex flex-col gap-1">
-                <p>Naim Rahman</p>
-                <p>Syed Shaeduzzaman Noor</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Blog Cover */}
-      <div className="w-full relative overflow-hidden">
+      <div className="w-full relative overflow-hidden px-4 lg:px-20 pt-6 lg:pt-10">
         <div className="w-full relative">
           <Image
             placeholder="blur"
@@ -93,10 +69,96 @@ function Blog1() {
         </div>
       </div>
 
+      {/* Blog Header  */}
+      <div className="w-full bg-darkPrimary pt-5 lg:pt-10 px-4 lg:px-20 pb-10 lg:pb-20 font-light text-lightSecondary">
+        <div className="flex flex-col gap-10">
+          <div className="w-full uppercase text-normal flex flex-row gap-5 lg:gap-20 justify-between lg:justify-normal items-center">
+            <p className=" leading-none text-accentColor">Search Engine</p>
+            <p className="leading-none">13 December 2024</p>
+          </div>
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20">
+            <div className="w-full lg:w-[70%] flex flex-col gap-6 lg:gap-10">
+              <div>
+                <h1 className="text-3xl lg:text-6xl font-medium leading-none text-lightPrimary font-oswald">
+                  SEO vs AEO in 2025: The future of search engine optimization
+                </h1>
+              </div>
+              <div>
+                <CustomShapeButton
+                  forwardTo="/blogs"
+                  label="Back"
+                  textStyle="text-lg font-normal text-darkPrimary"
+                  paddingX="ps-4 pe-8"
+                  paddingY="py-4"
+                  fontGap="gap-2"
+                  backgroundColor="bg-lightPrimary"
+                  hoverBgColor="bg-accentColor"
+                  icon={
+                    <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                  }
+                />
+              </div>
+            </div>
+            <div className="w-full lg:w-[30%] flex flex-col gap-10">
+              <div className="w-full flex flex-col gap-3">
+                <p className="w-full font-normal text-accentColor">Author(s)</p>
+                <div className="w-full flex flex-col gap-2">
+                  <div className="w-full flex flex-row gap-3 items-center">
+                    <div className="flex rounded-full p-[1px] border border-dashed border-accentColor">
+                      <div className="w-7 lg:w-8 h-7 lg:h-8 rounded-full overflow-hidden relative">
+                        <Image
+                          alt="naim rahman"
+                          src={naimPic}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <p className="text-lightPrimary leading-none lg:text-lg">
+                      Naim Rahman
+                    </p>
+                  </div>
+                  <div className="w-full flex flex-row gap-3 items-center">
+                    <div className="flex rounded-full p-[1px] border border-dashed">
+                      <div className="w-7 lg:w-8 h-7 lg:h-8 rounded-full overflow-hidden relative border-accentColor">
+                        <Image
+                          alt="syed shaeduzzaman noor"
+                          src={shaedPic}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    <p className="text-lightPrimary leading-none lg:text-lg">
+                      Syed Shaeduzzaman Noor
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full flex flex-col gap-3">
+                <p className="w-full font-normal text-lightPrimary">Share</p>
+                <div className="flex flex-row gap-3 items-center">
+                  {shareLinks.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms] text-xl"
+                    >
+                      {link.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Blog Description */}
 
       <div className="w-full px-5 lg:px-20 py-10 lg:py-20">
-        <p className="font-light text-lightPrimary text-lg lg:text-2xl">
+        <p className="font-light text-lightPrimary text-lg lg:text-2xl lg:indent-40 lg:leading-[1.7]">
           Is SEO dead, or is it just evolving? In this in-depth blog, we explore
           the future of SEO (Search Engine Optimization) and the rise of AEO
           (Answer Engine Optimization) in 2025. Discover how voice search,
@@ -134,7 +196,7 @@ function Blog1() {
               </ul>
             </div>
           </div>
-          <div className="w-full lg:w-[70%] overflow-y-auto">
+          <div className="w-full lg:w-[70%]">
             <div className="">
               <article className="w-full flex flex-col gap-5 lg:gap-7 font-light text-lightSecondary leading-tight text-base lg:text-xl">
                 <p>
@@ -220,7 +282,7 @@ function Blog1() {
                 </h2>
                 <table className="">
                   <thead className="text-lightPrimary fonr-normal bg-darkSecondary">
-                    <tr>
+                    <tr className="border-x border-lightSecondary/30">
                       <th className="w-[50%] border-r border-lightSecondary/30 py-3 pe-3">
                         SEO
                       </th>
@@ -229,26 +291,26 @@ function Blog1() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-lightSecondary/30">
-                      <td className="w-[50%] py-4 pe-3">
+                      <td className="w-[50%] py-4 px-3 border-x border-lightSecondary/30">
                         Focuses on keywords and backlinks.
                       </td>
-                      <td className="w-[50%] py-4 ps-3">
+                      <td className="w-[50%] py-4 px-3 border-r border-lightSecondary/30">
                         Focuses on answering user queries directly.
                       </td>
                     </tr>
                     <tr className="border-b border-lightSecondary/30">
-                      <td className="w-[50%] py-4 pe-3">
+                      <td className="w-[50%] py-4 px-3 border-x border-lightSecondary/30">
                         Drives organic traffic through rankings.
                       </td>
-                      <td className="w-[50%] py-4 ps-3">
+                      <td className="w-[50%] py-4 px-3 border-r border-lightSecondary/30">
                         Targets voice search and featured snippets.
                       </td>
                     </tr>
                     <tr className="border-b border-lightSecondary/30">
-                      <td className="w-[50%] py-4 pe-3">
+                      <td className="w-[50%] py-4 px-3 border-x border-lightSecondary/30">
                         Builds long-term authority.
                       </td>
-                      <td className="w-[50%] py-4 ps-3">
+                      <td className="w-[50%] py-4 px-3 border-r border-lightSecondary/30">
                         Provides instant, concise answers.
                       </td>
                     </tr>
@@ -375,29 +437,8 @@ function Blog1() {
         </div>
       </div>
 
-      {/* Share Links */}
-      <div className="px-5 lg:px-20 flex flex-row gap-5 items-center text-base lg:text-xl pb-10 lg:pb-20 pt-5 lg:pt-10">
-        <div className="flex flex-row gap-2 items-center">
-          <IoMdShare /> Share:
-        </div>
-        <div className="flex flex-row gap-5 items-center">
-          <a href="">
-            <FaFacebookF className="text-lightPrimary hover:text-accentColor duration-500" />
-          </a>
-          <a href="">
-            <FaLinkedinIn className="text-lightPrimary hover:text-accentColor duration-500" />
-          </a>
-          <a href="">
-            <AiFillInstagram className="text-lightPrimary hover:text-accentColor duration-500" />
-          </a>
-          <a href="">
-            <FaXTwitter className="text-lightPrimary hover:text-accentColor duration-500" />
-          </a>
-        </div>
-      </div>
-
       {/* Divider */}
-      <div className="px-5 lg:px-20">
+      <div className="px-5 lg:px-20 pt-10 lg:pt-20">
         <div className="w-full h-[1px] bg-gray-800"></div>
       </div>
 

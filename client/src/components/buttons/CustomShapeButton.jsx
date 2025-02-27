@@ -5,13 +5,13 @@ function CustomShapeButton({
   label,
   forwardTo = "",
   bend = "16px",
-  paddingX = "px-8",
+  paddingX = "ps-4 pe-8",
   paddingY = "py-4",
   textStyle = "text-lg font-normal text-lightPrimary",
   hoverText = "text-darkPrimary",
   backgroundColor = "bg-darkPrimary",
   hoverBgColor = "bg-lightPrimary",
-  fontGap = "gap-4",
+  fontGap = "gap-2",
   icon,
 }) {
   return (

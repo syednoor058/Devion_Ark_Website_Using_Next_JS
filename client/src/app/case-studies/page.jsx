@@ -88,8 +88,8 @@ function CaseStudies() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-0 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
-        <div className="w-full flex flex-col gap-10 lg:gap-16 justify-end">
+      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end pt-5 pb-10 lg:pt-20 lg:pb-20 text-lightSecondary font-light">
+        <div className="w-full flex flex-col gap-10 justify-end">
           <div className="w-full flex flex-col lg:flex-row justify-between">
             <div className="w-full">
               <div className="w-full flex flex-col gap-5">
@@ -105,7 +105,7 @@ function CaseStudies() {
             <div className="w-full">
               <div className="w-full flex flex-col lg:flex-row-reverse gap-10 lg:gap-20 justify-between items-end">
                 <div className="w-full lg:w-[40%] text-lg lg:text-base font-light text-lightSecondary flex flex-col-reverse lg:flex-col gap-5">
-                  <div className="w-full flex flex-row gap-10 items-center">
+                  <div className="w-full flex flex-row gap-5 lg:gap-10">
                     <div>
                       <CustomShapeButton
                         label="Get Started"
@@ -132,7 +132,7 @@ function CaseStudies() {
                       />
                     </div>
                   </div>
-                  <p className="lg:leading-relaxed pt-5 lg:border-t border-lightSecondary/30">
+                  <p className="lg:leading-relaxed lg:pt-5 lg:indent-20">
                     Explore our curated collection of real-world success stories
                     where innovation meets impact. Our case studies highlight
                     transformative projects in software development, digital
@@ -179,8 +179,8 @@ function CaseStudies() {
       <div className="w-full px-4 lg:px-20 py-10 lg:py-20 flex justify-end font-light text-lightSecondary bg-darkPrimary">
         <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
           <div className="w-full flex lg:justify-end">
-            <div className="w-full lg:w-[85%] text-2xl lg:text-5xl  text-lightPrimary font-medium">
-              <h1 className="leading-[1.15]">
+            <div className="w-full text-2xl lg:text-5xl  text-lightPrimary font-medium">
+              <h1 className="leading-[1.15] lg:indent-32">
                 Proven results,{" "}
                 <span className="leading-[1.15] text-accentColor">
                   real stories
@@ -189,8 +189,8 @@ function CaseStudies() {
               </h1>
             </div>
           </div>
-          <div className="w-full lg:w-[90%] flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl lg:text-end font-normal">
-            <p>
+          <div className="w-full flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl font-normal">
+            <p className="lg:indent-32">
               Every business has a unique story, but they all share one thing in
               common: the need for results. At Devion Ark, we&apos;ve partnered
               with startups, enterprises, and innovators across industries to
@@ -198,7 +198,7 @@ function CaseStudies() {
               sales to streamlining complex workflows, our case studies are more
               than numbers — they&apos;re blueprints for success.
             </p>
-            <p>
+            <p className="lg:indent-32">
               Ready to see how we can transform your business? Dive into the
               stories below.
             </p>
@@ -229,6 +229,7 @@ function CaseStudies() {
         <div className="py-10 lg:py-20">
           <ProjectCard
             reverse="1"
+            forwardTo="/case-studies/dynamic-sportswear-e-commerce-platform"
             video="https://res.cloudinary.com/de8g5laai/video/upload/v1739988780/sportswear_ecommerce_promo_video_fmbpaj.mp4"
             title="Dynamic Sportswear E-Commerce Platform"
             desc="An intuitive and scalable e-commerce website tailored for sportswear businesses. Features include user-friendly navigation, secure checkout, product filtering, and real-time inventory tracking."

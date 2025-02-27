@@ -19,7 +19,7 @@ function CustomShapeBorderButton({
         }}
       >
         <div
-          className={`${padd} text-lg font-normal leading-none flex flex-row gap-2 items-center ${bg2} ${textColor}`}
+          className={`${padd} text-lg font-light leading-none flex flex-row gap-2 items-center ${bg2} ${textColor}`}
           style={{
             clipPath: `polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0px 100%, 0px 0px)`,
           }}

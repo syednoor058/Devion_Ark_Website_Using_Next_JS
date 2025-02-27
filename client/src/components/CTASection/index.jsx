@@ -25,7 +25,7 @@ function CTASection() {
                 <span className="text-lightPrimary">digital legacy</span>.
               </h2>
             </div>
-            <p className="lg:pt-10">
+            <p className="lg:pt-10 lg:indent-24">
               Whether you&apos;re a startup hungry for visibility or an
               enterprise ready to scale, Devion Ark crafts tailored strategies
               that deliver. With 3+ years of proven excellence, 20+ projects

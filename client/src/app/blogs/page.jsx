@@ -7,6 +7,12 @@ import { MdOutlineArrowForward } from "react-icons/md";
 import blogCover1 from "../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
 import cover from "../../../public/projects/case-study-cover.jpg";
 
+export const metadata = {
+  title: "Blog - Latest Updates On SEO, Software & Social Media | Devion Ark",
+  description:
+    "Unlock growth with cutting-edge insights on SEO, software trends, and social media. Transform your strategy with Devion Ark’s actionable guides.",
+};
+
 function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
   return (
     <div className="w-full py-5 lg:py-10 group">
@@ -99,7 +105,7 @@ function Blogs() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary flex items-end py-10 lg:py-0 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
+      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary flex items-end pt-5 pb-10 lg:pt-20 lg:pb-20 text-lightSecondary font-light">
         <div className="w-full flex flex-col gap-10">
           <div className="w-full px-4 lg:px-20 flex flex-col gap-5">
             <h1 className="text-lightPrimary text-6xl lg:text-9xl font-medium uppercase font-oswald leading-none">
@@ -125,7 +131,7 @@ function Blogs() {
                   }
                 />
               </div>
-              <p className="font-normal text-xl lg:text-sm lg:leading-normal lg:pt-5 lg:border-t border-lightSecondary/30">
+              <p className="font-normal text-xl lg:text-sm lg:leading-normal lg:pt-5 lg:indent-20">
                 Welcome to the Devion Ark Blog, your resource for cutting-edge
                 trends, expert tips, and actionable strategies in digital
                 transformation. Here, we share real-world success stories and
@@ -140,7 +146,7 @@ function Blogs() {
                     <span>
                       <GoDotFill className="text-xs" />
                     </span>
-                    Top Content
+                    Top News
                   </p>
                 </div>
               </div>

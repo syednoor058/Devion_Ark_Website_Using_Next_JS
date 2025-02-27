@@ -112,10 +112,10 @@ function Services() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end py-10 lg:py-20">
+      <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end pt-5 pb-10 lg:pt-20 lg:pb-20">
         <div className="w-full h-full flex flex-col lg:flex-row gap-10 lg:items-stretch ">
           <div className="w-full lg:w-[55%] flex">
-            <div className="w-full flex flex-col-reverse lg:flex-col gap-10">
+            <div className="w-full flex flex-col-reverse lg:flex-col gap-5 lg:gap-10">
               <div className="w-full lg:w-[60%]  text-lg lg:text-base flex flex-col gap-5 ">
                 <div>
                   <CustomShapeButton
@@ -133,7 +133,7 @@ function Services() {
                     }
                   />
                 </div>
-                <p className="pt-5 border-t border-lightSecondary/30">
+                <p className="pt-5 lg:indent-20">
                   We craft tailored digital experiences-driving measurable
                   growth, ensuring your business stands out in today's
                   competitive online landscape.
@@ -240,25 +240,25 @@ function Services() {
       <div className="w-full px-4 lg:px-20 py-10 lg:py-20 flex justify-end font-light text-lightSecondary bg-darkPrimary">
         <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
           <div className="w-full flex lg:justify-end">
-            <div className="w-full lg:w-[80%] text-3xl lg:text-6xl  text-lightPrimary font-medium">
-              <h1 className="leading-[1.15]">
+            <div className="w-full text-3xl lg:text-6xl  text-lightPrimary font-medium">
+              <h1 className="leading-[1.15] lg:indent-32">
                 Struggling to Stand Out in a Crowded{" "}
                 <span className="text-accentColor leading-[1.15]">
                   Digital World
-                </span>{" "}
+                </span>
                 ?
               </h1>
             </div>
           </div>
-          <div className="w-full lg:w-[90%] flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl lg:text-end font-normal">
-            <p>
+          <div className="w-full flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl font-normal">
+            <p className="lg:indent-32">
               You&apos;re not alone — 74% of businesses feel invisible online.
               At Devion Ark, we turn that silence into a roar. With 3+ years of
               proven strategies, 20+ success stories, and tailored SEO, social
               media, and software solutions, we don&apos;t just get you seen —
               we get you remembered.{" "}
             </p>
-            <p>
+            <p className="lg:indent-32">
               Ready to finally break through? Start with a free, no-strings
               consultation today!
             </p>

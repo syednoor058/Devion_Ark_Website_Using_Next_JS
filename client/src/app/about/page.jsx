@@ -12,7 +12,15 @@ import fahim from "../../../public/owners/fahim_sharar.webp";
 import fuad from "../../../public/owners/farhan_fuad.webp";
 import naim from "../../../public/owners/naim_rahman.webp";
 import syedNoor from "../../../public/owners/syed_noor.webp";
-function page() {
+
+export const metadata = {
+  title:
+    "About Devion Ark | Digital Growth Partner for SEO, Software & Results",
+  description:
+    "Discover Devion Ark’s mission, team, and proven expertise in SEO, custom software, and digital strategies. Learn how we empower businesses to scale with innovation and integrity.",
+};
+
+function About() {
   return (
     <main>
       {/* Landing Section */}
@@ -521,4 +529,4 @@ function page() {
   );
 }
 
-export default page;
+export default About;

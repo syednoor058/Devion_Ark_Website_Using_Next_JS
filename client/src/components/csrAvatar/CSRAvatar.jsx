@@ -1,10 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-// Dynamically import Lottie with SSR disabled
-const Avatar = dynamic(() => import("@mui/material"), { ssr: false });
-const AvatarGroup = dynamic(() => import("@mui/material"), { ssr: false });
+import { Avatar, AvatarGroup } from "@mui/material";
 
 function CSRAvatar() {
   const groupImg = [

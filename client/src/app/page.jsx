@@ -1,8 +1,8 @@
 import AnimatedText from "@/components/animations/AnimatedText";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import CSRAvatar from "@/components/csrAvatar/CSRAvatar";
 import FAQSection from "@/components/faq";
 import ProjectShowcase from "@/components/projectShowcase";
-import { Avatar, AvatarGroup } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
@@ -29,7 +29,10 @@ import sikderFoundationLogo from "../../public/partners/sikder_foundation.png";
 import sweetCakes from "../../public/partners/sweet_cakes.png";
 import travel from "../../public/partners/travel.png";
 import streetSigns from "../../public/street_signs.jpg";
-import azizulHoque from "../../public/testimonials/azizul.webp";
+import {
+  default as azizulHoque,
+  default as azizulImg,
+} from "../../public/testimonials/azizul.webp";
 import rakibShikdar from "../../public/testimonials/rakib.webp";
 
 function TestimonialCard({ image, name, position, company, review }) {
@@ -72,7 +75,9 @@ function TestimonialCard({ image, name, position, company, review }) {
         <FaStar />
         <FaStar />
       </div>
-      <div className="text-sm font-light leading-tight">{review}</div>
+      <div className="text-sm font-light leading-tight lg:indent-20">
+        {review}
+      </div>
     </div>
   );
 }
@@ -113,7 +118,9 @@ function TestimonialCard2({ image, name, position, company, review }) {
         <FaStar />
         <FaStar />
       </div>
-      <div className="text-sm font-light leading-tight text-end">{review}</div>
+      <div className="text-sm font-light leading-tight lg:indent-20">
+        {review}
+      </div>
     </div>
   );
 }
@@ -201,8 +208,12 @@ export default function Home() {
             <div className="w-full lg:w-[55%] flex flex-col">
               <div className="py-5 lg:py-10 flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-20">
                 <div className="w-full flex flex-row items-center gap-5">
-                  <div className="w-12 h-12 rounded-full bg-accentColor flex justify-center items-center text-darkPrimary font-semibold">
-                    RH
+                  <div className="w-12 h-12 rounded-full bg-accentColor overflow-hidden relative">
+                    <Image
+                      alt="azizul hoque"
+                      src={azizulImg}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex flex-col gap-1 leading-[1.1]">
                     <p className="text-lightPrimary font-semibold">
@@ -211,7 +222,7 @@ export default function Home() {
                     <p>Head of Business Development, Sikder Foundation</p>
                   </div>
                 </div>
-                <p className=" text-lightPrimary font-light text-base">
+                <p className=" text-lightPrimary font-light text-base lg:indent-20">
                   &quot;Working with Devion Ark transformed our real estate
                   operations. Their CRM streamlined our inventory and client
                   management, drastically reducing errors and boosting
@@ -257,7 +268,7 @@ export default function Home() {
       <div className="w-full lg:h-screen bg-darkPrimary relative font-light text-lightSecondary pt-20 pb-10 lg:pt-[160px] lg:pb-20">
         <div className="relative z-[3] flex flex-col lg:flex-row  justify-between px-4 lg:px-20">
           <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
-            <p className="text-2xl lg:text-4xl text-lightPrimary font-medium">
+            <p className="text-2xl lg:text-4xl text-lightPrimary font-medium ">
               We are more than just a service provider — we are your{" "}
               <span className="text-accentColor ">strategic partner</span>. Our
               mission is to empower your business with tailored{" "}
@@ -285,7 +296,7 @@ export default function Home() {
           </div>
           <div className="w-full lg:w-[30%]">
             <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-5">
-              <AvatarGroup>
+              {/* <AvatarGroup>
                 <Avatar
                   alt="Md Azizul Hoque"
                   src="/testimonials/azizul.webp"
@@ -314,11 +325,12 @@ export default function Home() {
                 <Avatar sx={{ width: 48, height: 48, bgcolor: "#121212" }}>
                   8+
                 </Avatar>
-              </AvatarGroup>
+              </AvatarGroup> */}
+              <CSRAvatar />
               <div className="overflow-hidden font-light">
                 <span className="inline-block">
                   We have{" "}
-                  <span className="text-lightPrimary ">
+                  <span className="text-lightPrimary">
                     12+ satisfied clients
                   </span>{" "}
                   all around the world. We are empowering business to reach new
@@ -357,7 +369,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <p className="text-lg lg:text-base">
+                  <p className="text-lg lg:text-base lg:indent-20">
                     We specialise in developing solutions that help your
                     business prosper in the digital age. From intuitive software
                     to attractive websites to strategic marketing and flawless
@@ -379,7 +391,10 @@ export default function Home() {
                 />
               </div>
               <div className="border-t border-lightSecondary/30">
-                <ServiceCard forwardTo="/services" serviceTitle="Website Development" />
+                <ServiceCard
+                  forwardTo="/services"
+                  serviceTitle="Website Development"
+                />
               </div>
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
@@ -447,7 +462,7 @@ export default function Home() {
                 <span className="text-accentColor ">creative solutions</span> at
                 all scales.
               </h2>
-              <p className="text-lg">
+              <p className="text-lg lg:indent-20">
                 See how we've turned challenges into opportunities and ideas
                 into impactful solutions. Our case studies showcase real-world
                 examples of how we've helped businesses grow, optimize
