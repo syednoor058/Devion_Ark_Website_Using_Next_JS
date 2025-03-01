@@ -12,9 +12,10 @@ import blogImg3 from "../../../../public/blog-1-images/3.jpg";
 import blogCover from "../../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
 import naimPic from "../../../../public/owners/naim_rahman.webp";
 import shaedPic from "../../../../public/owners/syed_shaeduzzaman_noor.png";
-function MoreBlogCard({ cover, title, forwardTo }) {
+function MoreBlogCard({ cover, title = "", forwardTo, date }) {
+  const truncatedTitle = title.length > 40 ? title.slice(0, 40) + "..." : title;
   return (
-    <div className="w-full flex flex-col gap-3">
+    <div className="w-full flex flex-col gap-3 p-3 bg-black rounded">
       <div className="flex flex-col gap-2">
         <div className="w-full overflow-hidden relative rounded-sm">
           <Image
@@ -26,10 +27,11 @@ function MoreBlogCard({ cover, title, forwardTo }) {
         </div>
         <div className="w-full h-[1px] bg-gray-500"></div>
       </div>
+      <p className="text-sm">{date}</p>
       <Link href={forwardTo} className="group">
         <div className="w-full flex flex-row gap-5 justify-between">
           <div className="text-xl lg:text-2xl text-lightPrimary group-hover:underline underline-offset-4 duration-500">
-            {title}
+            {truncatedTitle}
           </div>
           <div className="text-2xl lg:text-4xl">
             <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
@@ -45,13 +47,51 @@ export const metadata = {
     "SEO vs AEO in 2025: The Future of Search Engine Optimization | Devion Ark",
   description:
     "Is SEO dead, or is AEO taking over? Discover how SEO and Answer Engine Optimization (AEO) are shaping the future of digital marketing in 2025. Learn actionable strategies to stay ahead!",
+  openGraph: {
+    title:
+      "SEO vs AEO in 2025: The Future of Search Engine Optimization | Devion Ark",
+    description:
+      "Is SEO dead, or is AEO taking over? Discover how SEO and Answer Engine Optimization (AEO) are shaping the future of digital marketing in 2025.",
+    url: "https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    type: "article",
+    images: [
+      {
+        url: "https://www.devionark.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fseo-vs-aeo-2025-blog-cover.b4e049bc.jpg&w=1200&q=75", // Absolute URL required
+        width: 1200,
+        height: 630,
+        alt: "SEO vs AEO in 2025: The Future of Search Engine Optimization",
+      },
+    ],
+    publishedTime: "2024-12-13T00:00:00Z",
+    authors: ["Devion Ark"],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "SEO vs AEO in 2025: The Future of Search Engine Optimization | Devion Ark",
+    description:
+      "Is SEO dead, or is AEO taking over? Discover how SEO and Answer Engine Optimization (AEO) are shaping the future of digital marketing in 2025.",
+    images: [
+      "https://www.devionark.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fseo-vs-aeo-2025-blog-cover.b4e049bc.jpg&w=1200&q=75",
+    ],
+  },
 };
 
 function Blog1() {
   const shareLinks = [
-    { icon: <FaFacebookF />, url: "/" },
-    { icon: <FaLinkedin />, url: "/" },
-    { icon: <FaXTwitter />, url: "/" },
+    {
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    },
+    {
+      icon: <FaLinkedin />,
+      url: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    },
+    {
+      icon: <FaXTwitter />,
+      url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization&hashtags=Marketing,DigitalStrategy",
+    },
     { icon: <FaGoogle />, url: "/" },
   ];
 
@@ -223,12 +263,28 @@ function Blog1() {
                   </p>
                   <ul className="ps-5 list-disc">
                     <li>
-                      50% of all searches will be voice-based by 2025
-                      (Comscore).
+                      <a
+                        href="https://www.comscore.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accentColor"
+                      >
+                        Comscore
+                      </a>{" "}
+                      predicts that by 2025, 50% of all searches will be
+                      voice-based.
                     </li>
                     <li>
-                      40% of Google searches now return featured snippets
-                      (HubSpot).
+                      40% of Google searches now return featured snippets (
+                      <a
+                        href="https://www.hubspot.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accentColor"
+                      >
+                        HubSpot
+                      </a>
+                      ).
                     </li>
                   </ul>
                 </div>
@@ -248,22 +304,28 @@ function Blog1() {
                   AEO, or Answer Engine Optimization, focuses on delivering
                   precise answers to user queries. It&apos;s the backbone of:
                 </p>
-                <ul className="pl-5 flex flex-col gap-5 list-disc">
+                <ul className="pl-5 flex flex-col gap-2 list-disc">
                   <li>
-                    <span className="font-bold">Voice Search:</span> The growing
-                    popularity of voice assistants has made providing accurate,
-                    concise answers essential.
+                    <span className="text-lightPrimary font-normal">
+                      Voice Search:
+                    </span>{" "}
+                    The growing popularity of voice assistants has made
+                    providing accurate, concise answers essential.
                   </li>
                   <li>
-                    <span className="font-bold">Featured Snippets:</span> AEO
-                    targets “Position Zero,” the prime spot on Google where
+                    <span className="text-lightPrimary font-normal">
+                      Featured Snippets:
+                    </span>{" "}
+                    AEO targets “Position Zero,” the prime spot on Google where
                     concise answers are displayed above traditional search
                     results.
                   </li>
                   <li>
-                    <span className="font-bold">Structured Data:</span> Schema
-                    markup is vital in helping search engines understand content
-                    and present it effectively in search results.
+                    <span className="text-lightPrimary font-normal">
+                      Structured Data:
+                    </span>{" "}
+                    Schema markup is vital in helping search engines understand
+                    content and present it effectively in search results.
                   </li>
                 </ul>
                 <div className="flex flex-col gap-3">
@@ -340,27 +402,27 @@ function Blog1() {
                   blurring. Businesses must adapt to this hybrid model to stay
                   competitive. Here&apos;s how you can prepare:
                 </p>
-                <h3 className="text-xl lg:text-3xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h3 className="text-xl lg:text-2xl text-lightPrimary font-medium">
                   The Rise of Voice Search and Conversational Queries
                 </h3>
                 <ul className="ps-5 list-disc">
                   <li>Optimize for natural language and long-tail keywords.</li>
                   <li>
-                    Example: Instead of “best pizza delivery,” target “Where can
-                    I find the best pizza delivery near me?”
+                    Example: Instead of "best car shop," ask, "Where can I find
+                    the best car shop near me?"
                   </li>
                 </ul>
-                <h3 className="text-xl lg:text-3xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h3 className="text-xl lg:text-2xl text-lightPrimary font-medium">
                   How Featured Snippets Are Changing the Game
                 </h3>
                 <ul className="ps-5 list-disc">
                   <li>
-                    Use schema markup to help search engines understand your
+                    Schema markup can help search engines interpret your
                     content.
                   </li>
                   <li>Create FAQ sections to target question-based queries.</li>
                 </ul>
-                <h3 className="text-xl lg:text-3xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h3 className="text-xl lg:text-2xl text-lightPrimary font-medium">
                   Actionable Tips to Combine SEO and AEO for Maximum Impact
                 </h3>
                 <ul className="ps-5 list-disc flex flex-col gap-2">
@@ -450,15 +512,16 @@ function Blog1() {
               <span>
                 <GoDotFill className="text-xs" />
               </span>
-              More Blogs
+              More Articles
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7">
           <MoreBlogCard
-            title="How much does it cost to design a website"
-            forwardTo=""
+            title="Meta Marketing in 2025: How Devion Ark’s Strategies Skyrocket Business Growth by 150%"
+            forwardTo="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150"
             cover={blogCover}
+            date="30 November 2024"
           />
         </div>
       </div>

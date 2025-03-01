@@ -146,7 +146,7 @@ function Blogs() {
                     <span>
                       <GoDotFill className="text-xs" />
                     </span>
-                    Top News
+                    Top Articles
                   </p>
                 </div>
               </div>
@@ -180,7 +180,7 @@ function Blogs() {
                 <span>
                   <GoDotFill className="text-xs" />
                 </span>
-                Blogs
+                Articles
               </p>
             </div>
           </div>
