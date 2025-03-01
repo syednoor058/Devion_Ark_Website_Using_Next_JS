@@ -1,3 +1,4 @@
+import CopyLinkButton from "@/components/buttons/CopyLinkButton";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
 import Link from "next/link";
@@ -189,6 +190,7 @@ function Blog1() {
                       {link.icon}
                     </a>
                   ))}
+                  <CopyLinkButton />
                 </div>
               </div>
             </div>

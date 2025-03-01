@@ -746,7 +746,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 divide-y-[1px] divide-lightSecondary/30">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
           <MoreBlogCard
             title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
             forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"

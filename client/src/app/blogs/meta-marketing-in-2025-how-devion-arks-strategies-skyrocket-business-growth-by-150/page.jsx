@@ -1,3 +1,4 @@
+import CopyLinkButton from "@/components/buttons/CopyLinkButton";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
 import Link from "next/link";
@@ -54,17 +55,17 @@ export const metadata = {
       "Meta Marketing in 2025: How Devion Ark's Strategies Skyrocket Business Growth by 150%",
     description:
       "Discover how Meta Marketing drives 150%+ growth in 2025. Learn AI personalization, AR/VR ads, and e-commerce strategies.",
-    url: "https://yourdomain.com/blog/meta-marketing-2025",
+    url: "https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
     type: "article",
     images: [
       {
-        url: "https://yourdomain.com/images/meta-marketing-2025-og.jpg", // Absolute URL required
+        url: "https://www.devionark.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeta-marketing-2025-cover.8864546a.jpg&w=1200&q=75", // Absolute URL required
         width: 1200,
         height: 630,
         alt: "Meta Marketing 2025 Strategies Visual Guide",
       },
     ],
-    publishedTime: "2024-03-15T00:00:00Z",
+    publishedTime: "2024-11-30T00:00:00Z",
     authors: ["Devion Ark"],
   },
 
@@ -73,7 +74,9 @@ export const metadata = {
     title: "Meta Marketing in 2025: 150% Growth Strategies",
     description:
       "Triple your ROI with Devion Ark's Meta Marketing methods. AI personalization, AR/VR ads, and more!",
-    images: ["https://yourdomain.com/images/meta-marketing-2025-twitter.jpg"],
+    images: [
+      "https://www.devionark.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeta-marketing-2025-cover.8864546a.jpg&w=1200&q=75",
+    ],
   },
 };
 
@@ -81,15 +84,15 @@ function Blog2() {
   const shareLinks = [
     {
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150n",
     },
     {
       icon: <FaLinkedin />,
-      url: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+      url: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
     },
     {
       icon: <FaXTwitter />,
-      url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization&hashtags=Marketing,DigitalStrategy",
+      url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150&hashtags=SocialMediaMarketing,DigitalStrategy",
     },
   ];
 
@@ -187,6 +190,7 @@ function Blog2() {
                       {link.icon}
                     </a>
                   ))}
+                  <CopyLinkButton />
                 </div>
               </div>
             </div>
@@ -288,12 +292,27 @@ function Blog2() {
                   </p>
                   <ul className="ps-5 list-disc">
                     <li>
-                      68% of consumers prefer brands using personalized ads
-                      (Meta 2024 Report).
+                      68% of consumers prefer brands using personalized ads (
+                      <a
+                        className="text-accentColor"
+                        href="https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
+                      Meta 2024 Report).
                     </li>
                     <li>
                       Businesses using Meta Shops see 40% higher conversion
-                      rates (Forbes).
+                      rates (
+                      <a
+                        className="text-accentColor"
+                        href="https://www.forbes.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Forbes
+                      </a>
+                      ).
                     </li>
                   </ul>
                 </div>
@@ -334,7 +353,16 @@ function Blog2() {
                     <span className="text-lightPrimary font-normal">
                       Interactive Storytelling:
                     </span>{" "}
-                    Gamified ads boost engagement by 200% (HubSpot).
+                    Gamified ads boost engagement by 200% (
+                    <a
+                      className="text-accentColor"
+                      href="https://www.hubspot.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      HubSpot
+                    </a>
+                    ).
                   </li>
                 </ul>
 
@@ -347,7 +375,16 @@ function Blog2() {
                     <span className="text-lightPrimary font-normal">
                       Short-Form Video:
                     </span>{" "}
-                    45% of users discover products via Reels (Meta).
+                    45% of users discover products via Reels ({" "}
+                    <a
+                      className="text-accentColor"
+                      href="https://about.meta.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Meta
+                    </a>{" "}
+                    ).
                   </li>
                   <li>
                     <span className="text-lightPrimary font-normal">
@@ -390,14 +427,32 @@ function Blog2() {
                       Outperform Competitors:
                     </span>{" "}
                     Brands using Meta Ads see 3X higher ROI than traditional ads
-                    (Social Media Today).
+                    (
+                    <a
+                      href="https://www.socialmediatoday.com/news/meta-shares-key-best-practices-facebook-instagram-ad-campaigns/691320/"
+                      className="text-accentColor"
+                      target="_blank"
+                      rel="noopener norefferer"
+                    >
+                      Social Media Today
+                    </a>
+                    ).
                   </li>
                   <li>
                     <span className="text-lightPrimary font-normal">
                       Build Brand Loyalty:
                     </span>{" "}
                     Interactive content like polls and live videos increase
-                    trust by 60% (Sprout Social).
+                    trust by 60% (
+                    <a
+                      href="https://sproutsocial.com/"
+                      className="text-accentColor"
+                      target="_blank"
+                      rel="noopener norefferer"
+                    >
+                      Sprout Social
+                    </a>
+                    ).
                   </li>
                 </ul>
 
