@@ -187,22 +187,6 @@ function Blogs() {
           </div>
           <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-lightSecondary/30">
             <BlogCard
-              title="Meta Marketing in 2025: How Devion Ark's Strategies Skyrocket Business Growth by 150%"
-              cover={blogCover2}
-              category={[
-                "Meta Marketing",
-                "Ads Campaign",
-                "Social Media",
-                "Virtual Reality",
-                "Social Media Marketing",
-              ]}
-              desc="This article explores how Meta Marketing is revolutionizing business growth in 2025, focusing on trends like AI-driven personalization, AR/VR advertising, and seamless e-commerce integration across Facebook, Instagram, and WhatsApp. Learn how Devion Ark leverages these tools to deliver 150%+ traffic growth and triple sales through precision targeting, scroll-stopping creatives, and real-time optimization."
-              forwardTo="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150"
-              date="November 30, 2024"
-              author={["Naim Rahman", "Syed Shaeduzzaman Noor"]}
-            />
-
-            <BlogCard
               title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
               cover={blogCover1}
               category={[
@@ -215,6 +199,21 @@ function Blogs() {
               desc="Is SEO dead, or is it just evolving? In this in-depth blog, we explore the future of SEO (Search Engine Optimization) and the rise of AEO (Answer Engine Optimization) in 2025. Discover how voice search, featured snippets, and structured data are reshaping the digital marketing landscape."
               forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"
               date="December 13, 2024"
+              author={["Naim Rahman", "Syed Shaeduzzaman Noor"]}
+            />
+            <BlogCard
+              title="Meta Marketing in 2025: How Devion Ark's Strategies Skyrocket Business Growth by 150%"
+              cover={blogCover2}
+              category={[
+                "Meta Marketing",
+                "Ads Campaign",
+                "Social Media",
+                "Virtual Reality",
+                "Social Media Marketing",
+              ]}
+              desc="This article explores how Meta Marketing is revolutionizing business growth in 2025, focusing on trends like AI-driven personalization, AR/VR advertising, and seamless e-commerce integration across Facebook, Instagram, and WhatsApp. Learn how Devion Ark leverages these tools to deliver 150%+ traffic growth and triple sales through precision targeting, scroll-stopping creatives, and real-time optimization."
+              forwardTo="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150"
+              date="November 30, 2024"
               author={["Naim Rahman", "Syed Shaeduzzaman Noor"]}
             />
           </div>

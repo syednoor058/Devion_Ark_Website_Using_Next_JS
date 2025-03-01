@@ -12,10 +12,12 @@ import { FaStar } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 import { LuArrowUpRight } from "react-icons/lu";
+import { MdOutlineArrowForward } from "react-icons/md";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
 import groupPhoto from "../../public/about/old-garage.jpg";
-import blogCover from "../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import blogCover2 from "../../public/blogs/meta-marketing-2025-cover.jpg";
+import blogCover1 from "../../public/blogs/seo-vs-aeo-2025-blog-cover.jpg";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.png";
 import elevate from "../../public/partners/elevate.png";
 import indigo from "../../public/partners/indigo_company.png";
@@ -156,9 +158,10 @@ function ServiceCard({ serviceTitle, forwardTo }) {
   );
 }
 
-function MoreBlogCard({ cover, title, date, forwardTo }) {
+function MoreBlogCard({ cover, title = "", forwardTo, date }) {
+  const truncatedTitle = title.length > 80 ? title.slice(0, 80) + "..." : title;
   return (
-    <div className="w-full flex flex-col gap-3">
+    <div className="w-full flex flex-col gap-3 p-5 bg-black rounded">
       <div className="flex flex-col gap-2">
         <div className="w-full overflow-hidden relative rounded-sm">
           <Image
@@ -170,18 +173,14 @@ function MoreBlogCard({ cover, title, date, forwardTo }) {
         </div>
         <div className="w-full h-[1px] bg-gray-500"></div>
       </div>
-      <div>
-        <p className="font-light text-base lg:text-lg text-lightSecondary">
-          {date}
-        </p>
-      </div>
+      <p className="text-sm">{date}</p>
       <Link href={forwardTo} className="group">
         <div className="w-full flex flex-row gap-5 justify-between">
-          <div className="text-xl lg:text-3xl text-lightPrimary group-hover:underline underline-offset-4 duration-500 leading-tight">
-            {title}
+          <div className="text-xl lg:text-2xl text-lightPrimary group-hover:underline underline-offset-4 duration-500">
+            {truncatedTitle}
           </div>
-          <div className="text-3xl lg:text-5xl">
-            <LuArrowUpRight className="rotate-45 group-hover:rotate-0 duration-500 text-accentColor font-light" />
+          <div className="text-2xl lg:text-4xl">
+            <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
           </div>
         </div>
       </Link>
@@ -747,12 +746,19 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 divide-y-[1px] divide-lightSecondary/30">
           <MoreBlogCard
             title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
             forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"
             date="14 December, 2024"
-            cover={blogCover}
+            cover={blogCover1}
+          />
+          <MoreBlogCard
+            title="Meta Marketing in 2025: How Devion Ark's Strategies
+                  Skyrocket Business Growth by 150%"
+            forwardTo="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150"
+            date="30 November, 2024"
+            cover={blogCover2}
           />
         </div>
       </div>

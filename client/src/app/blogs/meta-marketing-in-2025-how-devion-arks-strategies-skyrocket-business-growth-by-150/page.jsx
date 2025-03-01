@@ -1,7 +1,7 @@
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaGoogle, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
@@ -79,10 +79,18 @@ export const metadata = {
 
 function Blog2() {
   const shareLinks = [
-    { icon: <FaFacebookF />, url: "/" },
-    { icon: <FaLinkedin />, url: "/" },
-    { icon: <FaXTwitter />, url: "/" },
-    { icon: <FaGoogle />, url: "/" },
+    {
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    },
+    {
+      icon: <FaLinkedin />,
+      url: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+    },
+    {
+      icon: <FaXTwitter />,
+      url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization&hashtags=Marketing,DigitalStrategy",
+    },
   ];
 
   return (

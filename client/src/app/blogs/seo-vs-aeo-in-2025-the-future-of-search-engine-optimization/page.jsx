@@ -1,7 +1,7 @@
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaGoogle, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
@@ -94,7 +94,6 @@ function Blog1() {
       icon: <FaXTwitter />,
       url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization&hashtags=Marketing,DigitalStrategy",
     },
-    { icon: <FaGoogle />, url: "/" },
   ];
 
   return (
