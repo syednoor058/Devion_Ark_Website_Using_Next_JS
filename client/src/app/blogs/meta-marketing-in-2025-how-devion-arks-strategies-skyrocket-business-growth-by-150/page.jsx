@@ -6,16 +6,18 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineArrowForward } from "react-icons/md";
-import blogImg1 from "../../../../public/blog-1-images/1.jpg";
-import blogImg2 from "../../../../public/blog-1-images/2.jpg";
-import blogImg3 from "../../../../public/blog-1-images/3.jpg";
-import blogCover from "../../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import blogImg1 from "../../../../public/blogs/blog-2-images/img1.jpg";
+import blogImg2 from "../../../../public/blogs/blog-2-images/img2.jpg";
+import blogImg3 from "../../../../public/blogs/blog-2-images/img3.jpg";
+import blogCover from "../../../../public/blogs/meta-marketing-2025-cover.jpg";
+import moreBlog1 from "../../../../public/blogs/seo-vs-aeo-2025-blog-cover.jpg";
 import naimPic from "../../../../public/owners/naim_rahman.webp";
 import shaedPic from "../../../../public/owners/syed_shaeduzzaman_noor.png";
+
 function MoreBlogCard({ cover, title = "", forwardTo, date }) {
-  const truncatedTitle = title.length > 40 ? title.slice(0, 40) + "..." : title;
+  const truncatedTitle = title.length > 80 ? title.slice(0, 80) + "..." : title;
   return (
-    <div className="w-full flex flex-col gap-3 p-3 bg-black rounded">
+    <div className="w-full flex flex-col gap-3 p-5 bg-black rounded">
       <div className="flex flex-col gap-2">
         <div className="w-full overflow-hidden relative rounded-sm">
           <Image
@@ -44,9 +46,35 @@ function MoreBlogCard({ cover, title = "", forwardTo, date }) {
 
 export const metadata = {
   title:
-    "Meta Marketing in 2025: How Devion Ark&apos;s Strategies Skyrocket Business Growth by 150% | Devion Ark",
+    "Meta Marketing in 2025: How Devion Ark's Strategies Skyrocket Business Growth by 150% | Devion Ark",
   description:
     "Discover how Meta Marketing drives 150%+ growth in 2025. Learn AI personalization, AR/VR ads, and e-commerce strategies. See how Devion Ark’s proven methods triple ROI. Start now!",
+  openGraph: {
+    title:
+      "Meta Marketing in 2025: How Devion Ark's Strategies Skyrocket Business Growth by 150%",
+    description:
+      "Discover how Meta Marketing drives 150%+ growth in 2025. Learn AI personalization, AR/VR ads, and e-commerce strategies.",
+    url: "https://yourdomain.com/blog/meta-marketing-2025",
+    type: "article",
+    images: [
+      {
+        url: "https://yourdomain.com/images/meta-marketing-2025-og.jpg", // Absolute URL required
+        width: 1200,
+        height: 630,
+        alt: "Meta Marketing 2025 Strategies Visual Guide",
+      },
+    ],
+    publishedTime: "2024-03-15T00:00:00Z",
+    authors: ["Devion Ark"],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Meta Marketing in 2025: 150% Growth Strategies",
+    description:
+      "Triple your ROI with Devion Ark's Meta Marketing methods. AI personalization, AR/VR ads, and more!",
+    images: ["https://yourdomain.com/images/meta-marketing-2025-twitter.jpg"],
+  },
 };
 
 function Blog2() {
@@ -61,11 +89,11 @@ function Blog2() {
     <main className="font-poppins">
       {/* Blog Cover */}
       <div className="w-full relative overflow-hidden px-4 lg:px-20 pt-6 lg:pt-10">
-        <div className="w-full relative">
+        <div className="w-full relative overflow-hidden">
           <Image
             placeholder="blur"
             src={blogCover}
-            alt="seo vs aeo who will take over in 2025 blog cover"
+            alt="meta marketing in 2025"
             className="w-full object-cover"
           />
         </div>
@@ -212,8 +240,8 @@ function Blog2() {
                 <div className="w-full relative overflow-hidden rounded-sm">
                   <Image
                     placeholder="blur"
-                    src={blogImg3}
-                    alt="construction_building"
+                    src={blogImg1}
+                    alt="what is meta marketing know in details"
                     className="w-full object-cover"
                   />
                 </div>
@@ -264,8 +292,8 @@ function Blog2() {
                 <div className="w-full relative overflow-hidden rounded-sm">
                   <Image
                     placeholder="blur"
-                    src={blogImg1}
-                    alt="construction_building"
+                    src={blogImg2}
+                    alt="top 5 meta marketing trends for 2025"
                     className="w-full object-cover"
                   />
                 </div>
@@ -424,15 +452,6 @@ function Blog2() {
                   tweak bids, audiences, and creatives weekly.
                 </p>
 
-                <div className="w-full relative overflow-hidden rounded-sm">
-                  <Image
-                    placeholder="blur"
-                    src={blogImg2}
-                    alt="construction_building"
-                    className="w-full object-cover"
-                  />
-                </div>
-
                 <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
                   Case Studies: Devion Ark&apos;s Meta Marketing Wins
                 </h2>
@@ -496,6 +515,15 @@ function Blog2() {
                   </li>
                 </ul>
 
+                <div className="w-full relative overflow-hidden rounded-sm">
+                  <Image
+                    placeholder="blur"
+                    src={blogImg3}
+                    alt="analyse your competitors of increase your business growth"
+                    className="w-full object-cover"
+                  />
+                </div>
+
                 <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
                   Why Choose Devion Ark for Your Meta Marketing?
                 </h2>
@@ -549,11 +577,11 @@ function Blog2() {
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
           <MoreBlogCard
             title="SEO vs AEO in 2025: The future of search engine optimization"
             forwardTo="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization"
-            cover={blogCover}
+            cover={moreBlog1}
             date="13 December 2024"
           />
         </div>

@@ -6,16 +6,18 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineArrowForward } from "react-icons/md";
-import blogImg1 from "../../../../public/blog-1-images/1.jpg";
-import blogImg2 from "../../../../public/blog-1-images/2.jpg";
-import blogImg3 from "../../../../public/blog-1-images/3.jpg";
-import blogCover from "../../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import blogImg1 from "../../../../public/blogs/blog-1-images/1.jpg";
+import blogImg2 from "../../../../public/blogs/blog-1-images/2.jpg";
+import blogImg3 from "../../../../public/blogs/blog-1-images/3.jpg";
+import moreBlogs1 from "../../../../public/blogs/meta-marketing-2025-cover.jpg";
+import blogCover from "../../../../public/blogs/seo-vs-aeo-2025-blog-cover.jpg";
 import naimPic from "../../../../public/owners/naim_rahman.webp";
 import shaedPic from "../../../../public/owners/syed_shaeduzzaman_noor.png";
+
 function MoreBlogCard({ cover, title = "", forwardTo, date }) {
-  const truncatedTitle = title.length > 40 ? title.slice(0, 40) + "..." : title;
+  const truncatedTitle = title.length > 60 ? title.slice(0, 60) + "..." : title;
   return (
-    <div className="w-full flex flex-col gap-3 p-3 bg-black rounded">
+    <div className="w-full flex flex-col gap-3 p-5 bg-black rounded">
       <div className="flex flex-col gap-2">
         <div className="w-full overflow-hidden relative rounded-sm">
           <Image
@@ -98,7 +100,7 @@ function Blog1() {
   return (
     <main className="font-poppins">
       {/* Blog Cover */}
-      <div className="w-full relative overflow-hidden px-4 lg:px-20 pt-6 lg:pt-10">
+      <div className="w-full relative overflow-hidden px-4 lg:px-20 pt-5 lg:pt-10">
         <div className="w-full relative">
           <Image
             placeholder="blur"
@@ -512,15 +514,15 @@ function Blog1() {
               <span>
                 <GoDotFill className="text-xs" />
               </span>
-              More Articles
+              More Blogs
             </p>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
           <MoreBlogCard
             title="Meta Marketing in 2025: How Devion Ark’s Strategies Skyrocket Business Growth by 150%"
             forwardTo="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150"
-            cover={blogCover}
+            cover={moreBlogs1}
             date="30 November 2024"
           />
         </div>

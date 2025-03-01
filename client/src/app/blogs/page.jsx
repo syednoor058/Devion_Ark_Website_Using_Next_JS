@@ -4,7 +4,8 @@ import Image from "next/image";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineArrowForward } from "react-icons/md";
-import blogCover1 from "../../../public/blogs_cover/seo-vs-aeo-2025-blog-cover.jpg";
+import blogCover2 from "../../../public/blogs/meta-marketing-2025-cover.jpg";
+import blogCover1 from "../../../public/blogs/seo-vs-aeo-2025-blog-cover.jpg";
 import cover from "../../../public/projects/case-study-cover.jpg";
 
 export const metadata = {
@@ -27,7 +28,7 @@ function BlogCard({ title, cover, category, desc, forwardTo, date, author }) {
                 <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
               </div>
             </div>
-            <div className="w-full aspect-[3/1] overflow-hidden rounded-sm relative">
+            <div className="w-full aspect-[1200/630] overflow-hidden rounded-sm relative">
               <Image
                 placeholder="blur"
                 src={cover}
@@ -95,10 +96,10 @@ function Blogs() {
         "/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
     },
     {
-      title: "What is the best solution for Machine Learning?",
-      img: blogCover1,
+      title: "Meta Marketing in 2025: How Devion Ark's Strategies...",
+      img: blogCover2,
       forwardTo:
-        "/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization",
+        "/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
     },
   ];
   return (
@@ -180,11 +181,27 @@ function Blogs() {
                 <span>
                   <GoDotFill className="text-xs" />
                 </span>
-                Articles
+                Blogs
               </p>
             </div>
           </div>
-          <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-gray-800">
+          <div className="w-full grid grid-cols-1 gap-5 lg:gap-10 font-light text-lightSecondary leading-none divide-y-[1px] divide-lightSecondary/30">
+            <BlogCard
+              title="Meta Marketing in 2025: How Devion Ark's Strategies Skyrocket Business Growth by 150%"
+              cover={blogCover2}
+              category={[
+                "Meta Marketing",
+                "Ads Campaign",
+                "Social Media",
+                "Virtual Reality",
+                "Social Media Marketing",
+              ]}
+              desc="This article explores how Meta Marketing is revolutionizing business growth in 2025, focusing on trends like AI-driven personalization, AR/VR advertising, and seamless e-commerce integration across Facebook, Instagram, and WhatsApp. Learn how Devion Ark leverages these tools to deliver 150%+ traffic growth and triple sales through precision targeting, scroll-stopping creatives, and real-time optimization."
+              forwardTo="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150"
+              date="November 30, 2024"
+              author={["Naim Rahman", "Syed Shaeduzzaman Noor"]}
+            />
+
             <BlogCard
               title="SEO vs AEO in 2025: The Future of Search Engine Optimization"
               cover={blogCover1}
