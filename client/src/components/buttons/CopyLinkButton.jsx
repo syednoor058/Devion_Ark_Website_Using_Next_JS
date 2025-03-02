@@ -5,7 +5,7 @@ import { FaCopy } from "react-icons/fa";
 
 function CopyLinkButton() {
   const pathname = usePathname();
-  const currentURL = `${window.location.origin}${pathname}`;
+  const currentURL = `https://www.devionark.com/${pathname}`;
   const copyToClipboard = () => {
     navigator.clipboard.writeText(currentURL);
     alert("Link copied to clipboard!");
