@@ -1,11 +1,10 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export default function HashComponent() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     const scrollToSection = (hash, attempts = 0) => {
@@ -42,7 +41,7 @@ export default function HashComponent() {
     return () => {
       window.removeEventListener("hashchange", handleHash);
     };
-  }, [pathname, searchParams]); // Add searchParams to dependency array
+  }, [pathname]); // Add searchParams to dependency array
 
   return null;
 }
