@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { FaBell } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import footerLogo from "../../../public/footer_logo.png";
 import TextAnimation from "../animations/TextAnimation";
-import CustomShapeButton from "../buttons/CustomShapeButton";
+import NewsletterForm from "../forms/NewsletterForm";
 
 function AddressInfo({ icon, title, value }) {
   return (
@@ -32,9 +31,9 @@ function Footer() {
   ];
 
   const navLinks3 = [
-    { label: "Privacy Policy", path: "/privacy-policy" },
-    { label: "Cookies Policy", path: "/cookies-policy" },
-    { label: "Terms of Use", path: "/terms-of-use" },
+
+    { label: "Cookies Policy", path: "/legals" },
+    { label: "Privacy Policy", path: "/legals#privacy-policy" },
   ];
 
   const socialLinks = [
@@ -154,29 +153,7 @@ function Footer() {
                       <p className="font-light text-base lg:text-lg">
                         Sign up for counsiling, latest updates, and offers!
                       </p>
-                      <form className="w-full flex flex-col gap-3">
-                        <input
-                          className="p-3 outline-none border bg-transparent text-lightSecondary"
-                          placeholder="Enter your email address"
-                        />
-                        <div className="w-full flex justify-start">
-                          <div className="w-full flex justify-start">
-                            <CustomShapeButton
-                              label="Subscribe"
-                              backgroundColor="bg-lightPrimary"
-                              hoverBgColor="bg-accentColor"
-                              textStyle="text-lg font-normal text-darkPrimary"
-                              hoverText="text-darkPrimary"
-                              paddingX="ps-4 pe-8"
-                              paddingY="py-4"
-                              fontGap="gap-2"
-                              icon={
-                                <FaBell className="text-base text-darkPrimary transition duration-[350ms]" />
-                              }
-                            />
-                          </div>
-                        </div>
-                      </form>
+                      <NewsletterForm />
                       <p className="text-sm font-light ">
                         By signing up, you understand and agree that your data
                         will be collected and used subject to our Privacy Policy

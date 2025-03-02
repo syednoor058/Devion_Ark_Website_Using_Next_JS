@@ -208,24 +208,7 @@ function CaseStudies() {
 
       {/* Project List Section */}
 
-      <div className="w-full flex flex-col px-4 lg:px-20 bg-black">
-        <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
-          <ProjectCard
-            forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
-            video="https://res.cloudinary.com/de8g5laai/video/upload/v1739689633/crm_software_promo_video_sdysuq.mp4"
-            title="Comprehensive Real Estate CRM Solution"
-            desc="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
-            features={[
-              "CRM System",
-              "Custom Software",
-              "Inventory Management",
-              "Leads Storage",
-              "Employee Assign",
-              "Project Handle",
-              "Real Estate",
-            ]}
-          />
-        </div>
+      <div className="w-full flex flex-col px-4 lg:px-20 bg-black divide-y-[1px] divide-lightSecondary/30">
         <div className="py-10 lg:py-20">
           <ProjectCard
             reverse="1"
@@ -240,6 +223,23 @@ function CaseStudies() {
               "Customer Solutions",
               "Dynamic Category",
               "Data Security",
+            ]}
+          />
+        </div>
+        <div className="py-10 lg:py-20 ">
+          <ProjectCard
+            forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
+            video="https://res.cloudinary.com/de8g5laai/video/upload/v1739689633/crm_software_promo_video_sdysuq.mp4"
+            title="Comprehensive Real Estate CRM Solution"
+            desc="A powerful CRM system for real estate professionals, providing automated lead management, property listing organization, client follow-ups, and in-depth analytics to streamline operations."
+            features={[
+              "CRM System",
+              "Custom Software",
+              "Inventory Management",
+              "Leads Storage",
+              "Employee Assign",
+              "Project Handle",
+              "Real Estate",
             ]}
           />
         </div>

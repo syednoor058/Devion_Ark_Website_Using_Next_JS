@@ -93,34 +93,37 @@ function ProjectColumn({
         </div>
       </div>
 
-      <div className="h-full flex flex-col justify-between items-center">
+      <div className="h-full flex flex-col justify-between items-center gap-10">
         <div
-          className={`w-full h-[15%] text-base text-darkSecondary z-[2] text-center`}
+          className={`w-full h-[20%] text-base text-darkSecondary z-[2] text-center`}
         >
           {caption}
         </div>
-        <div className="w-full h-[20%] z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
-          <h2
-            className={`w-full font-normal text-5xl  text-darkSecondary text-center duration-500 flex flex-col gap-2`}
-          >
-            <span>{title1}</span>
-            <span>{title2}</span>
-          </h2>
+        <div className="w-full h-[40%] flex flex-col gap-10">
+          <div className="w-full z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
+            <h2
+              className={`w-full font-normal text-5xl  text-darkSecondary text-center duration-500 flex flex-col gap-2`}
+            >
+              <span>{title1}</span>
+              <span>{title2}</span>
+            </h2>
+          </div>
+
+          <div className={`z-[2] flex justify-center items-center`}>
+            <Link
+              href={forward}
+              className={`${activeCard === projectNum ? "flex" : "hidden"}`}
+            >
+              <FiArrowUpRight
+                className={`text-6xl text-darkSecondary  rotate-45  transition duration-[350ms] ${
+                  activeCard === projectNum && "group-hover:rotate-0"
+                }`}
+              />
+            </Link>
+          </div>
         </div>
 
-        <div className={`z-[2] h-[15%] flex justify-center items-center`}>
-          <Link
-            href={forward}
-            className={`${activeCard === projectNum ? "flex" : "hidden"}`}
-          >
-            <FiArrowUpRight
-              className={`text-6xl text-darkSecondary  rotate-45  transition duration-[350ms] ${
-                activeCard === projectNum && "group-hover:rotate-0"
-              }`}
-            />
-          </Link>
-        </div>
-        <div className="w-full h-[50%] text-darkSecondary text-[250px] font-semibold z-[2] leading-none text-center flex items-end justify-center font-baumans">
+        <div className="w-full h-[40%] text-darkSecondary text-[250px] font-semibold z-[2] leading-none text-center flex items-end justify-center font-baumans">
           {projectNum}
         </div>
       </div>

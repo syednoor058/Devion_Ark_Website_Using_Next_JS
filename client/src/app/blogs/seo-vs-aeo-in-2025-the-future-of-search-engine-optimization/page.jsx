@@ -1,5 +1,6 @@
 import CopyLinkButton from "@/components/buttons/CopyLinkButton";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import HashComponent from "@/components/hashComp/HashComp";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa";
@@ -200,7 +201,7 @@ function Blog1() {
 
       {/* Blog Description */}
 
-      <div className="w-full px-5 lg:px-20 py-10 lg:py-20">
+      <div className="w-full px-4 lg:px-20 py-10 lg:py-20">
         <p className="font-light text-lightPrimary text-lg lg:text-2xl lg:indent-40 lg:leading-[1.7]">
           Is SEO dead, or is it just evolving? In this in-depth blog, we explore
           the future of SEO (Search Engine Optimization) and the rise of AEO
@@ -216,7 +217,7 @@ function Blog1() {
 
       {/* Blog Content */}
 
-      <div className="w-full px-5 lg:px-20 pt-5 pb-5">
+      <div className="w-full px-4 lg:px-20 pt-5 pb-5">
         <div className="w-full flex flex-row gap-20">
           <div className="w-[30%] hidden lg:flex">
             <div className="flex h-screen flex-col gap-5 sticky top-20">
@@ -224,21 +225,35 @@ function Blog1() {
                 Table of Contents
               </div>
               <ul className="pl-5 flex flex-col gap-5 font-light text-lightSecondary list-disc">
-                <li>What&apos;s Happening to SEO in 2025?</li>
-                <li className="">
-                  What Is AEO, and Why Is It Gaining Popularity?
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization#whats-happening-to-seo-in-2025">
+                    What&apos;s Happening to SEO in 2025?
+                  </Link>
                 </li>
-                <li>SEO vs AEO: Key Differences and Similarities</li>
-                <li>How to Prepare for the Future of Search Optimization</li>
-                <li>Why SEO Is Still Worth It (And Always Will Be)</li>
-                <li>The Rise of Voice Search and Conversational Queries</li>
-                <li>How Featured Snippets Are Changing the Game</li>
-                <li>
-                  Actionable Tips to Combine SEO and AEO for Maximum Impact
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization#what-is-aeo-and-why-is-it-gaining-popularity">
+                    What Is AEO, and Why Is It Gaining Popularity?
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization#seo-vs-aeo-key-differences-and-similarities">
+                    SEO vs AEO: Key Differences and Similarities
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization#how-to-prepare-for-the-future-of-search-optimization">
+                    How to Prepare for the Future of Search Optimization
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization#why-seo-is-still-worth-it">
+                    Why SEO Is Still Worth It (And Always Will Be)
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
+          <HashComponent />
           <div className="w-full lg:w-[70%]">
             <div className="">
               <article className="w-full flex flex-col gap-5 lg:gap-7 font-light text-lightSecondary leading-tight text-base lg:text-xl">
@@ -250,7 +265,10 @@ function Blog1() {
                   SEO with AEO to stay competitive. Let&apos;s break it all
                   down.
                 </p>
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="whats-happening-to-seo-in-2025"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   What&apos;s Happening to SEO in 2025?
                 </h2>
                 <p>
@@ -300,7 +318,10 @@ function Blog1() {
                   />
                 </div>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="what-is-aeo-and-why-is-it-gaining-popularity"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   What Is AEO, and Why Is It Gaining Popularity?
                 </h2>
                 <p>
@@ -342,7 +363,10 @@ function Blog1() {
                     </li>
                   </ul>
                 </div>
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="seo-vs-aeo-key-differences-and-similarities"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   SEO vs AEO: Key Differences and Similarities
                 </h2>
                 <table className="">
@@ -397,7 +421,10 @@ function Blog1() {
                     className="w-full object-cover"
                   />
                 </div>
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="how-to-prepare-for-the-future-of-search-optimization"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   How to Prepare for the Future of Search Optimization
                 </h2>
                 <p>
@@ -456,7 +483,10 @@ function Blog1() {
                   </li>
                 </ul>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="why-seo-is-still-worth-it"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   Why SEO Is Still Worth It (And Always Will Be)
                 </h2>
                 <p>
@@ -503,12 +533,12 @@ function Blog1() {
       </div>
 
       {/* Divider */}
-      <div className="px-5 lg:px-20 pt-10 lg:pt-20">
+      <div className="px-4 lg:px-20 pt-10 lg:pt-20">
         <div className="w-full h-[1px] bg-gray-800"></div>
       </div>
 
       {/* More Blogs */}
-      <div className="w-full px-5 lg:px-20 pt-10 lg:pt-20 pb-10 lg:pb-20 flex flex-col gap-10 lg:gap-20">
+      <div className="w-full px-4 lg:px-20 pt-10 lg:pt-20 pb-10 lg:pb-20 flex flex-col gap-10 lg:gap-20">
         <div className="flex overflow-hidden">
           <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
             <p className="flex flex-row gap-2 items-center">

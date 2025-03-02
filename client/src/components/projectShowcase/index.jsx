@@ -88,7 +88,7 @@ const ProjectShowcase = () => {
           title1="Sportswear"
           title2="E-commerce"
           img={eCommerceBack}
-          forward=""
+          forward="/case-studies/dynamic-sportswear-e-commerce-platform"
           projectNum="1"
           activeCard={activeCard}
           setActiveCard={setActiveCard}
@@ -98,7 +98,7 @@ const ProjectShowcase = () => {
           title1="Real Estate"
           title2="CRM System"
           img={realEstateBack}
-          forward=""
+          forward="/case-studies/comprehensive-real-estate-crm-solution"
           projectNum="2"
           activeCard={activeCard}
           setActiveCard={setActiveCard}
@@ -108,7 +108,7 @@ const ProjectShowcase = () => {
           title1="Social Ads"
           title2="Campaigns"
           img={smmBack}
-          forward=""
+          forward="/case-studies"
           projectNum="3"
           activeCard={activeCard}
           setActiveCard={setActiveCard}
@@ -118,7 +118,7 @@ const ProjectShowcase = () => {
           title1="Technical"
           title2="SEO Stuff"
           img={seoBack}
-          forward=""
+          forward="/case-studies"
           projectNum="4"
           activeCard={activeCard}
           setActiveCard={setActiveCard}
@@ -133,7 +133,7 @@ const ProjectShowcase = () => {
           title1="Sportswear"
           title2="E-commerce"
           img={eCommerceBack}
-          forward=""
+          forward="/case-studies/dynamic-sportswear-e-commerce-platform"
           projectNum="1"
         />
         <div
@@ -146,7 +146,7 @@ const ProjectShowcase = () => {
             title1="Real Estate"
             title2="CRM System"
             img={realEstateBack}
-            forward=""
+            forward="/case-studies/comprehensive-real-estate-crm-solution"
             projectNum="2"
           />
         </div>
@@ -160,7 +160,7 @@ const ProjectShowcase = () => {
             title1="Social Ads"
             title2="Campaigns"
             img={smmBack}
-            forward=""
+            forward="/case-studies"
             projectNum="3"
           />
         </div>
@@ -174,7 +174,7 @@ const ProjectShowcase = () => {
             title1="Technical"
             title2="SEO Stuff"
             img={seoBack}
-            forward=""
+            forward="/case-studies"
             projectNum="4"
           />
         </div>

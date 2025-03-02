@@ -84,7 +84,7 @@ function Blog2() {
   const shareLinks = [
     {
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150n",
+      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
     },
     {
       icon: <FaLinkedin />,
@@ -200,7 +200,7 @@ function Blog2() {
 
       {/* Blog Description */}
 
-      <div className="w-full px-5 lg:px-20 py-10 lg:py-20">
+      <div className="w-full px-4 lg:px-20 py-10 lg:py-20">
         <p className="font-light text-lightPrimary text-lg lg:text-2xl lg:indent-40 lg:leading-[1.7]">
           This article explores how Meta Marketing is revolutionizing business
           growth in 2025, focusing on trends like AI-driven personalization,
@@ -218,7 +218,7 @@ function Blog2() {
 
       {/* Blog Content */}
 
-      <div className="w-full px-5 lg:px-20 pt-5 pb-5">
+      <div className="w-full px-4 lg:px-20 pt-5 pb-5">
         <div className="w-full flex flex-row gap-20">
           <div className="w-[30%] hidden lg:flex">
             <div className="flex h-screen flex-col gap-5 sticky top-20">
@@ -226,14 +226,36 @@ function Blog2() {
                 Table of Contents
               </div>
               <ul className="pl-5 flex flex-col gap-5 font-light text-lightSecondary list-disc">
-                <li>What Is Meta Marketing? The 2025 Growth Engine</li>
-                <li className="">Top 5 Meta Marketing Trends for 2025</li>
-                <li>Why Meta Marketing is Non-Negotiable in 2025</li>
-                <li>
-                  How Devion Ark Delivers 150%+ Growth with Meta Marketing
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#what-is-meta-marketing">
+                    What Is Meta Marketing? The 2025 Growth Engine
+                  </Link>
                 </li>
-                <li>Case Studies: Devion Ark's Meta Marketing Wins</li>
-                <li>Why Choose Devion Ark for Your Meta Marketing?</li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#top-5-meta-marketing">
+                    Top 5 Meta Marketing Trends for 2025
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#why-meta-marketing-non-negotiable-in-2025">
+                    Why Meta Marketing is Non-Negotiable in 2025
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#how-devion-ark-delivers-150-growth-with-meta-marketing">
+                    How Devion Ark Delivers 150%+ Growth with Meta Marketing
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#case-studies">
+                    Case Studies: Devion Ark's Meta Marketing Wins
+                  </Link>
+                </li>
+                <li className="text-lightSecondary hover:text-lightPrimary">
+                  <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#why-choose-devion-ark">
+                    Why Choose Devion Ark for Your Meta Marketing?
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -257,7 +279,10 @@ function Blog2() {
                     className="w-full object-cover"
                   />
                 </div>
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="what-is-meta-marketing"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   What Is Meta Marketing? The 2025 Growth Engine
                 </h2>
                 <p>
@@ -325,7 +350,10 @@ function Blog2() {
                   />
                 </div>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="top-5-meta-marketing"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   Top 5 Meta Marketing Trends for 2025
                 </h2>
                 <h3 className="text-xl lg:text-2xl text-lightPrimary font-medium">
@@ -410,7 +438,10 @@ function Blog2() {
                   abandoned carts—24/7.
                 </p>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="why-meta-marketing-non-negotiable-in-2025"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   Why Meta Marketing is Non-Negotiable in 2025
                 </h2>
 
@@ -456,7 +487,10 @@ function Blog2() {
                   </li>
                 </ul>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="how-devion-ark-delivers-150-growth-with-meta-marketing"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   How Devion Ark Delivers 150%+ Growth with Meta Marketing
                 </h2>
 
@@ -515,7 +549,10 @@ function Blog2() {
                   tweak bids, audiences, and creatives weekly.
                 </p>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="case-studies"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   Case Studies: Devion Ark&apos;s Meta Marketing Wins
                 </h2>
                 <h3 className="text-xl lg:text-2xl text-lightPrimary font-medium">
@@ -587,7 +624,10 @@ function Blog2() {
                   />
                 </div>
 
-                <h2 className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold">
+                <h2
+                  id="why-choose-devion-ark"
+                  className="text-2xl lg:text-4xl text-lightPrimary py-4 lg:py-6 font-semibold"
+                >
                   Why Choose Devion Ark for Your Meta Marketing?
                 </h2>
                 <ul className="pl-5 flex flex-col gap-2 list-disc">
@@ -624,19 +664,19 @@ function Blog2() {
       </div>
 
       {/* Divider */}
-      <div className="px-5 lg:px-20 pt-10 lg:pt-20">
+      <div className="px-4 lg:px-20 pt-10 lg:pt-20">
         <div className="w-full h-[1px] bg-gray-800"></div>
       </div>
 
       {/* More Blogs */}
-      <div className="w-full px-5 lg:px-20 pt-10 lg:pt-20 pb-10 lg:pb-20 flex flex-col gap-10 lg:gap-20">
+      <div className="w-full px-4 lg:px-20 pt-10 lg:pt-20 pb-10 lg:pb-20 flex flex-col gap-10 lg:gap-20">
         <div className="flex overflow-hidden">
           <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
             <p className="flex flex-row gap-2 items-center">
               <span>
                 <GoDotFill className="text-xs" />
               </span>
-              More Articles
+              More Blogs
             </p>
           </div>
         </div>

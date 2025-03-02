@@ -385,37 +385,38 @@ export default function Home() {
             <div className="flex flex-col">
               <div className="">
                 <ServiceCard
-                  forwardTo="/services"
+                  forwardTo="/services#custom-software-solutions"
                   serviceTitle="Custom Software Solutions"
                 />
               </div>
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo="/services"
+                  forwardTo="/services#website-development"
                   serviceTitle="Website Development"
                 />
               </div>
+
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo="/services"
-                  serviceTitle="Search Engine Optimization"
-                />
-              </div>
-              <div className="border-t border-lightSecondary/30">
-                <ServiceCard
-                  forwardTo="/services"
+                  forwardTo="/services#social-media-marketing"
                   serviceTitle="Social Media Marketing"
                 />
               </div>
               <div className="border-t border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo="/services"
+                  forwardTo="/services#search-engine-marketing"
                   serviceTitle="Search Engine Marketing"
+                />
+              </div>
+              <div className="border-t border-lightSecondary/30">
+                <ServiceCard
+                  forwardTo="/services#search-engine-optimization"
+                  serviceTitle="Search Engine Optimization"
                 />
               </div>
               <div className="border-y border-lightSecondary/30">
                 <ServiceCard
-                  forwardTo="/services"
+                  forwardTo="/services#business-consultancy"
                   serviceTitle="Business Consultation"
                 />
               </div>

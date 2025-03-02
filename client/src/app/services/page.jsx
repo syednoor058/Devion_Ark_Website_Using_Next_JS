@@ -1,4 +1,5 @@
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import HashComponent from "@/components/hashComp/HashComp";
 import AutoSlider from "@/components/slider/Slider";
 import Image from "next/image";
 import Link from "next/link";
@@ -267,8 +268,9 @@ function Services() {
       </div>
 
       {/* Service List Section */}
+      <HashComponent />
       <div className="w-full flex flex-col px-4 lg:px-20">
-        <div className="py-10 lg:py-20 border-y border-lightSecondary/30">
+        <div id="custom-software-solutions" className="py-10 lg:py-20 border-y border-lightSecondary/30">
           <ServiceCard
             imgs={[service1Img1, service1Img2]}
             title="Custom Software Solutions"
@@ -284,7 +286,7 @@ function Services() {
             ]}
           />
         </div>
-        <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
+        <div id="website-development" className="py-10 lg:py-20 border-b border-lightSecondary/30">
           <ServiceCard
             reverse="1"
             imgs={[service2Img]}
@@ -301,7 +303,7 @@ function Services() {
             ]}
           />
         </div>
-        <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
+        <div id="social-media-marketing" className="py-10 lg:py-20 border-b border-lightSecondary/30">
           <ServiceCard
             imgs={[service3Img1, service3Img2]}
             title="Social Media Marketing"
@@ -317,7 +319,7 @@ function Services() {
             ]}
           />
         </div>
-        <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
+        <div id="search-engine-marketing" className="py-10 lg:py-20 border-b border-lightSecondary/30">
           <ServiceCard
             reverse="1"
             imgs={[service4Img1]}
@@ -332,7 +334,7 @@ function Services() {
             ]}
           />
         </div>
-        <div className="py-10 lg:py-20 border-b border-lightSecondary/30">
+        <div id="search-engine-optimization" className="py-10 lg:py-20 border-b border-lightSecondary/30">
           <ServiceCard
             imgs={[service5Img1, service5Img2]}
             title="Search Engine Optimization"
@@ -348,7 +350,7 @@ function Services() {
             ]}
           />
         </div>
-        <div className="py-10 lg:py-20">
+        <div id="business-consultancy" className="py-10 lg:py-20">
           <ServiceCard
             reverse="1"
             imgs={[service6Img1]}
