@@ -84,9 +84,9 @@ const ProjectShowcase = () => {
     <div className="w-full lg:h-screen overflow-hidden relative">
       <div className="w-full h-full hidden lg:flex">
         <ProjectColumn
-          caption="An intuitive and scalable e-commerce website tailored for sportswear businesses."
+          caption="Built a scalable online store for a local brand, boosting sales by 150% with SEO-friendly web development and seamless payment integration."
           title1="Sportswear"
-          title2="E-commerce"
+          title2="E-commerce App"
           img={eCommerceBack}
           forward="/case-studies/dynamic-sportswear-e-commerce-platform"
           projectNum="1"
@@ -94,7 +94,7 @@ const ProjectShowcase = () => {
           setActiveCard={setActiveCard}
         />
         <ProjectColumn
-          caption="A powerful CRM system for real estate professionals, providing automation."
+          caption="Automated lead management for a Dhaka agency, slashing manual tasks by 70% with our custom software development expertise."
           title1="Real Estate"
           title2="CRM System"
           img={realEstateBack}
@@ -104,9 +104,9 @@ const ProjectShowcase = () => {
           setActiveCard={setActiveCard}
         />
         <ProjectColumn
-          caption="A strategic social media project encompassing performance monitoring to boost online presence."
-          title1="Social Ads"
-          title2="Campaigns"
+          caption="Transformed a fading brand into a viral sensation, tripling engagement through targeted ads – proof we’re among the best digital marketing agencies in Bangladesh."
+          title1="Social Media"
+          title2="Brand Revival"
           img={smmBack}
           forward="/case-studies"
           projectNum="3"
@@ -114,9 +114,9 @@ const ProjectShowcase = () => {
           setActiveCard={setActiveCard}
         />
         <ProjectColumn
-          caption="A potential strategy to stand out and out perform competitors in google search rank."
-          title1="Technical"
-          title2="SEO Stuff"
+          caption="Helped a e-commerce startup outrank competitors with local SEO strategies, driving a 200% traffic surge in 6 months."
+          title1="Dominating"
+          title2="Web Rankings"
           img={seoBack}
           forward="/case-studies"
           projectNum="4"
@@ -129,9 +129,9 @@ const ProjectShowcase = () => {
         className="w-full min-h-screen flex lg:hidden flex-col relative"
       >
         <ProjectMobileColumn
-          caption="An intuitive and scalable e-commerce web application tailored for sportswear businesses."
+          caption="Built a scalable online store for a local brand, boosting sales by 150% with SEO-friendly web development and seamless payment integration."
           title1="Sportswear"
-          title2="E-commerce"
+          title2="E-commerce App"
           img={eCommerceBack}
           forward="/case-studies/dynamic-sportswear-e-commerce-platform"
           projectNum="1"
@@ -142,7 +142,7 @@ const ProjectShowcase = () => {
           style={{ top: "100%" }}
         >
           <ProjectMobileColumn
-            caption="A powerful CRM system for real estate professionals, providing automation."
+            caption="Automated lead management for a Dhaka agency, slashing manual tasks by 70% with our custom software development expertise."
             title1="Real Estate"
             title2="CRM System"
             img={realEstateBack}
@@ -156,9 +156,9 @@ const ProjectShowcase = () => {
           style={{ top: "200%" }}
         >
           <ProjectMobileColumn
-            caption="A strategic social media project encompassing performance monitoring to boost online presence."
-            title1="Social Ads"
-            title2="Campaigns"
+            caption="Transformed a fading brand into a viral sensation, tripling engagement through targeted ads – proof we’re among the best digital marketing agencies in Bangladesh"
+            title1="Social Media"
+            title2="Brand Revival"
             img={smmBack}
             forward="/case-studies"
             projectNum="3"
@@ -170,9 +170,9 @@ const ProjectShowcase = () => {
           style={{ top: "300%" }}
         >
           <ProjectMobileColumn
-            caption="A potential strategy to stand out and out perform competitors in google search rank."
-            title1="Technical"
-            title2="SEO Stuff"
+            caption="Helped a SaaS startup outrank competitors with local SEO strategies, driving a 200% traffic surge in 6 months."
+            title1="Dominating"
+            title2="Web Rankings"
             img={seoBack}
             forward="/case-studies"
             projectNum="4"

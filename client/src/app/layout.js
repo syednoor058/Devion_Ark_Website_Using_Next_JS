@@ -15,8 +15,8 @@ const baumans = Baumans({ subsets: ['latin'], weight: ["400"], variable: "--font
 gsap.registerPlugin(ScrollTrigger);
 
 export const metadata = {
-  title: "Devion Ark | Innovative IT Solutions for Your Business Success",
-  description: "Explore cutting-edge IT solutions with Devion Ark for businesses of all sizes. From e-commerce development and custom management systems to SEO optimization and digital marketing strategies, we deliver tailored services to drive your growth.",
+  title: "Devion Ark | The End-to-End Digital Solutions Provider",
+  description: "Your trusted partner for website development, digital marketing, custom software solutions, and business consultant in Bangladesh. Drive growth with tailored strategies today.",
 };
 
 export default function RootLayout({ children }) {
@@ -25,6 +25,17 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:title" content="Devion Ark | The End-to-End Digital Solutions Provider" />
+  <meta property="og:description" content="Your trusted partner for website development, digital marketing, custom software solutions, and business consultant in Bangladesh. Drive growth with tailored strategies today." />
+  <meta property="og:url" content="https://www.devionark.com" />
+  <meta property="og:image" content="/og-image.jpg" /> {/* Replace with your OG image URL */}
+  <meta property="og:type" content="website" />
+  
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Devion Ark | The End-to-End Digital Solutions Provider" />
+  <meta name="twitter:description" content="Your trusted partner for website development, digital marketing, custom software solutions, and business consultant in Bangladesh. Drive growth with tailored strategies today." />
+  <meta name="twitter:image" content="/og-image.jpg" /> {/* Replace with your Twitter image URL */}
       </head>
       <body
         className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden ${baumans.variable} relative min-h-screen`}

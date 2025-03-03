@@ -31,15 +31,12 @@ import sikderFoundationLogo from "../../public/partners/sikder_foundation.png";
 import sweetCakes from "../../public/partners/sweet_cakes.png";
 import travel from "../../public/partners/travel.png";
 import streetSigns from "../../public/street_signs.jpg";
-import {
-  default as azizulHoque,
-  default as azizulImg,
-} from "../../public/testimonials/azizul.webp";
+import { default as azizulHoque } from "../../public/testimonials/azizul.webp";
 import rakibShikdar from "../../public/testimonials/rakib.webp";
 
 function TestimonialCard({ image, name, position, company, review }) {
   return (
-    <div className="w-[400px] aspect-video p-5 rounded text-lightSecondary  flex flex-col-reverse gap-3 overflow-hidden">
+    <div className="w-[500px] p-5 rounded text-lightSecondary  flex flex-col-reverse gap-3 overflow-hidden">
       <div className="flex flex-row-reverse gap-5 justify-between items-start">
         <div className="flex flex-row-reverse gap-5 items-center">
           <div>
@@ -77,7 +74,7 @@ function TestimonialCard({ image, name, position, company, review }) {
         <FaStar />
         <FaStar />
       </div>
-      <div className="text-sm font-light leading-tight lg:indent-20">
+      <div className="text-lg font-light leading-tight lg:indent-20">
         {review}
       </div>
     </div>
@@ -86,7 +83,7 @@ function TestimonialCard({ image, name, position, company, review }) {
 
 function TestimonialCard2({ image, name, position, company, review }) {
   return (
-    <div className="w-[400px] aspect-video p-5 rounded text-lightSecondary flex flex-col-reverse gap-3 overflow-hidden">
+    <div className="w-[500px] p-5 rounded text-lightSecondary flex flex-col-reverse gap-3 overflow-hidden">
       <div className="flex flex-row gap-5 justify-between items-start">
         <div className="flex flex-row gap-5 items-center">
           <div>
@@ -120,7 +117,7 @@ function TestimonialCard2({ image, name, position, company, review }) {
         <FaStar />
         <FaStar />
       </div>
-      <div className="text-sm font-light leading-tight lg:indent-20">
+      <div className="text-lg font-light leading-tight lg:indent-20">
         {review}
       </div>
     </div>
@@ -193,8 +190,8 @@ export default function Home() {
     <main className="font-poppins">
       {/* Landing Section */}
 
-      <div className="w-full h-full lg:h-[calc(100vh-60px)] pt-5 lg:pt-10 relative font-light text-lightSecondary bg-darkPrimary">
-        <div className="w-full h-full flex flex-col justify-end">
+      <div className="w-full pt-5 lg:pt-10 relative font-light text-lightSecondary">
+        <div className="w-full h-full flex flex-col justify-end gap-7 lg:gap-10">
           <div className="w-full flex justify-end items-end px-4 lg:px-20">
             <div className="w-full lg:w-[75%] pb-5">
               <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-3xl lg:text-7xl uppercase">
@@ -203,38 +200,35 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="w-full flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 border-b lg:border-t border-lightSecondary/30">
-            <div className="w-full lg:w-[55%] flex flex-col">
-              <div className="py-5 lg:py-10 flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-20">
-                <div className="w-full flex flex-row items-center gap-5">
-                  <div className="w-12 h-12 rounded-full bg-accentColor overflow-hidden relative">
-                    <Image
-                      alt="azizul hoque"
-                      src={azizulImg}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1 leading-[1.1]">
-                    <p className="text-lightPrimary font-semibold">
-                      Md Razibul Hassan
-                    </p>
-                    <p>Head of Business Development, Sikder Foundation</p>
+          <div className="w-full flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 lg:border-b lg:border-t border-lightSecondary/30">
+            <div className="w-full lg:w-[55%] flex flex-col py-10 gap-5">
+              <div className=" flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-20">
+                <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-5">
+                  <CSRAvatar />
+                  <div className="overflow-hidden font-light">
+                    <span className="inline-block">
+                      We have{" "}
+                      <span className="text-lightPrimary">
+                        12+ satisfied clients
+                      </span>{" "}
+                      all around the world. We are empowering business to reach
+                      new heights.
+                    </span>
                   </div>
                 </div>
                 <p className=" text-lightPrimary font-light text-base lg:indent-20">
-                  &quot;Working with Devion Ark transformed our real estate
-                  operations. Their CRM streamlined our inventory and client
-                  management, drastically reducing errors and boosting
-                  conversions. Automated workflows and real-time reporting
-                  empowered our team to make smart, data-driven decisions. We
-                  highly recommend Devion Ark for driving success in our
-                  business.&quot;
+                  Got a game-changing idea but unsure how to bring it to life?
+                  We&apos;re here to bridge that gap. As one of the best
+                  tech-driven digital marketing agencies in Bangladesh, we
+                  don&apos;t just code – we craft digital solutions that drive
+                  sales, simplify workflows, and make your brand unforgettable.
+                  Let&apos;s turn your ‘what if&apos; into ‘what&apos;s next.
                 </p>
               </div>
-              <div className="py-5 lg:py-7 h-full flex items-center px-4 lg:px-0 lg:ps-20 lg:pe-5 lg:border-t border-lightSecondary/30">
+              <div className=" h-full flex items-center px-4 lg:px-0 lg:ps-20 lg:pe-5">
                 <CustomShapeButton
-                  forwardTo="/case-studies/comprehensive-real-estate-crm-solution"
-                  label="Case Study"
+                  forwardTo="/contact"
+                  label="Get Started"
                   textStyle="text-lg font-normal text-darkPrimary"
                   paddingX="ps-4 pe-8"
                   paddingY="py-4"
@@ -247,16 +241,18 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-full lg:w-[45%] aspect-video flex lg:border-l border-lightSecondary/30 overflow-hidden relative">
-              <video
-                className="w-full h-full object-cover"
-                loop
-                muted
-                autoPlay
-                playsInline
-              >
-                <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739689640/devion_ark_showreel_2024_ronun7.mp4" />
-              </video>
+            <div className="w-full lg:w-[45%] flex lg:border-l border-lightSecondary/30 overflow-hidden relative">
+              <div className="w-full aspect-video relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                >
+                  <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1739689640/devion_ark_showreel_2024_ronun7.mp4" />
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -264,79 +260,43 @@ export default function Home() {
 
       {/* Who We Are Section */}
 
-      <div className="w-full lg:h-screen bg-darkPrimary relative font-light text-lightSecondary pt-20 pb-10 lg:pt-[160px] lg:pb-20">
-        <div className="relative z-[3] flex flex-col lg:flex-row  justify-between px-4 lg:px-20">
-          <div className="w-full lg:w-[40%] flex flex-col gap-5 lg:gap-16">
-            <p className="text-2xl lg:text-4xl text-lightPrimary font-medium ">
-              We are more than just a service provider — we are your{" "}
-              <span className="text-accentColor ">strategic partner</span>. Our
-              mission is to empower your business with tailored{" "}
-              <span className="text-accentColor ">digital solutions</span> that
-              drive growth, enhance visibility, and maximize impact.
-            </p>
-            <div>
-              <CustomShapeButton
-                forwardTo="/about"
-                label="Learn More"
-                textStyle="text-lg font-normal text-darkPrimary"
-                paddingX="ps-4 pe-8"
-                paddingY="py-4"
-                fontGap="gap-2"
-                backgroundColor="bg-lightPrimary"
-                hoverBgColor="bg-accentColor"
-                icon={
-                  <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-                }
-              />
-            </div>
-          </div>
-          <div className="w-full h-full lg:absolute top-0 left-0 inset-0 flex justify-center items-center -z-[1]">
-            <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden bg-[url(https://res.cloudinary.com/de8g5laai/image/upload/v1739692170/metal_glitch_opwjsp.gif)] bg-no-repeat bg-contain lg:translate-x-[12%]"></div>
-          </div>
-          <div className="w-full lg:w-[30%]">
-            <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-5">
-              {/* <AvatarGroup>
-                <Avatar
-                  alt="Md Azizul Hoque"
-                  src="/testimonials/azizul.webp"
-                  sx={{ width: 48, height: 48 }}
-                />
-
-                <Avatar
-                  alt="Syed Mustafa Mehedi"
-                  src="/testimonials/mehedi.webp"
-                  sx={{
-                    width: 48,
-                    height: 48,
-                  }}
-                />
-
-                <Avatar
-                  alt="Rakib Shikder"
-                  src="/testimonials/rakib.webp"
-                  sx={{ width: 48, height: 48 }}
-                />
-                <Avatar
-                  alt="Kazi Farhan Masum"
-                  src="/testimonials/farhan_masum.webp"
-                  sx={{ width: 48, height: 48 }}
-                />
-                <Avatar sx={{ width: 48, height: 48, bgcolor: "#121212" }}>
-                  8+
-                </Avatar>
-              </AvatarGroup> */}
-              <CSRAvatar />
-              <div className="overflow-hidden font-light">
-                <span className="inline-block">
-                  We have{" "}
-                  <span className="text-lightPrimary">
-                    12+ satisfied clients
-                  </span>{" "}
-                  all around the world. We are empowering business to reach new
-                  heights.
+      <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pb-10 lg:pt-40 lg:pb-20">
+        <div className="flex flex-col-reverse">
+          <div className="w-full flex px-4 lg:px-20 lg:justify-end relative z-[5]">
+            <div className="w-full lg:w-[80%] flex flex-col gap-5 lg:gap-16">
+              <p className="text-2xl lg:text-4xl lg:leading-[1.3] text-lightPrimary font-normal lg:indent-40">
+                We&apos;re more than a digital service provider company in
+                Bangladesh – we&apos;re your business{" "}
+                <span className="text-accentColor">growth partners</span>.
+                Specializing in custom software development, website solutions,
+                and data-driven digital marketing services,{" "}
+                <span className="text-accentColor">we empower businesses</span>{" "}
+                across Dhaka and beyond to outrank competitors, streamline
+                operations, and{" "}
+                <span className="text-accentColor">
+                  connect with their audience
                 </span>
+                . Whether you're a startup or an enterprise.
+              </p>
+              <div>
+                <CustomShapeButton
+                  forwardTo="/about"
+                  label="About Us"
+                  textStyle="text-lg font-normal text-darkPrimary"
+                  paddingX="ps-4 pe-8"
+                  paddingY="py-4"
+                  fontGap="gap-2"
+                  backgroundColor="bg-lightPrimary"
+                  hoverBgColor="bg-accentColor"
+                  icon={
+                    <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                  }
+                />
               </div>
             </div>
+          </div>
+          <div className="w-full h-full lg:absolute top-0 left-0 inset-0 flex justify-center items-center z-[2] lg:opacity-30">
+            <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden bg-[url(https://res.cloudinary.com/de8g5laai/image/upload/v1739692170/metal_glitch_opwjsp.gif)] bg-no-repeat bg-contain"></div>
           </div>
         </div>
       </div>
@@ -368,53 +328,60 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <p className="text-lg lg:text-base lg:indent-20">
-                    We specialise in developing solutions that help your
-                    business prosper in the digital age. From intuitive software
-                    to attractive websites to strategic marketing and flawless
-                    testing, we match technology with business objectives. Our
-                    comprehensive approach guarantees that every project we do
-                    promotes development, increases visibility, and delivers
-                    long-term value.
-                  </p>
+                  <div className="flex flex-col gap-7">
+                    <p className="text-lg lg:text-base lg:indent-28">
+                      At Devion Ark, we&apos;re your one-stop digital
+                      transformation partner in Bangladesh, blending technical
+                      expertise with strategic vision. Whether you need custom
+                      software development to automate workflows, a mobile-first
+                      website to dominate local search rankings, or data-driven
+                      digital marketing services to amplify your brand, we craft
+                      solutions that align with your unique goals. Recognized
+                      among the best digital marketing agencies in Bangladesh,
+                      our holistic approach ensures every project — from code to
+                      campaigns — drives growth, visibility, and measurable ROI.
+                      No rigid templates, no guesswork — just results tailored
+                      to your business.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="w-full lg:w-[60%] border border-lightSecondary/30">
-            <div className="flex flex-col">
+            <div className="flex flex-col divide-y-[1px] divide-lightSecondary/30 border-b border-lightSecondary/30">
               <div className="">
                 <ServiceCard
                   forwardTo="/services#custom-software-solutions"
                   serviceTitle="Custom Software Solutions"
                 />
               </div>
-              <div className="border-t border-lightSecondary/30">
+              <div>
                 <ServiceCard
                   forwardTo="/services#website-development"
                   serviceTitle="Website Development"
                 />
               </div>
 
-              <div className="border-t border-lightSecondary/30">
+              <div>
                 <ServiceCard
                   forwardTo="/services#social-media-marketing"
                   serviceTitle="Social Media Marketing"
                 />
               </div>
-              <div className="border-t border-lightSecondary/30">
+              <div>
                 <ServiceCard
                   forwardTo="/services#search-engine-marketing"
                   serviceTitle="Search Engine Marketing"
                 />
               </div>
-              <div className="border-t border-lightSecondary/30">
+              <div className="">
                 <ServiceCard
                   forwardTo="/services#search-engine-optimization"
                   serviceTitle="Search Engine Optimization"
                 />
               </div>
-              <div className="border-y border-lightSecondary/30">
+              <div>
                 <ServiceCard
                   forwardTo="/services#business-consultancy"
                   serviceTitle="Business Consultation"
@@ -462,13 +429,19 @@ export default function Home() {
                 <span className="text-accentColor ">creative solutions</span> at
                 all scales.
               </h2>
-              <p className="text-lg lg:indent-20">
-                See how we've turned challenges into opportunities and ideas
-                into impactful solutions. Our case studies showcase real-world
-                examples of how we've helped businesses grow, optimize
-                operations, and achieve their goals. Each story reflects our
-                commitment to innovation, collaboration, and delivering
-                measurable results.
+              <p className="text-lg lg:indent-40">
+                From startups to nationwide enterprises, our work speaks for
+                itself. We&apos;ve engineered an intuitive e-commerce platform
+                for sportswear brands, boosting sales by 150% through
+                SEO-friendly web development, and built a custom CRM system that
+                automated 70% of manual tasks for real estate professionals. Our
+                strategic social media campaigns transformed a local
+                retailer&apos;s online presence, tripling engagement, while
+                targeted SEO strategies helped a tech startup dominate Google
+                rankings. Every project – whether custom software, websites, or
+                digital marketing services – reflects our commitment to turning
+                challenges into growth. These aren&apos;t just case studies;
+                they&apos;re blueprints for what we can achieve together.
               </p>
             </div>
           </div>

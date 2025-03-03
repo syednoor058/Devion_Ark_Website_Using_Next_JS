@@ -95,14 +95,14 @@ function ProjectColumn({
 
       <div className="h-full flex flex-col justify-between items-center gap-10">
         <div
-          className={`w-full h-[20%] text-base text-darkSecondary z-[2] text-center`}
+          className={`w-full h-[20%] text-sm text-darkSecondary z-[2] text-center`}
         >
           {caption}
         </div>
         <div className="w-full h-[40%] flex flex-col gap-10">
           <div className="w-full z-[2] flex flex-col gap-7 justify-center items-center uppercase font-oswald">
             <h2
-              className={`w-full font-normal text-5xl  text-darkSecondary text-center duration-500 flex flex-col gap-2`}
+              className={`w-full font-medium text-4xl  text-darkSecondary text-center duration-500 flex flex-col gap-1`}
             >
               <span>{title1}</span>
               <span>{title2}</span>
