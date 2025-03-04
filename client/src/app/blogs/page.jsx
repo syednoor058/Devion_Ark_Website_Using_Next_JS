@@ -99,8 +99,7 @@ function Blogs() {
     {
       title: "Meta Marketing in 2025: How Devion Ark's Strategies...",
       img: blogCover2,
-      forwardTo:
-        "/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
+      forwardTo: "/blogs/meta-marketing-best-practices-for-2025",
     },
   ];
   return (

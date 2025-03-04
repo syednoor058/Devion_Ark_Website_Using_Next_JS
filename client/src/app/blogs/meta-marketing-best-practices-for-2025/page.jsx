@@ -54,7 +54,7 @@ export const metadata = {
     title: "Meta Marketing Best Practices for 2025 | Devion Ark",
     description:
       "Unlock 150% business growth with 2025 Meta Marketing. Master AI personalization, AR/VR ads & social commerce. Drive organic traffic with Devion Ark.",
-    url: "https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
+    url: "https://www.devionark.com/blogs/meta-marketing-best-practices-for-2025",
     type: "article",
     images: [
       {
@@ -83,15 +83,15 @@ function Blog2() {
   const shareLinks = [
     {
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
+      url: "https://www.facebook.com/sharer/sharer.php?u=https://www.devionark.com/blogs/meta-marketing-best-practices-for-2025",
     },
     {
       icon: <FaLinkedin />,
-      url: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150",
+      url: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.devionark.com/blogs/meta-marketing-best-practices-for-2025",
     },
     {
       icon: <FaXTwitter />,
-      url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150&hashtags=SocialMediaMarketing,DigitalStrategy",
+      url: "https://twitter.com/intent/tweet?text=seovsaeoin2025&url=https://www.devionark.com/blogs/meta-marketing-best-practices-for-2025y",
     },
   ];
 
@@ -235,32 +235,32 @@ function Blog2() {
                 </div>
                 <ul className="pl-5 flex flex-col gap-5 font-light text-lightSecondary list-disc">
                   <li className="text-lightSecondary hover:text-lightPrimary">
-                    <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#what-is-meta-marketing">
+                    <Link href="/blogs/meta-marketing-best-practices-for-2025#what-is-meta-marketing">
                       What Is Meta Marketing? The 2025 Growth Engine
                     </Link>
                   </li>
                   <li className="text-lightSecondary hover:text-lightPrimary">
-                    <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#top-5-meta-marketing">
+                    <Link href="/blogs/meta-marketing-best-practices-for-2025#top-5-meta-marketing">
                       Top 5 Meta Marketing Trends for 2025
                     </Link>
                   </li>
                   <li className="text-lightSecondary hover:text-lightPrimary">
-                    <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#why-meta-marketing-non-negotiable-in-2025">
+                    <Link href="/blogs/meta-marketing-best-practices-for-2025#why-meta-marketing-non-negotiable-in-2025">
                       Why Meta Marketing is Non-Negotiable in 2025
                     </Link>
                   </li>
                   <li className="text-lightSecondary hover:text-lightPrimary">
-                    <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#how-devion-ark-delivers-150-growth-with-meta-marketing">
+                    <Link href="/blogs/meta-marketing-best-practices-for-2025#how-devion-ark-delivers-150-growth-with-meta-marketing">
                       How Devion Ark Delivers 150%+ Growth with Meta Marketing
                     </Link>
                   </li>
                   <li className="text-lightSecondary hover:text-lightPrimary">
-                    <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#case-studies">
+                    <Link href="/blogs/meta-marketing-best-practices-for-2025#case-studies">
                       Case Studies: Devion Ark's Meta Marketing Wins
                     </Link>
                   </li>
                   <li className="text-lightSecondary hover:text-lightPrimary">
-                    <Link href="/blogs/meta-marketing-in-2025-how-devion-arks-strategies-skyrocket-business-growth-by-150#why-choose-devion-ark">
+                    <Link href="/blogs/meta-marketing-best-practices-for-2025#why-choose-devion-ark">
                       Why Choose Devion Ark for Your Meta Marketing?
                     </Link>
                   </li>
