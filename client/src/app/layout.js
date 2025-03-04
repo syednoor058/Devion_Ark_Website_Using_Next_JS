@@ -34,6 +34,46 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Devion Ark Digital Solutions",
+    "url": "https://www.devionark.com/",
+    "logo": "https://www.devionark.com/logo.png",
+    "description": "A leading software development and digital marketing agency in Bangladesh.",
+    "foundingDate": "2022", // Add if applicable
+    "founder": {
+      "@type": "Person",
+      "name": "Syed Shaeduzzaman Noor",
+      "url": "https://www.linkedin.com/in/shaednoor/"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+8801782734573",
+      "contactType": "technical support",
+      "email": "info@devionark.com",
+      "areaServed": ["BD", "US", "GB"],
+    "availableLanguage": ["English", "Bengali"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/devion.ark/",
+      "https://www.linkedin.com/company/devion-ark/",
+      "https://www.instagram.com/devionark/"
+    ],
+    "address": { // Optional but recommended
+      "@type": "PostalAddress",
+      "streetAddress": "08 Tootpara Central Rd",
+      "addressLocality": "Khulna",
+      "addressRegion": "Khulna",
+      "postalCode": "9100",
+      "addressCountry": "BD"
+    },
+    "priceRange": "Contact for pricing",
+  "telephone": "+8801782734573",
+  "openingHours": "Mon-Sat 09:00-18:00"
+  }
+
+
   return (
     <html lang="en">
       <head>
@@ -62,15 +102,21 @@ export default function RootLayout({ children }) {
         />
         <meta name="twitter:image" content="/og-image.jpg" />{" "}
         {/* Replace with your Twitter image URL */}
-
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3YRX0462MW"></Script>
-<Script id="google-analytics">
-  {`window.dataLayer = window.dataLayer || [];
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3YRX0462MW"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-3YRX0462MW');`}
-</Script>
+        </Script>
       </head>
       <body
         className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden ${baumans.variable} relative min-h-screen`}

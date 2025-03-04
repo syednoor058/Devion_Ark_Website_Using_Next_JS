@@ -31,7 +31,6 @@ function Footer() {
   ];
 
   const navLinks3 = [
-
     { label: "Cookies Policy", path: "/legals" },
     { label: "Privacy Policy", path: "/legals#privacy-policy" },
   ];
@@ -62,8 +61,8 @@ function Footer() {
                           <p>Khulna-9100, Bangladesh</p>
                         </div>
                         <div className="flex flex-col">
-                          <p>+8801782-734573, +8801893-204778</p>
-                          <p>info@devionark.com</p>
+                          <p>Phone 1: +8801782-734573</p>
+                          <p>Phone 2: +8801893-204778</p>
                         </div>
                       </div>
                       <div className="w-full grid grid-cols-3 gap-4 lg:gap-7 text-sm font-light lg:font-normal lg:text-lg leading-none">

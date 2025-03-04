@@ -16,22 +16,22 @@ import { LuArrowUpRight } from "react-icons/lu";
 import { MdOutlineArrowForward } from "react-icons/md";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
-import groupPhoto from "../../public/about/old-garage.jpg";
-import blogCover2 from "../../public/blogs/meta-marketing-2025-cover.jpg";
-import blogCover1 from "../../public/blogs/seo-vs-aeo-2025-blog-cover.jpg";
-import annaKitchen from "../../public/partners/anna_khan_kitchen.png";
-import elevate from "../../public/partners/elevate.png";
-import indigo from "../../public/partners/indigo_company.png";
-import interAidLogo from "../../public/partners/interaid.png";
-import kickOffLogo from "../../public/partners/kick-off.png";
-import moonStudio from "../../public/partners/moon_studio.png";
-import oxw from "../../public/partners/okw.png";
-import puppetbrushLogo from "../../public/partners/puppetbrush.png";
-import qahafLogo from "../../public/partners/qahaf.png";
-import sikderFoundationLogo from "../../public/partners/sikder_foundation.png";
-import sweetCakes from "../../public/partners/sweet_cakes.png";
-import travel from "../../public/partners/travel.png";
-import streetSigns from "../../public/street_signs.jpg";
+import blogCover2 from "../../public/blogs/meta-marketing-2025-cover.webp";
+import blogCover1 from "../../public/blogs/seo-vs-aeo-2025-blog-cover.webp";
+import groupPhoto from "../../public/old-garage.webp";
+import annaKitchen from "../../public/partners/anna_khan_kitchen.webp";
+import elevate from "../../public/partners/elevate.webp";
+import indigo from "../../public/partners/indigo_company.webp";
+import interAidLogo from "../../public/partners/interaid.webp";
+import kickOffLogo from "../../public/partners/kick-off.webp";
+import moonStudio from "../../public/partners/moon_studio.webp";
+import oxw from "../../public/partners/okw.webp";
+import puppetbrushLogo from "../../public/partners/puppetbrush.webp";
+import qahafLogo from "../../public/partners/qahaf.webp";
+import sikderFoundationLogo from "../../public/partners/sikder_foundation.webp";
+import sweetCakes from "../../public/partners/sweet_cakes.webp";
+import travel from "../../public/partners/travel.webp";
+import streetSigns from "../../public/street_signs.webp";
 import { default as azizulHoque } from "../../public/testimonials/azizul.webp";
 import rakibShikdar from "../../public/testimonials/rakib.webp";
 
@@ -304,7 +304,17 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full h-full lg:absolute top-0 left-0 inset-0 flex justify-center items-center z-[2] lg:opacity-30">
-              <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden bg-[url(https://res.cloudinary.com/de8g5laai/image/upload/v1739692170/metal_glitch_opwjsp.gif)] bg-no-repeat bg-contain"></div>
+              <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                >
+                  <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1741112093/metal_glitch_opwjsp-ezgif.com-gif-to-webm-converter_sxp3kb.webm" />
+                </video>
+              </div>
             </div>
           </div>
         </div>

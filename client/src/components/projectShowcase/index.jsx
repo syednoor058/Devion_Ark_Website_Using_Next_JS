@@ -2,10 +2,10 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
-import eCommerceBack from "../../../public/projects/e-commerce_background.jpg";
-import realEstateBack from "../../../public/projects/real_estate_background.jpg";
-import seoBack from "../../../public/projects/seo_background.jpg";
-import smmBack from "../../../public/projects/smm_background.jpg";
+import eCommerceBack from "../../../public/projects/e-commerce_background.webp";
+import realEstateBack from "../../../public/projects/real_estate_background.webp";
+import seoBack from "../../../public/projects/seo_background.webp";
+import smmBack from "../../../public/projects/smm_background.webp";
 import ProjectColumn from "./ProjectColumn";
 import ProjectMobileColumn from "./ProjectMobileColumn";
 
