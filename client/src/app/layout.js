@@ -68,9 +68,9 @@ export default function RootLayout({ children }) {
       "postalCode": "9100",
       "addressCountry": "BD"
     },
-    "priceRange": "Contact for pricing",
+    "priceRange": "",
   "telephone": "+8801782734573",
-  "openingHours": "Mon-Sat 09:00-18:00"
+  "openingHours": "Mon-Sa 09:00-18:00"
   }
 
 
