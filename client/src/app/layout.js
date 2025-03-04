@@ -37,42 +37,41 @@ export default function RootLayout({ children }) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Devion Ark Digital Solutions",
-    "url": "https://www.devionark.com/",
-    "logo": "https://www.devionark.com/logo.png",
-    "description": "A leading software development and digital marketing agency in Bangladesh.",
-    "foundingDate": "2022", // Add if applicable
-    "founder": {
+    name: "Devion Ark Digital Solutions",
+    url: "https://www.devionark.com/",
+    logo: "https://www.devionark.com/logo.png",
+    description:
+      "A leading software development and digital marketing agency in Bangladesh.",
+    foundingDate: "2022", // Add if applicable
+    founder: {
       "@type": "Person",
-      "name": "Syed Shaeduzzaman Noor",
-      "url": "https://www.linkedin.com/in/shaednoor/"
+      name: "Syed Shaeduzzaman Noor",
+      url: "https://www.linkedin.com/in/shaednoor/",
     },
-    "contactPoint": {
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+8801782734573",
-      "contactType": "technical support",
-      "email": "info@devionark.com",
-      "areaServed": ["BD", "US", "GB"],
-    "availableLanguage": ["English", "Bengali"]
+      telephone: "+8801782734573",
+      contactType: "technical support",
+      email: "info@devionark.com",
+      areaServed: ["BD", "US", "GB"],
+      availableLanguage: ["English", "Bengali"],
     },
-    "sameAs": [
+    sameAs: [
       "https://www.facebook.com/devion.ark/",
       "https://www.linkedin.com/company/devion-ark/",
-      "https://www.instagram.com/devionark/"
+      "https://www.instagram.com/devionark/",
     ],
-    "address": { // Optional but recommended
+    address: {
+      // Optional but recommended
       "@type": "PostalAddress",
-      "streetAddress": "08 Tootpara Central Rd",
-      "addressLocality": "Khulna",
-      "addressRegion": "Khulna",
-      "postalCode": "9100",
-      "addressCountry": "BD"
+      streetAddress: "08 Tootpara Central Rd",
+      addressLocality: "Khulna",
+      addressRegion: "Khulna",
+      postalCode: "9100",
+      addressCountry: "BD",
     },
-    "priceRange": "",
-  "telephone": "+8801782734573",
-  "openingHours": "Mon-Sa 09:00-18:00"
-  }
-
+    telephone: "+8801782734573",
+  };
 
   return (
     <html lang="en">
@@ -103,9 +102,9 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content="/og-image.jpg" />{" "}
         {/* Replace with your Twitter image URL */}
         <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-3YRX0462MW"
