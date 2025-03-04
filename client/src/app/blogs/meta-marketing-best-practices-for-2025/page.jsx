@@ -332,8 +332,10 @@ function Blog2() {
                           href="https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Reports-Fourth-Quarter-and-Full-Year-2024-Results/default.aspx"
                           target="_blank"
                           rel="noopener noreferrer"
-                        ></a>
-                        Meta 2024 Report).
+                        >
+                          Meta 2024 Report
+                        </a>
+                        ).
                       </li>
                       <li>
                         Businesses using Meta Shops see 40% higher conversion

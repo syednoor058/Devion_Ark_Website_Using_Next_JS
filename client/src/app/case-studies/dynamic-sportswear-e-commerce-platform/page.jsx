@@ -21,8 +21,7 @@ import slider3 from "../../../../public/projects/sportswear_ecommerce/slider3.jp
 import rakibImg from "../../../../public/testimonials/rakib.webp";
 
 export const metadata = {
-  title:
-    "Dynamic Sportswear E-Commerce Platform | Online Products And Sales Management – Devion Ark",
+  title: "Dynamic Sportswear E-Commerce Platform | Devion Ark",
   description:
     "Struggling with outdated e-commerce systems? Explore how our sportswear web app boosted client sales by 150% and 40% lower cart abandonment with admin dashboards, payment gateways & mobile optimization.",
 };

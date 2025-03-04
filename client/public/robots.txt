@@ -4,7 +4,6 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /dashboard/
-Disallow: /public/
 Disallow: /*/edit/
 Disallow: /*?*
 Disallow: /blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization

@@ -186,13 +186,13 @@ function CaseStudies() {
           <div className="w-[80%] flex flex-col gap-10 lg:gap-20">
             <div className="w-full flex lg:justify-end">
               <div className="w-full text-2xl lg:text-5xl  text-lightPrimary font-medium">
-                <h1 className="leading-[1.15] lg:indent-32">
+                <h2 className="leading-[1.15] lg:indent-32">
                   Proven results,{" "}
                   <span className="leading-[1.15] text-accentColor">
                     real stories
                   </span>
                   : how we&apos;ve helped businesses thrive
-                </h1>
+                </h2>
               </div>
             </div>
             <div className="w-full flex flex-col gap-5 lg:gap-10 text-base lg:text-3xl font-normal">
