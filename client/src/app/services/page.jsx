@@ -18,6 +18,7 @@ import service5Img1 from "../../../public/services/service_5/service_5_img_1.jpg
 import service5Img2 from "../../../public/services/service_5/service_5_img_2.jpg";
 import service6Img1 from "../../../public/services/service_6/service_6_img_1.jpg";
 import cover from "../../../public/services/service_cover.jpg";
+import Head from "next/head";
 
 export const metadata = {
   title: "Our Services | Software, SEO & Business Growth | Devion Ark",
@@ -110,6 +111,10 @@ function ServiceCard({ title, desc, features, imgs, reverse = "0" }) {
 
 function Services() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.devionark.com/services/" />
+    </Head>
     <main className="font-poppins">
       {/* Landing Section */}
 
@@ -367,7 +372,7 @@ function Services() {
           />
         </div>
       </div>
-    </main>
+    </main></>
   );
 }
 

@@ -1,2 +1,18 @@
 User-agent: *
-Disallow: /
+Disallow: /_next/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /public/
+Disallow: /*/edit/
+Disallow: /*?*
+Disallow: /blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization
+
+Allow: /
+Allow: /services/
+Allow: /case-studies/
+Allow: /blogs/
+Allow: /legals
+
+Sitemap: https://www.devionark.com/sitemap.xml
