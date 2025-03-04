@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import shaedImg from "../../../../public/owners/syed_shaeduzzaman_noor.png";
-import kickOffLogo from "../../../../public/partners/kick-off.png";
+import kickOffLogo from "../../../../public/partners/kick-off.webp";
 import projectBackground from "../../../../public/projects/sportswear_ecommerce/background.jpg";
 import mobileFirstImg from "../../../../public/projects/sportswear_ecommerce/mobile-first.jpg";
 import dataOptm1 from "../../../../public/projects/sportswear_ecommerce/opt1.jpg";

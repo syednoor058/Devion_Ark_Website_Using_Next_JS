@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import shaedImg from "../../../../public/owners/syed_shaeduzzaman_noor.png";
-import sikderFoundationLogo from "../../../../public/partners/sikder_foundation.png";
+import sikderFoundationLogo from "../../../../public/partners/sikder_foundation.webp";
 import dataOptm2 from "../../../../public/projects/comprehensive_crm_system/data-opt-2.jpg";
 import dataOptm1 from "../../../../public/projects/comprehensive_crm_system/data-optm-1.jpg";
 import performanceImg from "../../../../public/projects/comprehensive_crm_system/performance.jpg";
