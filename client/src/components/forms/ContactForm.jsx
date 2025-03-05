@@ -294,7 +294,7 @@ function ContactForm() {
           </div>
         </button>
         <CustomShapeBorderButton
-          text="Home"
+          text="Cancel"
           forwardTo="/"
           bg="bg-lightPrimary"
           bg2="bg-darkPrimary"

@@ -568,7 +568,7 @@ function ComprehensiveRealEstateCRMProject() {
                       </div>
                     </a>
                     <a
-                      href="https://www.wa.me/01782734573"
+                      href="https://wa.me/1782734573"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block group"

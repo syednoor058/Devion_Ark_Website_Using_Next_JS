@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./globals.css";
 
+import Analytics from "@/components/cookies/Analytics";
+import CookiesConsent from "@/components/cookies/CookiesConsent";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/Navbar";
@@ -110,11 +112,13 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-3YRX0462MW"
         ></Script>
         <Script id="google-analytics">
-          {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  gtag('config', 'G-3YRX0462MW');`}
+            gtag('config', 'G-3YRX0462MW');
+          `}
         </Script>
       </head>
       <body
@@ -128,6 +132,8 @@ export default function RootLayout({ children }) {
           </SmoothScroll>
           <Footer />
         </Template>
+        <CookiesConsent />
+        <Analytics />
       </body>
     </html>
   );
