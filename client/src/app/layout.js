@@ -5,6 +5,7 @@ import "./globals.css";
 import Analytics from "@/components/cookies/Analytics";
 import CookiesConsent from "@/components/cookies/CookiesConsent";
 import CTASection from "@/components/CTASection";
+import FacebookPixel from "@/components/facebookPixel/FacebookPixel";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/Navbar";
 import SmoothScroll from "@/components/smoothScroll";
@@ -134,6 +135,7 @@ export default function RootLayout({ children }) {
         </Template>
         <CookiesConsent />
         <Analytics />
+        <FacebookPixel />
       </body>
     </html>
   );
