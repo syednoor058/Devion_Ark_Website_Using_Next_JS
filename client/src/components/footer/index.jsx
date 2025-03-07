@@ -39,7 +39,7 @@ function Footer() {
     { label: "Facebook", url: "https://www.facebook.com/devion.ark/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/company/devion-ark/" },
     { label: "Instagram", url: "https://www.instagram.com/devionark/" },
-    { label: "Whatsapp", url: "https://wa.me/1782734573" },
+    { label: "Whatsapp", url: "https://wa.me/8801782734573" },
   ];
 
   return (

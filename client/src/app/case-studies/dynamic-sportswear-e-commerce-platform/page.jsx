@@ -539,7 +539,7 @@ function DynamicECommerce() {
                       </div>
                     </a>
                     <a
-                      href="https://wa.me/1782734573"
+                      href="https://wa.me/8801782734573"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block group"
