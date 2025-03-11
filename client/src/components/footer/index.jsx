@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { GoDotFill } from "react-icons/go";
+import { BiSupport } from "react-icons/bi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
 import footerLogo from "../../../public/footer_logo.png";
-import TextAnimation from "../animations/TextAnimation";
-import NewsletterForm from "../forms/NewsletterForm";
 
 function AddressInfo({ icon, title, value }) {
   return (
@@ -23,23 +28,23 @@ function Footer() {
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Case Studies", path: "/case-studies" },
+    { label: "Blogs", path: "/blogs" },
   ];
   const navLinks2 = [
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
-    { label: "Blogs", path: "/blogs" },
-  ];
-
-  const navLinks3 = [
     { label: "Cookies Policy", path: "/legals" },
     { label: "Privacy Policy", path: "/legals#privacy-policy" },
   ];
 
   const socialLinks = [
-    { label: "Facebook", url: "https://www.facebook.com/devion.ark/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/company/devion-ark/" },
-    { label: "Instagram", url: "https://www.instagram.com/devionark/" },
-    { label: "Whatsapp", url: "https://wa.me/8801782734573" },
+    { label: <FaFacebookF />, url: "https://www.facebook.com/devion.ark/" },
+    {
+      label: <FaLinkedinIn />,
+      url: "https://www.linkedin.com/company/devion-ark/",
+    },
+    { label: <FaInstagram />, url: "https://www.instagram.com/devionark/" },
+    { label: <FaWhatsapp />, url: "https://wa.me/8801782734573" },
   ];
 
   return (
@@ -49,149 +54,130 @@ function Footer() {
     >
       <div className="relative w-full h-[200vh] -top-[100vh]">
         <div className="sticky w-full h-[100vh] top-0 left-0">
-          <div className="w-full h-[100vh] relative bg-black pt-5 lg:pt-10 flex">
-            <div className="w-full h-full flex flex-col gap-10 justify-between">
-              <div className="w-full h-full flex flex-col-reverse lg:flex-row  px-4 lg:px-10">
-                <div className="w-full h-full flex lg:w-[50%] pb-5 lg:pb-10 lg:pe-10 ">
-                  <div className="w-full h-full flex flex-col gap-5 justify-between">
-                    <div className="w-full h-full flex flex-col gap-10">
-                      <div className="hidden lg:flex flex-col gap-3 text-sm lg:text-lg font-light">
-                        <div className="flex flex-col">
-                          <p>08 Tootpara Central Rd,</p>
-                          <p>Khulna-9100, Bangladesh</p>
+          <div className="w-full h-[100vh] relative bg-black pt-5 lg:pt-20 flex">
+            <div className="w-full h-full flex flex-col gap-5 lg:gap-10 justify-between">
+              <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-20 px-4 lg:px-10">
+                <div className="flex flex-col gap-5">
+                  <div className="h-6 relative overflow-hidden">
+                    <Image
+                      src={footerLogo}
+                      alt="Devion Ark Logo"
+                      className="h-full w-auto"
+                    />
+                  </div>
+                  <p className="font-light">
+                    Your full-service digital growth partner. We craft custom
+                    software, SEO-optimized websites, and data-driven marketing
+                    strategies that convert. Empowering startups to enterprises
+                    with transparent, results-focused solutions.
+                  </p>
+                  <div className="w-full flex flex-wrap gap-5">
+                    {socialLinks.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="p-3 rounded-full bg-darkSecondary hover:bg-darkPrimary text-lightPrimary hover:text-accentColor transition-colors duration-[350ms] text-xl">
+                          {item.label}
                         </div>
-                        <div className="flex flex-col">
-                          <p>Phone 1: +8801782-734573</p>
-                          <p>Phone 2: +8801893-204778</p>
-                        </div>
-                      </div>
-                      <div className="w-full grid grid-cols-3 gap-4 lg:gap-7 text-sm font-light lg:font-normal lg:text-lg leading-none">
-                        <div className="flex flex-col gap-2 ">
-                          <div>
-                            <p className="text-lightPrimary font-medium">
-                              Quick Links
-                            </p>
-                          </div>
-                          {navLinks1.map((nav, i) => (
-                            <Link href={nav.path} key={i}>
-                              <span className="text-lightSecondary">
-                                <TextAnimation
-                                  text={nav.label}
-                                  hoverText="text-accentColor"
-                                />
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                        <div className="flex flex-col gap-2 ">
-                          <div>
-                            <p className="text-lightPrimary font-medium">
-                              Resources
-                            </p>
-                          </div>
-                          {navLinks2.map((nav, i) => (
-                            <Link href={nav.path} key={i}>
-                              <span className="text-lightSecondary">
-                                <TextAnimation
-                                  text={nav.label}
-                                  hoverText="text-accentColor"
-                                />
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                        <div className="flex flex-col gap-2 ">
-                          <div>
-                            <p className="text-lightPrimary font-medium">
-                              Legals
-                            </p>
-                          </div>
-                          {navLinks3.map((nav, i) => (
-                            <Link href={nav.path} key={i}>
-                              <span className="text-lightSecondary">
-                                <TextAnimation
-                                  text={nav.label}
-                                  hoverText="text-accentColor"
-                                />
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="w-full h-full lg:hidden flex flex-row justify-between items-end gap-5 text-sm">
-                        <p>&copy;2025</p>
-                        <p className="text-end">All rights reserved</p>
-                      </div>
-                    </div>
-                    <div className="w-full hidden lg:flex flex-row gap-3 justify-between items-center">
-                      <div>
-                        <p>&copy;2025</p>
-                      </div>
-                      <div>
-                        <GoDotFill />
-                      </div>
-                      <div>
-                        <p>Devion Ark Digital Solutions</p>
-                      </div>
-                      <div>
-                        <GoDotFill />
-                      </div>
-                      <div>
-                        <p>All rights reserved</p>
-                      </div>
-                    </div>
+                      </a>
+                    ))}
                   </div>
                 </div>
-                <div className="w-full flex lg:w-[50%] pb-5 lg:pb-10 lg:ps-10">
-                  <div className="flex flex-col gap-5 justify-between">
-                    <div className="w-full flex flex-col gap-3">
-                      <h2 className="text-lightPrimary font-semibold  text-3xl lg:text-5xl font-oswald leading-[1.10]">
-                        Ready to transform your{" "}
-                        <span className="text-accentColor">business</span>?
-                      </h2>
-                      <p className="font-light text-base lg:text-lg">
-                        Sign up for counsiling, latest updates, and offers!
-                      </p>
-                      <NewsletterForm />
-                      <p className="text-sm font-light ">
-                        By signing up, you understand and agree that your data
-                        will be collected and used subject to our Privacy Policy
-                        and Terms of Use.
-                      </p>
+                <div className="w-full flex flex-row gap-10 lg:justify-between">
+                  <div className="flex flex-col gap-3">
+                    <div className="text-lightPrimary font-normal uppercase">
+                      Quick Links
                     </div>
-                    <div className="w-full h-full flex flex-row gap-2 justify-between items-end py-7 lg:py-0">
-                      {socialLinks.map((social, index) => (
-                        <a
-                          href={social.url}
+                    <div className="flex flex-col gap-1 font-light">
+                      {navLinks1.map((link, index) => (
+                        <Link
                           key={index}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href={link.path}
+                          className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
                         >
-                          <div
-                            className={`w-full text-lightPrimary text-sm lg:text-base font-medium leading-none duration-[350ms] whitespace-nowrap`}
-                          >
-                            <TextAnimation
-                              text={social.label}
-                              hoverText="text-accentColor"
-                            />
-                          </div>
-                        </a>
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <div className="text-lightPrimary font-normal uppercase">
+                      Resources
+                    </div>
+                    <div className="flex flex-col gap-1 font-light">
+                      {navLinks2.map((link, index) => (
+                        <Link
+                          key={index}
+                          href={link.path}
+                          className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
+                        >
+                          {link.label}
+                        </Link>
                       ))}
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="hidden lg:flex w-full justify-end">
-                <Marquee autoFill={true}>
-                  <div className="w-[480px] lg:w-[1300px] aspect-[7.6/1] relative mx-4 lg:mx-6">
-                    <Image
-                      placeholder="blur"
-                      src={footerLogo}
-                      alt="footer-logo"
-                      className="w-full h-full object-cover"
-                    />
+                <div className="w-full flex lg:justify-end">
+                  <div className="flex flex-col gap-5 lg:gap-10">
+                    <div className="flex flex-col gap-3">
+                      <div className="text-lightPrimary font-normal uppercase">
+                        Contact us 24/7
+                      </div>
+                      <div className="flex flex-col">
+                        <div className="flex flex-row gap-3 text-lightSecondary">
+                          <span className="text-accentColor pt-1">
+                            <BiSupport />
+                          </span>{" "}
+                          <span>+8801782734573</span>
+                        </div>
+                        <div className="flex flex-row gap-3 text-lightSecondary">
+                          <span className="text-accentColor pt-1">
+                            <MdOutlineEmail />
+                          </span>{" "}
+                          <span>info@devionark.com</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <div className="text-lightPrimary font-normal uppercase">
+                        Office
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <div className="flex flex-row gap-3 text-lightSecondary">
+                          <span className="text-accentColor pt-1">
+                            <MdOutlineLocationOn />
+                          </span>
+                          <span className="flex flex-col">
+                            <span>08 Tootpara Central Rd,</span>
+                            <span>Khulna Sadar, Khulna-9100</span>
+                            <span>Bangladesh</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </Marquee>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-5 w-full justify-end">
+                <div className="w-full flex justify-center text-sm">
+                  <p>Copyright &copy; 2025 Devion Ark. All rights resereved.</p>
+                </div>
+                <div className="hidden lg:flex">
+                  <Marquee autoFill={true}>
+                    <div className="w-[480px] lg:w-[1300px] aspect-[7.6/1] relative mx-4 lg:mx-6">
+                      <Image
+                        placeholder="blur"
+                        src={footerLogo}
+                        alt="footer-logo"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </Marquee>
+                </div>
               </div>
             </div>
           </div>

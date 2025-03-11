@@ -199,7 +199,7 @@ export default function Home() {
           <div className="w-full h-full flex flex-col justify-end gap-7 lg:gap-10">
             <div className="w-full flex justify-end items-end px-4 lg:px-20">
               <div className="w-full lg:w-[75%] pb-5">
-                <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-3xl lg:text-7xl uppercase">
+                <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-4xl lg:text-7xl uppercase">
                   Transforming your ideas into{" "}
                   <span className="text-accentColor ">digital reality</span>.
                 </h1>
@@ -208,16 +208,15 @@ export default function Home() {
             <div className="w-full flex flex-col-reverse lg:flex-row gap-5 lg:gap-0 lg:border-b lg:border-t border-lightSecondary/30">
               <div className="w-full lg:w-[55%] flex flex-col py-10 gap-5">
                 <div className=" flex flex-col gap-5 px-4 lg:px-0 lg:ps-20 lg:pe-20">
-                  <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-5">
+                  <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-3">
                     <CSRAvatar />
-                    <div className="overflow-hidden font-light">
+                    <div className="overflow-hidden font-light lg:text-sm leading-tight">
                       <span className="inline-block">
                         We have{" "}
                         <span className="text-lightPrimary">
                           12+ satisfied clients
                         </span>{" "}
-                        all around the world. We are empowering business to
-                        reach new heights.
+                        all around the world.
                       </span>
                     </div>
                   </div>

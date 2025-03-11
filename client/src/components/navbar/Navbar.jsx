@@ -178,7 +178,7 @@ function Navbar() {
                   placeholder="blur"
                   src={darkLogoMobile}
                   alt="devion_ark_logo"
-                  className="w-auto h-4 object-cover"
+                  className="w-auto h-6 object-cover"
                 />
               </Link>
             </div>
