@@ -34,6 +34,9 @@ export const metadata = {
   title: "Devion Ark | Dynamic Software & Digital Marketing Agency",
   description:
     "Your trusted partner for website development, digital marketing, SEO, custom software solutions, and consultancy. Drive growth with tailored strategies today!",
+    icons: {
+      icon: '/favicon.svg', // /public path
+    },
 };
 
 export default function RootLayout({ children }) {
