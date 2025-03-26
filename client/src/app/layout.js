@@ -83,6 +83,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:site_name" content="Devion Ark Digital Solutions" />
         <meta
           property="og:title"
           content="Devion Ark | Dynamic Software & Digital Marketing Agency"
@@ -105,8 +106,11 @@ export default function RootLayout({ children }) {
           name="twitter:description"
           content="Your trusted partner for website development, digital marketing, SEO, custom software solutions, and consultancy. Drive growth with tailored strategies today!"
         />
-        <meta name="twitter:image" content="/og-image.jpg" />{" "}
-        {/* Replace with your Twitter image URL */}
+        <meta name="twitter:image" content="/og-image.jpg" />
+
+        {/* Favicon Links */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
@@ -124,6 +128,17 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-3YRX0462MW');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Devion Ark",
+              "url": "https://devionark.com",
+            }),
+          }}
+        />
       </head>
       <body
         className={`w-full ${poppins.variable} ${oswald.variable} antialiased overflow-x-hidden ${baumans.variable} relative min-h-screen`}
