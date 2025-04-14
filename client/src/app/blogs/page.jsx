@@ -110,7 +110,7 @@ function Blogs() {
         </Head>
         {/* Landing Section */}
 
-        <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary flex items-end pt-5 pb-10 lg:pt-20 lg:pb-20 text-lightSecondary font-light">
+        <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary flex items-end pt-5 pb-10 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-4 lg:px-20 flex flex-col gap-5">
               <h1 className="text-lightPrimary text-6xl lg:text-9xl font-medium uppercase font-oswald leading-none">

@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/animations/AnimatedText";
+import CustomShapeBorderButton from "@/components/buttons/CustomShapeBorderButton";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import CSRAvatar from "@/components/csrAvatar/CSRAvatar";
 import FAQSection from "@/components/faq";
@@ -195,7 +196,7 @@ export default function Home() {
       <main className="font-poppins">
         {/* Landing Section */}
 
-        <div className="w-full pt-5 lg:pt-10 relative font-light text-lightSecondary">
+        {/* <div className="w-full pt-5 lg:pt-10 relative font-light text-lightSecondary">
           <div className="w-full h-full flex flex-col justify-end gap-7 lg:gap-10">
             <div className="w-full flex justify-end items-end px-4 lg:px-20">
               <div className="w-full lg:w-[75%] pb-5">
@@ -261,58 +262,100 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div> */}
+
+        <div className="w-full pt-5 pb-10 lg:pt-10 lg:pb-20 relative font-light text-lightSecondary">
+          <div className="w-full flex flex-col gap-7 lg:gap-10 px-4 lg:px-20">
+            <div className="w-full flex flex-col gap-10">
+              <div className="w-full lg:w-[75%]">
+                <h1 className="text-lightPrimary font-bold font-oswald leading-[1.10] text-4xl lg:text-7xl uppercase">
+                  Transforming your ideas into{" "}
+                  <span className="text-accentColor ">digital reality</span>.
+                </h1>
+              </div>
+              <div className="h-full flex flex-row gap-5 items-center">
+                <CustomShapeButton
+                  forwardTo="/contact"
+                  label="Get Started"
+                  textStyle="text-lg font-normal text-darkPrimary"
+                  paddingX="ps-[10px] pe-[20px]"
+                  paddingY="py-[14px]"
+                  fontGap="gap-2"
+                  backgroundColor="bg-lightPrimary"
+                  hoverBgColor="bg-accentColor"
+                  icon={
+                    <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                  }
+                />
+                <CustomShapeBorderButton
+                  text="About Us"
+                  forwardTo="/about"
+                  bg="bg-lightPrimary"
+                  bg2="bg-darkPrimary"
+                  padd="ps-[10px] pe-[20px] py-[13px]"
+                  textColor="text-lightPrimary"
+                />
+              </div>
+            </div>
+            <div className="w-full flex justify-end">
+              <div className="w-full lg:w-[40%] flex flex-col gap-5">
+                <div className=" flex flex-col gap-5">
+                  <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-3">
+                    <CSRAvatar />
+                    <div className="overflow-hidden font-light text-lg lg:text-sm leading-tight">
+                      <span className="inline-block">
+                        We have{" "}
+                        <span className="text-lightPrimary">
+                          12+ satisfied clients
+                        </span>{" "}
+                        all around the world.
+                      </span>
+                    </div>
+                  </div>
+                  <p className=" text-lightPrimary font-light text-lg lg:text-sm lg:indent-20">
+                    Got a game-changing idea but unsure how to bring it to life?
+                    We&apos;re here to bridge that gap. As one of the best
+                    tech-driven digital marketing agencies in Bangladesh, we
+                    don&apos;t just code – we craft digital solutions that drive
+                    sales, simplify workflows, and make your brand
+                    unforgettable. Let&apos;s turn your ‘what if&apos; into
+                    ‘what&apos;s next.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full flex overflow-hidden relative">
+          <div className="w-full aspect-video relative overflow-hidden">
+            <video
+              className="w-full h-full object-cover"
+              loop
+              muted
+              autoPlay
+              playsInline
+            >
+              <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1741025624/devion_ark_showreel_2024_ronun7_wbst4z.webm" />
+            </video>
+          </div>
         </div>
 
         {/* Who We Are Section */}
 
-        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pb-10 lg:pt-40 lg:pb-20">
+        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary py-20 lg:py-40">
           <div className="flex flex-col-reverse">
             <div className="w-full flex px-4 lg:px-20 lg:justify-end relative z-[5]">
               <div className="w-full lg:w-[80%] flex flex-col gap-5 lg:gap-16">
-                <p className="text-2xl lg:text-4xl lg:leading-[1.3] text-lightPrimary font-normal lg:indent-52">
+                <p className="text-lg lg:text-3xl lg:leading-[1.3] text-lightSecondary font-normal indent-20 lg:indent-52">
                   We&apos;re more than a digital service provider company in
-                  Bangladesh – we&apos;re your business{" "}
-                  <span className="text-accentColor">growth partners</span>.
+                  Bangladesh – we&apos;re your business growth partners.
                   Specializing in custom software development, website
-                  solutions, and data-driven digital marketing services,{" "}
-                  <span className="text-accentColor">
-                    we empower businesses
-                  </span>{" "}
-                  across Dhaka and beyond to outrank competitors, streamline
-                  operations, and{" "}
-                  <span className="text-accentColor">
-                    connect with their audience
-                  </span>
-                  . Whether you're a startup or an enterprise.
+                  solutions, and data-driven digital marketing services, we
+                  empower businesses across Dhaka and beyond to outrank
+                  competitors, streamline operations, and connect with their
+                  audience. Whether you're a startup or an enterprise.
                 </p>
-                <div>
-                  <CustomShapeButton
-                    forwardTo="/about"
-                    label="About Us"
-                    textStyle="text-lg font-normal text-darkPrimary"
-                    paddingX="ps-4 pe-8"
-                    paddingY="py-4"
-                    fontGap="gap-2"
-                    backgroundColor="bg-lightPrimary"
-                    hoverBgColor="bg-accentColor"
-                    icon={
-                      <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="w-full h-full lg:absolute top-0 left-0 inset-0 flex justify-center items-center z-[2] lg:opacity-30">
-              <div className="flex w-full lg:w-auto h-auto lg:h-full aspect-square relative overflow-hidden">
-                <video
-                  className="w-full h-full object-cover"
-                  loop
-                  muted
-                  autoPlay
-                  playsInline
-                >
-                  <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1741112093/metal_glitch_opwjsp-ezgif.com-gif-to-webm-converter_sxp3kb.webm" />
-                </video>
               </div>
             </div>
           </div>
@@ -320,7 +363,7 @@ export default function Home() {
 
         {/* Our Services Section */}
 
-        <div className="bg-darkPrimary relative font-light text-lightSecondary pt-10 lg:pt-20">
+        <div className="bg-darkPrimary relative font-light text-lightSecondary">
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-0">
             <div className="w-full lg:w-[40%] lg:border-b border-lightSecondary/30">
               <div className="flex flex-col">
@@ -471,8 +514,8 @@ export default function Home() {
                     forwardTo="/case-studies"
                     label="View All"
                     textStyle="text-lg font-normal text-darkPrimary"
-                    paddingX="ps-4 pe-8"
-                    paddingY="py-4"
+                    paddingX="ps-[10px] pe-[20px]"
+                    paddingY="py-[14px]"
                     fontGap="gap-2"
                     backgroundColor="bg-lightPrimary"
                     hoverBgColor="bg-accentColor"

@@ -52,8 +52,8 @@ function CTASection() {
               <CustomShapeButton
                 forwardTo="/contact"
                 label="Book A Call"
-                paddingX="ps-4 pe-8"
-                paddingY="py-4"
+                paddingX="ps-[10px] pe-[20px]"
+                paddingY="py-[14px]"
                 fontGap="gap-2"
                 textStyle="text-lg font-light text-lightPrimary"
                 icon={

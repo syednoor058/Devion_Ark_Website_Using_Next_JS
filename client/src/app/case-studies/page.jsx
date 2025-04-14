@@ -93,7 +93,7 @@ function CaseStudies() {
       <main className="font-poppins">
         {/* Landing Section */}
 
-        <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end pt-5 pb-10 lg:pt-20 lg:pb-20 text-lightSecondary font-light">
+        <div className="w-full min-h-[calc(100vh-60px)] bg-darkPrimary px-4 lg:px-20 flex items-end pt-5 pb-10 lg:pt-10 lg:pb-20 text-lightSecondary font-light">
           <div className="w-full flex flex-col gap-10 justify-end">
             <div className="w-full flex flex-col lg:flex-row justify-between">
               <div className="w-full">
