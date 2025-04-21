@@ -146,16 +146,16 @@ function Navbar() {
                   <CustomShapeButton
                     label="Let's Talk"
                     forwardTo="/contact"
-                    bend="10px"
-                    textStyle="text-sm font-normal text-darkPrimary"
-                    hoverText="text-darkPrimary"
-                    backgroundColor="bg-lightPrimary"
-                    hoverBgColor="bg-accentColor"
-                    paddingX="ps-2 pe-4"
-                    paddingY="py-2"
-                    fontGap="gap-1"
+                    bend="13px"
+                    textStyle="text-sm font-normal"
+                    hoverText="text-lightPrimary"
+                    backgroundColor="bg-accentColor"
+                    hoverBgColor="bg-accentColor2"
+                    paddingX="ps-3 pe-6"
+                    paddingY="py-3"
+                    fontGap="gap-2"
                     icon={
-                      <FiArrowDownLeft className="text-base text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                      <FiArrowDownLeft className="text-base text-lightPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
                     }
                   />
                 </div>

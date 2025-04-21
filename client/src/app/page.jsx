@@ -1,4 +1,3 @@
-import AnimatedText from "@/components/animations/AnimatedText";
 import CustomShapeBorderButton from "@/components/buttons/CustomShapeBorderButton";
 import CustomShapeButton from "@/components/buttons/CustomShapeButton";
 import CSRAvatar from "@/components/csrAvatar/CSRAvatar";
@@ -13,13 +12,12 @@ import { CgQuote } from "react-icons/cg";
 import { FaStar } from "react-icons/fa";
 import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
-import { LuArrowUpRight } from "react-icons/lu";
-import { MdOutlineArrowForward } from "react-icons/md";
+import { MdKeyboardArrowRight, MdOutlineArrowForward } from "react-icons/md";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
 import blogCover2 from "../../public/blogs/meta-marketing-2025-cover.webp";
 import blogCover1 from "../../public/blogs/seo-vs-aeo-2025-blog-cover.webp";
-import groupPhoto from "../../public/old-garage.webp";
+import heroSectionImg from "../../public/hero_section_image.png";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.webp";
 import elevate from "../../public/partners/elevate.webp";
 import indigo from "../../public/partners/indigo_company.webp";
@@ -32,7 +30,14 @@ import qahafLogo from "../../public/partners/qahaf.webp";
 import sikderFoundationLogo from "../../public/partners/sikder_foundation.webp";
 import sweetCakes from "../../public/partners/sweet_cakes.webp";
 import travel from "../../public/partners/travel.webp";
-import streetSigns from "../../public/street_signs.webp";
+import realEstateProjectImg from "../../public/projects/real_estate_background_grid.png";
+import customeSoftwareIcon from "../../public/services/icons/code.png";
+import businessConsultancyIcon from "../../public/services/icons/conversation.png";
+import seoIcon from "../../public/services/icons/seo.png";
+import marketingIcon from "../../public/services/icons/social-media (1).png";
+import socialMediaIcon from "../../public/services/icons/social-media.png";
+import websiteDesignIcon from "../../public/services/icons/web-design.png";
+import serviceBackgroundImg from "../../public/services/service_background.png";
 import { default as azizulHoque } from "../../public/testimonials/azizul.webp";
 import rakibShikdar from "../../public/testimonials/rakib.webp";
 
@@ -139,21 +144,41 @@ function PartnersCard({ brandImg, brandAlt }) {
   );
 }
 
-function ServiceCard({ serviceTitle, forwardTo }) {
+function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
   return (
-    <Link href={forwardTo} className="w-full group  ">
-      <div className="px-4 lg:px-0 lg:ps-5 lg:pe-20 py-5 group-hover:py-8 lg:group-hover:py-10 duration-[350ms]  relative overflow-hidden">
-        <div className="flex flex-row gap-5 justify-between items-center relative z-[3]">
-          <span>
-            <LuArrowUpRight className="text-xl lg:text-4xl rotate-45 text-accentColor group-hover:text-darkPrimary group-hover:rotate-0 transition duration-[350ms]" />
-          </span>
-          <h3 className="text-xl lg:text-4xl inline-block uppercase font-medium text-lightPrimary">
-            <AnimatedText text={serviceTitle} hoverText="text-darkPrimary" />
-          </h3>
+    <div
+      className="w-full p-7 text-darkSecondary bg-lightSecondary hover:bg-accentColor2 hover:text-lightPrimary lg:hover:scale-105 transition-all duration-[350ms] group"
+      style={{
+        clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0px 100%, 0px 0px)`,
+      }}
+    >
+      <div className="w-full h-full flex flex-col justify-between gap-5">
+        <div className="w-full flex flex-col gap-5">
+          <div className="w-[60px] aspect-square relative overflow-hidden">
+            <Image
+              placeholder="blur"
+              src={serviceIcon}
+              alt="hero section image"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h4 className="text-xl font-semibold leading-[1.2]">
+              {serviceTitle}
+            </h4>
+            <p className=" font-light text-lg lg:text-sm">{serviceDesc}</p>
+          </div>
         </div>
-        <div className="w-full h-full absolute bg-lightPrimary inset-0 z-[1] -translate-y-full group-hover:translate-y-0 transition duration-[350ms]"></div>
+        <div>
+          <Link href={forwardTo} className="flex">
+            <div className="flex flex-row items-center gap-2 ps-5 pe-2 py-2 rounded-sm bg-accentColor2 group-hover:bg-lightSecondary text-lightPrimary group-hover:text-darkSecondary transition-all duration-[350px]">
+              <span>Learn More</span>
+              <MdKeyboardArrowRight className="text-xl" />
+            </div>
+          </Link>
+        </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
@@ -264,7 +289,7 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="w-full pt-5 pb-10 lg:pt-10 lg:pb-20 relative font-light text-lightSecondary">
+        {/* <div className="w-full pt-5 pb-10 lg:pt-10 lg:pb-20 relative font-light text-lightSecondary">
           <div className="w-full flex flex-col gap-7 lg:gap-10 px-4 lg:px-20">
             <div className="w-full flex flex-col gap-10">
               <div className="w-full lg:w-[75%]">
@@ -325,209 +350,84 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-full flex overflow-hidden relative">
-          <div className="w-full aspect-video relative overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              autoPlay
-              playsInline
-            >
-              <source src="https://res.cloudinary.com/de8g5laai/video/upload/v1741025624/devion_ark_showreel_2024_ronun7_wbst4z.webm" />
-            </video>
-          </div>
-        </div>
-
-        {/* Who We Are Section */}
-
-        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary py-20 lg:py-40">
-          <div className="flex flex-col-reverse">
-            <div className="w-full flex px-4 lg:px-20 lg:justify-end relative z-[5]">
-              <div className="w-full lg:w-[80%] flex flex-col gap-5 lg:gap-16">
-                <p className="text-lg lg:text-3xl lg:leading-[1.3] text-lightSecondary font-normal indent-20 lg:indent-52">
-                  We&apos;re more than a digital service provider company in
-                  Bangladesh – we&apos;re your business growth partners.
-                  Specializing in custom software development, website
-                  solutions, and data-driven digital marketing services, we
-                  empower businesses across Dhaka and beyond to outrank
-                  competitors, streamline operations, and connect with their
-                  audience. Whether you're a startup or an enterprise.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Our Services Section */}
-
-        <div className="bg-darkPrimary relative font-light text-lightSecondary">
-          <div className="flex flex-col lg:flex-row gap-5 lg:gap-0">
-            <div className="w-full lg:w-[40%] lg:border-b border-lightSecondary/30">
-              <div className="flex flex-col">
-                <div className="w-full aspect-[9/11] relative overflow-hidden">
-                  <Image
-                    placeholder="blur"
-                    src={streetSigns}
-                    alt="street signs saying one way"
-                    className="w-full h-full object-cover"
-                  />
+        <div className="w-full lg:min-h-screen pt-5 pb-20 lg:pt-10 lg:pb-20 relative font-light text-lightSecondary px-4 lg:px-20 flex justify-center items-center">
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
+            <div className="w-full lg:w-[55%]">
+              <div className="w-full flex flex-col gap-10 lg:gap-16">
+                <div className="w-full flex flex-col gap-6 lg:gap-10">
+                  <div className="w-full">
+                    <h1 className="text-lightPrimary font-bold font-oswald leading-[1.2] text-4xl lg:text-6xl">
+                      Transforming your ideas into{" "}
+                      <span className="text-accentColor ">digital reality</span>
+                      .
+                    </h1>
+                  </div>
+                  <div className="h-full flex flex-row gap-5 items-center">
+                    <CustomShapeButton
+                      forwardTo="/contact"
+                      label="Get Started"
+                      textStyle="text-lg font-normal text-lightPrimary"
+                      paddingX="ps-[14px] pe-[24px]"
+                      paddingY="py-[16px]"
+                      fontGap="gap-2"
+                      backgroundColor="bg-accentColor2"
+                      hoverBgColor="bg-accentColor"
+                      icon={
+                        <FiArrowDownLeft className="text-xl text-lightPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                      }
+                    />
+                    <CustomShapeBorderButton
+                      text="About Us"
+                      forwardTo="/about"
+                      bg="bg-lightPrimary"
+                      bg2="bg-darkPrimary"
+                      padd="ps-[14px] pe-[24px] py-[15px]"
+                      textColor="text-lightPrimary"
+                    />
+                  </div>
                 </div>
-                <div className="px-4 py-16 lg:py-10">
+                <div className="w-full flex">
                   <div className="w-full flex flex-col gap-5">
-                    <div className="flex overflow-hidden">
-                      <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
-                        <p className="flex flex-row gap-2 items-center">
-                          <span>
-                            <GoDotFill className="text-xs" />
+                    <div className=" flex flex-col gap-5">
+                      <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-3">
+                        <CSRAvatar />
+                        <div className="overflow-hidden font-light text-lg lg:text-sm leading-tight">
+                          <span className="inline-block">
+                            We have{" "}
+                            <span className="text-lightPrimary">
+                              12+ satisfied clients
+                            </span>{" "}
+                            all around the world.
                           </span>
-                          Our Services
-                        </p>
+                        </div>
                       </div>
-                    </div>
-
-                    <div className="flex flex-col gap-7">
-                      <p className="text-lg lg:text-base lg:indent-28">
-                        At Devion Ark, we&apos;re your one-stop digital
-                        transformation partner in Bangladesh, blending technical
-                        expertise with strategic vision. Whether you need custom
-                        software development to automate workflows, a
-                        mobile-first website to dominate local search rankings,
-                        or data-driven digital marketing services to amplify
-                        your brand, we craft solutions that align with your
-                        unique goals. Recognized among the best digital
-                        marketing agencies in Bangladesh, our holistic approach
-                        ensures every project — from code to campaigns — drives
-                        growth, visibility, and measurable ROI. No rigid
-                        templates, no guesswork — just results tailored to your
-                        business.
+                      <p className=" text-lightPrimary font-light text-lg lg:text-sm">
+                        Got a game-changing idea but unsure how to bring it to
+                        life? We&apos;re here to bridge that gap. As one of the
+                        best tech-driven digital marketing agencies in
+                        Bangladesh, we don&apos;t just code – we craft digital
+                        solutions that drive sales, simplify workflows, and make
+                        your brand unforgettable. Let&apos;s turn your ‘what
+                        if&apos; into ‘what&apos;s next.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[60%] border border-lightSecondary/30">
-              <div className="flex flex-col divide-y-[1px] divide-lightSecondary/30 border-b border-lightSecondary/30">
-                <div className="">
-                  <ServiceCard
-                    forwardTo="/services#custom-software-solutions"
-                    serviceTitle="Custom Software Solutions"
-                  />
-                </div>
-                <div>
-                  <ServiceCard
-                    forwardTo="/services#website-development"
-                    serviceTitle="Website Development"
-                  />
-                </div>
-
-                <div>
-                  <ServiceCard
-                    forwardTo="/services#social-media-marketing"
-                    serviceTitle="Social Media Marketing"
-                  />
-                </div>
-                <div>
-                  <ServiceCard
-                    forwardTo="/services#search-engine-marketing"
-                    serviceTitle="Search Engine Marketing"
-                  />
-                </div>
-                <div className="">
-                  <ServiceCard
-                    forwardTo="/services#search-engine-optimization"
-                    serviceTitle="Search Engine Optimization"
-                  />
-                </div>
-                <div>
-                  <ServiceCard
-                    forwardTo="/services#business-consultancy"
-                    serviceTitle="Business Consultation"
-                  />
-                </div>
+            <div className="w-full lg:w-[45%]">
+              <div className="w-full relative overflow-hidden">
+                <Image
+                  placeholder="blur"
+                  src={heroSectionImg}
+                  alt="hero section image"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Image Section  */}
-
-        <div className="w-full overflow-hidden relative">
-          <Image
-            placeholder="blur"
-            src={groupPhoto}
-            alt="a hiker hiking mountain"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Project Showcase Section */}
-
-        <div className="bg-darkPrimary flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
-          <div className="flex flex-col lg:flex-row px-4 lg:px-5">
-            <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-10 lg:py-20 border-x border-lightSecondary/30">
-              <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase items-center lg:items-start gap-5">
-                <div className="flex overflow-hidden">
-                  <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
-                    <p className="flex flex-row gap-2 items-center">
-                      <span>
-                        <GoDotFill className="text-xs" />
-                      </span>
-                      Case Studies
-                    </p>
-                  </div>
-                </div>
-                <p className="whitespace-nowrap">+{"  "}Featured Works</p>
-              </div>
-            </div>
-            <div className="w-full lg:w-[55%] px-4 lg:px-7 py-0 lg:py-20 border-x border-lightSecondary/30 lg:border-x-0">
-              <div className="w-full flex flex-col gap-5 lg:gap-10">
-                <h2 className="text-lightPrimary font-oswald leading-[1.10] text-4xl lg:text-5xl font-medium">
-                  Crafting{" "}
-                  <span className="text-accentColor ">creative solutions</span>{" "}
-                  at all scales.
-                </h2>
-                <p className="text-lg lg:indent-40">
-                  From startups to nationwide enterprises, our work speaks for
-                  itself. We&apos;ve engineered an intuitive e-commerce platform
-                  for sportswear brands, boosting sales by 150% through
-                  SEO-friendly web development, and built a custom CRM system
-                  that automated 70% of manual tasks for real estate
-                  professionals. Our strategic social media campaigns
-                  transformed a local retailer&apos;s online presence, tripling
-                  engagement, while targeted SEO strategies helped a tech
-                  startup dominate Google rankings. Every project – whether
-                  custom software, websites, or digital marketing services –
-                  reflects our commitment to turning challenges into growth.
-                  These aren&apos;t just case studies; they&apos;re blueprints
-                  for what we can achieve together.
-                </p>
-              </div>
-            </div>
-            <div className="w-full flex lg:w-[20%] px-4 lg:px-7 py-10 lg:py-20 border-x  border-lightSecondary/30">
-              <div className="w-full h-full flex justify-end lg:items-end">
-                <div>
-                  <CustomShapeButton
-                    forwardTo="/case-studies"
-                    label="View All"
-                    textStyle="text-lg font-normal text-darkPrimary"
-                    paddingX="ps-[10px] pe-[20px]"
-                    paddingY="py-[14px]"
-                    fontGap="gap-2"
-                    backgroundColor="bg-lightPrimary"
-                    hoverBgColor="bg-accentColor"
-                    icon={
-                      <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <ProjectShowcase />
         </div>
 
         {/* Partners Section */}
@@ -570,12 +470,105 @@ export default function Home() {
           </div>
         </div>
 
+        {/* What We Do Section */}
+
+        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pt-10 pb-7 lg:pt-40 lg:pb-20">
+          <div className="flex flex-col-reverse">
+            <div className="w-full flex flex-col gap-10 px-4 lg:px-20 justify-center items-center relative z-[5]">
+              <div className="w-full flex flex-col gap-5 lg:text-center">
+                <div className="w-full flex flex-col gap-5 justify-center lg:items-center">
+                  <div className="flex overflow-hidden">
+                    <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                      <h3 className="flex flex-row gap-2 items-center">
+                        <span>
+                          <GoDotFill className="text-xs" />
+                        </span>
+                        What We Do
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <h2 className="font-oswald text-3xl lg:text-6xl font-semibold leading-[1.2] text-lightPrimary">
+                  It's not who we are{" "}
+                  <span className="text-accentColor">underneath</span>,<br></br>{" "}
+                  It's what we do that{" "}
+                  <span className="text-accentColor">defines</span> us.
+                </h2>
+              </div>
+              <div className="w-full lg:w-[80%] flex flex-col gap-5 lg:gap-16 lg:text-center">
+                <p className="text-lg lg:text-xl lg:leading-[1.3] text-lightSecondary font-light">
+                  We&apos;re more than a digital service provider company in
+                  Bangladesh – we&apos;re your business growth partners.
+                  Specializing in custom software development, website
+                  solutions, and data-driven digital marketing services, we
+                  empower businesses across Dhaka and beyond to outrank
+                  competitors, streamline operations, and connect with their
+                  audience. Whether you're a startup or an enterprise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pb-20 lg:pb-40 lg:px-20">
+          <div className="w-full px-4 lg:px-20 lg:py-20 rounded-lg lg:bg-darkSecondary relative overflow-hidden">
+            <div className="w-full h-full absolute z-[2] top-0 left-0 opacity-40">
+              <div className="w-full h-full relative overflow-hidden">
+                <Image
+                  placeholder="blur"
+                  src={serviceBackgroundImg}
+                  alt="service background image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 relative z-[5]">
+              <ServiceCard2
+                serviceTitle="Custome Software Solution"
+                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                forwardTo="/services#custom-software-solutions"
+                serviceIcon={customeSoftwareIcon}
+              />
+              <ServiceCard2
+                serviceTitle="Website Design"
+                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                forwardTo="/services#website-development"
+                serviceIcon={websiteDesignIcon}
+              />
+              <ServiceCard2
+                serviceTitle="Social Media Marketing"
+                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                forwardTo="/services#social-media-marketing"
+                serviceIcon={socialMediaIcon}
+              />
+              <ServiceCard2
+                serviceTitle="Search Engine Marketing"
+                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                forwardTo="/services#search-engine-marketing"
+                serviceIcon={marketingIcon}
+              />
+              <ServiceCard2
+                serviceTitle="Search Engine Optimization"
+                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                forwardTo="/services#search-engine-optimization"
+                serviceIcon={seoIcon}
+              />
+              <ServiceCard2
+                serviceTitle="Business Consultancy"
+                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                forwardTo="/services#business-consultancy"
+                serviceIcon={businessConsultancyIcon}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Testimonial Section */}
 
-        <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-black overflow-x-hidden">
+        <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-darkPrimary overflow-x-hidden border-y border-lightSecondary/30">
           <div className="w-full h-full flex flex-col lg:gap-20 justify-between">
             <div className="w-full h-full ps-4 lg:ps-20 flex flex-row  relative border-b border-lightSecondary/30">
-              <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor font-inter text-[14vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-lightSecondary/30 pb-5 lg:pb-0">
+              <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor2 font-inter text-[14vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-lightSecondary/30 pb-5 lg:pb-0">
                 Clients talk
               </h2>
 
@@ -768,6 +761,152 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Project Showcase Section */}
+
+        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pt-10 pb-7 lg:pt-40 lg:pb-20">
+          <div className="flex flex-col-reverse">
+            <div className="w-full flex flex-col gap-10 px-4 lg:px-20 justify-center items-center relative z-[5]">
+              <div className="w-full flex flex-col gap-5 lg:text-center">
+                <div className="w-full flex flex-col gap-5 justify-center lg:items-center">
+                  <div className="flex overflow-hidden">
+                    <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                      <h3 className="flex flex-row gap-2 items-center">
+                        <span>
+                          <GoDotFill className="text-xs" />
+                        </span>
+                        Featured Projects
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <h2 className="font-oswald text-3xl lg:text-6xl font-semibold leading-[1.2] text-lightPrimary">
+                  Crafting{" "}
+                  <span className="text-accentColor">creative solutions</span>{" "}
+                  at all scales.
+                </h2>
+              </div>
+              <div className="w-full lg:w-[80%] flex flex-col gap-5 lg:gap-16 lg:text-center">
+                <p className="text-lg lg:text-xl lg:leading-[1.3] text-lightSecondary font-light">
+                  From startups to nationwide enterprises, our work speaks for
+                  itself. We've engineered an intuitive e-commerce platform for
+                  sportswear brands, boosting sales by 150% through SEO-friendly
+                  web development, and built a custom CRM system that automated
+                  70% of manual tasks for real estate professionals. Our
+                  strategic social media campaigns transformed a local
+                  retailer's online presence, tripling engagement, while
+                  targeted SEO strategies helped a tech startup dominate Google
+                  rankings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pb-20 lg:pb-40 lg:px-20">
+          <div className="w-full flex flex-col gap-10">
+            <div className="w-full h-full rounded-2xl bg-black flex flex-col lg:flex-row lg:gap-10">
+              <div className="w-full lg:w-[60%] px-5 pt-10 lg:px-10 lg:pt-10 lg:pb-10 flex items-center">
+                <div className="w-full flex flex-col gap-5 lg:gap-10">
+                  <div className=" flex">
+                    <p className="px-6 py-2 bg-accentColor2 text-lightPrimary font-light rounded-full">
+                      Custom Software Solutions
+                    </p>
+                  </div>
+                  <h3 className="text-2xl lg:text-4xl font-semibold text-lightPrimary leading-[1.2]">
+                    All-In-One Real Estate Management System
+                  </h3>
+                  <p className="text-base font-light text-lightSecondary/60">
+                    Automated lead management for a Dhaka agency, slashing
+                    manual tasks by 70% with our custom software development
+                    expertise.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="flex flex-row gap-2 items-center text-accentColor2"
+                  >
+                    <span>Start now</span>
+                    <MdKeyboardArrowRight className="text-xl" />
+                  </Link>
+                </div>
+              </div>
+              <div className="w-full lg:w-[40%] pt-10">
+                <div className="w-full relative overflow-hidden">
+                  <Image
+                    placeholder="blur"
+                    src={realEstateProjectImg}
+                    alt="real estate management project"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-darkPrimary flex flex-col leading-none w-full h-full relative font-light text-lightSecondary">
+          <div className="flex flex-col lg:flex-row px-4 lg:px-5">
+            <div className="w-full flex lg:w-[25%] px-4 lg:px-7 py-10 lg:py-20 border-x border-lightSecondary/30">
+              <div className="w-full flex flex-row lg:flex-col justify-between text-base lg:text-lg uppercase items-center lg:items-start gap-5">
+                <div className="flex overflow-hidden">
+                  <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
+                    <p className="flex flex-row gap-2 items-center">
+                      <span>
+                        <GoDotFill className="text-xs" />
+                      </span>
+                      Case Studies
+                    </p>
+                  </div>
+                </div>
+                <p className="whitespace-nowrap">+{"  "}Featured Works</p>
+              </div>
+            </div>
+            <div className="w-full lg:w-[55%] px-4 lg:px-7 py-0 lg:py-20 border-x border-lightSecondary/30 lg:border-x-0">
+              <div className="w-full flex flex-col gap-5 lg:gap-10">
+                <h2 className="text-lightPrimary font-oswald leading-[1.10] text-4xl lg:text-5xl font-medium">
+                  Crafting{" "}
+                  <span className="text-accentColor ">creative solutions</span>{" "}
+                  at all scales.
+                </h2>
+                <p className="text-lg lg:indent-40">
+                  From startups to nationwide enterprises, our work speaks for
+                  itself. We&apos;ve engineered an intuitive e-commerce platform
+                  for sportswear brands, boosting sales by 150% through
+                  SEO-friendly web development, and built a custom CRM system
+                  that automated 70% of manual tasks for real estate
+                  professionals. Our strategic social media campaigns
+                  transformed a local retailer&apos;s online presence, tripling
+                  engagement, while targeted SEO strategies helped a tech
+                  startup dominate Google rankings. Every project – whether
+                  custom software, websites, or digital marketing services –
+                  reflects our commitment to turning challenges into growth.
+                  These aren&apos;t just case studies; they&apos;re blueprints
+                  for what we can achieve together.
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex lg:w-[20%] px-4 lg:px-7 py-10 lg:py-20 border-x  border-lightSecondary/30">
+              <div className="w-full h-full flex justify-end lg:items-end">
+                <div>
+                  <CustomShapeButton
+                    forwardTo="/case-studies"
+                    label="View All"
+                    textStyle="text-lg font-normal text-darkPrimary"
+                    paddingX="ps-[10px] pe-[20px]"
+                    paddingY="py-[14px]"
+                    fontGap="gap-2"
+                    backgroundColor="bg-lightPrimary"
+                    hoverBgColor="bg-accentColor"
+                    icon={
+                      <FiArrowDownLeft className="text-xl text-darkPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <ProjectShowcase />
         </div>
 
         {/* More Blogs */}

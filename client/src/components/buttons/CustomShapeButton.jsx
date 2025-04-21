@@ -8,7 +8,7 @@ function CustomShapeButton({
   paddingX = "ps-4 pe-8",
   paddingY = "py-4",
   textStyle = "text-lg font-normal text-lightPrimary",
-  hoverText = "text-darkPrimary",
+  hoverText = "text-lightPrimary",
   backgroundColor = "bg-darkPrimary",
   hoverBgColor = "bg-lightPrimary",
   fontGap = "gap-2",
