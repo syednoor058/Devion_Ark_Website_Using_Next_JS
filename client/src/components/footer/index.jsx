@@ -1,15 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import Marquee from "react-fast-marquee";
-import { BiSupport } from "react-icons/bi";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
-import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
 import footerLogo from "../../../public/footer_logo.png";
+import amexIcon from "../../../public/payments/amex.png";
+import bkashIcon from "../../../public/payments/BKash-Icon2-Logo.wine.png";
+import nogodIcon from "../../../public/payments/Nagad-Logo.wine.png";
+import mastersIcon from "../../../public/payments/shopping.png";
+import visaIcon from "../../../public/payments/visa.png";
 
 function AddressInfo({ icon, title, value }) {
   return (
@@ -25,14 +29,41 @@ function AddressInfo({ icon, title, value }) {
 
 function Footer() {
   const navLinks1 = [
-    { label: "Home", path: "/" },
-    { label: "Services", path: "/services" },
-    { label: "Case Studies", path: "/case-studies" },
-    { label: "Blogs", path: "/blogs" },
+    { label: "Business Services", path: "/services" },
+    { label: "Dynamic Solutions", path: "/case-studies" },
+    { label: "Latest Articles", path: "/blogs" },
+    { label: "About Us", path: "/about" },
+    { label: "Get In Touch", path: "/contact" },
   ];
   const navLinks2 = [
-    { label: "About", path: "/about" },
-    { label: "Contact", path: "/contact" },
+    {
+      label: "Software Solutions",
+      path: "/services#custom-software-solutions",
+    },
+    { label: "Website Development", path: "/services#website-development" },
+    {
+      label: "Social Marketing",
+      path: "/services#social-media-marketing",
+    },
+
+    { label: "Business Consultancy", path: "/services#business-consultancy" },
+    {
+      label: "Search Marketing",
+      path: "/services#search-engine-marketing",
+    },
+    {
+      label: "Search Optimization",
+      path: "/services#search-engine-optimization",
+    },
+  ];
+  const navLinks3 = [
+    { label: "Responsive Website", path: "/case-studies" },
+    { label: "Brand Revival", path: "/blogs" },
+    { label: "Local SEO", path: "/about" },
+    { label: "Management System", path: "/services" },
+    { label: "Ecommerce Application", path: "/" },
+  ];
+  const navLinks4 = [
     { label: "Cookies Policy", path: "/legals" },
     { label: "Privacy Policy", path: "/legals#privacy-policy" },
   ];
@@ -45,141 +76,155 @@ function Footer() {
     },
     { label: <FaInstagram />, url: "https://www.instagram.com/devionark/" },
     { label: <FaWhatsapp />, url: "https://wa.me/8801782734573" },
+    { label: <FaXTwitter />, url: "/" },
+    { label: <FaYoutube />, url: "/" },
   ];
 
   return (
-    <div
-      className="w-full relative h-[100vh]"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
-      <div className="relative w-full h-[200vh] -top-[100vh]">
-        <div className="sticky w-full h-[100vh] top-0 left-0">
-          <div className="w-full h-[100vh] relative bg-black pt-5 lg:pt-20 flex">
-            <div className="w-full h-full flex flex-col gap-5 lg:gap-10 justify-between">
-              <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-20 px-4 lg:px-10">
-                <div className="flex flex-col gap-5">
-                  <div className="h-6 relative overflow-hidden">
-                    <Image
-                      src={footerLogo}
-                      alt="Devion Ark Logo"
-                      className="h-full w-auto"
-                    />
-                  </div>
-                  <p className="font-light">
-                    Your full-service digital growth partner. We craft custom
-                    software, SEO-optimized websites, and data-driven marketing
-                    strategies that convert. Empowering startups to enterprises
-                    with transparent, results-focused solutions.
-                  </p>
-                  <div className="w-full flex flex-wrap gap-5">
-                    {socialLinks.map((item, index) => (
-                      <a
-                        key={index}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="p-3 rounded-full bg-darkSecondary hover:bg-darkPrimary text-lightPrimary hover:text-accentColor transition-colors duration-[350ms] text-xl">
-                          {item.label}
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-                <div className="w-full flex flex-row gap-10 lg:justify-between">
-                  <div className="flex flex-col gap-3">
-                    <div className="text-lightPrimary font-normal uppercase">
-                      Quick Links
-                    </div>
-                    <div className="flex flex-col gap-1 font-light">
-                      {navLinks1.map((link, index) => (
-                        <Link
-                          key={index}
-                          href={link.path}
-                          className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-3">
-                    <div className="text-lightPrimary font-normal uppercase">
-                      Resources
-                    </div>
-                    <div className="flex flex-col gap-1 font-light">
-                      {navLinks2.map((link, index) => (
-                        <Link
-                          key={index}
-                          href={link.path}
-                          className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full flex lg:justify-end">
-                  <div className="flex flex-col gap-5 lg:gap-10">
-                    <div className="flex flex-col gap-3">
-                      <div className="text-lightPrimary font-normal uppercase">
-                        Contact us 24/7
-                      </div>
-                      <div className="flex flex-col">
-                        <div className="flex flex-row gap-3 text-lightSecondary">
-                          <span className="text-accentColor pt-1">
-                            <BiSupport />
-                          </span>{" "}
-                          <span>+8801782734573</span>
-                        </div>
-                        <div className="flex flex-row gap-3 text-lightSecondary">
-                          <span className="text-accentColor pt-1">
-                            <MdOutlineEmail />
-                          </span>{" "}
-                          <span>info@devionark.com</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3">
-                      <div className="text-lightPrimary font-normal uppercase">
-                        Office
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        <div className="flex flex-row gap-3 text-lightSecondary">
-                          <span className="text-accentColor pt-1">
-                            <MdOutlineLocationOn />
-                          </span>
-                          <span className="flex flex-col">
-                            <span>08 Tootpara Central Rd,</span>
-                            <span>Khulna Sadar, Khulna-9100</span>
-                            <span>Bangladesh</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <div className="w-full relative bg-black pt-10 lg:pt-32 flex px-4 lg:px-20 font-light font-poppins">
+      <div className="w-full h-full flex flex-col gap-7 lg:gap-14 justify-between">
+        <div className="w-full hidden lg:grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-10 text-lg">
+          <div className="flex flex-col gap-4">
+            <div className="text-lightPrimary font-normal uppercase">
+              Quick Links
+            </div>
+            <div className="flex flex-col gap-2 font-light">
+              {navLinks1.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.path}
+                  className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="text-lightPrimary font-normal uppercase">
+              Resources
+            </div>
+            <div className="flex flex-col gap-2 font-light">
+              {navLinks2.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.path}
+                  className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="text-lightPrimary font-normal uppercase">
+              Legals
+            </div>
+            <div className="flex flex-col gap-2 font-light">
+              {navLinks4.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.path}
+                  className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="text-lightPrimary font-normal uppercase">
+              Case Studies
+            </div>
+            <div className="flex flex-col gap-2 font-light">
+              {navLinks3.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.path}
+                  className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex flex-col lg:flex-row gap-10 justify-between pt-10">
+          <div className="flex flex-col gap-5">
+            <div className="h-6 lg:h-8 relative overflow-hidden">
+              <Image
+                src={footerLogo}
+                alt="Devion Ark Logo"
+                className="h-full w-auto"
+              />
+            </div>
+            <p className="font-light text-lightSecondary">
+              Your full-service digital growth partner. We craft custom
+              software, SEO-optimized websites, and data-driven marketing
+              strategies that convert. Empowering startups to enterprises with
+              transparent, results-focused solutions.
+            </p>
+            <div className="w-full flex flex-wrap gap-4">
+              <div className="h-7 relative overflow-hidden">
+                <Image
+                  src={bkashIcon}
+                  alt="payment_logo"
+                  className="h-full w-auto"
+                />
               </div>
-
-              <div className="flex flex-col gap-5 w-full justify-end">
-                <div className="w-full flex justify-center text-sm">
-                  <p>Copyright &copy; 2025 Devion Ark. All rights resereved.</p>
-                </div>
-                <div className="hidden lg:flex">
-                  <Marquee autoFill={true}>
-                    <div className="w-[480px] lg:w-[1300px] aspect-[7.6/1] relative mx-4 lg:mx-6">
-                      <Image
-                        placeholder="blur"
-                        src={footerLogo}
-                        alt="footer-logo"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </Marquee>
-                </div>
+              <div className="h-7 relative overflow-hidden">
+                <Image
+                  src={nogodIcon}
+                  alt="payment_logo"
+                  className="h-full w-auto"
+                />
+              </div>
+              <div className="h-7 relative overflow-hidden">
+                <Image
+                  src={visaIcon}
+                  alt="payment_logo"
+                  className="h-full w-auto"
+                />
+              </div>
+              <div className="h-7 relative overflow-hidden">
+                <Image
+                  src={mastersIcon}
+                  alt="payment_logo"
+                  className="h-full w-auto"
+                />
+              </div>
+              <div className="h-7 relative overflow-hidden">
+                <Image
+                  src={amexIcon}
+                  alt="payment_logo"
+                  className="h-full w-auto"
+                />
               </div>
             </div>
+          </div>
+          <div className="w-full flex flex-col gap-5 lg:items-end">
+            <div className="flex flex-col gap-5 lg:gap-10">
+              <div className="w-full flex flex-wrap gap-5 justify-between lg:justify-normal">
+                {socialLinks.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="p-2 rounded-md bg-accentColor2 hover:bg-accentColor text-lightPrimary transition-all duration-[350ms] text-xl lg:hover:scale-110">
+                      {item.label}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-5 lg:py-7 border-t-[0.5px] border-gray-700">
+          <div className="w-full flex flex-col lg:flex-row gap-1 justify-center lg:justify-between text-sm lg:text-base text-lightSecondary text-center lg:text-left">
+            <p>&copy;2023-2025 Devion Ark</p>
+            <p>Prices are listed without VAT.</p>
           </div>
         </div>
       </div>

@@ -147,7 +147,7 @@ function Navbar() {
                     label="Let's Talk"
                     forwardTo="/contact"
                     bend="12px"
-                    textStyle="text-sm font-light"
+                    textStyle="text-sm font-light text-lightPrimary"
                     hoverText="text-lightPrimary"
                     backgroundColor="bg-accentColor"
                     hoverBgColor="bg-accentColor2"

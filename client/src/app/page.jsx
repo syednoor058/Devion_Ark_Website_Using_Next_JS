@@ -149,7 +149,7 @@ function PartnersCard({ brandImg, brandAlt }) {
 function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
   return (
     <div
-      className="w-full p-7 text-darkSecondary bg-lightSecondary hover:bg-accentColor2 hover:text-lightPrimary lg:hover:scale-105 transition-all duration-[350ms] group"
+      className="w-full p-7 text-darkSecondary bg-lightPrimary hover:bg-accentColor2 hover:text-lightPrimary lg:hover:scale-105 transition-all duration-[350ms] group"
       style={{
         clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0px 100%, 0px 0px)`,
       }}
@@ -175,7 +175,10 @@ function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
         </div>
         <div>
           <Link href={forwardTo} className="flex">
-            <div className="flex flex-row items-center gap-2 ps-5 pe-2 py-2 rounded-sm bg-accentColor2 group-hover:bg-lightSecondary text-lightPrimary group-hover:text-darkSecondary transition-all duration-[350px]">
+            <div
+              className="flex flex-row items-center gap-2 ps-5 pe-2 py-2 rounded-sm bg-accentColor2 group-hover:bg-lightPrimary
+             text-lightPrimary group-hover:text-darkSecondary transition-all duration-[350px]"
+            >
               <span>Learn More</span>
               <MdKeyboardArrowRight className="text-xl" />
             </div>
