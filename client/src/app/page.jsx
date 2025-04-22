@@ -17,6 +17,7 @@ import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
 import blogCover2 from "../../public/blogs/meta-marketing-2025-cover.webp";
 import blogCover1 from "../../public/blogs/seo-vs-aeo-2025-blog-cover.webp";
+import faqImg from "../../public/faq_img.png";
 import heroSectionImg from "../../public/hero_section_image.png";
 import annaKitchen from "../../public/partners/anna_khan_kitchen.webp";
 import elevate from "../../public/partners/elevate.webp";
@@ -454,7 +455,7 @@ export default function Home() {
         <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-darkPrimary overflow-x-hidden border-y border-lightSecondary/30">
           <div className="w-full h-full flex flex-col lg:gap-20 justify-between">
             <div className="w-full h-full ps-4 lg:ps-20 flex flex-row  relative border-b border-lightSecondary/30">
-              <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor2 font-inter text-[12vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-lightSecondary/30 pb-5 lg:pb-0">
+              <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor2 font-inter text-[13vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-lightSecondary/30 pb-5 lg:pb-0">
                 Clients talk
               </h2>
 
@@ -651,7 +652,7 @@ export default function Home() {
 
         {/* Project Showcase Section */}
 
-        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pt-10 pb-7 lg:pt-40 lg:pb-20">
+        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pt-20 pb-10 lg:pt-40 lg:pb-20">
           <div className="flex flex-col-reverse">
             <div className="w-full flex flex-col gap-10 px-4 lg:px-20 justify-center items-center relative z-[5]">
               <div className="w-full flex flex-col gap-5 lg:text-center">
@@ -871,7 +872,7 @@ export default function Home() {
         <div className="w-full font-light text-lightSecondary text-base lg:text-lg pt-20 pb-10 lg:pb-20 lg:pt-40 px-4 lg:px-20 bg-darkPrimary">
           <div className="flex flex-col gap-10 lg:gap-20">
             <div className="w-full flex flex-col-reverse lg:flex-row gap-10 justify-between">
-              <div className="w-full lg:w-[80%] flex flex-col gap-2 leading-[1.10]">
+              <div className="w-full lg:w-[80%] flex flex-col leading-[1.10]">
                 <h2 className="font-oswald text-4xl lg:text-6xl font-semibold leading-[1.2] text-lightPrimary">
                   Have doubts?
                 </h2>
@@ -896,8 +897,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full flex lg:justify-end">
-              <div className="w-full lg:w-[70%]">
+            <div className="w-full flex flex-col-reverse lg:flex-row gap-10 lg:gap-20">
+              <div className="w-full lg:w-[40%] relative overflow-hidden flex justify-start items-start">
+                <div className="relative">
+                  <Image
+                    placeholder="blur"
+                    src={faqImg}
+                    alt="FAQ Image"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div className="w-full lg:w-[60%]">
                 <FAQSection />
               </div>
             </div>

@@ -35,7 +35,7 @@ function FAQSection() {
 
   return (
     <div className="w-full">
-      <div className="border-lightSecondary/30 border-b pb-5">
+      <div className="border-lightSecondary/30 border-b pb-3">
         <Accordion
           elevation={0}
           expanded={expanded1}
@@ -103,7 +103,7 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-lightSecondary/30 border-b py-5">
+      <div className=" border-lightSecondary/30 border-b py-3">
         <Accordion
           elevation={0}
           expanded={expanded2}
@@ -170,7 +170,7 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-lightSecondary/30 border-b py-5">
+      <div className=" border-lightSecondary/30 border-b py-3">
         <Accordion
           elevation={0}
           expanded={expanded3}
@@ -238,7 +238,7 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-lightSecondary/30 border-b py-5">
+      <div className=" border-lightSecondary/30 border-b py-3">
         <Accordion
           elevation={0}
           expanded={expanded4}
@@ -306,7 +306,7 @@ function FAQSection() {
           </AccordionDetails>
         </Accordion>
       </div>
-      <div className=" border-lightSecondary/30 border-b py-5">
+      <div className=" border-lightSecondary/30 border-b py-3">
         <Accordion
           elevation={0}
           expanded={expanded5}

@@ -222,8 +222,8 @@ function Footer() {
           </div>
         </div>
         <div className="py-5 lg:py-7 border-t-[0.5px] border-gray-700">
-          <div className="w-full flex flex-col lg:flex-row gap-1 justify-center lg:justify-between text-sm lg:text-base text-lightSecondary text-center lg:text-left">
-            <p>&copy;2023-2025 Devion Ark</p>
+          <div className="w-full flex flex-col lg:flex-row gap-[2px] justify-center lg:justify-between text-sm lg:text-base text-lightSecondary text-center lg:text-left">
+            <p>&copy; 2023-2025 Devion Ark Digital Solutions</p>
             <p>Prices are listed without VAT.</p>
           </div>
         </div>
