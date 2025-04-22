@@ -825,8 +825,8 @@ export default function Home() {
                 </div>
               </div>
               <h2 className="font-oswald text-4xl lg:text-6xl font-semibold leading-[1.2] text-lightPrimary">
-                Allways keep{" "}
-                <span className="text-accentColor">up-to-date</span>.
+                Always keep <span className="text-accentColor">up-to-date</span>
+                .
               </h2>
             </div>
             <div className="w-full flex flex-col gap-5 lg:gap-16">

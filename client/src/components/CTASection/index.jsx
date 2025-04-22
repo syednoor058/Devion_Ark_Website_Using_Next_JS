@@ -19,7 +19,7 @@ function CTASection() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-2 text-4xl lg:text-6xl font-semibold text-darkPrimary font-oswald leading-[1.10]">
+            <div className="flex flex-col gap-2 text-4xl lg:text-6xl font-semibold text-darkPrimary font-oswald leading-[1.10] ">
               <h2 className="text-bold">
                 Let&apos;s build your{" "}
                 <span className="text-lightPrimary">digital legacy</span>.
