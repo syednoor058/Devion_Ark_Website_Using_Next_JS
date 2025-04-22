@@ -5,12 +5,12 @@ import CustomShapeButton from "../buttons/CustomShapeButton";
 
 function CTASection() {
   return (
-    <div className="w-full h-full bg-accentColor text-darkSecondary font-light text-base lg:text-lg px-4 lg:px-20 py-10 lg:py-20">
+    <div className="w-full h-full bg-gradient-to-tr from-accentColor to-accentColor2 text-lightPrimary font-light text-base lg:text-lg px-4 lg:px-20 py-10 lg:py-20">
       <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20">
         <div className="w-full lg:w-[70%]">
           <div className="flex flex-col gap-10 lg:gap-10">
             <div className="flex">
-              <div className="text-sm uppercase text-darkSecondary font-light ps-3 pe-5 py-2 rounded-full border border-lightPrimary">
+              <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-lightPrimary">
                 <p className="flex flex-row gap-2 items-center">
                   <span>
                     <GoDotFill className="text-xs" />
@@ -37,7 +37,7 @@ function CTASection() {
         <div className="w-full lg:w-[30%]">
           <div className="flex flex-col-reverse lg:flex-col gap-10 lg:gap-20">
             <div className="w-full flex flex-row gap-4">
-              <div className="pt-2 text-darkSecondary">
+              <div className="pt-2 text-lightPrimary">
                 <BiSolidMessageAltError className="text-lg" />
               </div>
               <div className="flex flex-col gap-3">
@@ -52,12 +52,13 @@ function CTASection() {
               <CustomShapeButton
                 forwardTo="/contact"
                 label="Book A Call"
-                paddingX="ps-[10px] pe-[20px]"
-                paddingY="py-[14px]"
+                paddingX="ps-4 pe-6"
+                paddingY="py-5"
                 fontGap="gap-2"
-                textStyle="text-lg font-light text-lightPrimary"
+                textStyle="text-base font-light text-lightPrimary"
+                hoverText="text-darkSecondary"
                 icon={
-                  <FaPhone className="text-base text-lightPrimary group-hover:text-darkPrimary group-hover:rotate-90 duration-[350ms]" />
+                  <FaPhone className="text-base text-lightPrimary group-hover:text-darkSecondary group-hover:rotate-90 duration-[350ms]" />
                 }
               />
             </div>

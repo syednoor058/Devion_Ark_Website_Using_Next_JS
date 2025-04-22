@@ -146,12 +146,12 @@ function Navbar() {
                   <CustomShapeButton
                     label="Let's Talk"
                     forwardTo="/contact"
-                    bend="13px"
-                    textStyle="text-sm font-normal"
+                    bend="12px"
+                    textStyle="text-sm font-light"
                     hoverText="text-lightPrimary"
                     backgroundColor="bg-accentColor"
                     hoverBgColor="bg-accentColor2"
-                    paddingX="ps-3 pe-6"
+                    paddingX="ps-2 pe-4"
                     paddingY="py-3"
                     fontGap="gap-2"
                     icon={
