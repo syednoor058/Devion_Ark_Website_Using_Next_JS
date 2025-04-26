@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  FaBell,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
@@ -14,6 +15,7 @@ import bkashIcon from "../../../public/payments/BKash-Icon2-Logo.wine.png";
 import nogodIcon from "../../../public/payments/Nagad-Logo.wine.png";
 import mastersIcon from "../../../public/payments/shopping.png";
 import visaIcon from "../../../public/payments/visa.png";
+import TextAnimation from "../animations/TextAnimation";
 
 function AddressInfo({ icon, title, value }) {
   return (
@@ -95,7 +97,11 @@ function Footer() {
                   href={link.path}
                   className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
                 >
-                  {link.label}
+                  {" "}
+                  <TextAnimation
+                    text={link.label}
+                    hoverText="text-accentColor"
+                  />
                 </Link>
               ))}
             </div>
@@ -111,7 +117,10 @@ function Footer() {
                   href={link.path}
                   className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
                 >
-                  {link.label}
+                  <TextAnimation
+                    text={link.label}
+                    hoverText="text-accentColor"
+                  />
                 </Link>
               ))}
             </div>
@@ -127,7 +136,10 @@ function Footer() {
                   href={link.path}
                   className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
                 >
-                  {link.label}
+                  <TextAnimation
+                    text={link.label}
+                    hoverText="text-accentColor"
+                  />
                 </Link>
               ))}
             </div>
@@ -143,14 +155,17 @@ function Footer() {
                   href={link.path}
                   className="text-lightSecondary hover:text-accentColor transition-colors duration-[350ms]"
                 >
-                  {link.label}
+                  <TextAnimation
+                    text={link.label}
+                    hoverText="text-accentColor"
+                  />
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col lg:flex-row gap-10 justify-between pt-10">
-          <div className="flex flex-col gap-5">
+        <div className="w-full flex flex-col lg:flex-row gap-14 lg:gap-40 justify-between pt-10">
+          <div className="w-full lg:w-[60%] flex flex-col gap-5">
             <div className="h-6 lg:h-8 relative overflow-hidden">
               <Image
                 src={footerLogo}
@@ -202,9 +217,9 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-5 lg:items-end">
-            <div className="flex flex-col gap-5 lg:gap-10">
-              <div className="w-full flex flex-wrap gap-5 justify-between lg:justify-normal">
+          <div className="w-full lg:w-[40%] flex flex-col gap-10 lg:gap-5">
+            <div className="flex flex-col-reverse lg:flex-col gap-10 lg:gap-5">
+              <div className="w-full flex flex-wrap gap-5 justify-between lg:justify-end">
                 {socialLinks.map((item, index) => (
                   <a
                     key={index}
@@ -218,11 +233,28 @@ function Footer() {
                   </a>
                 ))}
               </div>
+              <div className="w-full">
+                <form className="w-full flex flex-row">
+                  <button
+                    type="submit"
+                    className="px-5 flex flex-row gap-2 items-center bg-accentColor2 hover:bg-accentColor text-lightPrimary transition-all duration-[350ms] rounded-l-sm"
+                  >
+                    <span>Subscribe</span>
+                    <FaBell className="text-base text-lightPrimary transition duration-[350ms]" />
+                  </button>
+                  <input
+                    className="w-full p-3 outline-none border bg-lightPrimary text-darkSecondary"
+                    placeholder="Enter your email address"
+                    type="email"
+                    required
+                  />
+                </form>
+              </div>
             </div>
           </div>
         </div>
         <div className="py-5 lg:py-7 border-t-[0.5px] border-gray-700">
-          <div className="w-full flex flex-col lg:flex-row gap-[2px] justify-center lg:justify-between text-sm lg:text-base text-lightSecondary text-center lg:text-left">
+          <div className="w-full flex flex-col lg:flex-row justify-center lg:justify-between text-sm lg:text-base text-lightSecondary text-center lg:text-left">
             <p>&copy; 2023-2025 Devion Ark Digital Solutions</p>
             <p>Prices are listed without VAT.</p>
           </div>

@@ -50,21 +50,21 @@ function CTASection() {
                   grow business for.
                 </p>
                 <p>Talk to us to learn more!</p>
+                <div className="pt-10 lg:pt-20">
+                  <CustomShapeButton
+                    forwardTo="/contact"
+                    label="Book A Call"
+                    paddingX="ps-4 pe-6"
+                    paddingY="py-5"
+                    fontGap="gap-2"
+                    textStyle="text-base font-light text-lightPrimary"
+                    hoverText="text-darkSecondary"
+                    icon={
+                      <FaPhone className="text-base text-lightPrimary group-hover:text-darkSecondary group-hover:rotate-90 duration-[350ms]" />
+                    }
+                  />
+                </div>
               </div>
-            </div>
-            <div>
-              <CustomShapeButton
-                forwardTo="/contact"
-                label="Book A Call"
-                paddingX="ps-4 pe-6"
-                paddingY="py-5"
-                fontGap="gap-2"
-                textStyle="text-base font-light text-lightPrimary"
-                hoverText="text-darkSecondary"
-                icon={
-                  <FaPhone className="text-base text-lightPrimary group-hover:text-darkSecondary group-hover:rotate-90 duration-[350ms]" />
-                }
-              />
             </div>
           </div>
         </div>

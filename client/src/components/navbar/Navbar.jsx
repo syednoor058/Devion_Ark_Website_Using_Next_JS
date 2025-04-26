@@ -193,7 +193,7 @@ function Navbar() {
           </div>
         </div>
         <div
-          className={`w-full h-screen overflow-x-hidden overflow-y-auto bg-black fixed top-0 left-0 transform ${
+          className={`w-full h-screen overflow-x-hidden overflow-y-auto bg-darkPrimary fixed top-0 left-0 transform ${
             menuExpand ? "translate-y-0" : "-translate-y-full"
           } duration-1000 ease-in-out z-[999]`}
         >

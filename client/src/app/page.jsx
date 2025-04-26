@@ -150,7 +150,7 @@ function PartnersCard({ brandImg, brandAlt }) {
 function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
   return (
     <div
-      className="w-full p-7 text-darkSecondary bg-lightPrimary hover:bg-accentColor2 hover:text-lightPrimary lg:hover:scale-105 transition-all duration-[350ms] group"
+      className="w-full p-7 text-darkSecondary bg-lightPrimary hover:bg-accentColor2 hover:text-lightPrimary lg:hover:scale-105 transition-all duration-[350ms] group/outer"
       style={{
         clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0px 100%, 0px 0px)`,
       }}
@@ -166,7 +166,7 @@ function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
             />
           </div>
           <div className="flex flex-col gap-5">
-            <h4 className="text-[27px] lg:text-2xl font-semibold leading-tight text-accentColor2 group-hover:text-lightPrimary">
+            <h4 className="text-[27px] lg:text-2xl font-semibold leading-tight text-accentColor2 group-hover/outer:text-lightPrimary">
               {serviceTitle}
             </h4>
             <p className=" font-light text-base lg:text-sm leading-[1.2]">
@@ -175,12 +175,17 @@ function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
           </div>
         </div>
         <div>
-          <Link href={forwardTo} className="flex">
+          <Link href={forwardTo} className="flex group">
             <div
-              className="flex flex-row items-center gap-2 ps-5 pe-2 py-2 rounded-sm bg-accentColor2 group-hover:bg-lightPrimary
-             text-lightPrimary group-hover:text-darkSecondary transition-all duration-[350px]"
+              className="flex flex-row items-center gap-2 ps-5 pe-2 py-2 rounded-sm bg-accentColor2 group-hover/outer:bg-lightPrimary
+             text-lightPrimary group-hover/outer:text-darkSecondary transition-all duration-[350px]"
             >
-              <span>Learn More</span>
+              <span>
+                <TextAnimation
+                  text="Learn More"
+                  hoverText="text-darkSecondary"
+                />
+              </span>
               <MdKeyboardArrowRight className="text-xl" />
             </div>
           </Link>
@@ -711,10 +716,15 @@ export default function Home() {
                   </p>
                   <Link
                     href="/contact"
-                    className="flex flex-row gap-2 items-center text-accentColor2"
+                    className="flex flex-row gap-2 items-center text-accentColor2 group"
                   >
-                    <span>Start now</span>
-                    <MdKeyboardArrowRight className="text-xl" />
+                    <span className="text-xl">
+                      <TextAnimation
+                        text="Start Now"
+                        hoverText="text-lightPrimary"
+                      />{" "}
+                    </span>
+                    <MdKeyboardArrowRight className="text-2xl group-hover:text-lightPrimary" />
                   </Link>
                 </div>
               </div>
@@ -749,10 +759,15 @@ export default function Home() {
                       </p>
                       <Link
                         href="/contact"
-                        className="flex flex-row gap-2 items-center text-accentColor"
+                        className="flex flex-row gap-2 items-center text-accentColor group"
                       >
-                        <span>Start now</span>
-                        <MdKeyboardArrowRight className="text-xl" />
+                        <span className="text-xl">
+                          <TextAnimation
+                            text="Start Now"
+                            hoverText="text-lightPrimary"
+                          />{" "}
+                        </span>
+                        <MdKeyboardArrowRight className="text-2xl group-hover:text-lightPrimary" />
                       </Link>
                     </div>
                   </div>
@@ -798,11 +813,14 @@ export default function Home() {
                   <div className="w-full flex justify-center">
                     <Link
                       href="/case-studies"
-                      className="flex flex-row gap-2 px-3 py-2 bg-lightPrimary rounded-sm"
+                      className="flex flex-row gap-2 px-3 py-2 bg-lightPrimary rounded-sm group"
                     >
                       <AiFillProject className="text-xl text-green-400" />
                       <span className="text-sm font-normal text-darkSecondary">
-                        See all our projects
+                        <TextAnimation
+                          text="See all our projects"
+                          hoverText="text-darkSecondary"
+                        />
                       </span>
                     </Link>
                   </div>
