@@ -7,6 +7,7 @@ import CookiesConsent from "@/components/cookies/CookiesConsent";
 import CTASection from "@/components/CTASection";
 import FacebookPixel from "@/components/facebookPixel/FacebookPixel";
 import Footer from "@/components/footer";
+import Header from "@/components/header/Header";
 import Navbar from "@/components/navbar/Navbar";
 import SmoothScroll from "@/components/smoothScroll";
 import { Baumans, Oswald, Poppins } from "next/font/google";
@@ -146,6 +147,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <Template>
           <SmoothScroll>
+            <Header />
             {children}
             <CTASection />
           </SmoothScroll>

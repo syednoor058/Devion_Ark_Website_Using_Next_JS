@@ -16,11 +16,11 @@ function CSRAvatar() {
           key={i}
           alt={img.alt}
           src={img.src}
-          sx={{ width: 40, height: 40 }}
+          sx={{ width: 50, height: 50 }}
         />
       ))}
       <Avatar
-        sx={{ width: 40, height: 40, bgcolor: "#414141", fontSize: "14px" }}
+        sx={{ width: 50, height: 50, bgcolor: "#673de5", fontSize: "18px" }}
       >
         8+
       </Avatar>

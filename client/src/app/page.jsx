@@ -1,5 +1,6 @@
 import TextAnimation from "@/components/animations/TextAnimation";
-import CustomShapeButton from "@/components/buttons/CustomShapeButton";
+import Button from "@/components/buttons/Button";
+import ButtonOutline from "@/components/buttons/ButtonOutline";
 import CSRAvatar from "@/components/csrAvatar/CSRAvatar";
 import FAQSection from "@/components/faq";
 import Head from "next/head";
@@ -9,9 +10,14 @@ import Marquee from "react-fast-marquee";
 import { AiFillProject } from "react-icons/ai";
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from "react-icons/bi";
 import { CgQuote } from "react-icons/cg";
-import { FaGlobeAmericas, FaStar } from "react-icons/fa";
-import { FiArrowDownLeft, FiArrowUpRight } from "react-icons/fi";
+import { FaFacebookF, FaGlobeAmericas, FaStar } from "react-icons/fa";
+import {
+  FiArrowDownLeft,
+  FiArrowDownRight,
+  FiArrowUpRight,
+} from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
+import { IoIosCheckboxOutline } from "react-icons/io";
 import { MdKeyboardArrowRight, MdOutlineArrowForward } from "react-icons/md";
 import farhanMasum from "../../public//testimonials/farhan_masum.webp";
 import mustafaMehedi from "../../public//testimonials/mehedi.webp";
@@ -30,7 +36,7 @@ import puppetbrushLogo from "../../public/partners/puppetbrush.webp";
 import qahafLogo from "../../public/partners/qahaf.webp";
 import sikderFoundationLogo from "../../public/partners/sikder_foundation.webp";
 import sweetCakes from "../../public/partners/sweet_cakes.webp";
-import travel from "../../public/partners/travel.webp";
+import treatosBd from "../../public/partners/treatosBD.png";
 import ecommerceWebImg from "../../public/projects/ecommerce_web_img.png";
 import realEstateProjectImg from "../../public/projects/real_estate_background_grid.png";
 import seeMoreImg from "../../public/projects/see_more_img.png";
@@ -40,40 +46,34 @@ import seoIcon from "../../public/services/icons/seo.png";
 import marketingIcon from "../../public/services/icons/social-media (1).png";
 import socialMediaIcon from "../../public/services/icons/social-media.png";
 import websiteDesignIcon from "../../public/services/icons/web-design.png";
-import serviceBackgroundImg from "../../public/services/service_background.png";
 import { default as azizulHoque } from "../../public/testimonials/azizul.webp";
 import rakibShikdar from "../../public/testimonials/rakib.webp";
 
 function TestimonialCard({ image, name, position, company, review }) {
   return (
-    <div className="w-[500px] p-5 rounded text-lightSecondary  flex flex-col-reverse gap-3 overflow-hidden">
+    <div className="w-[500px] p-5 rounded flex flex-col-reverse gap-3 overflow-hidden">
       <div className="flex flex-row-reverse gap-5 justify-between items-start">
         <div className="flex flex-row-reverse gap-5 items-center">
           <div>
             <div className="w-16 aspect-square rounded-full overflow-hidden relative">
-              <Image
-                placeholder="blur"
-                src={image}
-                alt={name}
-                className="object-cover"
-              />
+              <Image src={image} alt={name} className="object-cover" />
             </div>
           </div>
           <div className="flex flex-col gap-2 items-end">
-            <div className="text-lightPrimary uppercase font-medium leading-none">
+            <div className="text-neutral-800 uppercase font-medium leading-none">
               {name}
             </div>
             <div className="flex flex-col gap-1">
-              <div className="text-xs font-light leading-none text-end">
+              <div className="text-xs font-light leading-none text-end text-gray-600">
                 {company}
               </div>
-              <div className="text-xs font-light leading-none text-end">
+              <div className="text-xs font-light leading-none text-end text-gray-600">
                 {position}
               </div>
             </div>
           </div>
         </div>
-        <div className="text-6xl">
+        <div className="text-6xl text-accentColor">
           <BiSolidQuoteLeft />
         </div>
       </div>
@@ -93,7 +93,7 @@ function TestimonialCard({ image, name, position, company, review }) {
 
 function TestimonialCard2({ image, name, position, company, review }) {
   return (
-    <div className="w-[500px] p-5 rounded text-lightSecondary flex flex-col-reverse gap-3 overflow-hidden">
+    <div className="w-[500px] p-5 rounded flex flex-col-reverse gap-3 overflow-hidden">
       <div className="flex flex-row gap-5 justify-between items-start">
         <div className="flex flex-row gap-5 items-center">
           <div>
@@ -107,16 +107,20 @@ function TestimonialCard2({ image, name, position, company, review }) {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <div className="text-lightPrimary uppercase font-medium leading-none">
+            <div className="text-neutral-800 uppercase font-medium leading-none">
               {name}
             </div>
             <div className="flex flex-col gap-1">
-              <div className="text-xs font-light leading-none">{company}</div>
-              <div className="text-xs font-light leading-none">{position}</div>
+              <div className="text-xs font-light leading-none text-gray-600">
+                {company}
+              </div>
+              <div className="text-xs font-light leading-none text-gray-600">
+                {position}
+              </div>
             </div>
           </div>
         </div>
-        <div className="text-6xl">
+        <div className="text-6xl text-accentColor">
           <BiSolidQuoteRight />
         </div>
       </div>
@@ -136,7 +140,7 @@ function TestimonialCard2({ image, name, position, company, review }) {
 
 function PartnersCard({ brandImg, brandAlt }) {
   return (
-    <div className="w-full h-full border border-lightSecondary border-opacity-15">
+    <div className="w-full h-full border border-accentColor border-opacity-40">
       <Image
         placeholder="blur"
         src={brandImg}
@@ -149,15 +153,10 @@ function PartnersCard({ brandImg, brandAlt }) {
 
 function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
   return (
-    <div
-      className="w-full p-7 text-darkSecondary bg-lightPrimary hover:bg-accentColor2 hover:text-lightPrimary lg:hover:scale-105 transition-all duration-[350ms] group/outer"
-      style={{
-        clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0px 100%, 0px 0px)`,
-      }}
-    >
-      <div className="w-full h-full flex flex-col justify-between gap-5">
-        <div className="w-full flex flex-col gap-7">
-          <div className="w-[60px] aspect-square relative overflow-hidden">
+    <div className="w-full p-7 bg-[#2f1c6a] text-gray-200 transition-all duration-[350ms] group/outer rounded-xl">
+      <div className="w-full h-full flex flex-col justify-between gap-4">
+        <div className="w-full flex flex-col gap-4">
+          <div className="w-[40px] aspect-square relative overflow-hidden ">
             <Image
               placeholder="blur"
               src={serviceIcon}
@@ -165,30 +164,27 @@ function ServiceCard2({ serviceTitle, forwardTo, serviceIcon, serviceDesc }) {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col gap-5">
-            <h4 className="text-[27px] lg:text-2xl font-semibold leading-tight text-accentColor2 group-hover/outer:text-lightPrimary">
+          <div className="flex flex-col gap-3">
+            <h4 className="text-xl font-semibold text-[#fff]">
               {serviceTitle}
             </h4>
-            <p className=" font-light text-base lg:text-sm leading-[1.2]">
+            <p className=" font-light text-base lg:text-sm text-gray-400">
               {serviceDesc}
             </p>
           </div>
         </div>
-        <div>
-          <Link href={forwardTo} className="flex group">
-            <div
-              className="flex flex-row items-center gap-2 ps-5 pe-2 py-2 rounded-sm bg-accentColor2 group-hover/outer:bg-lightPrimary
-             text-lightPrimary group-hover/outer:text-darkSecondary transition-all duration-[350px]"
-            >
-              <span>
-                <TextAnimation
-                  text="Learn More"
-                  hoverText="text-darkSecondary"
-                />
-              </span>
-              <MdKeyboardArrowRight className="text-xl" />
-            </div>
-          </Link>
+        <div className="pt-2">
+          <Button
+            label="Learn More"
+            forwardTo={forwardTo}
+            paddingX="ps-4 pe-2"
+            paddingY="py-2"
+            fontGap="gap-2"
+            textStyle="text-sm text-[#fff]"
+            icon={
+              <FiArrowDownRight className="text-base text-lightPrimary -rotate-45 group-hover:-rotate-90 transition duration-[350ms]" />
+            }
+          />
         </div>
       </div>
     </div>
@@ -235,75 +231,91 @@ export default function Home() {
       <Head>
         <link rel="canonical" href="https://www.devionark.com/" />
       </Head>
-      <main className="font-poppins">
+      <main className="">
         {/* Landing Section */}
 
-        <div className="w-full lg:min-h-screen pt-10 pb-20 lg:pt-10 lg:pb-20 relative font-light text-lightSecondary px-4 lg:px-20 flex justify-center items-center">
+        <div className="w-full lg:min-h-screen pt-10 pb-20 lg:pt-10 lg:pb-20 relative text-neutral-600 px-4 lg:px-20 flex justify-center items-center">
           <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
             <div className="w-full lg:w-[55%]">
-              <div className="w-full flex flex-col gap-16 lg:gap-16">
-                <div className="w-full flex flex-col gap-6 lg:gap-10">
+              <div className="w-full flex flex-col gap-10">
+                <div className="w-full flex flex-col gap-6">
                   <div className="w-full">
-                    <h1 className="text-lightPrimary font-bold font-oswald leading-[1.2] text-4xl lg:text-6xl">
-                      Transforming your ideas into{" "}
-                      <span className="text-accentColor ">digital reality</span>
+                    <h1 className="text-neutral-800 font-bold text-3xl lg:text-5xl">
+                      Transforming your ideas <br /> into{" "}
+                      <span className="text-accentColor font-sans">
+                        digital reality
+                      </span>
                       .
                     </h1>
                   </div>
                   <div className="h-full flex flex-row gap-5 items-center">
-                    <CustomShapeButton
+                    <Button
                       forwardTo="/contact"
                       label="Get Started"
-                      textStyle="text-base font-light text-lightPrimary"
-                      paddingX="ps-4 pe-6"
-                      paddingY="py-5"
-                      fontGap="gap-2"
-                      backgroundColor="bg-accentColor"
-                      hoverBgColor="bg-accentColor2"
+                      textStyle="font-normal text-[#fff]"
                       icon={
-                        <FiArrowDownLeft className="text-lg text-lightPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                        <FiArrowDownRight className="text-lg text-lightPrimary -rotate-45 group-hover:-rotate-90 transition duration-[350ms]" />
                       }
                     />
                     <div className="flex">
-                      <Link
-                        href="/about"
-                        className="flex flex-row gap-2 items-center text-accentColor hover:text-accentColor2 ps-5 pe-3 py-[19px] border border-accentColor hover:border-accentColor2 group"
-                      >
-                        <span>
-                          <TextAnimation
-                            text="About us"
-                            hoverText="text-accentColor2"
-                          />
-                        </span>
-                        <MdKeyboardArrowRight className="text-xl" />
-                      </Link>
+                      <ButtonOutline
+                        label="About Us"
+                        forwardTo="/about"
+                        icon={<MdKeyboardArrowRight className="text-2xl" />}
+                      />
                     </div>
                   </div>
                 </div>
                 <div className="w-full flex">
-                  <div className="w-full flex flex-col gap-5">
-                    <div className=" flex flex-col gap-5">
-                      <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-3">
-                        <CSRAvatar />
-                        <div className="overflow-hidden font-light text-lg lg:text-sm leading-tight">
-                          <span className="inline-block">
-                            We have{" "}
-                            <span className="text-accentColor font-bold">
-                              12+ satisfied clients
-                            </span>{" "}
-                            all around the world.
-                          </span>
-                        </div>
+                  <div className=" flex flex-col gap-5">
+                    <div className="w-full flex flex-col justify-start items-start gap-3 lg:gap-3">
+                      <CSRAvatar />
+                      <div className="overflow-hidden font-bold text-xl lg:text-2xl">
+                        <span className="inline-block">
+                          <span className="text-accentColor">
+                            12+ satisfied clients
+                          </span>{" "}
+                          all around the world.
+                        </span>
                       </div>
-                      <p className=" text-lightSecondary font-light text-lg lg:text-sm">
-                        Got a game-changing idea but unsure how to bring it to
-                        life? We&apos;re here to bridge that gap. As one of the
-                        best tech-driven digital marketing agencies in
-                        Bangladesh, we don&apos;t just code – we craft digital
-                        solutions that drive sales, simplify workflows, and make
-                        your brand unforgettable. Let&apos;s turn your ‘what
-                        if&apos; into ‘what&apos;s next.
-                      </p>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <div className="flex flex-row leading-none items-center">
+                        <span>
+                          <IoIosCheckboxOutline className="text-3xl text-green-500 pr-2" />
+                        </span>
+                        Digital Marketing that Drives Real Results
+                      </div>
+                      <div className="flex flex-row leading-none items-center">
+                        <span>
+                          <IoIosCheckboxOutline className="text-3xl text-green-500 pr-2" />
+                        </span>
+                        Website & Web Application Development
+                      </div>
+                      <div className="flex flex-row leading-none items-center">
+                        <span>
+                          <IoIosCheckboxOutline className="text-3xl text-green-500 pr-2" />
+                        </span>
+                        Social Media Strategy & Paid Ads Campaign
+                      </div>
+                      <div className="flex flex-row leading-none items-center">
+                        <span>
+                          <IoIosCheckboxOutline className="text-3xl text-green-500 pr-2" />
+                        </span>
+                        Full-Stack eCommerce Solutions
+                      </div>
+                      <div className="flex flex-row leading-none items-center">
+                        <span>
+                          <IoIosCheckboxOutline className="text-3xl text-green-500 pr-2" />
+                        </span>
+                        Search Engine Optimization for Visibility
+                      </div>
+                      <div className="flex flex-row leading-none items-center">
+                        <span>
+                          <IoIosCheckboxOutline className="text-3xl text-green-500 pr-2" />
+                        </span>
+                        Branding Promotion & Content Strategy
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -324,19 +336,19 @@ export default function Home() {
 
         {/* Partners Section */}
 
-        <div className="bg-darkPrimary py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative border-y-0 border-t lg:border-y border-lightSecondary/30">
-          <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0"></div>
-          <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 left-[50%]"></div>
-          <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-lightSecondary/30 top-0 right-20 "></div>
-          <h2 className="w-full lg:w-[50%] text-lightPrimary font-medium text-4xl lg:text-5xl font-oswald leading-[1.10] px-4">
-            The <span className="text-accentColor ">brands</span> we&apos;ve
-            partnered with
+        <div className="py-10 lg:py-20 flex flex-col gap-10 lg:gap-16 leading-none w-full h-full lg:px-20 relative border-y-0 border-t lg:border-y border-accentColor">
+          <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-accentColor top-0"></div>
+          <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-accentColor top-0 left-[50%]"></div>
+          <div className="w-[1px] h-full hidden lg:flex flex-1 absolute bg-accentColor top-0 right-20 "></div>
+          <h2 className="w-full lg:w-[50%] font-bold text-3xl lg:text-5xl px-4">
+            The <span className="text-accentColor ">brands</span>
+            <br /> we&apos;ve partnered with
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-6 relative px-3 lg:px-0">
             <div className="w-full h-full absolute top-0 flex flex-col justify-between">
-              <div className="w-full h-[1px] bg-lightSecondary/30"></div>
-              <div className="w-full h-[1px] bg-lightSecondary/30"></div>
-              <div className="w-full h-[1px] bg-lightSecondary/30"></div>
+              <div className="w-full h-[1px] bg-accentColor"></div>
+              <div className="w-full h-[1px] bg-accentColor"></div>
+              <div className="w-full h-[1px] bg-accentColor"></div>
             </div>
             <PartnersCard brandImg={interAidLogo} brandAlt="interaid_logo" />
             <PartnersCard
@@ -350,7 +362,7 @@ export default function Home() {
             />
             <PartnersCard brandImg={qahafLogo} brandAlt="qahaf_logo" />
             <PartnersCard brandImg={sweetCakes} brandAlt="sweet_cakes_logo" />
-            <PartnersCard brandImg={travel} brandAlt="travel_logo" />
+            <PartnersCard brandImg={treatosBd} brandAlt="treatos_BD_logo" />
             <PartnersCard
               brandImg={annaKitchen}
               brandAlt="ananna_khan_kitchen_logo"
@@ -364,113 +376,130 @@ export default function Home() {
 
         {/* What We Do Section */}
 
-        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pt-10 pb-7 lg:pt-40 lg:pb-20">
-          <div className="flex flex-col-reverse">
-            <div className="w-full flex flex-col gap-10 px-4 lg:px-20 justify-center items-center relative z-[5]">
-              <div className="w-full flex flex-col gap-5 lg:text-center">
-                <div className="w-full flex flex-col gap-5 justify-center lg:items-center">
-                  <div className="flex overflow-hidden">
-                    <div className="text-sm uppercase text-lightPrimary font-light ps-3 pe-5 py-2 rounded-full border border-accentColor">
-                      <h3 className="flex flex-row gap-2 items-center">
-                        <span>
-                          <GoDotFill className="text-xs" />
-                        </span>
-                        What We Do
-                      </h3>
+        <div className="bg-[#131f46] flex flex-col gap-6 lg:gap-14 px-4 lg:px-16 py-10 lg:py-20">
+          <div className="w-full relative text-gray-200">
+            <div className="flex flex-col-reverse">
+              <div className="w-full flex flex-col gap-10 px-4 lg:px-20 justify-center items-center relative z-[5]">
+                <div className="w-full flex flex-col gap-5 lg:text-center">
+                  <div className="w-full flex flex-col gap-5 justify-center lg:items-center">
+                    <div className="flex overflow-hidden">
+                      <div className="text-sm uppercase font-light ps-3 pe-5 py-2 rounded-full border border-[#fff]">
+                        <h3 className="flex flex-row gap-2 items-center">
+                          <span>
+                            <GoDotFill className="text-xs" />
+                          </span>
+                          What We Do
+                        </h3>
+                      </div>
                     </div>
                   </div>
+                  <h2 className="text-3xl lg:text-5xl font-bold text-[#fff]">
+                    It's not who we are <span className="">underneath</span>,
+                    <br></br> It's what we do that{" "}
+                    <span className="">defines</span> us.
+                  </h2>
                 </div>
-                <h2 className="font-oswald text-4xl lg:text-6xl font-semibold leading-[1.2] text-lightPrimary">
-                  It's not who we are{" "}
-                  <span className="text-accentColor">underneath</span>,<br></br>{" "}
-                  It's what we do that{" "}
-                  <span className="text-accentColor">defines</span> us.
-                </h2>
-              </div>
-              <div className="w-full lg:w-[80%] flex flex-col gap-5 lg:gap-16 lg:text-center">
-                <p className="text-lg lg:text-xl lg:leading-[1.3] text-lightSecondary font-light">
-                  We&apos;re more than a digital service provider company in
-                  Bangladesh – we&apos;re your business growth partners.
-                  Specializing in custom software development, website
-                  solutions, and data-driven digital marketing services, we
-                  empower businesses across Dhaka and beyond to outrank
-                  competitors, streamline operations, and connect with their
-                  audience. Whether you're a startup or an enterprise.
-                </p>
+                <div className="w-full flex flex-col lg:text-center">
+                  <p className="text-gray-400">
+                    We&apos;re more than a digital service provider company in
+                    Bangladesh – we&apos;re your business growth partners.
+                    Specializing in custom software development, website
+                    solutions, and data-driven digital marketing services, we
+                    empower businesses across Dhaka and beyond to outrank
+                    competitors, streamline operations, and connect with their
+                    audience. Whether you're a startup or an enterprise.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="w-full bg-darkPrimary relative font-light text-lightSecondary pb-20 lg:pb-40 lg:px-20">
-          <div className="w-full px-4 lg:px-20 lg:py-20 rounded-lg lg:bg-darkSecondary relative overflow-hidden">
-            <div className="w-full h-full absolute z-[2] top-0 left-0 opacity-40">
-              <div className="w-full h-full relative overflow-hidden">
-                <Image
-                  placeholder="blur"
-                  src={serviceBackgroundImg}
-                  alt="service background image"
-                  className="w-full h-full object-cover"
+          <div className="w-full relative">
+            <div className="w-full rounded-lg relative overflow-hidden">
+              <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7 relative z-[5]">
+                <ServiceCard2
+                  serviceTitle="Custome Software Solution"
+                  serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                  forwardTo="/services#custom-software-solutions"
+                  serviceIcon={customeSoftwareIcon}
+                />
+                <ServiceCard2
+                  serviceTitle="Web App Development"
+                  serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                  forwardTo="/services#website-development"
+                  serviceIcon={websiteDesignIcon}
+                />
+                <ServiceCard2
+                  serviceTitle="Social Media Marketing"
+                  serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                  forwardTo="/services#social-media-marketing"
+                  serviceIcon={socialMediaIcon}
+                />
+                <ServiceCard2
+                  serviceTitle="Search Engine Marketing"
+                  serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                  forwardTo="/services#search-engine-marketing"
+                  serviceIcon={marketingIcon}
+                />
+                <ServiceCard2
+                  serviceTitle="Search Engine Optimization"
+                  serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                  forwardTo="/services#search-engine-optimization"
+                  serviceIcon={seoIcon}
+                />
+                <ServiceCard2
+                  serviceTitle="Business Consultancy"
+                  serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
+                  forwardTo="/services#business-consultancy"
+                  serviceIcon={businessConsultancyIcon}
                 />
               </div>
-            </div>
-            <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 relative z-[5]">
-              <ServiceCard2
-                serviceTitle="Custome Software Solution"
-                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
-                forwardTo="/services#custom-software-solutions"
-                serviceIcon={customeSoftwareIcon}
-              />
-              <ServiceCard2
-                serviceTitle="Website Design"
-                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
-                forwardTo="/services#website-development"
-                serviceIcon={websiteDesignIcon}
-              />
-              <ServiceCard2
-                serviceTitle="Social Media Marketing"
-                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
-                forwardTo="/services#social-media-marketing"
-                serviceIcon={socialMediaIcon}
-              />
-              <ServiceCard2
-                serviceTitle="Search Engine Marketing"
-                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
-                forwardTo="/services#search-engine-marketing"
-                serviceIcon={marketingIcon}
-              />
-              <ServiceCard2
-                serviceTitle="Search Engine Optimization"
-                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
-                forwardTo="/services#search-engine-optimization"
-                serviceIcon={seoIcon}
-              />
-              <ServiceCard2
-                serviceTitle="Business Consultancy"
-                serviceDesc="Every business has unique needs. Custom software solutions improve efficiency, automate workflows, and solve specific challenges."
-                forwardTo="/services#business-consultancy"
-                serviceIcon={businessConsultancyIcon}
-              />
             </div>
           </div>
         </div>
 
         {/* Testimonial Section */}
 
-        <div className="w-full min-h-[15vh] pb-0 lg:pb-10 bg-darkPrimary overflow-x-hidden border-y border-lightSecondary/30">
-          <div className="w-full h-full flex flex-col lg:gap-20 justify-between">
-            <div className="w-full h-full ps-4 lg:ps-20 flex flex-row  relative border-b border-lightSecondary/30">
-              <h2 className="pt-16 lg:pt-40 text-nowrap font-bold text-accentColor2 font-inter text-[13vw] lg:text-[14.5vw] leading-none text-center border-l-[1px] border-r-[1px] border-lightSecondary/30 pb-5 lg:pb-0">
-                Clients talk
-              </h2>
+        <div className="w-full min-h-[15vh] pb-0 lg:pb-10 overflow-x-hidden border-y border-accentColor">
+          <div className="w-full h-full flex flex-col gap-6 lg:gap-20 justify-between">
+            <div className="w-full h-full ps-4 lg:ps-32 flex flex-row  relative border-b-[1px] border-accentColor">
+              <div className="flex flex-col gap-5 lg:gap-10 pt-16 lg:pt-40 border-l-[1px] border-r-[1px] border-accentColor pb-5 lg:pb-0">
+                <div className="flex flex-row gap-2 lg:gap-4 justify-center items-center lg:text-lg leading-none">
+                  <span>Excellent</span>
+                  <div className="flex flex-row gap-[2px]">
+                    <div className="p-1 bg-green-600">
+                      <FaStar className="text-[#fff]" />
+                    </div>
+                    <div className="p-1 bg-green-600">
+                      <FaStar className="text-[#fff]" />
+                    </div>
+                    <div className="p-1 bg-green-600">
+                      <FaStar className="text-[#fff]" />
+                    </div>
+                    <div className="p-1 bg-green-600">
+                      <FaStar className="text-[#fff]" />
+                    </div>
+                    <div className="p-1 bg-green-600">
+                      <FaStar className="text-[#fff]" />
+                    </div>
+                  </div>
+                  <span className="hidden md:inline-block">7 reviews on</span>
+                  <div className="hidden md:inline-block p-1 bg-blue-600">
+                    <FaFacebookF className="text-xl text-[#fff]" />
+                  </div>
+                </div>
+                <h2 className="text-nowrap font-bold text-neutral-800 text-[14.5vw] leading-none text-center">
+                  Clients talk
+                </h2>
+              </div>
 
               <div className="w-full h-full flex items-start">
-                <div className="w-full aspect-square bg-lightPrimary text-darkPrimary text-[7vw] lg:text-[5vw] flex justify-center items-center">
+                <div className="w-full aspect-square bg-accentColor text-[#fff] text-[7vw] flex justify-center items-center">
                   <FiArrowDownLeft />
                 </div>
               </div>
             </div>
-            <div className="w-full hidden lg:flex flex-col gap-5">
+            <div className="w-full hidden lg:flex flex-col gap-20">
               <div className="w-full">
                 <Marquee autoFill={true} pauseOnClick={true}>
                   <div className="flex mx-[10px]">
@@ -536,7 +565,7 @@ export default function Home() {
                       image={rakibShikdar}
                       name="Rakib Shikdar"
                       position="Founder & CEO"
-                      company="Kick-off The Jersey Galleria"
+                      company="Retrofino"
                       review="They developed an E-commerce web application for my jersey business! The most loveble thing is they actually can understand what clients want and their requirments! Totally satisfied with their works! Their services are highly recommended!"
                     />
                   </div>
@@ -553,7 +582,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex lg:hidden flex-col">
-              <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-4 py-5">
+              <div className="border-b border-accentColor flex flex-col gap-6 px-4 py-7">
                 <div className="flex flex-row gap-2">
                   <p className=" font-light leading-tight">
                     With their SEO expertise and digital marketing campaigns, we
@@ -561,23 +590,30 @@ export default function Home() {
                     quarter. They transformed our online presence and positioned
                     us as an authority in our industry.
                   </p>
-                  <div className="text-2xl text-lightPrimary">
+                  <div className="text-3xl text-accentColor">
                     <CgQuote />
                   </div>
                 </div>
-                <div className="w-full flex justify-end">
-                  <div className="flex flex-col gap-2 items-end">
-                    <div className="uppercase text-lightPrimary leading-none">
+                <div className="w-full flex flex-row gap-3 justify-end">
+                  <div className="flex flex-col gap-1 items-end">
+                    <div className="uppercase text-neutral-800 font-medium leading-none">
                       Syed Mustafa Mehedi
                     </div>
-                    <div className="flex flex-col gap-1 text-xs font-light leading-none text-end">
+                    <div className="flex flex-col gap-1 text-xs font-light leading-none text-end text-gray-600">
                       <div>QAHAF</div>
                       <div>Founder & CEO</div>
                     </div>
                   </div>
+                  <div className="h-11 aspect-square rounded-full overflow-hidden relative">
+                    <Image
+                      src={mustafaMehedi}
+                      alt="mustafa-mehedi-avatar"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-5 py-5">
+              <div className="border-b border-accentColor flex flex-col gap-6 px-4 py-7">
                 <div className="flex flex-row-reverse items-start gap-2">
                   <p className="font-light leading-tight text-end">
                     Our business grew faster than we imagined after partnering
@@ -586,23 +622,30 @@ export default function Home() {
                     assistance. I wish them every success in their future
                     endeavors.
                   </p>
-                  <div className="text-2xl text-lightPrimary ">
+                  <div className="text-3xl text-accentColor ">
                     <CgQuote />
                   </div>
                 </div>
-                <div className="w-full flex justify-start">
-                  <div className="flex flex-col gap-2">
-                    <div className="uppercase text-lightPrimary leading-none">
+                <div className="w-full flex flex-row gap-3 justify-start">
+                  <div className="h-11 aspect-square rounded-full overflow-hidden relative">
+                    <Image
+                      src={farhanMasum}
+                      alt="farhan-masum-avatar"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="uppercase text-neutral-800 font-medium leading-none">
                       Kazi Farhan Masum
                     </div>
-                    <div className="flex flex-col gap-1 text-xs font-light leading-none">
+                    <div className="flex flex-col gap-1 text-xs font-light leading-none text-gray-600">
                       <div>PuppetBrush</div>
                       <div>Founder & CEO</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-5 py-5">
+              <div className="border-b border-accentColor flex flex-col gap-6 px-4 py-7">
                 <div className="flex flex-row gap-2">
                   <p className="font-light leading-tight">
                     They developed an E-commerce web application for my jersey
@@ -611,23 +654,30 @@ export default function Home() {
                     satisfied with their works! Their services are highly
                     recommended!
                   </p>
-                  <div className="text-2xl text-lightPrimary">
+                  <div className="text-3xl text-accentColor">
                     <CgQuote />
                   </div>
                 </div>
-                <div className="w-full flex justify-end">
-                  <div className="flex flex-col gap-2 items-end">
-                    <div className="uppercase text-lightPrimary leading-none">
+                <div className="w-full flex flex-row gap-3 justify-end">
+                  <div className="flex flex-col gap-1 items-end">
+                    <div className="uppercase text-neutral-800 font-medium leading-none">
                       Rakib Shikder
                     </div>
-                    <div className="flex flex-col gap-1 text-xs font-light leading-none text-end">
-                      <div>Kick-off - The Jersey Galleria</div>
+                    <div className="flex flex-col gap-1 text-xs font-light leading-none text-end text-gray-600">
+                      <div>Retrofino</div>
                       <div>Founder & CEO</div>
                     </div>
                   </div>
+                  <div className="h-11 aspect-square rounded-full overflow-hidden relative">
+                    <Image
+                      src={rakibShikdar}
+                      alt="rakib-shikder-avatar"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="border-b border-lightSecondary/30 flex flex-col gap-5 px-5 py-5">
+              <div className="border-b border-accentColor flex flex-col gap-6 px-4 py-7">
                 <div className="flex flex-row-reverse items-start gap-2">
                   <p className="font-light leading-tight text-end">
                     We relied on them for software development, and they
@@ -635,16 +685,23 @@ export default function Home() {
                     Their rigorous testing ensured a smooth launch with zero
                     downtime—simply outstanding and amazing!
                   </p>
-                  <div className="text-2xl text-lightPrimary  rotate-">
+                  <div className="text-3xl text-accentColor">
                     <CgQuote />
                   </div>
                 </div>
-                <div className="w-full flex justify-start">
-                  <div className="flex flex-col gap-2">
-                    <div className="uppercase text-lightPrimary leading-none">
+                <div className="w-full flex flex-row gap-3 justify-start">
+                  <div className="h-11 aspect-square rounded-full overflow-hidden relative">
+                    <Image
+                      src={azizulHoque}
+                      alt="azizul-hoque-avatar"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="uppercase text-neutral-800 font-medium leading-none">
                       Md. Azizul Hoque
                     </div>
-                    <div className="flex flex-col gap-1 text-xs font-light leading-none">
+                    <div className="flex flex-col gap-1 text-xs font-light leading-none text-gray-600">
                       <div>InterAiD</div>
                       <div>Founder & CEO</div>
                     </div>

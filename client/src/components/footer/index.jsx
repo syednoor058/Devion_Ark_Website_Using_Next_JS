@@ -9,7 +9,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import footerLogo from "../../../public/footer_logo.png";
+import footerLogo from "../../../public/logos/logo.png";
 import amexIcon from "../../../public/payments/amex.png";
 import bkashIcon from "../../../public/payments/BKash-Icon2-Logo.wine.png";
 import nogodIcon from "../../../public/payments/Nagad-Logo.wine.png";

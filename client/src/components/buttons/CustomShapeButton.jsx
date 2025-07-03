@@ -17,13 +17,10 @@ function CustomShapeButton({
   return (
     <Link
       href={forwardTo}
-      className={`inline-block ${paddingX} ${paddingY} ${textStyle} ${backgroundColor} duration-[350ms] ease-in-out transition-colors group overflow-hidden relative`}
-      style={{
-        clipPath: `polygon(${bend} 0%, calc(100% - ${bend}) 0%, 100% ${bend}, 100% 100%, calc(100% - ${bend}) 100%, ${bend} 100%, 0px 100%, 0px 0px)`,
-      }}
+      className={`inline-block ${paddingX} ${paddingY} ${textStyle} ${backgroundColor} duration-[350ms] ease-in-out transition-colors group overflow-hidden relative rounded-full`}
     >
       <div
-        className={`relative z-[5] flex flex-row-reverse ${fontGap} items-center whitespace-nowrap`}
+        className={`relative z-[5] flex flex-row ${fontGap} items-center whitespace-nowrap uppercase`}
       >
         <span>
           <TextAnimation text={label} hoverText={hoverText} />

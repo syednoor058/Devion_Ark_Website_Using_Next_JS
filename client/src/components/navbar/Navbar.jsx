@@ -3,46 +3,23 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FiArrowDownLeft } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
-import { MdOutlineArrowForward } from "react-icons/md";
 import {
-  default as darkLogoMobile,
   default as logo,
-} from "../../../public/footer_logo.png";
+  default as logoMobile,
+} from "../../../public/logos/logo.png";
 import TextAnimation from "../animations/TextAnimation";
 
 import Link from "next/link";
-import CustomShapeButton from "../buttons/CustomShapeButton";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
+import ButtonOutline from "../buttons/ButtonOutline";
 import MenuIcon from "../menuIcon/MenuIcon";
-
-function MoreBlogCard({ cover, title, forwardTo }) {
-  return (
-    <div className="w-full flex flex-col gap-3">
-      <div className="flex flex-col gap-2">
-        <div className="w-full overflow-hidden relative rounded-sm">
-          <Image
-            placeholder="blur"
-            src={cover}
-            alt={title}
-            className="w-full object-cover"
-          />
-        </div>
-        <div className="w-full h-[1px] bg-gray-500"></div>
-      </div>
-      <Link href={forwardTo} className="group">
-        <div className="w-full flex flex-row gap-5 justify-between">
-          <div className="text-2xl text-lightPrimary group-hover:underline underline-offset-4 duration-[350ms]">
-            {title}
-          </div>
-          <div className="text-2xl lg:text-4xl">
-            <MdOutlineArrowForward className="group-hover:-rotate-45 duration-500 text-accentColor font-light" />
-          </div>
-        </div>
-      </Link>
-    </div>
-  );
-}
 
 function Navbar() {
   const navLinks = [
@@ -89,23 +66,22 @@ function Navbar() {
     >
       {/* Pc Navbar  */}
 
-      <div className="w-full hidden lg:flex relative bg-transparent ">
+      <div className="w-full hidden lg:flex relative bg-white">
         <div
-          className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-3 bg-transparent`}
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center px-20 z-[1002] py-5 bg-transparent`}
         >
-          <div className="w-full flex flex-row justify-start items-center text-lightSecondary z-[1003] gap-20 ">
+          <div className="w-full flex flex-row justify-start items-center z-[1003] gap-20 ">
             <Link
               href="/"
-              className={`w-auto h-5 relative z-[1003] overflow-hidden`}
+              className={`w-auto h-7 relative z-[1003] overflow-hidden`}
             >
               <Image
-                placeholder="blur"
                 src={logo}
                 alt="devion_ark_logo"
                 className="w-full h-full object-cover"
               />
             </Link>
-            <div className="flex flex-row gap-3 items-center text-lightPrimary font-normal text-sm mix-blend-difference">
+            <div className="flex flex-row gap-3 items-center  font-normal text-sm mix-blend-difference">
               <div>
                 <GoDotFill />
               </div>
@@ -116,7 +92,7 @@ function Navbar() {
             </div>
           </div>
           <div
-            className={`w-full flex flex-row justify-end items-center text-lightSecondary z-[1003]`}
+            className={`w-full flex flex-row justify-end items-center  z-[1003]`}
           >
             <div className=" flex flex-row gap-5 items-center px-10">
               {navLinks.map((navLink, index) => (
@@ -125,15 +101,15 @@ function Navbar() {
                     className={`${
                       pathname === navLink.path
                         ? "text-accentColor"
-                        : "text-lightPrimary"
-                    } text-base font-normal leading-none duration-[350ms] whitespace-nowrap`}
+                        : "text-[#1d1e20]"
+                    } text-sm font-normal leading-none duration-[350ms] whitespace-nowrap uppercase`}
                   >
                     <TextAnimation
                       text={navLink.label}
                       hoverText={`${
                         pathname === navLink.path
                           ? "text-accentColor"
-                          : "text-lightPrimary"
+                          : "text-[#1d1e20]"
                       }`}
                     />
                   </div>
@@ -143,19 +119,15 @@ function Navbar() {
             <div>
               <div className="w-full flex justify-end">
                 <div className="w-full flex justify-end">
-                  <CustomShapeButton
-                    label="Let's Talk"
+                  <ButtonOutline
+                    label="Get A Quote"
                     forwardTo="/contact"
-                    bend="12px"
-                    textStyle="text-sm font-light text-lightPrimary"
-                    hoverText="text-lightPrimary"
-                    backgroundColor="bg-accentColor"
-                    hoverBgColor="bg-accentColor2"
-                    paddingX="ps-2 pe-4"
-                    paddingY="py-3"
+                    textStyle="text-sm text-accentColor"
+                    paddingX="ps-4 pe-3"
+                    paddingY="py-2"
                     fontGap="gap-2"
                     icon={
-                      <FiArrowDownLeft className="text-base text-lightPrimary rotate-45 group-hover:rotate-90 transition duration-[350ms]" />
+                      <FiArrowRight className="text-base text-accentColor  group-hover:-rotate-45 transition duration-[350ms]" />
                     }
                   />
                 </div>
@@ -167,16 +139,15 @@ function Navbar() {
 
       {/* Mobile Navbar */}
 
-      <div className="w-full flex lg:hidden relative">
+      <div className="w-full flex lg:hidden relative ">
         <div
-          className={`w-full h-full flex flex-row gap-5 justify-between items-center py-4  z-[1002] bg-darkPrimary`}
+          className={`w-full h-full flex flex-row gap-5 justify-between items-center py-4  z-[1002] bg-white`}
         >
           <div className="flex justify-center items-center px-5 z-[1003]">
             <div className="w-full relative">
               <Link href="/">
                 <Image
-                  placeholder="blur"
-                  src={darkLogoMobile}
+                  src={logoMobile}
                   alt="devion_ark_logo"
                   className="w-auto h-6 object-cover"
                 />
@@ -185,7 +156,7 @@ function Navbar() {
           </div>
           <div className="w-[15%] flex justify-center items-center text-2xl z-[1003]">
             <div
-              className="text-lightPrimary cursor-pointer"
+              className="text-neutral-600 cursor-pointer"
               onClick={() => setMenuExpand((prevMenuExpand) => !prevMenuExpand)}
             >
               <MenuIcon expand={menuExpand} />
@@ -193,39 +164,76 @@ function Navbar() {
           </div>
         </div>
         <div
-          className={`w-full h-screen overflow-x-hidden overflow-y-auto bg-darkPrimary fixed top-0 left-0 transform ${
-            menuExpand ? "translate-y-0" : "-translate-y-full"
+          className={`w-[65%] h-screen overflow-x-hidden overflow-y-auto fixed bg-white top-0 left-0 shadow-2xl transform ${
+            menuExpand ? "translate-x-0" : "-translate-x-full"
           } duration-1000 ease-in-out z-[999]`}
         >
           <div className="w-full h-full pt-20 flex flex-col gap-10 justify-between z-[1001]">
-            <div className="w-full h-full flex flex-col justify-center gap-2 px-5">
+            <div className="w-full h-full flex flex-col gap-3">
               {navLinks.map((navLink, index) => (
                 <Link
                   href={navLink.path}
                   key={index}
                   onClick={() => setMenuExpand(false)}
+                  className="px-5 border-b border-neutral-200 pb-2 text-sm"
                 >
                   <div
                     className={`w-full ${
-                      pathname === navLink.path
-                        ? "text-accentColor"
-                        : "text-lightSecondary hover:text-lightPrimary"
-                    }  duration-500 text-5xl font-bold uppercase font-oswald leading-none`}
+                      pathname === navLink.path ? "text-accentColor" : ""
+                    }  duration-500 uppercase leading-none`}
                   >
                     <TextAnimation text={navLink.label} />
                   </div>
                 </Link>
               ))}
+
+              <div className="w-full px-4 mt-2">
+                <ButtonOutline
+                  label="Get A Quote"
+                  forwardTo="/contact"
+                  textStyle="text-sm text-accentColor"
+                  paddingX="ps-4 pe-3"
+                  paddingY="py-2"
+                  fontGap="gap-2"
+                  icon={
+                    <FiArrowRight className="text-base text-accentColor group-hover:-rotate-45  transition duration-[350ms]" />
+                  }
+                />
+              </div>
             </div>
-            <div className="w-full flex flex-row gap-5 justify-between text-sm font-light py-5 px-4">
-              <div>
-                <p>&copy; 2022-2025</p>
-              </div>
-              <div className="text-lightPrimary uppercase font-normal">
-                <p>
-                  Devion <span className="text-accentColor">Ark</span>
-                </p>
-              </div>
+            <div className="w-full flex flex-row justify-center gap-5 text-sm  py-5 px-4">
+              <a
+                href="https://www.facebook.com/devion.ark/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full border border-neutral-600 text-neutral-600 hover:text-accentColor2 transition-all duration-300 ease-in-out"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/devion-ark/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full border border-neutral-600 text-neutral-600 hover:text-accentColor2 transition-all duration-300 ease-in-out"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.instagram.com/devionark/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full border border-neutral-600 text-neutral-600 hover:text-accentColor2 transition-all duration-300 ease-in-out"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/8801782734573"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full border border-neutral-600 text-neutral-600 hover:text-accentColor2 transition-all duration-300 ease-in-out"
+              >
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
         </div>
